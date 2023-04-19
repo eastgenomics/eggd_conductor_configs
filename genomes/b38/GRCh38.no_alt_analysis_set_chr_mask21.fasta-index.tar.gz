@@ -1,3 +1,0 @@
-A tarball contaning the GRCh38 reference FASTA index file GRCh38.no_alt_analysis_set_chr_mask21.fasta-index.tar.gz is used by eggd_picard_qc app.
-This file is copied into 001 (\resources\genomes\b38\)
-and can be found at project-Fkb6Gkj433GVVvj73J7x8KbV:file-Fy4j2G04qB6zQK885B5Q8Pqp
