@@ -1,8 +1,0 @@
-Docker image of VEP for release 104.3:
-
-Pulled from dockerhub:
-
-root@cwic:~# docker pull ensemblorg/ensembl-vep:release_104.3
-
-Saved into an image and uploaded to 001_Reference:
-docker save ensemblorg/ensembl-vep:release_104.3 |gzip > vep_v104.3.tar.gz

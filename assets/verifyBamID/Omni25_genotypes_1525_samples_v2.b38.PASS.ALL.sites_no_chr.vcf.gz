@@ -1,4 +1,0 @@
-A gzipped VCF containing the SNPs used to calculate contamination for for build GRCh38 and is used by the verifybamid app. The linking CAPA to this file is GEN.BI.619. Provenance of this
-file is described in https://cuhbioinformatics.atlassian.net/wiki/spaces/P/pages/2540240912/Updating+Omni25+genotypes+file+for+b38
-This file is copied into 001 (001_Reference/app_assets/verifyBamID)
-and can be found with file-G7YKFZj4kj47GxgQ2bKGYV1g

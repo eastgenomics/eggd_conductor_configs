@@ -1,4 +1,0 @@
-Docker image containing ga4gh programme to run commands on.
-Taken from docker ga4gh v1.0 (https://hub.docker.com/r/mokaguys/ga4gh_rep.py) 
-using command <docker pull mokaguys/ga4gh_rep.py:v1.0> followed by <docker save 5c1f5377fb00 | gzip > ga4gh_rep.py_v1.0.tar.gz>
-Documentation for more detail - https://cuhbioinformatics.atlassian.net/wiki/spaces/UTILS/pages/2632482819/Docker+images

@@ -1,2 +1,0 @@
-##fileDate=yyyymmdd
-##source=nimagen_v1.0.0
