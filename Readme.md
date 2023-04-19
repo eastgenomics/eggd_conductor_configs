@@ -1,10 +1,10 @@
-# 🤖 Automation 🤖
+# 🤖 eggd_conductor configs 🤖
 
 The files contained in the `app_configs` and `assay_configs` folders are essential for the running of eggd_conductor.
 
 ## 🔧 App configs 🔧
 
-The files in the 001_Reference are placeholders for the actual **app** config files stored in DNAnexus as those contain tokens.
+The files in this repository are placeholders for the actual **app** config files stored in DNAnexus as those contain tokens.
 
 Other than that, those files contain:
 
@@ -21,14 +21,15 @@ Other than that, those files contain:
 
 ## 🔧 Assay configs 🔧
 
-Each assay require a config file to work with eggd_conductor. They are stored in folders named after the assay that they work with. Those will mainly specify:
+Each assay requires a config file to work with eggd_conductor. They are stored in folders named after the assay that they work with. Those will mainly specify:
 
 - workflows/apps
   - name
   - version
-  - repo url
   - arguments for use in eggd_conductor
 - inputs of said workflows/apps
 - links between outputs of the stages and inputs of subsequent stages
 
 Additionally, details about the config file itself are stored such as version, assay or allowed users.
+
+Full details on the assay config design and structure may be found [here][https://github.com/eastgenomics/eggd_conductor#assay-config-file]
