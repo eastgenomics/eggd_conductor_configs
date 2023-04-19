@@ -1,9 +1,0 @@
-# Created as follows:
-
-Created by Swiss Army Knife App - see https://platform.dnanexus.com/projects/G6gg2Pj4yPzB22894kfXZbYK/monitor/job/G6zqkG84yPzKGV5z5PgKZyzp
-
-# Filter to PASS variants only
-bcftools view --threads 4 gnomad.genomes.r2.0.1.sites.noVEP_normalised_decomposed.vcf.gz -f PASS -Oz > gnomad.genomes.r2.0.1.sites.noVEP_normalised_decomposed_PASS.vcf.gz; 
-
-# Index
-tabix gnomad.genomes.r2.0.1.sites.noVEP_normalised_decomposed_PASS.vcf.gz

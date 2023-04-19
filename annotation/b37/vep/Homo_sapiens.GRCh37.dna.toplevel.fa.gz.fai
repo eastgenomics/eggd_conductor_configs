@@ -1,3 +1,0 @@
-Created using the following command:
-
-samtools faidx Homo_sapiens.GRCh37.dna.toplevel.fa.gz

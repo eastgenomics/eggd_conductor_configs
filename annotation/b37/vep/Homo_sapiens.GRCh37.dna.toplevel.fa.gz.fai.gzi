@@ -1,4 +1,0 @@
-Created using the following commands:
-
-gzip -d Homo_sapiens.GRCh37.dna.toplevel.fa.gz
-bgzip -i Homo_sapiens.GRCh37.dna.toplevel.fa
