@@ -114,9 +114,9 @@
                 "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME"
             }
         },
-        "workflow-G5j1j28433GYkv4gPpPG8g11": {
-            "name": "dias_multi_v1.2.0",
-            "details": "Dias multi workflow - Takes all fastqs of all samples, starts Hap.py and somalier relate jobs",
+        "workflow-GQgbGyj4PZpQG1BZzzyZx1QF": {
+            "name": "dias_multi_v2.0.0",
+            "details": "Dias multi workflow - starts Hap.py and somalier_relate jobs",
             "url": "https://github.com/eastgenomics/eggd_dias_multi_workflow",
             "analysis": "analysis_2",
             "per_sample": false,
@@ -125,41 +125,91 @@
                 "analysis_1"
             ],
             "inputs": {
-                "stage-Fybykxj433GV7vJKFGf3yVkK.SampleSheet": {
+                "stage-update_runfolders.SampleSheet": {
                     "$dnanexus_link": "INPUT-SAMPLESHEET"
                 },
-                "stage-Fq1BPKj433Gx3K4Y8J35j0fv.prefix": "NA12878",
-                "stage-Fq1BPKj433Gx3K4Y8J35j0fv.panel_bed": {
-                    "$dnanexus_link": "file-G620390433GYGY34Jq6Zq1Xf"
-                },
-                "stage-Fq1BPKj433Gx3K4Y8J35j0fv.query_vcf": {
+                "stage-vcfeval_happy.query_vcf": {
                     "$dnanexus_link": {
                         "analysis": "analysis_1",
-                        "stage": "stage-Fy6fpk040vZZPPbq96Jb2KfK",
+                        "stage": "stage-sentieon_dnaseq",
                         "field": "variants_vcf"
                     }
                 },
-                "stage-G5j1jJj433GpFY3v0JZQ2ZZ0.somalier_extract_file": {
+                "stage-vcfeval_happy.truth_vcf": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-FjkzKVQ4yBGkQQg53bX957G7"
+                    }
+                },
+                "stage-vcfeval_happy.panel_bed": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-G620390433GYGY34Jq6Zq1Xf"
+                    }
+                },
+                "stage-vcfeval_happy.high_conf_bed": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-FjkzKPQ4yBGgBgJ6KvyZ563P"
+                    }
+                },
+                "stage-vcfeval_happy.reference_fasta": {
+                    "$dnanexus_link": {
+                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
+                        "id": "file-F403K904F30y2vpVFqxB9kz7"
+                    }
+                },
+                "stage-vcfeval_happy.reference_fasta_index": {
+                    "$dnanexus_link": {
+                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
+                        "id": "file-F3zyVj84F30jxYxG68vJyg68"
+                    }
+                },
+                "stage-vcfeval_happy.reference_sdf_tar": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Fjp4k3j4yBGpK4x73bzbG2P0"
+                    }
+                },
+                "stage-vcfeval_happy.happy_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GFGbK48433GzV4y54b25p43Z"
+                    }
+                },
+                "stage-vcfeval_happy.reppy_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GFGbK48433Gk4xYG8KK05QqY"
+                    }
+                },
+                "stage-somalier_relate.somalier_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GPQX4G04x14XV5PFfqGkGJk1"
+                    }
+                },
+                "stage-somalier_relate.somalier_extract_file": {
                     "$dnanexus_link": {
                         "analysis": "analysis_1",
-                        "stage": "stage-G5gzP78433GVJ1z1PBKBqxzy",
+                        "stage": "stage-somalier_extract",
                         "field": "somalier_output"
                     }
                 },
-                "stage-G5j1jvj433GYYY25B5jKxFYp.female_threshold": 3,
-                "stage-G5j1jvj433GYYY25B5jKxFYp.male_threshold": 1
-
-            },
-            "output_dirs": {
-                "stage-Fybykxj433GV7vJKFGf3yVkK": "/OUT-FOLDER/STAGE-NAME",
-                "stage-Fq1BPKj433Gx3K4Y8J35j0fv": "/OUT-FOLDER/STAGE-NAME",
-                "stage-G5j1jJj433GpFY3v0JZQ2ZZ0": "/OUT-FOLDER/STAGE-NAME",
-                "stage-G5j1jvj433GYYY25B5jKxFYp": "/OUT-FOLDER/STAGE-NAME"
+                "stage-somalier_relate2multiqc.female_threshold": 3,
+                "stage-somalier_relate2multiqc.male_threshold": 1
             },
             "inputs_filter": {
-                "stage-Fq1BPKj433Gx3K4Y8J35j0fv.query_vcf": [
-                    "NA12878.*"
+                "stage-vcfeval_happy.query_vcf": [
+                    "NA12878.*",
+                    "-[0-9]+Q[0-9]+-"
                 ]
+            },
+            "output_dirs": {
+                "stage-update_runfolders": "/OUT-FOLDER/STAGE-NAME",
+                "stage-vcfeval_happy": "/OUT-FOLDER/STAGE-NAME",
+                "stage-somalier_relate": "/OUT-FOLDER/STAGE-NAME",
+                "stage-somalier_relate2multiqc": "/OUT-FOLDER/STAGE-NAME"
             }
         },
         "app-GF3K4Qj4bJyvpzx055V3G8q7": {
