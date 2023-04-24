@@ -1,4 +1,0 @@
-Docker image containing happy programme to run commands on.
-Taken from docker happy v0.3.9 (https://hub.docker.com/r/pkrusche/hap.py/)
-using command <docker pull pkrusche/hap.py> followed by <docker save f69ea1624f20 | gzip > pkrusche_happy_v0.3.9.tar.gz>
-Documentation for more detail - https://cuhbioinformatics.atlassian.net/wiki/spaces/UTILS/pages/2632482819/Docker+images

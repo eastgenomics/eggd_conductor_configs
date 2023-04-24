@@ -1,3 +1,0 @@
-Docker image containing the somalier programme to run commands on.
-Taken from docker somalier v0.2.15 (https://hub.docker.com/r/brentp/somalier/tags?page=1&ordering=last_updated) 
-using command <docker pull brentp/somalier:v0.2.15> followed by <docker save brentp/somalier | gzip > somalier_v0_2_15.tar.gz>

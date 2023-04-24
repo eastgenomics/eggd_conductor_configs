@@ -1,3 +1,0 @@
-ExAC population AFs
-source: wget -c ftp://ftp.broadinstitute.org/pub/ExAC_release/release0.3.1/ExAC.r0.3.1.sites.vep.vcf.gz
-md5sum: 10f6a1f28c4b8959d22613b419697588

@@ -1,4 +1,0 @@
-A tarball containing the GRCh38 reference genome and fasta index for GCA_000001405.15_GRCh38_no_alt_analysis_set_plus_hs38d1_maskedGRC_exclusions_v2_no_chr.fasta-index.tar.gz used by eggd_picard_qc app.
-The reference includes decoys and has duplicate regions masked. Alt contigs are not included.
-This file is copied into 001
-and can be found at file-GFGY3Bj4kj419YZq4bK0fg2x
