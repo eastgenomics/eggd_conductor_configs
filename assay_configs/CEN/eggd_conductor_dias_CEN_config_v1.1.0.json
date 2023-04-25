@@ -213,7 +213,7 @@
             }
         },
         "app-GF3K4Qj4bJyvpzx055V3G8q7": {
-            "name": "MultiQC",
+            "name": "eggd_MultiQC/2.0.1",
             "details": "",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
             "analysis": "analysis_3",
@@ -226,12 +226,12 @@
             "inputs": {
                 "project_for_multiqc": "INPUT-dx_project_name",
                 "primary_workflow_output": "INPUT-parent_out_dir",
-                "calc_custom_coverage": true,
+                "calc_custom_coverage": false,
                 "multiqc_docker": {
-                    "$dnanexus_link": "file-GF3PxgQ433Gqv1Q029Gjzjfv"
+                    "$dnanexus_link": "file-G61JxF84g59YVK4G43FzGzGp"
                 },
                 "multiqc_config_file": {
-                    "$dnanexus_link": "file-G97Jf0j433GgfGj12xKJ8Zf6"
+                    "$dnanexus_link": "file-GV415gQ4Q7q7ffZJXYFx05v9"
                 }
             },
             "output_dirs": {
