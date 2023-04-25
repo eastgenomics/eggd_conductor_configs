@@ -114,7 +114,7 @@
                 "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME"
             }
         },
-        "workflow-GV39g0j4bz4GJvzQVvX5bzBV": {
+        "workflow-GV40KG04bz43357995BqBQJY": {
             "name": "dias_multi_v2.0.0",
             "details": "Dias multi workflow - starts Hap.py and somalier_relate jobs",
             "url": "https://github.com/eastgenomics/eggd_dias_multi_workflow",
