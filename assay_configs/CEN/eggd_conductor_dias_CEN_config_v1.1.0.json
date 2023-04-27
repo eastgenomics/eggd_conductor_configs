@@ -228,7 +228,10 @@
                 "primary_workflow_output": "INPUT-parent_out_dir",
                 "calc_custom_coverage": false,
                 "multiqc_docker": {
-                    "$dnanexus_link": "file-G61JxF84g59YVK4G43FzGzGp"
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GF3PxgQ433Gqv1Q029Gjzjfv"
+                    }
                 },
                 "multiqc_config_file": {
                     "$dnanexus_link": "file-GV415gQ4Q7q7ffZJXYFx05v9"
