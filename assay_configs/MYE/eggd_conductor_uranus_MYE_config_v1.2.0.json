@@ -287,6 +287,12 @@
             "process_fastqs": false,
             "depends_on": ["analysis_1"],
             "inputs": {
+                "stage-somalier_relate.somalier_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GPQX4G04x14XV5PFfqGkGJk1"
+                    }
+                },
                 "stage-somalier_extract.somalier_extract_file": {
                     "$dnanexus_link": {
                         "analysis": "analysis_1",
