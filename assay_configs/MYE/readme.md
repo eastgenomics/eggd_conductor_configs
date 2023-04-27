@@ -1,4 +1,4 @@
-## Uranus input files
+## 📄 Uranus input files
 
 Below defines all input files, their versions and file locations in DNAnexus used as part of the Uranus pipeline.
 
