@@ -234,7 +234,7 @@
                     }
                 },
                 "multiqc_config_file": {
-                    "$dnanexus_link": "file-GV415gQ4Q7q7ffZJXYFx05v9"
+                    "$dnanexus_link": "file-GV55qpj47f086YFQb47B5Gg4"
                 }
             },
             "output_dirs": {
