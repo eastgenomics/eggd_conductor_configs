@@ -278,7 +278,7 @@
                 "applet-FvyXygj433GbKPPY0QY8ZKQG": "/OUT-FOLDER/APP-NAME"
             }
         },
-        "workflow-GV4VxK846Z72J09Zz91Vj61g": {
+        "workflow-GV54Qbj46Z794JgJVB9jKFj5": {
             "name": "somalier",
             "details": "workflow to run somalier relate and somalier_relate2multiQC",
             "url": "https://github.com/eastgenomics/eggd_somalier_workflow",
