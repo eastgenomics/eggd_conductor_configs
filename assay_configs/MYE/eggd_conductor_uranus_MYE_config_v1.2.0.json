@@ -51,6 +51,37 @@
                 "stage-eggd_vcf_handler_for_uranus.pindel_bed": {
                     "$dnanexus_link": "file-G0bFvXQ433GZJq780QgxZxKf"
                 },
+                "stage-eggd_vcf_handler_for_uranus.mutect2_fasta": {
+                    "$dnanexus_link": "file-Fy4gjFj41zgGjKJ85FYYPX4q"
+                },
+                "stage-eggd_vcf_handler_for_uranus.mutect2_fai": {
+                    "$dnanexus_link": "file-FyFGvzQ41zgBq7xf4Gy9Q28g"
+                },
+                "stage-eggd_vcf_handler_for_uranus.vep_docker": {
+                    "$dnanexus_link": "file-G61zff8433Gy2KQX7Q2z150B"
+                },
+                "stage-eggd_vcf_handler_for_uranus.vep_plugins": [
+                    {
+                      "$dnanexus_link": "file-G61zfvj433GxkQXF414xP1yF"
+                    },
+                    {
+                      "$dnanexus_link": "file-G620928433Gy9p2b27zb8JFV"
+                    }
+                ],
+                "stage-eggd_vcf_handler_for_uranus.vep_refs": [
+                    {
+                      "$dnanexus_link": "file-G61y95Q433Gk05zyFKF9kFv2"
+                    },
+                    {
+                      "$dnanexus_link": "file-G61yBV8433GjbVj022PyV3K5"
+                    },
+                    {
+                      "$dnanexus_link": "file-G61yBf0433Gp4BBVGj0jxqvP"
+                    },
+                    {
+                      "$dnanexus_link": "file-G61yF38433GQgP504Px5PZ4G"
+                    }
+                ],
                 "stage-eggd_vcf_handler_for_uranus.vep_annotation": [
                     {
                       "$dnanexus_link": "file-GPq3yF84J6BgY0vfYpqf9Z1X" 
@@ -82,37 +113,6 @@
                     {
                       "$dnanexus_link": "file-G64K4j8433Gb0PgpFgbzjj1b"
                     }  
-                ],
-                "stage-eggd_vcf_handler_for_uranus.mutect2_fastq": {
-                    "$dnanexus_link": "file-Fy4gjFj41zgGjKJ85FYYPX4q"
-                },
-                "stage-eggd_vcf_handler_for_uranus.mutect2_fai": {
-                    "$dnanexus_link": "file-FyFGvzQ41zgBq7xf4Gy9Q28g"
-                },
-                "stage-eggd_vcf_handler_for_uranus.vep_docker": {
-                    "$dnanexus_link": "file-G61zff8433Gy2KQX7Q2z150B"
-                },
-                "stage-eggd_vcf_handler_for_uranus.vep_plugins": [
-                    {
-                      "$dnanexus_link": "file-G61zfvj433GxkQXF414xP1yF"
-                    },
-                    {
-                      "$dnanexus_link": "file-G620928433Gy9p2b27zb8JFV"
-                    }
-                ],
-                "stage-eggd_vcf_handler_for_uranus.vep_refs": [
-                    {
-                      "$dnanexus_link": "file-G61y95Q433Gk05zyFKF9kFv2"
-                    },
-                    {
-                      "$dnanexus_link": "file-G61yBV8433GjbVj022PyV3K5"
-                    },
-                    {
-                      "$dnanexus_link": "file-G61yBf0433Gp4BBVGj0jxqvP"
-                    },
-                    {
-                      "$dnanexus_link": "file-G61yF38433GQgP504Px5PZ4G"
-                    }
                 ],
                 "stage-eggd_vcf_handler_for_uranus.maf_file": {
                     "$dnanexus_link": "file-G5PXK90433GjKFq70yfz9qfZ"
@@ -293,7 +293,7 @@
                         "id": "file-GPQX4G04x14XV5PFfqGkGJk1"
                     }
                 },
-                "stage-somalier_extract.somalier_extract_file": {
+                "stage-somalier_relate.somalier_extract_file": {
                     "$dnanexus_link": {
                         "analysis": "analysis_1",
                         "stage": "stage-somalier_extract",
@@ -302,8 +302,8 @@
                 }
             },
             "output_dirs": {
-                "stage-G9Z2B8841bQY907z1ygq7K9x": "/OUT-FOLDER/STAGE-NAME",
-                "stage-G9Z2B7Q41bQg2Jy40zVqqGg4": "/OUT-FOLDER/STAGE-NAME"
+                "stage-somalier_relate": "/OUT-FOLDER/STAGE-NAME",
+                "stage-somalier_relate2multiqc": "/OUT-FOLDER/STAGE-NAME"
             }
         },
         "app-GF3K4Qj4bJyvpzx055V3G8q7": {
