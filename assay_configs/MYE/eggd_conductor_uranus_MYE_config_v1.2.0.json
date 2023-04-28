@@ -14,7 +14,7 @@
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "workflow-GV58Gb04Zv8q3xp9XQQ6F82y": {
+        "workflow-GV5k4F04Zv8jfJBfx1K9JgY5": {
             "name": "uranus_main_workflow_GRCh38_v1.12.0",
             "details": "Main Uranus workflow for alignment and variant calling",
             "url": "https://github.com/eastgenomics/eggd_uranus_main_workflow",
@@ -192,6 +192,12 @@
                     }
                 },
                 "stage-athena.per_chromosome_coverage": true,
+                "stage-somalier_extract.somalier_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GPQX4G04x14XV5PFfqGkGJk1"
+                    }
+                },
                 "stage-somalier_extract.reference_genome": {
                     "$dnanexus_link": {
                       "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
@@ -244,12 +250,6 @@
                     }
                 },
                 "stage-sompy.query_vcf_string": "Oncospan|-[0-9]+Q[0-9]+-"
-            },
-            "inputs_filter": {
-                "stage-sentieon_tnbam.query_vcf": [
-                    "NA12878.*",
-                    "-[0-9]+Q[0-9]+-"
-                ]
             },
             "output_dirs": {
                 "stage-sentieon_bwa": "/OUT-FOLDER/STAGE-NAME",
