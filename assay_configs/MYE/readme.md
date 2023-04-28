@@ -5,7 +5,7 @@ Below defines all external input files, their versions and file locations in DNA
 ---
 ### [Uranus main workflow](https://github.com/eastgenomics/eggd_uranus_main_workflow)
 
-|  <div style="width:20px">App</div> 	| Input field |  Input file 	| Version  	|
+| App 	| Input field |  Input file 	| Version  	|
 |---	|---	|---	|--- |
 |[cgppindel](https://github.com/eastgenomics/eggd_cgppindel)| `normal` |[TA2_S59_L008_tumor_markdup.bam](https://platform.dnanexus.com/panx/projects/G21BGP84q5JFYf168QjZ58Vz/data/?scope=project&id.values=file-Fy9BXxQ40vjGfxP46Jb78Xf1)|not versioned|
 ||`normal_index`|[TA2_S59_L008_tumor_markdup.bam.bai](https://platform.dnanexus.com/panx/projects/G21BGP84q5JFYf168QjZ58Vz/data/?scope=project&id.values=file-Fy9BXxQ40vj7qPJq1Kppjx0F)|not versioned|
