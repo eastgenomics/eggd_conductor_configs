@@ -1,6 +1,6 @@
 ## 📄 Uranus input files
 
-Below defines all external input files, their versions and file locations in DNAnexus used as part of the Uranus pipeline.
+Below defines all external input files, their versions and file locations in DNAnexus used as part of the Uranus pipeline. These are used in the eggd_conductor assay config file within the `inputs` section for each executable
 
 ---
 ### [Uranus main workflow](https://github.com/eastgenomics/eggd_uranus_main_workflow)
