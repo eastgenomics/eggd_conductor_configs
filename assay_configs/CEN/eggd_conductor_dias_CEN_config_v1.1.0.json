@@ -1,7 +1,7 @@
 {
     "name": "Config for CEN assay",
     "assay": "CEN",
-    "assay_code": "-EGG5|-9527|-9617",
+    "assay_code": "-EGG5|-9527-|-9617-",
     "version": "1.1.0",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
@@ -63,7 +63,7 @@
                 "stage-picardQC.fasta_index": {
                     "$dnanexus_link": {
                         "project": "project-F3zqGV04fXX5j7566869fjFq",
-                        "id": "file-F3zxG0Q4fXX9YFjP1v5jK9jf"            
+                        "id": "file-F3zxG0Q4fXX9YFjP1v5jK9jf"
                     }
                 },
                 "stage-picardQC.bedfile": {
