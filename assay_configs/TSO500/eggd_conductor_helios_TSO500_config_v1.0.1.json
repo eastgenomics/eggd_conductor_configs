@@ -5,7 +5,8 @@
     "version": "1.0.0",
     "details": "Includes TSO500 local app only",
     "changelog": {
-        "v1.0.0": "Initial working version"
+        "v1.0.0": "Initial working version",
+        "v1.0.1": "Add new Epic procedure codes to assay_code field"
     },
     "demultiplex": false,
     "users": {
