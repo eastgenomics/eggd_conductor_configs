@@ -1,7 +1,7 @@
 {
     "name": "Config for helios workflow for TSO500 assay",
     "assay": "TSO500",
-    "assay_code": "EGG6",
+    "assay_code": "EGG6|-8471|-8472|-8475|-9689",
     "version": "1.0.0",
     "details": "Includes TSO500 local app only",
     "changelog": {
