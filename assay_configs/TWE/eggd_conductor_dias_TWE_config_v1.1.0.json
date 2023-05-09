@@ -240,7 +240,10 @@
                     }
                 },
                 "multiqc_config_file": {
-                    "$dnanexus_link": "file-G82Y3Kj433GV6bG91pB5VzG0"
+                    "$dnanexus_link":  {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GV8KZp04FfpQ7JPzzBbGXX2x"
+                    }
                 }
             },
             "output_dirs": {
