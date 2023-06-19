@@ -86,10 +86,10 @@
                 ],
                 "stage-eggd_vcf_handler_for_uranus.vep_annotation": [
                     {
-                      "$dnanexus_link": "file-GPq3yF84J6BgY0vfYpqf9Z1X" 
+                      "$dnanexus_link": "file-GVJk4Zj486y71gY8Pkz31Q5K"
                     },
                     {
-                      "$dnanexus_link": "file-GPq3yY04J6BZV72ZV955PgVV"
+                      "$dnanexus_link": "file-GVJk4kj486y77z179fx44XGQ"
                     },
                     {
                       "$dnanexus_link": "file-G61xbP0433GqX36p8QQxP3PV"
@@ -104,16 +104,16 @@
                       "$dnanexus_link": "file-G61y4Y8433GvyjJ52Fj5XjY5"
                     },
                     {
-                      "$dnanexus_link": "file-G64Jfk0433GVp0JJPZ4Q8FzJ"
+                      "$dnanexus_link": "file-GVgVpb8436p717kp00bz8Jy5"
                     },
                     {
-                      "$dnanexus_link": "file-G64K4bj433GZ35xJJ7YXGvzv"
+                      "$dnanexus_link": "file-GVgVpb8436p66kV0VpJp9bYK"
                     },
                     {
-                      "$dnanexus_link": "file-G64K0VQ433GV03462J6GXb9Z"
+                      "$dnanexus_link": "file-GVgVpb8436p31GYkx142xgPv"
                     },
                     {
-                      "$dnanexus_link": "file-G64K4j8433Gb0PgpFgbzjj1b"
+                      "$dnanexus_link": "file-GVgVpb8436pPYJv6BzKZ7vq3"
                     }  
                 ],
                 "stage-eggd_vcf_handler_for_uranus.maf_file": {
