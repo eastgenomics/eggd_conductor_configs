@@ -9,7 +9,7 @@
         "v1.1.0": "Updated main workflow to v1.11.0; updated multiQC app to v2.0.1 + config file and Docker image",
         "v1.2.0": "Updated main workflow to v1.12.0 (includes moving all workflow inputs from the dxworkflow.json to this config); updated somalier workflow to v1.1.0; added samplename as input for sentieon_tnbam; added new assay codes for Epic",
         "v1.2.1": "Added the new EPIC procedure code to end of assay_code field",
-        "v1.2.2": "Updated COSMIC resources (b38) to v98 and ClinVar annotation resources file to 2023 May version"
+        "v1.2.2": "Updated COSMIC resources (b38) to v98 and ClinVar annotation resources file to 2023 June version and updated MAF file and index"
     },
     "demultiplex": true,
     "users": {
