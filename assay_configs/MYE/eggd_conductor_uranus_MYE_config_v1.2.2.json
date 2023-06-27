@@ -117,10 +117,10 @@
                     }  
                 ],
                 "stage-eggd_vcf_handler_for_uranus.maf_file": {
-                    "$dnanexus_link": "file-G5PXK90433GjKFq70yfz9qfZ"
+                    "$dnanexus_link": "file-GXGk1p84Ggg1kFJGf56V9yGy"
                 },
                 "stage-eggd_vcf_handler_for_uranus.maf_file_tbi": {
-                    "$dnanexus_link": "file-G5PXKFj433Gv495095Z95pk1"
+                    "$dnanexus_link": "file-GXGk1p84Ggg6Kj3GY4YX0zGk"
                 },
                 "stage-cgppindel.reference_index": {
                     "$dnanexus_link": {
