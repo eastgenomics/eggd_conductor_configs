@@ -2,11 +2,12 @@
     "name": "Config for Twist whole exome assay",
     "assay": "TWE",
     "assay_code": "-EGG4|-9526-|-9688-",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
         "v1.0.0": "Initial working version",
-        "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files"
+        "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
+        "v1.1.1": "Updated somalier genome reference projects"
     },
     "demultiplex": true,
     "demultiplex_config": {
