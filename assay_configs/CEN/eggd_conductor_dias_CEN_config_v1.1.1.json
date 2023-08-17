@@ -1,17 +1,15 @@
 {
-    "name": "Config for Twist whole exome assay",
-    "assay": "TWE",
-    "assay_code": "-EGG4|-9526-|-9688-",
-    "version": "1.1.0",
-    "details": "Includes main Dias workflows: single, multi and QC reports",
+    "name": "Config for CEN assay",
+    "assay": "CEN",
+    "assay_code": "-EGG5|-9527-|-9617-",
+    "version": "1.1.1",
+    "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
         "v1.0.0": "Initial working version",
-        "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files"
+        "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
+        "v1.1.1": "Updated somalier reference genome projects"
     },
     "demultiplex": true,
-    "demultiplex_config": {
-        "instance_type": "mem2_ssd1_v2_x48"
-    },
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
@@ -72,7 +70,7 @@
                 "stage-picardQC.bedfile": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-G2J5ZV0433GQJz7860vb4PB1"
+                        "id": "file-G5jjzG0433GgkQ093K2p8PxQ"
                     }
                 },
                 "stage-mosdepth.bed": {
@@ -89,13 +87,13 @@
                 },
                 "stage-somalier_extract.reference_genome": {
                     "$dnanexus_link": {
-                        "project": "project-Fv2gqv04kxV0QZgY3gZ1VG0P",
+                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
                         "id": "file-F403K904F30y2vpVFqxB9kz7"
                     }
                 },
                 "stage-somalier_extract.reference_genome_index": {
                     "$dnanexus_link": {
-                        "project": "project-Fv2gqv04kxV0QZgY3gZ1VG0P",
+                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
                         "id": "file-F3zxG0Q4fXX9YFjP1v5jK9jf"
                     }
                 },
@@ -147,7 +145,7 @@
                 "stage-vcfeval_happy.panel_bed": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-G2V8k90433GVQ7v07gfj0ggX"
+                        "id": "file-G620390433GYGY34Jq6Zq1Xf"
                     }
                 },
                 "stage-vcfeval_happy.high_conf_bed": {
@@ -199,7 +197,7 @@
                         "field": "somalier_output"
                     }
                 },
-                "stage-somalier_relate2multiqc.female_threshold": 60,
+                "stage-somalier_relate2multiqc.female_threshold": 3,
                 "stage-somalier_relate2multiqc.male_threshold": 1
             },
             "inputs_filter": {
@@ -226,9 +224,6 @@
                 "analysis_1",
                 "analysis_2"
             ],
-            "extra_args": {
-                "systemRequirements": {"*": {"instanceType": "mem1_ssd1_v2_x8"}}
-            },
             "inputs": {
                 "project_for_multiqc": "INPUT-dx_project_name",
                 "primary_workflow_output": "INPUT-parent_out_dir",
@@ -240,10 +235,7 @@
                     }
                 },
                 "multiqc_config_file": {
-                    "$dnanexus_link":  {
-                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GV8KZp04FfpQ7JPzzBbGXX2x"
-                    }
+                    "$dnanexus_link": "file-GV55qpj47f086YFQb47B5Gg4"
                 }
             },
             "output_dirs": {
