@@ -89,13 +89,13 @@
                 },
                 "stage-somalier_extract.reference_genome": {
                     "$dnanexus_link": {
-                        "project": "project-Fv2gqv04kxV0QZgY3gZ1VG0P",
+                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
                         "id": "file-F403K904F30y2vpVFqxB9kz7"
                     }
                 },
                 "stage-somalier_extract.reference_genome_index": {
                     "$dnanexus_link": {
-                        "project": "project-Fv2gqv04kxV0QZgY3gZ1VG0P",
+                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
                         "id": "file-F3zxG0Q4fXX9YFjP1v5jK9jf"
                     }
                 },
