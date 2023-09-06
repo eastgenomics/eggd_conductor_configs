@@ -2,13 +2,13 @@
     "name": "Config for Twist whole exome assay",
     "assay": "TWE",
     "assay_code": "-EGG4|-9526-|-9688-",
-    "version": "1.2.0",
+    "version": "2.0.0",
     "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
         "v1.1.1": "Updated somalier genome reference projects",
-        "v1.2.0": "Updates to all reference related file to GRCh38"
+        "v2.0.0": "Updates to all reference related file to GRCh38"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -143,7 +143,7 @@
                 "stage-vcfeval_happy.truth_vcf": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-G08481j433GvB0XJJbg35jY8"
+                        "id": "file-GYv4kKQ43bP9XZZXz7bYJJjx"
                     }
                 },
                 "stage-vcfeval_happy.panel_bed": {
@@ -155,7 +155,13 @@
                 "stage-vcfeval_happy.high_conf_bed": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-G084810433GYBBGq3q1p3fjF"
+                        "id": "file-GYv4kJj43bPFv25JX1ZP7Z39"
+                    }
+                },
+                "stage-vcfeval_happy.reference_fasta_index": {
+                    "$dnanexus_link": {
+                        "project": "project-GYgPzp04zX5pzBpFqP6FZ9qZ",
+                        "id": "file-GYgZGx84zX5ZQFV3J46Jk56k"
                     }
                 },
                 "stage-vcfeval_happy.reference_fasta": {
