@@ -170,6 +170,12 @@
                         "id": "file-GF81ZX04kj4Jg6f90X33ggYj"
                     }
                 },
+                "stage-vcfeval_happy.reference_sdf_tar": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GYxKfV84zX5gJ9y7f0Y39Y44"
+                    }
+                },
                 "stage-vcfeval_happy.happy_docker": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
