@@ -77,12 +77,6 @@
                         "id": "file-G7FK1xQ4kj4317YGFpqYPb75"
                     }
                 },
-                "stage-mosdepth.bed": {
-                    "$dnanexus_link": {
-                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-G7FK1xQ4kj4317YGFpqYPb75"
-                    }
-                },
                 "stage-somalier_extract.somalier_docker": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
