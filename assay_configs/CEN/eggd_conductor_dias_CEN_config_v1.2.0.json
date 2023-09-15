@@ -2,12 +2,13 @@
     "name": "Config for CEN assay",
     "assay": "CEN",
     "assay_code": "-EGG5|-9527-|-9617-",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
-        "v1.1.1": "Updated somalier reference genome projects"
+        "v1.1.1": "Updated somalier reference genome projects",
+        "v1.2.0": "Updated instance type for MultiQC"
     },
     "demultiplex": true,
     "users": {
@@ -224,6 +225,9 @@
                 "analysis_1",
                 "analysis_2"
             ],
+            "extra_args": {
+                "systemRequirements": {"*": {"instanceType": "mem2_ssd1_v2_x8"}}
+            },
             "inputs": {
                 "project_for_multiqc": "INPUT-dx_project_name",
                 "primary_workflow_output": "INPUT-parent_out_dir",
