@@ -113,8 +113,8 @@
                 "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME"
             }
         },
-        "workflow-GV40KG04bz43357995BqBQJY": {
-            "name": "dias_multi_v2.0.0",
+        "workflow-GZFB75j4kYX4k6jfG3f9p3XX": {
+            "name": "dias_multi_v2.1.0",
             "details": "Dias multi workflow - starts Hap.py and somalier_relate jobs",
             "url": "https://github.com/eastgenomics/eggd_dias_multi_workflow",
             "analysis": "analysis_2",
@@ -152,16 +152,10 @@
                         "id": "file-GYv4kJj43bPFv25JX1ZP7Z39"
                     }
                 },
-                "stage-vcfeval_happy.reference_fasta_index": {
-                    "$dnanexus_link": {
-                        "project": "project-GYgPzp04zX5pzBpFqP6FZ9qZ",
-                        "id": "file-GYgZGx84zX5ZQFV3J46Jk56k"
-                    }
-                },
-                "stage-vcfeval_happy.reference_fasta": {
+                "stage-vcfeval_happy.reference_fasta_tar": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GF81ZX04kj4Jg6f90X33ggYj"
+                        "id": "file-GFGY3Bj4kj419YZq4bK0fg2x"
                     }
                 },
                 "stage-vcfeval_happy.reference_sdf_tar": {
