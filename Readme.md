@@ -33,7 +33,7 @@ i.e.
 - current file:
   ```
   # assay_configs/CEN/eggd_conductor_dias_CEN_config_v1.0.0.json
-  
+
   {
     "name": "Config for CEN assay",
     "assay": "CEN",
@@ -46,11 +46,11 @@ i.e.
     "demultiplex": true,
     ...
   ```
- 
+
 - new file:
   ```
   # assay_configs/CEN/eggd_conductor_dias_CEN_config_v1.1.0.json
-  
+
   {
     "name": "Config for CEN assay",
     "assay": "CEN",
