@@ -2,14 +2,15 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "details": "Includes main Uranus workflow, multi_fastqc, somalier workflow and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated main workflow to v1.11.0; updated multiQC app to v2.0.1 + config file and Docker image",
         "v1.2.0": "Updated main workflow to v1.12.0 (includes moving all workflow inputs from the dxworkflow.json to this config); updated somalier workflow to v1.1.0; added samplename as input for sentieon_tnbam; added new assay codes for Epic",
         "v1.2.1": "Added the new EPIC procedure code to end of assay_code field",
-        "v1.2.3": "Updated to use latest ClinVar and COSMIC annotation resource"
+        "v1.2.3": "Updated to use latest ClinVar and COSMIC annotation resource",
+        "v1.2.4": "Updated to use latest ClinVar annotation resource"
     },
     "demultiplex": true,
     "users": {
@@ -86,10 +87,10 @@
                 ],
                 "stage-eggd_vcf_handler_for_uranus.vep_annotation": [
                     {
-                      "$dnanexus_link": "file-GZg4jJQ42VYpq8g3Y8Fgf1Kg" 
+                      "$dnanexus_link": "file-GbJg4Y842VYxBpX7qVYp9j4Y" 
                     },
                     {
-                      "$dnanexus_link": "file-GZg4jgQ42VYbV4zZkVk02Vy0"
+                      "$dnanexus_link": "file-GbJg4b842VYj0XxxV5X0jJz7"
                     },
                     {
                       "$dnanexus_link": "file-G61xbP0433GqX36p8QQxP3PV"
