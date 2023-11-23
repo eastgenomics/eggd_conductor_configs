@@ -2,18 +2,19 @@
     "name": "Config for helios workflow for TSO500 assay",
     "assay": "TSO500",
     "assay_code": "EGG6|-8471|-8472|-8475|-9689",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "details": "Includes TSO500 local app only",
     "changelog": {
         "v1.0.0": "Initial working version",
-        "v1.0.1": "Add new Epic procedure codes to assay_code field"
+        "v1.0.1": "Add new Epic procedure codes to assay_code field",
+        "v1.1.0": "Update eggd_TSO500 v1.2.0 -> v2.0.0"
     },
     "demultiplex": false,
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "app-G8vFF0Q4v5vPVgx90QjQfg7v": {
+        "app-GZxvpV845JGGX8K5YGY48BV3": {
             "name": "TSO500 local app",
             "details": "TSO500 local app",
             "url": "https://github.com/eastgenomics/eggd_tso500",
@@ -28,7 +29,7 @@
                 "samplesheet": {
                     "$dnanexus_link": "INPUT-SAMPLESHEET"
                 },
-                "input_files": "INPUT-UPLOAD_TARS"
+                "run_tar_data": "INPUT-UPLOAD_TARS"
             },
             "output_dirs": {
                 "app-G8vFF0Q4v5vPVgx90QjQfg7v": "/OUT-FOLDER/APP-NAME"
