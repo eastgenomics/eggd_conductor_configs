@@ -19,7 +19,7 @@
     },
     "executables": {
         "workflow-GbXF3bQ4zbvBzjg4j6884z3g": {
-            "name": "dias_single_v2.1.0",
+            "name": "dias_single_v2.2.0",
             "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAM_ID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step",
             "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
             "analysis": "analysis_1",
