@@ -2,21 +2,22 @@
     "name": "Config for CEN assay",
     "assay": "CEN",
     "assay_code": "-EGG5|-9527-|-9617-",
-    "version": "1.2.0",
+    "version": "2.0.0",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
         "v1.1.1": "Updated somalier reference genome projects",
-        "v1.2.0": "Updated instance type for MultiQC"
+        "v1.2.0": "Updated instance type for MultiQC",
+        "v2.0.0": "Updates to all reference genome related files to GRCh38"
     },
     "demultiplex": true,
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "workflow-GV35kQj4P1ggx5gYFZGb3zFK": {
-            "name": "dias_single_v2.1.0",
+        "workflow-GbXF3bQ4zbvBzjg4j6884z3g": {
+            "name": "dias_single_v2.2.0",
             "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAM_ID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step",
             "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
             "analysis": "analysis_1",
@@ -31,32 +32,32 @@
                 "stage-sentieon_dnaseq.ignore_decoy": true,
                 "stage-sentieon_dnaseq.genome_fastagz": {
                     "$dnanexus_link": {
-                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
-                        "id": "file-F403K904F30y2vpVFqxB9kz7"
+                        "project": "project-Gb7329Q4XGyX6yz59fvp0V5j",
+                        "id": "file-Gb757784XGyY3FPvkPQ74K9z"
                     }
                 },
                 "stage-sentieon_dnaseq.genomebwaindex_targz": {
                     "$dnanexus_link": {
-                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
-                        "id": "file-F404y604F30fbxQG68KF3GZb"
+                        "project": "project-Gb7329Q4XGyX6yz59fvp0V5j",
+                        "id": "file-Gb76f204XGybZ3J6F731xkBp"
                     }
                 },
                 "stage-sentieon_dnaseq.gatk_resource_bundle": {
                     "$dnanexus_link": {
                         "project": "project-F3zqGV04fXX5j7566869fjFq",
-                        "id": "file-F3zx7gj4fXX8QG3Q42BzpyZJ"
+                        "id": "file-F3zvKp84fXX8qJx43zZXP395"
                     }
                 },
                 "stage-verifybamid.vcf_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-G08V2gj41zgGYp1K79YZXqx8"
+                        "id": "file-G7YKFZj4kj47GxgQ2bKGYV1g"
                     }
                 },
                 "stage-vcfQC.bed_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-Fpz2X0Q433GVK5xxPvzqvVPB"
+                        "id": "file-GFF77q84kj4J701y0Gq3KqqV"
                     }
                 },
                 "stage-picardQC.run_CollectMultipleMetrics": false,
@@ -64,20 +65,14 @@
                 "stage-picardQC.run_CollectTargetedPcrMetrics": false,
                 "stage-picardQC.fasta_index": {
                     "$dnanexus_link": {
-                        "project": "project-F3zqGV04fXX5j7566869fjFq",
-                        "id": "file-F3zxG0Q4fXX9YFjP1v5jK9jf"
+                        "project": "project-Gb7329Q4XGyX6yz59fvp0V5j",
+                        "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
                     }
                 },
                 "stage-picardQC.bedfile": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-G5jjzG0433GgkQ093K2p8PxQ"
-                    }
-                },
-                "stage-mosdepth.bed": {
-                    "$dnanexus_link": {
-                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-Fpz2X0Q433GVK5xxPvzqvVPB"
+                        "id": "file-GP2bGp848QggjG456FJ1vG95"
                     }
                 },
                 "stage-somalier_extract.somalier_docker": {
@@ -86,22 +81,16 @@
                         "id": "file-GPQX4G04x14XV5PFfqGkGJk1"
                     }
                 },
-                "stage-somalier_extract.reference_genome": {
+                "stage-somalier_extract.reference_fasta_tar": {
                     "$dnanexus_link": {
-                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
-                        "id": "file-F403K904F30y2vpVFqxB9kz7"
-                    }
-                },
-                "stage-somalier_extract.reference_genome_index": {
-                    "$dnanexus_link": {
-                        "project": "project-F3zqGV04fXX5j7566869fjFq",
-                        "id": "file-F3zxG0Q4fXX9YFjP1v5jK9jf"
+                        "project": "project-Gb7329Q4XGyX6yz59fvp0V5j",
+                        "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
                     }
                 },
                 "stage-somalier_extract.snp_site_vcf": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-G18PB8Q4vQpfvPv83qKpj2QG"
+                        "id": "file-G7FJjz04kj424vq826gKbZx7"
                     }
                 }
             },
@@ -116,8 +105,8 @@
                 "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME"
             }
         },
-        "workflow-GV40KG04bz43357995BqBQJY": {
-            "name": "dias_multi_v2.0.0",
+        "workflow-GZFB75j4kYX4k6jfG3f9p3XX": {
+            "name": "dias_multi_v2.1.0",
             "details": "Dias multi workflow - starts Hap.py and somalier_relate jobs",
             "url": "https://github.com/eastgenomics/eggd_dias_multi_workflow",
             "analysis": "analysis_2",
@@ -140,37 +129,31 @@
                 "stage-vcfeval_happy.truth_vcf": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-FjkzKVQ4yBGkQQg53bX957G7"
+                        "id": "file-GYv4kKQ43bP9XZZXz7bYJJjx"
                     }
                 },
                 "stage-vcfeval_happy.panel_bed": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-G620390433GYGY34Jq6Zq1Xf"
+                        "id": "file-G7qpfY04kj4Ppyk4BYZ9PPVp"
                     }
                 },
                 "stage-vcfeval_happy.high_conf_bed": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-FjkzKPQ4yBGgBgJ6KvyZ563P"
+                        "id": "file-GYv4kJj43bPFv25JX1ZP7Z39"
                     }
                 },
-                "stage-vcfeval_happy.reference_fasta": {
+                "stage-vcfeval_happy.reference_fasta_tar": {
                     "$dnanexus_link": {
-                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
-                        "id": "file-F403K904F30y2vpVFqxB9kz7"
-                    }
-                },
-                "stage-vcfeval_happy.reference_fasta_index": {
-                    "$dnanexus_link": {
-                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
-                        "id": "file-F3zyVj84F30jxYxG68vJyg68"
+                        "project": "project-Gb7329Q4XGyX6yz59fvp0V5j",
+                        "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
                     }
                 },
                 "stage-vcfeval_happy.reference_sdf_tar": {
                     "$dnanexus_link": {
-                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-Fjp4k3j4yBGpK4x73bzbG2P0"
+                        "project": "project-Gb7329Q4XGyX6yz59fvp0V5j",
+                        "id": "file-Gb75X184XGypG6k0fq8P6Y6Z"
                     }
                 },
                 "stage-vcfeval_happy.happy_docker": {
@@ -239,7 +222,10 @@
                     }
                 },
                 "multiqc_config_file": {
-                    "$dnanexus_link": "file-GV55qpj47f086YFQb47B5Gg4"
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GV55qpj47f086YFQb47B5Gg4"
+                    }
                 }
             },
             "output_dirs": {
