@@ -34,13 +34,13 @@
                 "stage-sentieon_dnaseq.ignore_decoy": true,
                 "stage-sentieon_dnaseq.genome_fastagz": {
                     "$dnanexus_link": {
-                        "project": "project-Gb7329Q4XGyX6yz59fvp0V5j",
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-Gb757784XGyY3FPvkPQ74K9z"
                     }
                 },
                 "stage-sentieon_dnaseq.genomebwaindex_targz": {
                     "$dnanexus_link": {
-                        "project": "project-Gb7329Q4XGyX6yz59fvp0V5j",
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-Gb76f204XGybZ3J6F731xkBp"
                     }
                 },
@@ -67,7 +67,7 @@
                 "stage-picardQC.run_CollectTargetedPcrMetrics": false,
                 "stage-picardQC.fasta_index": {
                     "$dnanexus_link": {
-                        "project": "project-Gb7329Q4XGyX6yz59fvp0V5j",
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
                     }
                 },
@@ -85,7 +85,7 @@
                 },
                 "stage-somalier_extract.reference_fasta_tar": {
                     "$dnanexus_link": {
-                        "project": "project-Gb7329Q4XGyX6yz59fvp0V5j",
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
                     }
                 },
@@ -137,7 +137,7 @@
                 "stage-vcfeval_happy.panel_bed": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-G7FK1xQ4kj4317YGFpqYPb75"
+                        "id": "file-GbYg9J04XGyqK7xkQjbXj6GG"
                     }
                 },
                 "stage-vcfeval_happy.high_conf_bed": {
@@ -148,13 +148,13 @@
                 },
                 "stage-vcfeval_happy.reference_fasta_tar": {
                     "$dnanexus_link": {
-                        "project": "project-Gb7329Q4XGyX6yz59fvp0V5j",
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
                     }
                 },
                 "stage-vcfeval_happy.reference_sdf_tar": {
                     "$dnanexus_link": {
-                        "project": "project-Gb7329Q4XGyX6yz59fvp0V5j",
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-Gb75X184XGypG6k0fq8P6Y6Z"
                     }
                 },
