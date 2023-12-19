@@ -29,16 +29,16 @@ Below defines all external input files, their versions and file locations in DNA
 ||`pkrusche_`<br>`happy_docker`|[pkrusche_happy_v0.3.9.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-GFGbK48433GzV4y54b25p43Z)|v0.3.9|
 |[eggd_vcf_handler<br>_for_uranus](https://github.com/eastgenomics/eggd_vcf_handler_for_uranus)|`mutect2_bed`|[coding_unrestricted_GRCh38_myeloid_5bp_flank_v2.0.0.bed](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G9vKbv0433Gg2bP9GP72pxKJ)|v2.0.0|
 ||`pindel_bed`|[pindel_cgppindel_filtering_coordinates_v1.0.bed](https://platform.dnanexus.com/panx/projects/G21BGP84q5JFYf168QjZ58Vz/data/?scope=project&id.values=file-G0bFvXQ433GZJq780QgxZxKf)|v1.0|
-||`vep_annotation`|[clinvar_20231112_b38_withchr.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20231112|
-||`vep_annotation`|[clinvar_20231112_b38_withchr.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20231112|
+||`vep_annotation`|[clinvar_20231217_hg38_withchr.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20231217|
+||`vep_annotation`|[clinvar_20231217_hg38_withchr.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20231217|
 ||`vep_refs`|[gnomad.genomes.r3.0.indel.tsv.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61xbP0433GqX36p8QQxP3PV)|version r3.0|
 ||`vep_refs`|[gnomad.genomes.r3.0.indel.tsv.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61xf3j433Gz49jf6XjKG4F0)|version r3.0|
 ||`vep_refs`|[whole_genome_SNVs.tsv.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61xfZ0433Gj2vJ7P8k9ky2Z)| not versioned|
 ||`vep_refs`|[whole_genome_SNVs.tsv.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61y4Y8433GvyjJ52Fj5XjY5)|not versioned|
-||`vep_annotation`|[CosmicCodingMuts_GRCh38_v98.normal.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G64Jfk0433GVp0JJPZ4Q8FzJ)|v98|
-||`vep_annotation`|[CosmicCodingMuts_GRCh38_v98.normal.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G64K4bj433GZ35xJJ7YXGvzv)|v98|
-||`vep_annotation`|[CosmicNonCodingVariants_GRCh38_v98.normal.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G64K0VQ433GV03462J6GXb9Z)|v98|
-||`vep_annotation`|[CosmicNonCodingVariants_GRCh38_v98.normal.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G64K4j8433Gb0PgpFgbzjj1b)|v98|
+||`vep_annotation`|[CosmicCodingMuts_GRCh38_v99.normal.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gf02Fxj4Pj2vPPV0zyfpbFkz)|v99|
+||`vep_annotation`|[CosmicCodingMuts_GRCh38_v99.normal.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gf02JgQ4Pj2xZg2b1g9pVV7g)|v99|
+||`vep_annotation`|[CosmicNonCodingVariants_GRCh38_v99.normal.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gf02Jj04Pj2ZPxF97V6YJFKv)|v99|
+||`vep_annotation`|[CosmicNonCodingVariants_GRCh38_v99.normal.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gf02KG84Pj2QB86kK721B9yQ)|v99|
 ||`vep_docker`|[vep_v103.1_docker.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61zff8433Gy2KQX7Q2z150B)|v103.1|
 ||`vep_plugins`|[plugin_config.txt](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61zfvj433GxkQXF414xP1yF)| not versioned|
 ||`vep_plugins`|[ CADD.pm](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G620928433Gy9p2b27zb8JFV)|not versioned|
