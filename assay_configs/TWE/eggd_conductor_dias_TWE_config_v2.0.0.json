@@ -1,0 +1,238 @@
+{
+    "name": "Config for Twist whole exome assay",
+    "assay": "TWE",
+    "assay_code": "-EGG4|-9526-|-9688-",
+    "version": "2.0.0",
+    "details": "Includes main Dias workflows: single, multi and QC reports",
+    "changelog": {
+        "v1.0.0": "Initial working version",
+        "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
+        "v1.1.1": "Updated somalier genome reference projects",
+        "v2.0.0": "Updates to all reference related file to GRCh38"
+    },
+    "demultiplex": true,
+    "demultiplex_config": {
+        "instance_type": "mem2_ssd1_v2_x48"
+    },
+    "users": {
+        "org-emee_1": "CONTRIBUTE"
+    },
+    "executables": {
+        "workflow-GbXF3bQ4zbvBzjg4j6884z3g": {
+            "name": "dias_single_v2.2.0",
+            "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAM_ID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step",
+            "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
+            "analysis": "analysis_1",
+            "per_sample": true,
+            "process_fastqs": true,
+            "inputs": {
+                "stage-fastQC.fastqs": "INPUT-R1-R2",
+                "stage-sentieon_dnaseq.sample": "INPUT-SAMPLE-NAME",
+                "stage-sentieon_dnaseq.reads_fastqgzs": "INPUT-R1",
+                "stage-sentieon_dnaseq.reads2_fastqgzs": "INPUT-R2",
+                "stage-sentieon_dnaseq.output_metrics": true,
+                "stage-sentieon_dnaseq.ignore_decoy": true,
+                "stage-sentieon_dnaseq.genome_fastagz": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gb757784XGyY3FPvkPQ74K9z"
+                    }
+                },
+                "stage-sentieon_dnaseq.genomebwaindex_targz": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gb76f204XGybZ3J6F731xkBp"
+                    }
+                },
+                "stage-sentieon_dnaseq.gatk_resource_bundle": {
+                    "$dnanexus_link": {
+                        "project": "project-F3zqGV04fXX5j7566869fjFq",
+                        "id": "file-F3zvKp84fXX8qJx43zZXP395"
+                    }
+                },
+                "stage-verifybamid.vcf_file": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-G7YKFZj4kj47GxgQ2bKGYV1g"
+                    }
+                },
+                "stage-vcfQC.bed_file": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GZYqkkQ4fPQpKYz0BYPZk68j"
+                    }
+                },
+                "stage-picardQC.run_CollectMultipleMetrics": false,
+                "stage-picardQC.run_CollectHsMetrics": true,
+                "stage-picardQC.run_CollectTargetedPcrMetrics": false,
+                "stage-picardQC.fasta_index": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+                    }
+                },
+                "stage-picardQC.bedfile": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-G7FK1xQ4kj4317YGFpqYPb75"
+                    }
+                },
+                "stage-somalier_extract.somalier_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GPQX4G04x14XV5PFfqGkGJk1"
+                    }
+                },
+                "stage-somalier_extract.reference_fasta_tar": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+                    }
+                },
+                "stage-somalier_extract.snp_site_vcf": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-G7FJjz04kj424vq826gKbZx7"
+                    }
+                }
+            },
+            "output_dirs": {
+                "stage-fastQC": "/OUT-FOLDER/STAGE-NAME",
+                "stage-sentieon_dnaseq": "/OUT-FOLDER/STAGE-NAME",
+                "stage-verifybamid": "/OUT-FOLDER/STAGE-NAME",
+                "stage-vcfQC": "/OUT-FOLDER/STAGE-NAME",
+                "stage-samtools_flagstat": "/OUT-FOLDER/STAGE-NAME",
+                "stage-picardQC": "/OUT-FOLDER/STAGE-NAME",
+                "stage-mosdepth": "/OUT-FOLDER/STAGE-NAME",
+                "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME"
+            }
+        },
+        "workflow-GZFB75j4kYX4k6jfG3f9p3XX": {
+            "name": "dias_multi_v2.1.0",
+            "details": "Dias multi workflow - starts Hap.py and somalier_relate jobs",
+            "url": "https://github.com/eastgenomics/eggd_dias_multi_workflow",
+            "analysis": "analysis_2",
+            "per_sample": false,
+            "process_fastqs": false,
+            "depends_on": [
+                "analysis_1"
+            ],
+            "inputs": {
+                "stage-update_runfolders.SampleSheet": {
+                    "$dnanexus_link": "INPUT-SAMPLESHEET"
+                },
+                "stage-vcfeval_happy.query_vcf": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-sentieon_dnaseq",
+                        "field": "variants_vcf"
+                    }
+                },
+                "stage-vcfeval_happy.truth_vcf": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GYv4kKQ43bP9XZZXz7bYJJjx"
+                    }
+                },
+                "stage-vcfeval_happy.panel_bed": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GbYg9J04XGyqK7xkQjbXj6GG"
+                    }
+                },
+                "stage-vcfeval_happy.high_conf_bed": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GYv4kJj43bPFv25JX1ZP7Z39"
+                    }
+                },
+                "stage-vcfeval_happy.reference_fasta_tar": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+                    }
+                },
+                "stage-vcfeval_happy.reference_sdf_tar": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gb75X184XGypG6k0fq8P6Y6Z"
+                    }
+                },
+                "stage-vcfeval_happy.happy_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GFGbK48433GzV4y54b25p43Z"
+                    }
+                },
+                "stage-vcfeval_happy.reppy_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GFGbK48433Gk4xYG8KK05QqY"
+                    }
+                },
+                "stage-somalier_relate.somalier_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GPQX4G04x14XV5PFfqGkGJk1"
+                    }
+                },
+                "stage-somalier_relate.somalier_extract_file": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-somalier_extract",
+                        "field": "somalier_output"
+                    }
+                },
+                "stage-somalier_relate2multiqc.female_threshold": 60,
+                "stage-somalier_relate2multiqc.male_threshold": 1
+            },
+            "inputs_filter": {
+                "stage-vcfeval_happy.query_vcf": [
+                    "NA12878.*",
+                    "-[0-9]+Q[0-9]+-"
+                ]
+            },
+            "output_dirs": {
+                "stage-update_runfolders": "/OUT-FOLDER/STAGE-NAME",
+                "stage-vcfeval_happy": "/OUT-FOLDER/STAGE-NAME",
+                "stage-somalier_relate": "/OUT-FOLDER/STAGE-NAME",
+                "stage-somalier_relate2multiqc": "/OUT-FOLDER/STAGE-NAME"
+            }
+        },
+        "app-GF3K4Qj4bJyvpzx055V3G8q7": {
+            "name": "eggd_MultiQC/2.0.1",
+            "details": "",
+            "url": "https://github.com/eastgenomics/eggd_multiqc",
+            "analysis": "analysis_3",
+            "per_sample": false,
+            "process_fastqs": false,
+            "depends_on": [
+                "analysis_1",
+                "analysis_2"
+            ],
+            "extra_args": {
+                "systemRequirements": {"*": {"instanceType": "mem1_ssd1_v2_x8"}}
+            },
+            "inputs": {
+                "project_for_multiqc": "INPUT-dx_project_name",
+                "primary_workflow_output": "INPUT-parent_out_dir",
+                "calc_custom_coverage": false,
+                "multiqc_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GF3PxgQ433Gqv1Q029Gjzjfv"
+                    }
+                },
+                "multiqc_config_file": {
+                    "$dnanexus_link":  {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GV8KZp04FfpQ7JPzzBbGXX2x"
+                    }
+                }
+            },
+            "output_dirs": {
+                "app-GF3K4Qj4bJyvpzx055V3G8q7": "/OUT-FOLDER/APP-NAME"
+            }
+        }
+    }
+}
