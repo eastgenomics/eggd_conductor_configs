@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "details": "Includes main Uranus workflow, multi_fastqc, somalier workflow and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -11,7 +11,8 @@
         "v1.2.1": "Added the new EPIC procedure code to end of assay_code field",
         "v1.2.3": "Updated to use latest ClinVar and COSMIC annotation resource",
         "v1.2.4": "Updated to use ClinVar version 20231112 (hg38)",
-        "v1.2.5": "Updated to use ClinVar version 20231217 and COSMIC v99 (hg38)"
+        "v1.2.5": "Updated to use ClinVar version 20231217 and COSMIC v99 (hg38)",
+        "v1.2.6": "Updated to use new Myeloid NovaSeq samples MAF file (haemonc_1706_samples)"
     },
     "demultiplex": true,
     "users": {
@@ -119,10 +120,10 @@
                     }  
                 ],
                 "stage-eggd_vcf_handler_for_uranus.maf_file": {
-                    "$dnanexus_link": "file-G5PXK90433GjKFq70yfz9qfZ"
+                    "$dnanexus_link": "file-GZJFvq043bFzkk3xBxY6GZyX"
                 },
                 "stage-eggd_vcf_handler_for_uranus.maf_file_tbi": {
-                    "$dnanexus_link": "file-G5PXKFj433Gv495095Z95pk1"
+                    "$dnanexus_link": "file-GZJFvq043bFyG614g32P3K59"
                 },
                 "stage-cgppindel.reference_index": {
                     "$dnanexus_link": {
