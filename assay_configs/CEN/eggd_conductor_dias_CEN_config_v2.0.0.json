@@ -57,7 +57,7 @@
                 "stage-vcfQC.bed_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GFF77q84kj4J701y0Gq3KqqV"
+                        "id": "file-GZYqkkQ4fPQpKYz0BYPZk68j"
                     }
                 },
                 "stage-picardQC.run_CollectMultipleMetrics": false,
