@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-",
-    "version": "1.2.7",
+    "version": "1.2.8",
     "details": "Includes main Uranus workflow, multi_fastqc, somalier workflow and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -13,7 +13,8 @@
         "v1.2.4": "Updated to use ClinVar version 20231112 (hg38)",
         "v1.2.5": "Updated to use ClinVar version 20231217 and COSMIC v99 (hg38)",
         "v1.2.6": "Updated to use new Myeloid NovaSeq samples MAF file (haemonc_1706_samples)",
-        "v1.2.7": "Updated to use ClinVar version 20240107 (hg38)"
+        "v1.2.7": "Updated to use ClinVar version 20240107 (hg38)",
+        "v1.2.8": "Updated to use ClinVar version 20240215 (hg38)"
     },
     "demultiplex": true,
     "users": {
@@ -90,10 +91,10 @@
                 ],
                 "stage-eggd_vcf_handler_for_uranus.vep_annotation": [
                     {
-                      "$dnanexus_link": "file-GfXQZPQ42VYYz4FFqGb0XzQb" 
+                      "$dnanexus_link": "file-GgB82Y042VYfB6VFjg4j8xfZ"
                     },
                     {
-                      "$dnanexus_link": "file-GfXQZg042VYbPF1vypjbq4zp"
+                      "$dnanexus_link": "file-GgB82vQ42VYbQgzzF3vVX70g"
                     },
                     {
                       "$dnanexus_link": "file-G61xbP0433GqX36p8QQxP3PV"
@@ -118,7 +119,7 @@
                     },
                     {
                       "$dnanexus_link": "file-Gf02KG84Pj2QB86kK721B9yQ"
-                    }  
+                    }
                 ],
                 "stage-eggd_vcf_handler_for_uranus.maf_file": {
                     "$dnanexus_link": "file-GZJFvq043bFzkk3xBxY6GZyX"
@@ -128,8 +129,8 @@
                 },
                 "stage-cgppindel.reference_index": {
                     "$dnanexus_link": {
-                        "project": "project-G21BGP84q5JFYf168QjZ58Vz",
-                        "id": "file-G00jqQj4J7Byv963KkZ40kXv"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-FyFGvzQ41zgBq7xf4Gy9Q28g"
                     }
                 },
                 "stage-cgppindel.reference": {
