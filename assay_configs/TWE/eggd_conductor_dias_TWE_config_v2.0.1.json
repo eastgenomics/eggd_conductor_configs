@@ -1,6 +1,6 @@
 {
     "name": "Config for Twist whole exome assay",
-    "assay": "TWE",
+    "assay": "TWE38",
     "assay_code": "-EGG4|-9526-|-9688-",
     "version": "2.0.1",
     "details": "Includes main Dias workflows: single, multi and QC reports",
