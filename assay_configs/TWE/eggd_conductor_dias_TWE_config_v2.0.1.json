@@ -1,14 +1,16 @@
 {
     "name": "Config for Twist whole exome assay",
-    "assay": "TWE",
+    "assay": "TWE38",
+    "genome": "GRCh38",
     "assay_code": "-EGG4|-9526-|-9688-",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
         "v1.1.1": "Updated somalier genome reference projects",
-        "v2.0.0": "Updates to all reference related file to GRCh38"
+        "v2.0.0": "Updates to all reference related file to GRCh38",
+        "v2.0.1": "Change vcf_qc input bed to capture bed,update instance types,add genome field"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -25,6 +27,28 @@
             "analysis": "analysis_1",
             "per_sample": true,
             "process_fastqs": true,
+            "extra_args": {
+                "stageSystemRequirements": {
+                    "stage-sentieon_dnaseq": {
+                        "*": {"instanceType": "mem1_ssd1_v2_x72"}
+                    },
+                    "stage-verifybamid": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                    },
+                    "stage-picardQC": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                    },
+                    "stage-somalier_extract": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                    },
+                    "stage-samtools_flagstat": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                    },
+                    "stage-mosdepth": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                    }
+                }
+            },
             "inputs": {
                 "stage-fastQC.fastqs": "INPUT-R1-R2",
                 "stage-sentieon_dnaseq.sample": "INPUT-SAMPLE-NAME",
@@ -59,7 +83,7 @@
                 "stage-vcfQC.bed_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GZYqkkQ4fPQpKYz0BYPZk68j"
+                        "id": "file-G7FK1xQ4kj4317YGFpqYPb75"
                     }
                 },
                 "stage-picardQC.run_CollectMultipleMetrics": false,
