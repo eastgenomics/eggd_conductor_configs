@@ -8,7 +8,7 @@
         "v1.0.0": "Initial working version",
         "v1.0.1": "Add new Epic procedure codes to assay_code field",
         "v1.1.0": "Update eggd_TSO500 v1.2.0 -> v2.0.0",
-        "v1.2.0": "Add eggd_metricsoutput_editor after the effect of eggd_TSO500"
+        "v1.2.0": "Add eggd_metricsoutput_editor to run after eggd_TSO500"
     },
     "demultiplex": false,
     "users": {
