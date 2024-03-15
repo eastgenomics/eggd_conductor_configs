@@ -46,7 +46,7 @@
             "depends_on": ["analysis_1"],
             "inputs": {
                 "tsv_input": {
-                    "dnanexus_link": {
+                    "$dnanexus_link": {
                         "job": "analysis_1",
                         "field": "metricsOutput"
                     }
