@@ -2,12 +2,13 @@
     "name": "Config for helios workflow for TSO500 assay",
     "assay": "TSO500",
     "assay_code": "EGG6|-8471|-8472|-8475|-9689",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "details": "Includes TSO500 local app only",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.0.1": "Add new Epic procedure codes to assay_code field",
-        "v1.1.0": "Update eggd_TSO500 v1.2.0 -> v2.0.0"
+        "v1.1.0": "Update eggd_TSO500 v1.2.0 -> v2.0.0",
+        "v1.2.0": "Add eggd_metricsoutput_editor to run after eggd_TSO500"
     },
     "demultiplex": false,
     "users": {
@@ -33,6 +34,26 @@
             },
             "output_dirs": {
                 "app-GZxvpV845JGGX8K5YGY48BV3": "/OUT-FOLDER/APP-NAME"
+            }
+        },
+        "app-GgZ3kF04GV07BZ2k5fv3k0Fz": {
+            "name": "Eggd MetricsOutput excel maker",
+            "details": "Eggd MetricsOutput excel maker",
+            "url": "https://github.com/eastgenomics/eggd_MetricsOutput_editor",
+            "analysis": "analysis_2",
+            "per_sample": false,
+            "process_fastqs": false,
+            "depends_on": ["analysis_1"],
+            "inputs": {
+                "tsv_input": {
+                    "$dnanexus_link": {
+                        "job": "analysis_1",
+                        "field": "metricsOutput"
+                    }
+                }
+            },
+            "output_dirs": {
+                "app-GgQ84vQ4G7XK0YvYjPJK6yjz": "/OUT-FOLDER/APP-NAME"
             }
         }
     }
