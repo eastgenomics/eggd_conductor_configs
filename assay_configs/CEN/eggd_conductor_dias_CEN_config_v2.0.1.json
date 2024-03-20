@@ -1,15 +1,17 @@
 {
     "name": "Config for CEN assay",
-    "assay": "CEN",
+    "assay": "CEN38",
+    "genome": "GRCh38",
     "assay_code": "-EGG5|-9527-|-9617-",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
         "v1.1.1": "Updated somalier reference genome projects",
         "v1.2.0": "Updated instance type for MultiQC",
-        "v2.0.0": "Updates to all reference genome related files to GRCh38"
+        "v2.0.0": "Updates to all reference genome related files to GRCh38",
+        "v2.0.1": "Update vcf_QC bed file and instance types"
     },
     "demultiplex": true,
     "users": {
@@ -23,6 +25,25 @@
             "analysis": "analysis_1",
             "per_sample": true,
             "process_fastqs": true,
+            "extra_args": {
+                "stageSystemRequirements": {
+                    "stage-verifybamid": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                    },
+                    "stage-picardQC": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                    },
+                    "stage-somalier_extract": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                    },
+                    "stage-samtools_flagstat": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                    },
+                    "stage-mosdepth": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                    }
+                }
+            },
             "inputs": {
                 "stage-fastQC.fastqs": "INPUT-R1-R2",
                 "stage-sentieon_dnaseq.sample": "INPUT-SAMPLE-NAME",
@@ -57,7 +78,7 @@
                 "stage-vcfQC.bed_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GZYqkkQ4fPQpKYz0BYPZk68j"
+                        "id": "file-GP2bGp848QggjG456FJ1vG95"
                     }
                 },
                 "stage-picardQC.run_CollectMultipleMetrics": false,
