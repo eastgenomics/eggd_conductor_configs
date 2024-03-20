@@ -1,6 +1,7 @@
 {
     "name": "Config for CEN assay",
-    "assay": "CEN",
+    "assay": "CEN38",
+    "genome": "GRCh38",
     "assay_code": "-EGG5|-9527-|-9617-",
     "version": "2.0.1",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
@@ -77,7 +78,7 @@
                 "stage-vcfQC.bed_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GZYqkkQ4fPQpKYz0BYPZk68j"
+                        "id": "file-GP2bGp848QggjG456FJ1vG95"
                     }
                 },
                 "stage-picardQC.run_CollectMultipleMetrics": false,
