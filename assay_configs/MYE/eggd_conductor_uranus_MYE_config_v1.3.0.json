@@ -271,7 +271,8 @@
                 "stage-mosdepth": "/OUT-FOLDER/STAGE-NAME",
                 "stage-athena": "/OUT-FOLDER/STAGE-NAME",
                 "stage-sompy": "/OUT-FOLDER/STAGE-NAME",
-                "stage-somalier_extract": "OUT-FOLDER/STAGE-NAME"
+                "stage-somalier_extract": "OUT-FOLDER/STAGE-NAME",
+                "stage-apheleia": "OUT-FOLDER/STAGE-NAME"
             }
         },
         "applet-FvyXygj433GbKPPY0QY8ZKQG": {
