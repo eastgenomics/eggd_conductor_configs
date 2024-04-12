@@ -16,7 +16,7 @@
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "app-GZxvpV845JGGX8K5YGY48BV3": {
+        "app-GgBKy7j4QjX77XK69fG7Pj0y": {
             "name": "TSO500 local app",
             "details": "TSO500 local app",
             "url": "https://github.com/eastgenomics/eggd_tso500",
@@ -34,7 +34,7 @@
                 "run_tar_data": "INPUT-UPLOAD_TARS"
             },
             "output_dirs": {
-                "app-GZxvpV845JGGX8K5YGY48BV3": "/OUT-FOLDER/APP-NAME"
+                "app-GgBKy7j4QjX77XK69fG7Pj0y": "/OUT-FOLDER/APP-NAME"
             }
         },
         "app-GjF8gFQ4yyVBg4Y62BV10Vp2": {
