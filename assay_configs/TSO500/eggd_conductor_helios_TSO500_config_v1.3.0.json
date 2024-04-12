@@ -2,21 +2,21 @@
     "name": "Config for helios workflow for TSO500 assay",
     "assay": "TSO500",
     "assay_code": "EGG6|-8471|-8472|-8475|-9689",
-    "version": "1.2.1",
+    "version": "1.3.0",
     "details": "Includes TSO500 local app only",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.0.1": "Add new Epic procedure codes to assay_code field",
         "v1.1.0": "Update eggd_TSO500 v1.2.0 -> v2.0.0",
         "v1.2.0": "Add eggd_metricsoutput_editor to run after eggd_TSO500",
-        "v1.3.0": "Nadias update, fix output_dirs for eggd_metricsoutput_editor"
+        "v1.3.0": "Update eggd_TSO500 v2.0.0 -> v2.0.1, fix output_dirs for eggd_metricsoutput_editor"
     },
     "demultiplex": false,
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "app-GZxvpV845JGGX8K5YGY48BV3": {
+        "app-GgBKy7j4QjX77XK69fG7Pj0y": {
             "name": "TSO500 local app",
             "details": "TSO500 local app",
             "url": "https://github.com/eastgenomics/eggd_tso500",
@@ -34,7 +34,7 @@
                 "run_tar_data": "INPUT-UPLOAD_TARS"
             },
             "output_dirs": {
-                "app-GZxvpV845JGGX8K5YGY48BV3": "/OUT-FOLDER/APP-NAME"
+                "app-GgBKy7j4QjX77XK69fG7Pj0y": "/OUT-FOLDER/APP-NAME"
             }
         },
         "app-GjF8gFQ4yyVBg4Y62BV10Vp2": {
