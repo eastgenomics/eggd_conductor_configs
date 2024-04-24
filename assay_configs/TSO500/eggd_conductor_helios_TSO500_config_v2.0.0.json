@@ -59,10 +59,10 @@
             }
         },
         "app-GjF8gFQ4yyVBg4Y62BV10Vp2": {
-            "name": "Eggd MetricsOutput excel maker",
+            "name": "eggd_metricsoutput_editor/v1.1.0",
             "details": "Eggd MetricsOutput excel maker",
             "url": "https://github.com/eastgenomics/eggd_MetricsOutput_editor",
-            "analysis": "analysis_2",
+            "analysis": "analysis_3",
             "per_sample": false,
             "process_fastqs": false,
             "depends_on": ["analysis_1"],
@@ -77,6 +77,6 @@
             "output_dirs": {
                 "app-GjF8gFQ4yyVBg4Y62BV10Vp2": "/OUT-FOLDER/APP-NAME"
             }
-        }
+        },
     }
 }
