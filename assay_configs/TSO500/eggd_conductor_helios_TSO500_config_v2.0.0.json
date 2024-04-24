@@ -39,6 +39,25 @@
                 "app-GgBKy7j4QjX77XK69fG7Pj0y": "/OUT-FOLDER/APP-NAME"
             }
         },
+        "applet-FvyXygj433GbKPPY0QY8ZKQG": {
+            "name": "multi_fastqc_v1.1.0",
+            "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
+            "url": "https://github.com/eastgenomics/eggd_fastqc",
+            "analysis": "analysis_2",
+            "per_sample": false,
+            "process_fastqs": true,
+            "inputs": {
+                "fastqs": {
+                    "$dnanexus_link": {
+                        "job": "analysis_1",
+                        "field": "fastqs"
+                    }
+                }
+            },
+            "output_dirs": {
+                "applet-FvyXygj433GbKPPY0QY8ZKQG": "/OUT-FOLDER/APP-NAME"
+            }
+        },
         "app-GjF8gFQ4yyVBg4Y62BV10Vp2": {
             "name": "Eggd MetricsOutput excel maker",
             "details": "Eggd MetricsOutput excel maker",
