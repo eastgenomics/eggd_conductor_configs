@@ -1,15 +1,16 @@
 {
-    "name": "Config for helios workflow for TSO500 assay",
+    "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
     "assay_code": "EGG6|-8471|-8472|-8475|-9689",
-    "version": "1.3.0",
-    "details": "Includes TSO500 local app only",
+    "version": "2.0.0",
+    "details": "Automates the entire Helios pipeline, including eggd_tso500, multi_fastqc, MetricsOutput editor, TSO500 reports workflow, and MultiQC.",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.0.1": "Add new Epic procedure codes to assay_code field",
         "v1.1.0": "Update eggd_TSO500 v1.2.0 -> v2.0.0",
         "v1.2.0": "Add eggd_metricsoutput_editor to run after eggd_TSO500",
-        "v1.3.0": "Update eggd_TSO500 v2.0.0 -> v2.0.1, fix output_dirs for eggd_metricsoutput_editor"
+        "v1.3.0": "Update eggd_TSO500 v2.0.0 -> v2.0.1, fix output_dirs for eggd_metricsoutput_editor",
+        "v2.0.0": "Automation of entire Helios pipeline including reports workflow"
     },
     "demultiplex": false,
     "users": {
