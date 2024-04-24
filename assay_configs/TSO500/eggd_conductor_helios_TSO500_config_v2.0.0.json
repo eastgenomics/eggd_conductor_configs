@@ -18,12 +18,13 @@
     },
     "executables": {
         "app-GgBKy7j4QjX77XK69fG7Pj0y": {
-            "name": "TSO500 local app",
+            "name": "eggd_tso500/v2.0.1",
             "details": "TSO500 local app",
             "url": "https://github.com/eastgenomics/eggd_tso500",
             "analysis": "analysis_1",
             "per_sample": false,
             "process_fastqs": false,
+            "hold": true,
             "extra_args": {"priority": "high"},
             "inputs": {
                 "TSO500_ruo": {
