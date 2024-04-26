@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "details": "Includes main Uranus workflow, multi_fastqc, somalier workflow and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -16,7 +16,8 @@
         "v1.2.7": "Updated to use ClinVar version 20240107 (hg38)",
         "v1.2.8": "Updated to use ClinVar version 20240215 (hg38)",
         "v1.2.9": "Updated to use ClinVar version 20240317 (hg38)",
-        "v1.3.0": "Updated main workflow to v1.13.0 (addition of eggd_apheleia app)"
+        "v1.3.0": "Updated main workflow to v1.13.0 (addition of eggd_apheleia app)",
+        "v1.3.1": "Updated main workflow to v1.13.1 (eggd_apheleia v1.0.1)"
     },
     "demultiplex": true,
     "users": {
