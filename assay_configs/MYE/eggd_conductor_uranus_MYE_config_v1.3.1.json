@@ -24,8 +24,8 @@
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "workflow-GjGXbP04zjpf4bQ0zkpJ4Q8Q": {
-            "name": "uranus_main_workflow_GRCh38_v1.13.0",
+        "workflow-GjbgzbQ4V0pxvZZ5K3025Jf7": {
+            "name": "uranus_main_workflow_GRCh38_v1.13.1",
             "details": "Main Uranus workflow for alignment and variant calling",
             "url": "https://github.com/eastgenomics/eggd_uranus_main_workflow",
             "analysis": "analysis_1",
