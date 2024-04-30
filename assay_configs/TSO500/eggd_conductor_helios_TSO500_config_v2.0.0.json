@@ -95,6 +95,12 @@
                         "id": "file-FkkZQ1Q433GYXZ892pzkgvbP"
                     }
                 },
+                "stage-mosdepth.mosdepth_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
+                    }
+                },
                 "stage-athena.name": "INPUT-SAMPLE-NAME",
                 "stage-athena.panel_bed": {
                     "$dnanexus_link": {
