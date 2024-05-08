@@ -29,8 +29,8 @@ Below defines all external input files, their versions and file locations in DNA
 ||`pkrusche_`<br>`happy_docker`|[pkrusche_happy_v0.3.9.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-GFGbK48433GzV4y54b25p43Z)|v0.3.9|
 |[eggd_vcf_handler<br>_for_uranus](https://github.com/eastgenomics/eggd_vcf_handler_for_uranus)|`mutect2_bed`|[coding_unrestricted_GRCh38_myeloid_5bp_flank_v2.0.0.bed](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G9vKbv0433Gg2bP9GP72pxKJ)|v2.0.0|
 ||`pindel_bed`|[pindel_cgppindel_filtering_coordinates_v1.0.bed](https://platform.dnanexus.com/panx/projects/G21BGP84q5JFYf168QjZ58Vz/data/?scope=project&id.values=file-G0bFvXQ433GZJq780QgxZxKf)|v1.0|
-||`vep_annotation`|[clinvar_20240317_hg38_withchr.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20240317|
-||`vep_annotation`|[clinvar_20240317_hg38_withchr.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20240317|
+||`vep_annotation`|[clinvar_20240407_hg38_withchr.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20240407|
+||`vep_annotation`|[clinvar_20240407_hg38_withchr.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20240407|
 ||`vep_refs`|[gnomad.genomes.r3.0.indel.tsv.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61xbP0433GqX36p8QQxP3PV)|version r3.0|
 ||`vep_refs`|[gnomad.genomes.r3.0.indel.tsv.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61xf3j433Gz49jf6XjKG4F0)|version r3.0|
 ||`vep_refs`|[whole_genome_SNVs.tsv.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61xfZ0433Gj2vJ7P8k9ky2Z)| not versioned|
