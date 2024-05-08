@@ -78,8 +78,8 @@
                 "app-GjF8gFQ4yyVBg4Y62BV10Vp2": "/OUT-FOLDER/APP-NAME"
             }
         },
-        "workflow-GjjJ4804yfK24jvb99F3yJYq": {
-            "name": "TSO500_reports_workflow_v1.5.0",
+        "workflow-Gjk42k84yfKPv0x151ZvYBpK": {
+            "name": "TSO500_reports_workflow_v2.0.0",
             "details": "Reports workflow to run vep and generate_variant_workbook etc",
             "url": "https://github.com/eastgenomics/eggd_TSO500_reports_workflow",
             "analysis": "analysis_4",
@@ -137,7 +137,7 @@
                 "stage-vep.config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-Gj0p59Q40P9BQKP4Pz1qV5yj"
+                        "id": "file-GjY4k2Q40P9FyZ97xj588vkV"
                     }
                 },
                 "stage-vep.transcript_list": {
