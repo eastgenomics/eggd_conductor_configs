@@ -2,12 +2,13 @@
     "name": "Config for Twist whole exome assay",
     "assay": "TWE",
     "assay_code": "-EGG4|-9526-|-9688-",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
-        "v1.1.1": "Updated somalier genome reference projects"
+        "v1.1.1": "Updated somalier genome reference projects",
+        "v1.2.0": "Updated input files for dias_multi and MultiQC"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -118,8 +119,8 @@
                 "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME"
             }
         },
-        "workflow-GV40KG04bz43357995BqBQJY": {
-            "name": "dias_multi_v2.0.0",
+        "workflow-Gj2jP6j4PKbJpVgjK417J4X7": {
+            "name": "dias_multi_v2.2.0",
             "details": "Dias multi workflow - starts Hap.py and somalier_relate jobs",
             "url": "https://github.com/eastgenomics/eggd_dias_multi_workflow",
             "analysis": "analysis_2",
@@ -129,9 +130,6 @@
                 "analysis_1"
             ],
             "inputs": {
-                "stage-update_runfolders.SampleSheet": {
-                    "$dnanexus_link": "INPUT-SAMPLESHEET"
-                },
                 "stage-vcfeval_happy.query_vcf": {
                     "$dnanexus_link": {
                         "analysis": "analysis_1",
@@ -157,16 +155,10 @@
                         "id": "file-FjkzKPQ4yBGgBgJ6KvyZ563P"
                     }
                 },
-                "stage-vcfeval_happy.reference_fasta": {
+                "stage-vcfeval_happy.reference_fasta_tar": {
                     "$dnanexus_link": {
-                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
-                        "id": "file-F403K904F30y2vpVFqxB9kz7"
-                    }
-                },
-                "stage-vcfeval_happy.reference_fasta_index": {
-                    "$dnanexus_link": {
-                        "project": "project-F3zxk7Q4F30Xp8fG69K1Vppj",
-                        "id": "file-F3zyVj84F30jxYxG68vJyg68"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-F3zxG0Q4fXX9YFjP1v5jK9jf"
                     }
                 },
                 "stage-vcfeval_happy.reference_sdf_tar": {
@@ -210,7 +202,6 @@
                 ]
             },
             "output_dirs": {
-                "stage-update_runfolders": "/OUT-FOLDER/STAGE-NAME",
                 "stage-vcfeval_happy": "/OUT-FOLDER/STAGE-NAME",
                 "stage-somalier_relate": "/OUT-FOLDER/STAGE-NAME",
                 "stage-somalier_relate2multiqc": "/OUT-FOLDER/STAGE-NAME"
@@ -237,13 +228,13 @@
                 "multiqc_docker": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GF3PxgQ433Gqv1Q029Gjzjfv"
+                        "id": "file-Gj22pvQ433Gk8Y6JJXy5J73Y"
                     }
                 },
                 "multiqc_config_file": {
                     "$dnanexus_link":  {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GV8KZp04FfpQ7JPzzBbGXX2x"
+                        "id": "file-Gk30K3j433GfYXf0v5X89F7f"
                     }
                 }
             },
