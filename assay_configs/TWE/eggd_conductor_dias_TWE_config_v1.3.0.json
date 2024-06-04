@@ -2,13 +2,14 @@
     "name": "Config for Twist whole exome assay",
     "assay": "TWE",
     "assay_code": "-EGG4|-9526-|-9688-",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
         "v1.1.1": "Updated somalier genome reference projects",
-        "v1.2.0": "Updated input files for dias_multi and MultiQC"
+        "v1.2.0": "Updated input files for dias_multi and MultiQC",
+        "v1.3.0": "Updated workflow ID and name for dias_single"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -18,8 +19,8 @@
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "workflow-GV35kQj4P1ggx5gYFZGb3zFK": {
-            "name": "dias_single_v2.1.0",
+        "workflow-GkPJ88844VgPgXq9bjg0VX8z": {
+            "name": "dias_single_v2.4.0",
             "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAM_ID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step",
             "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
             "analysis": "analysis_1",
