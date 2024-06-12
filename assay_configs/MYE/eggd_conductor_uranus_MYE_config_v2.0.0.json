@@ -34,6 +34,25 @@
             "analysis": "analysis_1",
             "per_sample": true,
             "process_fastqs": true,
+            "extra_args": {
+                "stageSystemRequirements": {
+                    "stage-verifybamid": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                    },
+                    "stage-picardQC": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                    },
+                    "stage-somalier_extract": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                    },
+                    "stage-samtools_flagstat": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                    },
+                    "stage-mosdepth": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                    }
+                }
+            },
             "inputs": {
                 "stage-sentieon_bwa.reads_fastqgzs": "INPUT-R1",
                 "stage-sentieon_bwa.reads2_fastqgzs": "INPUT-R2",
@@ -183,6 +202,13 @@
                 },
                 "stage-picard.fasta_index": {
                     "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+                },
+                "stage-mosdepth.qual_flags": true,
+                "stage-mosdepth.mosdepth_docker": {
+                    "$dnanexus_link": {
+                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                      "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
+                    }
                 },
                 "stage-athena.snps": [
                     {
