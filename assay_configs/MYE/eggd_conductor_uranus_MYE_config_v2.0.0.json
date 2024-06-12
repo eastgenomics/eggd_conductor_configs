@@ -184,6 +184,13 @@
                 "stage-picard.fasta_index": {
                     "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
                 },
+                "stage-mosdepth.qual_flags": true,
+                "stage-mosdepth.mosdepth_docker": {
+                    "$dnanexus_link": {
+                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                      "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
+                    }
+                },
                 "stage-athena.snps": [
                     {
                       "$dnanexus_link": "file-FyZfyqQ41zg5FjK2GykYfKq8"
