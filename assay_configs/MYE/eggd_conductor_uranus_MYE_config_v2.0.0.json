@@ -34,6 +34,25 @@
             "analysis": "analysis_1",
             "per_sample": true,
             "process_fastqs": true,
+            "extra_args": {
+                "stageSystemRequirements": {
+                    "stage-verifybamid": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                    },
+                    "stage-picardQC": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                    },
+                    "stage-somalier_extract": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                    },
+                    "stage-samtools_flagstat": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                    },
+                    "stage-mosdepth": {
+                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                    }
+                }
+            },
             "inputs": {
                 "stage-sentieon_bwa.reads_fastqgzs": "INPUT-R1",
                 "stage-sentieon_bwa.reads2_fastqgzs": "INPUT-R2",
