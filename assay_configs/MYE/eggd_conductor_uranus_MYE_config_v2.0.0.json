@@ -39,7 +39,7 @@
                     "stage-verifybamid": {
                         "*": {"instanceType": "mem1_ssd2_v2_x2"}
                     },
-                    "stage-picardQC": {
+                    "stage-picard": {
                         "*": {"instanceType": "mem1_ssd2_v2_x4"}
                     },
                     "stage-somalier_extract": {
