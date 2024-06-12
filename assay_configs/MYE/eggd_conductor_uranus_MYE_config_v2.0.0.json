@@ -45,7 +45,7 @@
                     "stage-somalier_extract": {
                         "*": {"instanceType": "mem1_ssd2_v2_x2"}
                     },
-                    "stage-samtools_flagstat": {
+                    "stage-flagstat": {
                         "*": {"instanceType": "mem1_ssd2_v2_x2"}
                     },
                     "stage-mosdepth": {
