@@ -25,7 +25,10 @@
             "per_sample": false,
             "process_fastqs": false,
             "hold": true,
-            "extra_args": {"priority": "high"},
+            "extra_args": {
+                "systemRequirements": {"*": {"instanceType": "mem2_ssd1_v2_x64"}},
+                "priority": "high"
+            },
             "inputs": {
                 "TSO500_ruo": {
                     "$dnanexus_link": "file-Fz4X61Q44Bv44FyfJX1jJPj6"
