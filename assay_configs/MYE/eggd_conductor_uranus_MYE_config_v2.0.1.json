@@ -20,7 +20,8 @@
         "v1.3.1": "Updated main workflow to v1.13.1 (eggd_apheleia v1.0.1)",
         "v1.3.2": "Updated to use ClinVar version 20240407 (hg38)",
         "v1.3.3": "Updated to use ClinVar version 20240514 (hg38)",
-        "v2.0.0": "Updated main workflow to 2.0.0; update ref genome and resource files"
+        "v2.0.0": "Updated main workflow to 2.0.0; update ref genome and resource files",
+        "v2.0.1": "Updated to use ClinVar version 20240611 (hg38)"
     },
     "demultiplex": true,
     "users": {
@@ -116,10 +117,10 @@
                 ],
                 "stage-eggd_vcf_handler_for_uranus.vep_annotation": [
                     {
-                      "$dnanexus_link": "file-Gk5fxz847zgJ830X8b2b12zX"
+                      "$dnanexus_link": "file-Gk5VfVQ42VYfZvyPfb3959g2"
                     },
                     {
-                      "$dnanexus_link": "file-Gk5g01j475vQ8Py2Yp66PbXq"
+                      "$dnanexus_link": "file-Gk5VfYQ42VYVGy10zVkxf1Ff"
                     },
                     {
                       "$dnanexus_link": "file-G61xbP0433GqX36p8QQxP3PV"
