@@ -16,7 +16,7 @@
     },
     "demultiplex": true,
     "demultiplex_config": {
-        "app_name": "app-eggd_bclconvert",
+        "app_id": "app-GJxgy7Q47yq62Q90GY2FX0fq",
         "additional_args": "--strict-mode true",
         "instance_type": "mem2_ssd1_v2_x48"
     },
