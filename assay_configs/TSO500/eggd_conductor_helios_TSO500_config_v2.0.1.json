@@ -1,8 +1,8 @@
 {
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
-    "assay_code": "EGG6|-8471|-8472|-8475|-9689",
-    "version": "2.0.1",
+    "assay_code": "-8471|-8472|-8475|-9689|-10011|-10012",
+    "version": "2.1.0",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -11,15 +11,22 @@
         "v1.2.0": "Add eggd_metricsoutput_editor to run after eggd_TSO500",
         "v1.3.0": "Update eggd_TSO500 v2.0.0 -> v2.0.1, fix output_dirs for eggd_metricsoutput_editor",
         "v2.0.0": "Automation of entire Helios pipeline including reports workflow",
-        "v2.0.1": "Increase instanceType for the eggd_TSO500 app"
+        "v2.0.1": "Increase instanceType for the eggd_TSO500 app for additional storage in parent job",
+        "v2.1.0": "Changes for removing RNA analysis: add Pancan test codes to assay_code, enable demultiplexing with eggd_bclconvert, exclude RNA samples from analysis"
     },
-    "demultiplex": false,
+    "demultiplex": true,
+    "demultiplex_config": {
+        "app_name": "app-eggd_bclconvert",
+        "additional_args": "--strict-mode true",
+        "instance_type": "mem2_ssd1_v2_x48"
+    },
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
+    "subset_samplesheet": "-8471|-8472|-8475|-9689",
     "executables": {
         "app-GgBKy7j4QjX77XK69fG7Pj0y": {
-            "name": "eggd_tso500/v2.0.1",
+            "name": "eggd_tso500/v2.1.0",
             "details": "TSO500 local app",
             "url": "https://github.com/eastgenomics/eggd_tso500",
             "analysis": "analysis_1",
@@ -37,7 +44,9 @@
                 "samplesheet": {
                     "$dnanexus_link": "INPUT-SAMPLESHEET"
                 },
-                "run_tar_data": "INPUT-UPLOAD_TARS"
+                "run_tar_data": "INPUT-UPLOAD_TARS",
+                "include_samples": "-8471|-8472|-8475|-9689",
+                "upload_demultiplex_output": false
             },
             "output_dirs": {
                 "app-GgBKy7j4QjX77XK69fG7Pj0y": "/OUT-FOLDER/APP-NAME"
@@ -48,15 +57,10 @@
             "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
             "url": "https://github.com/eastgenomics/eggd_fastqc",
             "analysis": "analysis_2",
-            "per_sample": false,
+            "per_sample": true,
             "process_fastqs": true,
             "inputs": {
-                "fastqs": {
-                    "$dnanexus_link": {
-                        "job": "analysis_1",
-                        "field": "fastqs"
-                    }
-                }
+                "fastqs": "INPUT-R1-R2"
             },
             "output_dirs": {
                 "applet-FvyXygj433GbKPPY0QY8ZKQG": "/OUT-FOLDER/APP-NAME"
