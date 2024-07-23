@@ -137,7 +137,7 @@
                 "stage-vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": {
                       "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-GFGVxxQ4f4z4yz2q38VYz02X"
+                      "id": "file-Gp7vg9j4949f62X9b2Q9zxJY"
                     }
                   },
                 "stage-vcf_rescue.rescue_non_pass": true,
