@@ -12,7 +12,8 @@
         "v1.3.0": "Update eggd_TSO500 v2.0.0 -> v2.0.1, fix output_dirs for eggd_metricsoutput_editor",
         "v2.0.0": "Automation of entire Helios pipeline including reports workflow",
         "v2.0.1": "Increase instanceType for the eggd_TSO500 app for additional storage in parent job",
-        "v2.1.0": "Changes for removing RNA analysis: add Pancan test codes to assay_code, enable demultiplexing with eggd_bclconvert, exclude RNA samples from analysis"
+        "v2.1.0": "Changes for removing RNA analysis: add Pancan test codes to assay_code, enable demultiplexing with eggd_bclconvert, exclude RNA samples from analysis",
+        "v2.1.1": "Rescue VCF file reference updated to new version"
     },
     "demultiplex": true,
     "demultiplex_config": {
