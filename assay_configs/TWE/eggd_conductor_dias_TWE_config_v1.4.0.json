@@ -238,9 +238,9 @@
                     }
                 },
                 "multiqc_config_file": {
-                    "$dnanexus_link":  {
+                    "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-Gk30K3j433GfYXf0v5X89F7f"
+                        "id": "file-GpjGgf84621j10F6vJ60gpvZ"
                     }
                 }
             },
