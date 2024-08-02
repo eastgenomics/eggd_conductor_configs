@@ -2,7 +2,7 @@
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
     "assay_code": "-8471|-8472|-8475|-9689|-10011|-10012",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -12,7 +12,8 @@
         "v1.3.0": "Update eggd_TSO500 v2.0.0 -> v2.0.1, fix output_dirs for eggd_metricsoutput_editor",
         "v2.0.0": "Automation of entire Helios pipeline including reports workflow",
         "v2.0.1": "Increase instanceType for the eggd_TSO500 app for additional storage in parent job",
-        "v2.1.0": "Changes for removing RNA analysis: add Pancan test codes to assay_code, enable demultiplexing with eggd_bclconvert, exclude RNA samples from analysis"
+        "v2.1.0": "Changes for removing RNA analysis: add Pancan test codes to assay_code, enable demultiplexing with eggd_bclconvert, exclude RNA samples from analysis",
+        "v2.1.1": "Rescue VCF file reference updated to new version"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -137,7 +138,7 @@
                 "stage-vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": {
                       "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-GFGVxxQ4f4z4yz2q38VYz02X"
+                      "id": "file-GpVgQk04949qzzZk4FJ0ZQp7"
                     }
                   },
                 "stage-vcf_rescue.rescue_non_pass": true,
