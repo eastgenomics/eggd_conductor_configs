@@ -3,14 +3,15 @@
     "assay": "TWE38",
     "genome": "GRCh38",
     "assay_code": "-EGG4|-9526-|-9688-",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
         "v1.1.1": "Updated somalier genome reference projects",
         "v2.0.0": "Updates to all reference related file to GRCh38",
-        "v2.0.1": "Change vcf_qc input bed to capture bed,update instance types,add genome field"
+        "v2.0.1": "Change vcf_qc input bed to capture bed,update instance types,add genome field",
+        "v2.1.0": "TO BE ADDED"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -20,9 +21,9 @@
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "workflow-GbXF3bQ4zbvBzjg4j6884z3g": {
-            "name": "dias_single_v2.2.0",
-            "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAM_ID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step",
+        "workflow-Gkj2pgj4B1BxKfPZBfy85FjX": {
+            "name": "dias_single_v2.5.0",
+            "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAM_ID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step and eggd_sex_check",
             "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
             "analysis": "analysis_1",
             "per_sample": true,
@@ -118,7 +119,9 @@
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-G7FJjz04kj424vq826gKbZx7"
                     }
-                }
+                },
+                "stage-sex_check.male_threshold": "TO BE REVIEWED",
+                "stage-sex_check.female_threshold": "TO BE REVIEWED"
             },
             "output_dirs": {
                 "stage-fastQC": "/OUT-FOLDER/STAGE-NAME",
@@ -131,8 +134,8 @@
                 "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME"
             }
         },
-        "workflow-GZFB75j4kYX4k6jfG3f9p3XX": {
-            "name": "dias_multi_v2.1.0",
+        "workflow-Gj2jP6j4PKbJpVgjK417J4X7": {
+            "name": "dias_multi_v2.2.0",
             "details": "Dias multi workflow - starts Hap.py and somalier_relate jobs",
             "url": "https://github.com/eastgenomics/eggd_dias_multi_workflow",
             "analysis": "analysis_2",
@@ -217,7 +220,6 @@
                 ]
             },
             "output_dirs": {
-                "stage-update_runfolders": "/OUT-FOLDER/STAGE-NAME",
                 "stage-vcfeval_happy": "/OUT-FOLDER/STAGE-NAME",
                 "stage-somalier_relate": "/OUT-FOLDER/STAGE-NAME",
                 "stage-somalier_relate2multiqc": "/OUT-FOLDER/STAGE-NAME"
@@ -250,7 +252,7 @@
                 "multiqc_config_file": {
                     "$dnanexus_link":  {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GV8KZp04FfpQ7JPzzBbGXX2x"
+                        "id": "TO BE UPDATED"
                     }
                 }
             },
