@@ -2,7 +2,7 @@
     "name": "Config for CEN assay",
     "assay": "CEN",
     "assay_code": "-EGG5|-9527-|-9617-",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -10,15 +10,16 @@
         "v1.1.1": "Updated somalier reference genome projects",
         "v1.2.0": "Updated instance type for MultiQC",
         "v1.3.0": "Updated input files for dias_multi and MultiQC",
-        "v1.4.0": "Updated workflow ID and name for dias_single"
+        "v1.4.0": "Updated workflow ID and name for dias_single",
+        "v1.5.0": "Updated dias_single to v2.5.0 and multiqc config to v2.3.0"
     },
     "demultiplex": true,
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "workflow-GkPJ88844VgPgXq9bjg0VX8z": {
-            "name": "dias_single_v2.4.0",
+        "workflow-Gkj2pgj4B1BxKfPZBfy85FjX": {
+            "name": "dias_single_v2.5.0",
             "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAM_ID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step",
             "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
             "analysis": "analysis_1",
@@ -64,6 +65,7 @@
                 "stage-picardQC.run_CollectMultipleMetrics": false,
                 "stage-picardQC.run_CollectHsMetrics": true,
                 "stage-picardQC.run_CollectTargetedPcrMetrics": false,
+                "stage-picardQC.run_CollectRnaSeqMetrics": false,
                 "stage-picardQC.fasta_index": {
                     "$dnanexus_link": {
                         "project": "project-F3zqGV04fXX5j7566869fjFq",
@@ -80,6 +82,12 @@
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-Fpz2X0Q433GVK5xxPvzqvVPB"
+                    }
+                },
+                "stage-mosdepth.mosdepth_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
                     }
                 },
                 "stage-somalier_extract.somalier_docker": {
@@ -99,7 +107,9 @@
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-G18PB8Q4vQpfvPv83qKpj2QG"
                     }
-                }
+                },
+                "stage-sex_check.male_threshold": 4.25,
+                "stage-sex_check.female_threshold": 5.45
             },
             "output_dirs": {
                 "stage-fastQC": "/OUT-FOLDER/STAGE-NAME",
@@ -109,7 +119,8 @@
                 "stage-samtools_flagstat": "/OUT-FOLDER/STAGE-NAME",
                 "stage-picardQC": "/OUT-FOLDER/STAGE-NAME",
                 "stage-mosdepth": "/OUT-FOLDER/STAGE-NAME",
-                "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME"
+                "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME",
+                "stage-sex_check": "/OUT-FOLDER/STAGE-NAME"
             }
         },
         "workflow-Gj2jP6j4PKbJpVgjK417J4X7": {
@@ -225,7 +236,10 @@
                     }
                 },
                 "multiqc_config_file": {
-                    "$dnanexus_link": "file-Gj81GKQ46f9Kgb0fPB56Jzkk"
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GpZQGF84F7kZZQjBzK24g2Zy"
+                    }
                 }
             },
             "output_dirs": {
