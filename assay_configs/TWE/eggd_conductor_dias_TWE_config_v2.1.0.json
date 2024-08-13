@@ -1,6 +1,6 @@
 {
     "name": "Config for Twist whole exome assay",
-    "assay": "TWE38",
+    "assay": "TWE",
     "genome": "GRCh38",
     "assay_code": "-EGG4|-9526-|-9688-",
     "version": "2.1.0",
@@ -90,6 +90,7 @@
                 "stage-picardQC.run_CollectMultipleMetrics": false,
                 "stage-picardQC.run_CollectHsMetrics": true,
                 "stage-picardQC.run_CollectTargetedPcrMetrics": false,
+                "stage-picardQC.run_CollectRnaSeqMetrics": false,
                 "stage-picardQC.fasta_index": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
@@ -100,6 +101,12 @@
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-G7FK1xQ4kj4317YGFpqYPb75"
+                    }
+                },
+                "stage-mosdepth.mosdepth_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
                     }
                 },
                 "stage-somalier_extract.somalier_docker": {
@@ -131,7 +138,8 @@
                 "stage-samtools_flagstat": "/OUT-FOLDER/STAGE-NAME",
                 "stage-picardQC": "/OUT-FOLDER/STAGE-NAME",
                 "stage-mosdepth": "/OUT-FOLDER/STAGE-NAME",
-                "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME"
+                "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME",
+                "stage-sex_check": "/OUT-FOLDER/STAGE-NAME"
             }
         },
         "workflow-Gj2jP6j4PKbJpVgjK417J4X7": {
@@ -246,7 +254,7 @@
                 "multiqc_docker": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GF3PxgQ433Gqv1Q029Gjzjfv"
+                        "id": "file-Gj22pvQ433Gk8Y6JJXy5J73Y"
                     }
                 },
                 "multiqc_config_file": {
