@@ -153,9 +153,6 @@
                 "analysis_1"
             ],
             "inputs": {
-                "stage-update_runfolders.SampleSheet": {
-                    "$dnanexus_link": "INPUT-SAMPLESHEET"
-                },
                 "stage-vcfeval_happy.query_vcf": {
                     "$dnanexus_link": {
                         "analysis": "analysis_1",
