@@ -2,7 +2,7 @@
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
     "assay_code": "-8471|-8472|-8475|-9689|-10011|-10012",
-    "version": "2.1.2",
+    "version": "2.2.0",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -14,7 +14,8 @@
         "v2.0.1": "Increase instanceType for the eggd_TSO500 app for additional storage in parent job",
         "v2.1.0": "Changes for removing RNA analysis: add Pancan test codes to assay_code, enable demultiplexing with eggd_bclconvert, exclude RNA samples from analysis",
         "v2.1.1": "Rescue VCF file reference updated to new version",
-        "v2.1.2": "Update to latest TSO500 vep config file (v1.2.10)"
+        "v2.1.2": "Update to latest TSO500 vep config file (v1.2.10)",
+        "v2.2.0": "Incorporate eggd_MetricsOutput_MultiQC_parser"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -88,11 +89,31 @@
                 "app-GjF8gFQ4yyVBg4Y62BV10Vp2": "/OUT-FOLDER/APP-NAME"
             }
         },
+        "app-Gpzb0Y04FXvff0vJPxj0p1x1": {
+            "name": "eggd_MetricsOutput_MultiQC_parser/1.0.0",
+            "details": "Eggd MetricsOutput parser to produce MultiQC input",
+            "url": "https://github.com/eastgenomics/eggd_MetricsOutput_MultiQC_parser",
+            "analysis": "analysis_4",
+            "per_sample": false,
+            "process_fastqs": false,
+            "depends_on": ["analysis_1"],
+            "inputs": {
+                "tsv_input": {
+                    "$dnanexus_link": {
+                        "job": "analysis_1",
+                        "field": "metricsOutput"
+                    }
+                }
+            },
+            "output_dirs": {
+                "app-Gpzb0Y04FXvff0vJPxj0p1x1": "/OUT-FOLDER/APP-NAME"
+            }
+        },
         "workflow-Gjk42k84yfKPv0x151ZvYBpK": {
             "name": "TSO500_reports_workflow_v2.0.0",
             "details": "Reports workflow to run vep and generate_variant_workbook etc",
             "url": "https://github.com/eastgenomics/eggd_TSO500_reports_workflow",
-            "analysis": "analysis_4",
+            "analysis": "analysis_5",
             "per_sample": true,
             "process_fastqs": false,
             "depends_on": ["analysis_1"],
@@ -189,12 +210,13 @@
             "name": "eggd_MultiQC/v2.0.1",
             "details": "MultiQC app to generate aggregated run level QC report",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
-            "analysis": "analysis_5",
+            "analysis": "analysis_6",
             "per_sample": false,
             "process_fastqs": false,
             "depends_on": [
                 "analysis_1",
-                "analysis_2"
+                "analysis_2",
+                "analysis_4"
             ],
             "inputs": {
                 "project_for_multiqc": "INPUT-dx_project_name",
@@ -208,7 +230,7 @@
                 "multiqc_config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-G9P94j04q6Kj4bX06xvYyvxK"
+                        "id": "file-GqBvVx04ZKKf0zvXVV83X4Qv"
                     }
                 }
             },
