@@ -15,7 +15,7 @@
         "v2.1.0": "Changes for removing RNA analysis: add Pancan test codes to assay_code, enable demultiplexing with eggd_bclconvert, exclude RNA samples from analysis",
         "v2.1.1": "Rescue VCF file reference updated to new version",
         "v2.1.2": "Update to latest TSO500 vep config file (v1.2.10)",
-        "v2.2.0": "Incorporate eggd_MetricsOutput_MultiQC_parser"
+        "v2.2.0": "Incorporate eggd_MetricsOutput_MultiQC_parser, Update to latest TSO500 vep config file (v1.2.11)"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -168,7 +168,7 @@
                 "stage-vep.config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-Gq6kJz040P97fzVj653PZB02"
+                        "id": "file-GqZg6VQ40P9187pkKqFB653P"
                     }
                 },
                 "stage-vep.transcript_list": {
