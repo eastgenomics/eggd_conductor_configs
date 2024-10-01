@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "details": "Includes main Uranus workflow, multi_fastqc, somalier workflow and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -25,7 +25,8 @@
         "v2.0.2": "Updated to use ClinVar version 20240708 (hg38)",
         "v2.0.3": "Updated main workflow to 2.1.0 (eggd_vcf_handler_for_uranus v2.8.0, eggd_cgppindel v1.2.0, eggd_sompy v1.0.4)",
         "v2.0.4": "Updated to use ClinVar version 20240813 (hg38)",
-        "v2.0.5": "Updated to use ClinVar version 20240909 (hg38)"
+        "v2.0.5": "Updated to use ClinVar version 20240909 (hg38)",
+        "v2.0.6": "Update VEP 103 cache"
     },
     "demultiplex": true,
     "users": {
@@ -116,7 +117,7 @@
                       "$dnanexus_link": "file-G61yBf0433Gp4BBVGj0jxqvP"
                     },
                     {
-                      "$dnanexus_link": "file-G61yF38433GQgP504Px5PZ4G"
+                      "$dnanexus_link": "file-Gqpj9Pj4x0kG0QY2vY77VQ4J"
                     }
                 ],
                 "stage-eggd_vcf_handler_for_uranus.vep_annotation": [
