@@ -1,8 +1,8 @@
 {
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
-    "assay_code": "-8471|-8472|-8475|-9689|-10011|-10012",
-    "version": "2.2.1",
+    "assay_code": "-8471|-8472|-8475|-9689|-10011|-10012|-10040|-10041|-10042|-10043",
+    "version": "2.2.2",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -16,9 +16,10 @@
         "v2.1.1": "Rescue VCF file reference updated to new version",
         "v2.1.2": "Update to latest TSO500 vep config file (v1.2.10)",
         "v2.2.0": "Incorporate eggd_MetricsOutput_MultiQC_parser, Update to latest TSO500 vep config file (v1.2.11)",
-        "v2.2.1": "Update to latest TSO500 VEP transcript list (v1.3.0)"
+        "v2.2.1": "Update to latest TSO500 VEP transcript list (v1.3.0)",
+        "v2.2.2": "Add new Epic assay codes to assay_code field"
     },
-    "demultiplex": true,
+    "demultiplex": true,    
     "demultiplex_config": {
         "app_id": "app-GJxgy7Q47yq62Q90GY2FX0fq",
         "additional_args": "--strict-mode true",
@@ -27,7 +28,7 @@
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
-    "subset_samplesheet": "-8471|-8472|-8475|-9689",
+    "subset_samplesheet": "-8471|-8472|-8475|-9689|-10040|-10041",
     "executables": {
         "app-GgBKy7j4QjX77XK69fG7Pj0y": {
             "name": "eggd_tso500/v2.0.1",
@@ -49,7 +50,7 @@
                     "$dnanexus_link": "INPUT-SAMPLESHEET"
                 },
                 "run_tar_data": "INPUT-UPLOAD_TARS",
-                "include_samples": "-8471|-8472|-8475|-9689",
+                "include_samples": "-8471|-8472|-8475|-9689|-10040|-10041",
                 "upload_demultiplex_output": false
             },
             "output_dirs": {
