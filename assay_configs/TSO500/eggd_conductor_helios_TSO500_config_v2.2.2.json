@@ -18,9 +18,10 @@
         "v2.2.0": "Incorporate eggd_MetricsOutput_MultiQC_parser, Update to latest TSO500 vep config file (v1.2.11)",
         "v2.2.1": "Update to latest TSO500 VEP transcript list (v1.3.0)",
         "v2.2.2": "Add new Epic assay codes to assay_code field"
-    ,
-"demultiplex": true,    "demultiplex_config": {
-    "app_id": "app-GJxgy7Q47yq62Q90GY2FX0fq",
+    },
+    "demultiplex": true,    
+    "demultiplex_config": {
+        "app_id": "app-GJxgy7Q47yq62Q90GY2FX0fq",
         "additional_args": "--strict-mode true",
         "instance_type": "mem2_ssd1_v2_x48"
     },
