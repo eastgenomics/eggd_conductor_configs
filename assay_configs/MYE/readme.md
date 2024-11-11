@@ -31,8 +31,8 @@ Below defines all external input files, their versions and file locations in DNA
 ||`pkrusche_`<br>`happy_docker`|[pkrusche_happy_v0.3.9.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-GFGbK48433GzV4y54b25p43Z)|v0.3.9|
 |[eggd_vcf_handler<br>_for_uranus](https://github.com/eastgenomics/eggd_vcf_handler_for_uranus)|`mutect2_bed`|[coding_unrestricted_GRCh38_myeloid_5bp_flank_v2.1.0.bed](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gj6YQg84qv8fkGzygZ19j300)|v2.1.0|
 ||`pindel_bed`|[pindel_cgppindel_filtering_coordinates_v1.1.bed](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gj6YXj84qv8YV5Z3yb2Zk6Pg)|v1.1|
-||`vep_annotation`|[clinvar_20240909_GRCh38.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20240909|
-||`vep_annotation`|[clinvar_20240909_GRCh38.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20240909|
+||`vep_annotation`|[clinvar_20241021_GRCh38.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20241021|
+||`vep_annotation`|[clinvar_20241021_GRCh38.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20241021|
 ||`vep_refs`|[gnomad.genomes.r3.0.indel.tsv.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61xbP0433GqX36p8QQxP3PV)|version r3.0|
 ||`vep_refs`|[gnomad.genomes.r3.0.indel.tsv.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61xf3j433Gz49jf6XjKG4F0)|version r3.0|
 ||`vep_refs`|[whole_genome_SNVs.tsv.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61xfZ0433Gj2vJ7P8k9ky2Z)| not versioned|
@@ -47,7 +47,7 @@ Below defines all external input files, their versions and file locations in DNA
 ||`vep_refs`|[Homo_sapiens.GRCh38.dna.toplevel.fa.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61y95Q433Gk05zyFKF9kFv2)|not versioned|
 ||`vep_refs`|[Homo_sapiens.GRCh38.dna.toplevel.fa.gz.fai](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61yBV8433GjbVj022PyV3K5)|not versioned|
 ||`vep_refs`|[Homo_sapiens.GRCh38.dna.toplevel.fa.gz.gzi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61yBf0433Gp4BBVGj0jxqvP)|not versioned|
-||`vep_refs`|[homo_sapiens_refseq_vep_103_GRCh38.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61yF38433GQgP504Px5PZ4G)|not versioned|
+||`vep_refs`|[homo_sapiens_refseq_vep_103_GRCh38.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gqpj9Pj4x0kG0QY2vY77VQ4J)|not versioned|
 ||`maf_file`|[haemonc_1706_samples_withoutchr.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gj6YQg84qv8v2J1XKJy4fQYg)|not versioned|
 ||`maf_file_tbi`|[haemonc_1706_samples_withoutchr.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gj6YQg84qv8Z3F4J8fX7YK6V)|not versioned|
 
