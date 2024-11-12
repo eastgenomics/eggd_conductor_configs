@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "details": "Includes 'demultiplexing and multiQC",
     "changelog": {
-        "v1.0.0": "Initial working version",
+        "v1.0.0": "Initial working version"
     },
     "demultiplex": true,
     "users": {
