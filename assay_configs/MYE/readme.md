@@ -29,27 +29,14 @@ Below defines all external input files, their versions and file locations in DNA
 ||`panel_bed`|[coding_unrestricted_GRCh38_myeloid_5bp_flank_v2.1.0.bed](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gj6YQg84qv8fkGzygZ19j300)|v2.1.0|
 ||`truth_high_`<br>`confidence_bed`|[HD827_variant_annotation_withoutchr.bed](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gj7BZj04qv8gx99jFB5QqV2y)|not versioned|
 ||`pkrusche_`<br>`happy_docker`|[pkrusche_happy_v0.3.9.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-GFGbK48433GzV4y54b25p43Z)|v0.3.9|
-|[eggd_vcf_handler<br>_for_uranus](https://github.com/eastgenomics/eggd_vcf_handler_for_uranus)|`mutect2_bed`|[coding_unrestricted_GRCh38_myeloid_5bp_flank_v2.1.0.bed](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gj6YQg84qv8fkGzygZ19j300)|v2.1.0|
-||`pindel_bed`|[pindel_cgppindel_filtering_coordinates_v1.1.bed](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gj6YXj84qv8YV5Z3yb2Zk6Pg)|v1.1|
-||`vep_annotation`|[clinvar_20241111_GRCh38.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20241111|
-||`vep_annotation`|[clinvar_20241111_GRCh38.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/annotation/b38/clinvar)|version 20241111|
-||`vep_refs`|[gnomad.genomes.r3.0.indel.tsv.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61xbP0433GqX36p8QQxP3PV)|version r3.0|
-||`vep_refs`|[gnomad.genomes.r3.0.indel.tsv.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61xf3j433Gz49jf6XjKG4F0)|version r3.0|
-||`vep_refs`|[whole_genome_SNVs.tsv.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61xfZ0433Gj2vJ7P8k9ky2Z)| not versioned|
-||`vep_refs`|[whole_genome_SNVs.tsv.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61y4Y8433GvyjJ52Fj5XjY5)|not versioned|
-||`vep_annotation`|[CosmicCodingMuts_GRCh38_v99.normal.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gf02Fxj4Pj2vPPV0zyfpbFkz)|v99|
-||`vep_annotation`|[CosmicCodingMuts_GRCh38_v99.normal.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gf02JgQ4Pj2xZg2b1g9pVV7g)|v99|
-||`vep_annotation`|[CosmicNonCodingVariants_GRCh38_v99.normal.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gf02Jj04Pj2ZPxF97V6YJFKv)|v99|
-||`vep_annotation`|[CosmicNonCodingVariants_GRCh38_v99.normal.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gf02KG84Pj2QB86kK721B9yQ)|v99|
-||`vep_docker`|[vep_v103.1_docker.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61zff8433Gy2KQX7Q2z150B)|v103.1|
-||`vep_plugins`|[plugin_config.txt](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61zfvj433GxkQXF414xP1yF)| not versioned|
-||`vep_plugins`|[ CADD.pm](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G620928433Gy9p2b27zb8JFV)|not versioned|
-||`vep_refs`|[Homo_sapiens.GRCh38.dna.toplevel.fa.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61y95Q433Gk05zyFKF9kFv2)|not versioned|
-||`vep_refs`|[Homo_sapiens.GRCh38.dna.toplevel.fa.gz.fai](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61yBV8433GjbVj022PyV3K5)|not versioned|
-||`vep_refs`|[Homo_sapiens.GRCh38.dna.toplevel.fa.gz.gzi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G61yBf0433Gp4BBVGj0jxqvP)|not versioned|
-||`vep_refs`|[homo_sapiens_refseq_vep_103_GRCh38.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gqpj9Pj4x0kG0QY2vY77VQ4J)|not versioned|
-||`maf_file`|[haemonc_1706_samples_withoutchr.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gj6YQg84qv8v2J1XKJy4fQYg)|not versioned|
-||`maf_file_tbi`|[haemonc_1706_samples_withoutchr.vcf.gz.tbi](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-Gj6YQg84qv8Z3F4J8fX7YK6V)|not versioned|
+|[eggd_vep [mutect2 VCF]](https://github.com/eastgenomics/eggd_vep)|`config_file`|[uranus_vep_config_v1.0.1.json](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/dynamic_files/vep_configs?id.values=file-Gx47xzQ42ffzPPXyZqQ9bjK7)|v1.0.1|
+||`panel_bed`|[coding_unrestricted_athena_GRCh38_myeloid_5bp_flank_v2.2.0.bed](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/bed_files/b38/kits/myeloid?id.values=file-Gqy3qk847xBjBk1G7YV6YJ9V)|v2.2.0|
+|[eggd_vep [cgppindel VCF]](https://github.com/eastgenomics/eggd_vep)|`config_file`|[uranus_vep_config_v1.0.1.json](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/dynamic_files/vep_configs?id.values=file-Gx47xzQ42ffzPPXyZqQ9bjK7)|v1.0.1|
+||`panel_bed`|[pindel_cgppindel_filtering_coordinates_v1.2.bed](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/bed_files/b38/kits/myeloid?id.values=file-Gqy4V1Q47xBXYzfKxb22fGXz)|v1.2|
+|[eggd_vcf_rescue](https://github.com/eastgenomics/eggd_vcf_rescue)|`rescue_vcf`|[CosmicCodingMuts_GRCh38_v99.normal.NoEntry.vcf.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-GjFv9X0421zQFGxXVFQ4j972)|v99|
+||`fasta_tar`|[GRCh38_GIABv3_no_alt_analysis_set_maskedGRC_decoys_MAP2K3_KMT2C_KCNJ18_noChr.fasta-index.tar.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-Gb772VQ4XGyzQ0Zk615XbZ0X)| not versioned |
+
+
 
 ---
 
