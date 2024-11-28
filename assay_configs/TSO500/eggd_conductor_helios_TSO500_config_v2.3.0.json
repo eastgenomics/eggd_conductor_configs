@@ -58,6 +58,22 @@
                 "app-GgBKy7j4QjX77XK69fG7Pj0y": "/OUT-FOLDER/APP-NAME"
             }
         },
+        "app-Gvb47584ZGzp4pF9Gpk10P9Q": {
+            "name": "eggd-ici_uploader/v1.0.0",
+            "details": "ICI run uploader",
+            "url": "https://github.com/eastgenomics/eggd_ici_uploader",
+            "analysis": "ici_upload",
+            "per_sample": false,
+            "process_fastqs": false,
+            "depends_on": ["analysis_1"],
+            "inputs": {
+                "run_folder": "INPUT-analysis_1-out-dir",
+                "workflow_id": "c209834d-92d5-445f-b89b-c4d291c57613",
+                "api_key_file": {
+                    "$dnanexus_link": "file-12345abcdevwxyz"
+                }
+            }
+        },
         "applet-FvyXygj433GbKPPY0QY8ZKQG": {
             "name": "multi_fastqc_v1.1.0",
             "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
