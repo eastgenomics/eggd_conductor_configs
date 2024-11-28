@@ -1,8 +1,8 @@
 {
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
-    "assay_code": "-8471|-8472|-8475|-9689|-10011|-10012",
-    "version": "2.1.1",
+    "assay_code": "-8471|-8472|-8475|-9689|-10011|-10012|-10040|-10041|-10042|-10043",
+    "version": "2.2.3",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -13,9 +13,14 @@
         "v2.0.0": "Automation of entire Helios pipeline including reports workflow",
         "v2.0.1": "Increase instanceType for the eggd_TSO500 app for additional storage in parent job",
         "v2.1.0": "Changes for removing RNA analysis: add Pancan test codes to assay_code, enable demultiplexing with eggd_bclconvert, exclude RNA samples from analysis",
-        "v2.1.1": "Rescue VCF file reference updated to new version"
+        "v2.1.1": "Rescue VCF file reference updated to new version",
+        "v2.1.2": "Update to latest TSO500 vep config file (v1.2.10)",
+        "v2.2.0": "Incorporate eggd_MetricsOutput_MultiQC_parser, Update to latest TSO500 vep config file (v1.2.11)",
+        "v2.2.1": "Update to latest TSO500 VEP transcript list (v1.3.0)",
+        "v2.2.2": "Add new Epic assay codes to assay_code field",
+        "v2.2.3": "Update to latest TSO500 vep config file (v1.2.12)"
     },
-    "demultiplex": true,
+    "demultiplex": true,    
     "demultiplex_config": {
         "app_id": "app-GJxgy7Q47yq62Q90GY2FX0fq",
         "additional_args": "--strict-mode true",
@@ -24,7 +29,7 @@
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
-    "subset_samplesheet": "-8471|-8472|-8475|-9689",
+    "subset_samplesheet": "-8471|-8472|-8475|-9689|-10040|-10041",
     "executables": {
         "app-GgBKy7j4QjX77XK69fG7Pj0y": {
             "name": "eggd_tso500/v2.0.1",
@@ -46,7 +51,7 @@
                     "$dnanexus_link": "INPUT-SAMPLESHEET"
                 },
                 "run_tar_data": "INPUT-UPLOAD_TARS",
-                "include_samples": "-8471|-8472|-8475|-9689",
+                "include_samples": "-8471|-8472|-8475|-9689|-10040|-10041",
                 "upload_demultiplex_output": false
             },
             "output_dirs": {
@@ -87,11 +92,31 @@
                 "app-GjF8gFQ4yyVBg4Y62BV10Vp2": "/OUT-FOLDER/APP-NAME"
             }
         },
+        "app-Gpzb0Y04FXvff0vJPxj0p1x1": {
+            "name": "eggd_MetricsOutput_MultiQC_parser/1.0.0",
+            "details": "Eggd MetricsOutput parser to produce MultiQC input",
+            "url": "https://github.com/eastgenomics/eggd_MetricsOutput_MultiQC_parser",
+            "analysis": "analysis_4",
+            "per_sample": false,
+            "process_fastqs": false,
+            "depends_on": ["analysis_1"],
+            "inputs": {
+                "tsv_input": {
+                    "$dnanexus_link": {
+                        "job": "analysis_1",
+                        "field": "metricsOutput"
+                    }
+                }
+            },
+            "output_dirs": {
+                "app-Gpzb0Y04FXvff0vJPxj0p1x1": "/OUT-FOLDER/APP-NAME"
+            }
+        },
         "workflow-Gjk42k84yfKPv0x151ZvYBpK": {
             "name": "TSO500_reports_workflow_v2.0.0",
             "details": "Reports workflow to run vep and generate_variant_workbook etc",
             "url": "https://github.com/eastgenomics/eggd_TSO500_reports_workflow",
-            "analysis": "analysis_4",
+            "analysis": "analysis_5",
             "per_sample": true,
             "process_fastqs": false,
             "depends_on": ["analysis_1"],
@@ -146,13 +171,13 @@
                 "stage-vep.config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GjY4k2Q40P9FyZ97xj588vkV"
+                        "id": "file-GvJ326Q40P98VVXjv8BGfybx"
                     }
                 },
                 "stage-vep.transcript_list": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GgQ9xb8405jxjZ778k6Zg0Xk"
+                        "id": "file-Gqpgx7Q45bJP8bBbJb3KBJyJ"
                     }
                 },
                 "stage-eggd_add_MANE_annotation.transcript_file": {
@@ -188,12 +213,13 @@
             "name": "eggd_MultiQC/v2.0.1",
             "details": "MultiQC app to generate aggregated run level QC report",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
-            "analysis": "analysis_5",
+            "analysis": "analysis_6",
             "per_sample": false,
             "process_fastqs": false,
             "depends_on": [
                 "analysis_1",
-                "analysis_2"
+                "analysis_2",
+                "analysis_4"
             ],
             "inputs": {
                 "project_for_multiqc": "INPUT-dx_project_name",
@@ -207,7 +233,7 @@
                 "multiqc_config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-G9P94j04q6Kj4bX06xvYyvxK"
+                        "id": "file-GqBvVx04ZKKf0zvXVV83X4Qv"
                     }
                 }
             },
