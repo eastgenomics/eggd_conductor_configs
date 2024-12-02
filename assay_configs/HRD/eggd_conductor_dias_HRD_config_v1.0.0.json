@@ -39,7 +39,7 @@
             "inputs": {
                 "project_for_multiqc": "INPUT-dx_project_name",
                 "primary_workflow_output": "INPUT-parent_out_dir",
-                "calc_custom_coverage": true,
+                "calc_custom_coverage": false,
                 "multiqc_docker": {
                     "$dnanexus_link": "file-GF3PxgQ433Gqv1Q029Gjzjfv"
                 },
@@ -52,3 +52,4 @@
             }
         }
     }
+}
