@@ -12,12 +12,11 @@
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        },
         "applet-FvyXygj433GbKPPY0QY8ZKQG": {
             "name": "multi_fastqc",
             "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
             "url": "https://github.com/eastgenomics/eggd_fastqc",
-            "analysis": "analysis_2",
+            "analysis": "analysis_1",
             "per_sample": false,
             "process_fastqs": true,
             "inputs": {
@@ -31,13 +30,11 @@
             "name": "MultiQC",
             "details": "MultiQC app to generate aggregated run level QC report",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
-            "analysis": "analysis_4",
+            "analysis": "analysis_2",
             "per_sample": false,
             "process_fastqs": false,
             "depends_on": [
-                "analysis_1",
-                "analysis_2",
-                "analysis_3"
+                "analysis_1"
             ],
             "inputs": {
                 "project_for_multiqc": "INPUT-dx_project_name",
