@@ -36,8 +36,6 @@ Below defines all external input files, their versions and file locations in DNA
 |[eggd_vcf_rescue](https://github.com/eastgenomics/eggd_vcf_rescue)|`rescue_vcf`|[CosmicCodingMuts_GRCh38_v99.normal.NoEntry.vcf.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-GjFv9X0421zQFGxXVFQ4j972)|v99|
 ||`fasta_tar`|[GRCh38_GIABv3_no_alt_analysis_set_maskedGRC_decoys_MAP2K3_KMT2C_KCNJ18_noChr.fasta-index.tar.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-Gb772VQ4XGyzQ0Zk615XbZ0X)| not versioned |
 
-
-
 ---
 
 ### [multi_fastqc](https://github.com/eastgenomics/eggd_fastqc)
