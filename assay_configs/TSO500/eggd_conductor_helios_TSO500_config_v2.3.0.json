@@ -19,6 +19,7 @@
         "v2.2.1": "Update to latest TSO500 VEP transcript list (v1.3.0)",
         "v2.2.2": "Add new Epic assay codes to assay_code field",
         "v2.2.3": "Update to latest TSO500 vep config file (v1.2.12)",
+        "v2.2.4": "Update to latest TSO500 vep config file (v1.2.13)",
         "v2.3.0": "Update to use app-eggd_ici_uploader/v1.0.0"
     },
     "demultiplex": true,    
@@ -188,7 +189,7 @@
                 "stage-vep.config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GvJ326Q40P98VVXjv8BGfybx"
+                        "id": "file-Gx2k6gQ40P9Pyg59y42XJQj0"
                     }
                 },
                 "stage-vep.transcript_list": {
