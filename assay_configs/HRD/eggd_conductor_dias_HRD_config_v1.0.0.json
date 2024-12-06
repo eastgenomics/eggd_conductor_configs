@@ -1,7 +1,7 @@
 {
     "name": "Config for HRD assay",
     "assay": "HRD",
-    "assay_code": "LAB9197|LAB10021",
+    "assay_code": "-9197|-10021",
     "version": "1.0.0",
     "details": "Includes 'demultiplexing and multiQC",
     "changelog": {
