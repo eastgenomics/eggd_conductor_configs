@@ -9,9 +9,12 @@
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
         "v1.1.1": "Updated somalier genome reference projects",
+        "v1.2.0": "Updated input files for dias_multi and MultiQC",
+        "v1.3.0": "Updated workflow ID and name for dias_single",
+        "v1.4.0": "Updated dias_single to 2.5.0 and multiqc config to v2.3.0",
         "v2.0.0": "Updates to all reference related file to GRCh38",
         "v2.0.1": "Change vcf_qc input bed to capture bed,update instance types,add genome field",
-        "v2.1.0": "TO BE ADDED"
+        "v2.1.0": "Updates dias_single to v2.7.0, Sentieon instance type, sex check thresholds and adds mosdepth docker input. Updates dias_multi to v2.2.0 and removes references to update_run_folders. Updates egg_multiqc to v2.02, MultiQC docker input to v1.14 and MultiQC config for GRCh38"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -21,9 +24,9 @@
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "workflow-Gkj2pgj4B1BxKfPZBfy85FjX": {
-            "name": "dias_single_v2.5.0",
-            "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAM_ID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step and eggd_sex_check",
+        "workflow-Gx44P1j46vxPgz7BbQ81VXJ3": {
+            "name": "dias_single_v2.7.0",
+            "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAMID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step, and eggd_sex_check",
             "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
             "analysis": "analysis_1",
             "per_sample": true,
@@ -31,7 +34,7 @@
             "extra_args": {
                 "stageSystemRequirements": {
                     "stage-sentieon_dnaseq": {
-                        "*": {"instanceType": "mem1_ssd1_v2_x72"}
+                        "*": {"instanceType": "mem1_ssd1_v2_x36"}
                     },
                     "stage-verifybamid": {
                         "*": {"instanceType": "mem1_ssd2_v2_x2"}
@@ -127,8 +130,8 @@
                         "id": "file-G7FJjz04kj424vq826gKbZx7"
                     }
                 },
-                "stage-sex_check.male_threshold": "TO BE REVIEWED",
-                "stage-sex_check.female_threshold": "TO BE REVIEWED"
+                "stage-sex_check.male_threshold": 4.00,
+                "stage-sex_check.female_threshold": 5.00
             },
             "output_dirs": {
                 "stage-fastQC": "/OUT-FOLDER/STAGE-NAME",
@@ -230,8 +233,8 @@
                 "stage-somalier_relate2multiqc": "/OUT-FOLDER/STAGE-NAME"
             }
         },
-        "app-GF3K4Qj4bJyvpzx055V3G8q7": {
-            "name": "eggd_MultiQC/2.0.1",
+        "app-Gjyybj844V5bbzXQVfk32Xby": {
+            "name": "eggd_MultiQC/2.0.2",
             "details": "",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
             "analysis": "analysis_3",
@@ -257,12 +260,12 @@
                 "multiqc_config_file": {
                     "$dnanexus_link":  {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "TO BE UPDATED"
+                        "id": "file-Gx9Gy2046J883j8PY58V9Vp8"
                     }
                 }
             },
             "output_dirs": {
-                "app-GF3K4Qj4bJyvpzx055V3G8q7": "/OUT-FOLDER/APP-NAME"
+                "app-Gjyybj844V5bbzXQVfk32Xby": "/OUT-FOLDER/APP-NAME"
             }
         }
     }
