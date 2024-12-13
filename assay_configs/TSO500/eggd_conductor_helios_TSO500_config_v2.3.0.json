@@ -69,11 +69,16 @@
             "process_fastqs": false,
             "depends_on": ["analysis_1"],
             "inputs": {
-                "run_folder": "INPUT-analysis_1-out-dir",
+                "run_folder": "INPUT-analysis_1-out_dir",
                 "workflow_id": "c209834d-92d5-445f-b89b-c4d291c57613",
                 "api_key_file": {
-                    "$dnanexus_link": "project-Fv7VVv04FjKB44KJ3fp9554Q:file-Gx4v4g04FjK6F3fkGKJK3Y3J"
+                    "$dnanexus_link": {
+                        "project": "project-Fv7VVv04FjKB44KJ3fp9554Q",
+                        "id": "file-Gx4v4g04FjK6F3fkGKJK3Y3J"
+                    }
                 }
+            },
+            "output_dirs": {
             }
         },
         "applet-FvyXygj433GbKPPY0QY8ZKQG": {
