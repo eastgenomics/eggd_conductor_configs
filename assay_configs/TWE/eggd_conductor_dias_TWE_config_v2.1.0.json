@@ -260,7 +260,7 @@
                 "multiqc_config_file": {
                     "$dnanexus_link":  {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-Gx9Gy2046J883j8PY58V9Vp8"
+                        "id": "file-GxQ342j46J8J4pJ3fJ60qKky"
                     }
                 }
             },
