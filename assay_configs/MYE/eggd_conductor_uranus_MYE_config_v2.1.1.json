@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "details": "Includes main Uranus workflow, multi_fastqc, somalier workflow and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -29,7 +29,8 @@
         "v2.0.6": "Update VEP 103 cache",
         "v2.0.7": "Updated to use ClinVar version 20241021 (hg38)",
         "v2.0.8": "Updated to use ClinVar version 20241111 (hg38)",
-        "v2.1.0": "Updated main workflow to 2.2.0 (removal of eggd_vcf_handler_for_uranus v2.8.0, addition of eggd_vep, eggd_rescue_vcf, eggd_generate_variant_workbook)"
+        "v2.1.0": "Updated main workflow to 2.2.0 (removal of eggd_vcf_handler_for_uranus v2.8.0, addition of eggd_vep, eggd_rescue_vcf, eggd_generate_variant_workbook)",
+        "v2.1.1": "Updated VEP config to v1.0.2 for eggd_vep_cgppindel and eggd_vep_mutect2"
     },
     "demultiplex": true,
     "users": {
@@ -87,14 +88,14 @@
                     "$dnanexus_link": "file-Gqy4V1Q47xBXYzfKxb22fGXz"
                 },
                 "stage-eggd_vep_cgppindel.config_file": {
-                    "$dnanexus_link": "file-Gx47xzQ42ffzPPXyZqQ9bjK7"
+                    "$dnanexus_link": "file-GxXf9GQ44y215VkVYz48Xj1z"
                 },
                 "stage-eggd_vep_cgppindel.normalise": false,
                 "stage-eggd_vep_mutect2.panel_bed": {
                     "$dnanexus_link": "file-Gqy3qk847xBjBk1G7YV6YJ9V"
                   },
                 "stage-eggd_vep_mutect2.config_file": {
-                    "$dnanexus_link": "file-Gx47xzQ42ffzPPXyZqQ9bjK7"
+                    "$dnanexus_link": "file-GxXf9GQ44y215VkVYz48Xj1z"
                   },
                 "stage-eggd_vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": "file-GjFv9X0421zQFGxXVFQ4j972"
