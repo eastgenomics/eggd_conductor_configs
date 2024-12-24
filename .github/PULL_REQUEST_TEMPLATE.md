@@ -13,5 +13,5 @@ Please include a summary of the changes [bug fix? new feature?] and the related 
 - [ ] For any workflows or app IDs updated, check the name field is updated too for the correct version
 
 ### Checks applied before merging the PR
-- [] All checklists are done within the PR
-- [] Once changes are checked - comment on that line with an informing comment (non-blocking) the object name
+- [ ] All checklists are done within the PR
+- [ ] Once changes are checked - comment on that line with an informing comment (non-blocking) the object name
