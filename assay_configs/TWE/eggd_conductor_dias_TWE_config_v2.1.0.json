@@ -1,6 +1,6 @@
 {
     "name": "Config for Twist whole exome assay",
-    "assay": "TWE",
+    "assay": "38_TWE",
     "genome": "GRCh38",
     "assay_code": "-EGG4|-9526-|-9688-",
     "version": "2.1.0",
