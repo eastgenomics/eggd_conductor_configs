@@ -140,8 +140,8 @@
                 },
                 "stage-picard.bedfile": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-Ggv2k384jVYB0JX1Gjp669Bz"
+                      "project": "project-Gxp04xQ4kyZPy82xVbZzqkY5",
+                      "id": "file-Gxp2vx84kyZB9Y5GQjbY1vby"
                     }
                 },
                 "stage-picard.fasta_index": {
