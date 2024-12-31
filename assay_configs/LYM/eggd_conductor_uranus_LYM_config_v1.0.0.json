@@ -1,11 +1,11 @@
 {
-    "name": "Config for myeloid assay",
+    "name": "Config for Lymphoma assay",
     "assay": "LYM",
     "assay_code": "EGG2|-8128-|-8476-|-5877-",
     "version": "1.0.0",
     "details": "Includes main Uranus workflow, multi_fastqc, somalier workflow and multiQC",
     "changelog": {
-        "v1.0.0": "Initial working version replicating MYE 2.2.0",
+        "v1.0.0": "Initial working version replicating MYE 2.2.0"
     },
     "demultiplex": true,
     "users": {
@@ -163,7 +163,7 @@
                 "stage-athena.exons_file": {
                     "$dnanexus_link": {
                       "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-GjBYbb04qv8VK56JYV335xk2"
+                      "id": "file-GZYqkkQ4fPQpKYz0BYPZk68j"
                     }
                   },
                 "stage-athena.summary": true,
