@@ -14,7 +14,7 @@
         "v1.4.0": "Updated workflow ID and name for dias_single",
         "v2.0.0": "Updates to all reference genome related files to GRCh38",
         "v2.0.1": "Update vcf_QC bed file and instance types",
-        "v2.1.0": "Updates dias_single to v2.7.0, Sentieon instance type, sex check thresholds and adds mosdepth docker input. Updates dias_multi to v2.2.0 and removes references to update_run_folders. Updates egg_multiqc to v2.02, MultiQC docker input to v1.14 and MultiQC config for GRCh38"
+        "v2.1.0": "Updates dias_single to v2.7.0, Sentieon instance type, sex check thresholds and adds mosdepth docker input. Updates dias_multi to v2.2.0 and removes references to update_run_folders. Updates egg_multiqc to v2.0.2, MultiQC docker input to v1.14 and MultiQC config for GRCh38"
     },
     "demultiplex": true,
     "users": {
