@@ -26,6 +26,9 @@
             "per_sample": true,
             "process_fastqs": true,
             "hold": false,
+            "extra_args": {
+                "priority": "high"
+            },
             "inputs": {
                 "stage-staraligner.fastqs": "INPUT-R1-R2",
                 "stage-starfusion.sf_docker": {
