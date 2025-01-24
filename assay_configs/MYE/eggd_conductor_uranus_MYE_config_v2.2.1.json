@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "details": "Includes main Uranus workflow, multi_fastqc, somalier workflow and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -31,7 +31,8 @@
         "v2.0.8": "Updated to use ClinVar version 20241111 (hg38)",
         "v2.1.0": "Updated main workflow to 2.2.0 (removal of eggd_vcf_handler_for_uranus v2.8.0, addition of eggd_vep, eggd_rescue_vcf, eggd_generate_variant_workbook)",
         "v2.1.1": "Updated VEP config to v1.0.2 for eggd_vep_cgppindel and eggd_vep_mutect2",
-        "v2.2.0": "Updated main workflow to v2.3.0 (update sentieon-bwa to v4.2.2 and sentieon-tnbam to v5.0.1)"
+        "v2.2.0": "Updated main workflow to v2.3.0 (update sentieon-bwa to v4.2.2 and sentieon-tnbam to v5.0.1)",
+        "v2.2.1": "Updated VEP config to v1.0.3 for eggd_vep_cgppindel and eggd_vep_mutect2; and rescue_vcf to v100"
     },
     "demultiplex": true,
     "users": {
@@ -89,17 +90,17 @@
                     "$dnanexus_link": "file-Gqy4V1Q47xBXYzfKxb22fGXz"
                 },
                 "stage-eggd_vep_cgppindel.config_file": {
-                    "$dnanexus_link": "file-GxXf9GQ44y215VkVYz48Xj1z"
+                    "$dnanexus_link": "file-Gy90VG84ZYKg9Q461Vp5Bbbb"
                 },
                 "stage-eggd_vep_cgppindel.normalise": false,
                 "stage-eggd_vep_mutect2.panel_bed": {
                     "$dnanexus_link": "file-Gqy3qk847xBjBk1G7YV6YJ9V"
                   },
                 "stage-eggd_vep_mutect2.config_file": {
-                    "$dnanexus_link": "file-GxXf9GQ44y215VkVYz48Xj1z"
+                    "$dnanexus_link": "file-Gy90VG84ZYKg9Q461Vp5Bbbb"
                   },
                 "stage-eggd_vcf_rescue.rescue_vcf": {
-                    "$dnanexus_link": "file-GjFv9X0421zQFGxXVFQ4j972"
+                    "$dnanexus_link": "file-GqpjZZj4Pj2X4G2V9v22K403"
                 },
                 "stage-eggd_vcf_rescue.fasta_tar": {
                     "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
