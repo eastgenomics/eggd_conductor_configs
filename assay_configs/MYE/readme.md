@@ -33,7 +33,7 @@ Below defines all external input files, their versions and file locations in DNA
 ||`panel_bed`|[coding_unrestricted_athena_GRCh38_myeloid_5bp_flank_v2.2.0.bed](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/bed_files/b38/kits/myeloid?id.values=file-Gqy3qk847xBjBk1G7YV6YJ9V)|v2.2.0|
 |[eggd_vep [cgppindel VCF]](https://github.com/eastgenomics/eggd_vep)|`config_file`|[uranus_vep_config_v1.0.3.json](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/dynamic_files/vep_configs?id.values=file-Gy90VG84ZYKg9Q461Vp5Bbbb)|v1.0.3|
 ||`panel_bed`|[pindel_cgppindel_filtering_coordinates_v1.2.bed](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/bed_files/b38/kits/myeloid?id.values=file-Gqy4V1Q47xBXYzfKxb22fGXz)|v1.2|
-|[eggd_vcf_rescue](https://github.com/eastgenomics/eggd_vcf_rescue)|`rescue_vcf`|[CosmicCodingMuts_Normal_v100_GRCh38.vcf.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-GqpjZZj4Pj2X4G2V9v22K403)|v100|
+|[eggd_vcf_rescue](https://github.com/eastgenomics/eggd_vcf_rescue)|`rescue_vcf`|[CosmicCodingMuts_GRCh38_v99.normal.NoEntry.vcf.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-GjFv9X0421zQFGxXVFQ4j972)|v99|
 ||`fasta_tar`|[GRCh38_GIABv3_no_alt_analysis_set_maskedGRC_decoys_MAP2K3_KMT2C_KCNJ18_noChr.fasta-index.tar.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-Gb772VQ4XGyzQ0Zk615XbZ0X)| not versioned |
 
 ---
