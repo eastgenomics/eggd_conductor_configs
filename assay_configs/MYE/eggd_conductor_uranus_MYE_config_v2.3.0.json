@@ -91,14 +91,14 @@
                     "$dnanexus_link": "file-Gqy4V1Q47xBXYzfKxb22fGXz"
                 },
                 "stage-eggd_vep_cgppindel.config_file": {
-                    "$dnanexus_link": "file-GyGBV7048fj7jYyBV4vV0gb4"
+                    "$dnanexus_link": "file-GyGQBvj42ffyy9f03fFQjgVP"
                 },
                 "stage-eggd_vep_cgppindel.normalise": false,
                 "stage-eggd_vep_mutect2.panel_bed": {
                     "$dnanexus_link": "file-Gqy3qk847xBjBk1G7YV6YJ9V"
                   },
                 "stage-eggd_vep_mutect2.config_file": {
-                    "$dnanexus_link": "file-GyGBV7048fj7jYyBV4vV0gb4"
+                    "$dnanexus_link": "file-GyGQBvj42ffyy9f03fFQjgVP"
                   },
                 "stage-eggd_vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": "file-GjFv9X0421zQFGxXVFQ4j972"
