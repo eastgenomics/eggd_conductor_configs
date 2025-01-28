@@ -1,0 +1,136 @@
+{
+    "name": "Config for Eunomia pipeline with PANCAN assay",
+    "assay": "PANCAN",
+    "assay_code": "-10011|-10012",
+    "version": "1.0.0",
+    "details": "Initial release of assay config",
+    "changelog": {
+        "v1.0.0": "Initial release of assay config"
+    },
+    "demultiplex": true,
+    "demultiplex_config": {
+        "app_id": "app-GJxgy7Q47yq62Q90GY2FX0fq",
+        "additional_args": "--strict-mode true",
+        "instance_type": "mem2_ssd1_v2_x48"
+    },
+    "users": {
+        "org-emee_1": "CONTRIBUTE"
+    },
+    "subset_samplesheet": "-10011|-10012",
+    "executables": {
+        "workflow-GpYgvx840f99ZXpx05K0ZFbv": {
+            "name": "eunomia_workflow_v1.0.0",
+            "details": "Eunomia workflow",
+            "url": "https://github.com/eastgenomics/eggd_eunomia_workflow",
+            "analysis": "analysis_1",
+            "per_sample": true,
+            "process_fastqs": true,
+            "hold": false,
+            "extra_args": {
+                "priority": "high"
+            },
+            "inputs": {
+                "stage-staraligner.fastqs": "INPUT-R1-R2",
+                "stage-starfusion.sf_docker": {
+                    "$dnanexus_link": "file-GGygFkQ4Y6Yjp0jpBjgV9VZx"
+                },
+                "stage-starfusion.genome_lib": {
+                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
+                },
+                "stage-fusioninspector_scientist.fi_docker": {
+                    "$dnanexus_link": "file-GGzFp2Q43Gg5Y56p8yfGjPYb"
+                },
+                "stage-fusioninspector_scientist.known_fusions": [
+                    {
+                        "$dnanexus_link": "file-GpQXz1j4JJKX9PPVpKpBzV7Q"
+                    }
+                ],
+                "stage-fusioninspector_scientist.genome_lib": {
+                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
+                },
+                "stage-fusioninspector_scientist.include_trinity": true,
+                "stage-fusioninspector_scientist.r1_fastqs": "INPUT-R1",
+                "stage-fusioninspector_scientist.r2_fastqs": "INPUT-R2",
+                "stage-fusioninspector_rnaopa.fi_docker": {
+                    "$dnanexus_link": "file-GGzFp2Q43Gg5Y56p8yfGjPYb"
+                },
+                "stage-fusioninspector_rnaopa.genome_lib": {
+                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
+                },
+                "stage-fusioninspector_rnaopa.known_fusions": [
+                    {
+                        "$dnanexus_link": "file-GpGQq8j4JJKgbjK5z5gGxx6K"
+                    }
+                ],
+                "stage-fusioninspector_rnaopa.include_trinity": true,
+                "stage-fusioninspector_rnaopa.r1_fastqs": "INPUT-R1",
+                "stage-fusioninspector_rnaopa.r2_fastqs": "INPUT-R2",
+                "stage-fusioninspector_testdir_cosmic.fi_docker": {
+                    "$dnanexus_link": "file-GGzFp2Q43Gg5Y56p8yfGjPYb"
+                },
+                "stage-fusioninspector_testdir_cosmic.genome_lib": {
+                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
+                },
+                "stage-fusioninspector_testdir_cosmic.known_fusions": [
+                    {
+                        "$dnanexus_link": "file-GpGVQZj4JJKy6vGyZz2GQ2p2"
+                    }
+                ],
+                "stage-fusioninspector_testdir_cosmic.include_trinity": true,
+                "stage-fusioninspector_testdir_cosmic.r1_fastqs": "INPUT-R1",
+                "stage-fusioninspector_testdir_cosmic.r2_fastqs": "INPUT-R2",
+                "stage-rnaseqc.docker": {
+                    "$dnanexus_link": "file-Gp2YvGj43p6bP660QjZ6zV60"
+                },
+                "stage-rnaseqc.CTAT_bundle": {
+                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
+                },
+                "stage-rnaseqc.bed": {
+                    "$dnanexus_link": "file-Gp8Xxv842QQqKY9Z5938xQP0"
+                },
+                "stage-picard.fasta_index": {
+                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
+                },
+                "stage-picard.run_CollectMultipleMetrics": false,
+                "stage-picard.run_CollectHsMetrics": false,
+                "stage-picard.run_CollectRnaSeqMetrics": true,
+                "stage-fastqc.fastqs": "INPUT-R1-R2"
+            },
+            "output_dirs": {
+                "stage-staraligner": "/OUT-FOLDER/STAGE-NAME",
+                "stage-starfusion": "/OUT-FOLDER/STAGE-NAME",
+                "stage-fusioninspector_scientist": "/OUT-FOLDER/STAGE-NAME",
+                "stage-fusioninspector_rnaopa": "/OUT-FOLDER/STAGE-NAME",
+                "stage-fusioninspector_testdir_cosmic": "/OUT-FOLDER/STAGE-NAME",
+                "stage-rnaseqc": "/OUT-FOLDER/STAGE-NAME",
+                "stage-picard": "/OUT-FOLDER/STAGE-NAME",
+                "stage-fastqc": "/OUT-FOLDER/STAGE-NAME"
+            }
+        },
+        "app-Gjyybj844V5bbzXQVfk32Xby": {
+            "name": "MultiQC",
+            "details": "MultiQC app to generate aggregated run level QC report",
+            "url": "https://github.com/eastgenomics/eggd_multiqc",
+            "analysis": "analysis_2",
+            "depends_on": ["analysis_1"],
+            "per_sample": false,
+            "process_fastqs": false,
+            "inputs": {
+                "project_for_multiqc": "INPUT-dx_project_name",
+                "primary_workflow_output": "INPUT-parent_out_dir",
+                "multiqc_config_file": {
+                    "$dnanexus_link": "file-GbqZGj04k1722zqq766Fjf00"
+                },
+                "multiqc_docker": {
+                    "$dnanexus_link": "file-G61JxF84g59YVK4G43FzGzGp"
+                },
+                "single_folder": false,
+                "calc_custom_coverage": false,
+                "depths": "250,500,1000"
+            },
+            "output_dirs": {
+                "app-Gjyybj844V5bbzXQVfk32Xby": "/OUT-FOLDER/APP-NAME"
+            }
+        }
+    }
+}
