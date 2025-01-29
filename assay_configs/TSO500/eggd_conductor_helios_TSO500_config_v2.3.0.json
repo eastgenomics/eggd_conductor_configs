@@ -70,6 +70,10 @@
             "per_sample": false,
             "process_fastqs": false,
             "depends_on": ["analysis_1"],
+            "extra_args": {
+                "systemRequirements": {"*": {"instanceType": "mem2_ssd1_v2_x16"}},
+                "priority": "high"
+            },
             "inputs": {
                 "run_folder": "INPUT-analysis_1-out_dir",
                 "workflow_id": "c209834d-92d5-445f-b89b-c4d291c57613",
