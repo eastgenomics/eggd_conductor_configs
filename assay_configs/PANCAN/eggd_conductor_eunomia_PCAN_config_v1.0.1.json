@@ -1,6 +1,6 @@
 {
     "name": "Config for Eunomia pipeline with PANCAN assay",
-    "assay": "PANCAN",
+    "assay": "PCAN",
     "assay_code": "-10011|-10012",
     "version": "1.0.0",
     "details": "Initial release of assay config",
