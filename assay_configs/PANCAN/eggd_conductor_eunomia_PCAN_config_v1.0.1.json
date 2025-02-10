@@ -5,7 +5,8 @@
     "version": "1.0.1",
     "details": "Initial release of assay config",
     "changelog": {
-        "v1.0.0": "Initial release of assay config"
+        "v1.0.0": "Initial release of assay config",
+        "v1.0.1": "Changed assay field name to be more consistent with DNANexus project naming convention"
     },
     "demultiplex": true,
     "demultiplex_config": {
