@@ -2,7 +2,7 @@
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
     "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041|-10042|-10043",
-    "version": "2.3.0",
+    "version": "2.4.0",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -22,7 +22,8 @@
         "v2.2.4": "Update to latest TSO500 vep config file (v1.2.13)",
         "v2.2.5": "Update to latest TSO500 vep config file (v1.2.14)",
         "v2.2.6": "Update to latest TSO500 vep config file (v1.2.15).Removed PANCAN codes 10011 and 10012.",
-        "v2.3.0": "Update to use app-eggd_ici_uploader/v1.0.0"
+        "v2.3.0": "Update to use app-eggd_ici_uploader/v1.0.0",
+        "v2.4.0": "Update eggd_TSO500_reports_workflow to v2.1.0"
     },
     "demultiplex": true,    
     "demultiplex_config": {
@@ -141,8 +142,8 @@
                 "app-Gpzb0Y04FXvff0vJPxj0p1x1": "/OUT-FOLDER/APP-NAME"
             }
         },
-        "workflow-Gjk42k84yfKPv0x151ZvYBpK": {
-            "name": "TSO500_reports_workflow_v2.0.0",
+        "workflow-GyfvJ5j4yfKJ54935785K9Kq": {
+            "name": "TSO500_reports_workflow_v2.1.0",
             "details": "Reports workflow to run vep and generate_variant_workbook etc",
             "url": "https://github.com/eastgenomics/eggd_TSO500_reports_workflow",
             "analysis": "analysis_5",
@@ -215,6 +216,13 @@
                         "id": "file-Gg5p2J04qJpk3GyJXjFyby66"
                     }
                 },
+                "stage-plot_variant_baf.vcf": "eggd_tso500.vcf",
+                "stage-plot_variant_baf.packages": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GyFgkY84Bkj379jK5039J51q"
+                    }
+                },
                 "stage-generate_variant_workbook.additional_files": "eggd_tso500.cvo",
                 "stage-generate_variant_workbook.exclude_columns": "ID CSQ_Allele CSQ_Mastermind_MMID3 DP_FMT",
                 "stage-generate_variant_workbook.reorder_columns": "CSQ_SYMBOL CSQ_Consequence CSQ_Feature DNA Protein VF Classification Comment rawChange MANE CHROM POS REF ALT CSQ_EXON FILTER QUAL DP oncoKB PeCan cBioPortal CSQ_INTRON CSQ_IMPACT  CSQ_CADD_PHRED CSQ_REVEL CSQ_gnomADe_AF CSQ_gnomADg_AF CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL",
@@ -227,7 +235,9 @@
                 "stage-generate_variant_workbook.freeze_column": "H2",
                 "stage-generate_variant_workbook.additional_columns": "oncoKB PeCan cBioPortal",
                 "stage-generate_variant_workbook.summary": "helios",
-                "stage-generate_variant_workbook.colour_cells": "VF:>=0.9:#2ab600 VF:<0.9&>=0.8:#51bc00 VF:<0.8&>=0.7:#7bc100 VF:<0.7&>=0.6:#a7c700 VF:<0.6&>=0.5:#ccc300 VF:<0.5&>=0.4:#d29d00 VF:<0.4&>=0.3:#d77600 VF:<0.3&>=0.2:#dd4c00 VF:<0.2&>=0.1:#e22000 VF:<0.1:#e8000f"
+                "stage-generate_variant_workbook.colour_cells": "VF:>=0.9:#2ab600 VF:<0.9&>=0.8:#51bc00 VF:<0.8&>=0.7:#7bc100 VF:<0.7&>=0.6:#a7c700 VF:<0.6&>=0.5:#ccc300 VF:<0.5&>=0.4:#d29d00 VF:<0.4&>=0.3:#d77600 VF:<0.3&>=0.2:#dd4c00 VF:<0.2&>=0.1:#e22000 VF:<0.1:#e8000f",
+                "stage-generate_variant_workbook.image_sizes": "1500:500",
+                "stage-generate_variant_workbook.image_sheet_names": "BAF_Plot"
             },
             "output_dirs": {
                 "stage-mosdepth": "/OUT-FOLDER/STAGE-NAME",
@@ -235,6 +245,7 @@
                 "stage-vcf_rescue": "/OUT-FOLDER/STAGE-NAME",
                 "stage-vep": "/OUT-FOLDER/STAGE-NAME",
                 "stage-eggd_add_MANE_annotation": "/OUT-FOLDER/STAGE-NAME",
+                "stage-plot_variant_baf": "/OUT-FOLDER/STAGE-NAME",
                 "stage-generate_variant_workbook": "/OUT-FOLDER/STAGE-NAME"
             }
         },
