@@ -2,7 +2,7 @@
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
     "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041|-10042|-10043",
-    "version": "2.4.0",
+    "version": "2.4.1",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -23,7 +23,8 @@
         "v2.2.5": "Update to latest TSO500 vep config file (v1.2.14)",
         "v2.2.6": "Update to latest TSO500 vep config file (v1.2.15).Removed PANCAN codes 10011 and 10012.",
         "v2.3.0": "Update to use app-eggd_ici_uploader/v1.0.0",
-        "v2.4.0": "Update eggd_TSO500_reports_workflow to v2.1.0"
+        "v2.4.0": "Update eggd_TSO500_reports_workflow to v2.1.0",
+        "v2.4.1": "Update to latest TSO500 vep config file (v1.2.16)"
     },
     "demultiplex": true,    
     "demultiplex_config": {
@@ -201,7 +202,7 @@
                 "stage-vep.config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-Gy927J840P95qj95Bvy9Fb2V"
+                        "id": "file-Gyp9G8840P9B4ykYv12G2B7F"
                     }
                 },
                 "stage-vep.transcript_list": {
