@@ -3,7 +3,7 @@
     "assay": "38_TWE",
     "genome": "GRCh38",
     "assay_code": "-EGG4|-9526-|-9688-",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -14,7 +14,8 @@
         "v1.4.0": "Updated dias_single to 2.5.0 and multiqc config to v2.3.0",
         "v2.0.0": "Updates to all reference related file to GRCh38",
         "v2.0.1": "Change vcf_qc input bed to capture bed,update instance types,add genome field",
-        "v2.1.0": "Updates dias_single to v2.7.0, Sentieon instance type, sex check thresholds and adds mosdepth docker input. Updates dias_multi to v2.2.0 and removes references to update_run_folders. Updates egg_multiqc to v2.02, MultiQC docker input to v1.14 and MultiQC config for GRCh38"
+        "v2.1.0": "Updates dias_single to v2.7.0, Sentieon instance type, sex check thresholds and adds mosdepth docker input. Updates dias_multi to v2.2.0 and removes references to update_run_folders. Updates egg_multiqc to v2.02, MultiQC docker input to v1.14 and MultiQC config for GRCh38",
+        "v2.1.1": "Updates hap.py panel BED"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -172,7 +173,7 @@
                 "stage-vcfeval_happy.panel_bed": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GbYg9J04XGyqK7xkQjbXj6GG"
+                        "id": "file-Gz08bkj47Vx09JkYY14vk0gj"
                     }
                 },
                 "stage-vcfeval_happy.high_conf_bed": {
