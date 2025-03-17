@@ -1,12 +1,14 @@
 {
     "name": "Config for Eunomia pipeline with PANCAN assay",
     "assay": "PCAN",
-    "assay_code": "-10011|-10012",
-    "version": "1.0.1",
+    "assay_code": "-10011|-10012|-10042|-10043",
+    "version": "1.0.2",
     "details": "Initial release of assay config",
     "changelog": {
         "v1.0.0": "Initial release of assay config",
-        "v1.0.1": "Changed assay field name to be more consistent with DNANexus project naming convention"
+        "v1.0.1": "Changed assay field name to be more consistent with DNANexus project naming convention",
+        "v1.0.2": "Added Epic test codes 10042 and 10043 for Haemonc to assay_code"
+        
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -17,7 +19,7 @@
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
-    "subset_samplesheet": "-10011|-10012",
+    "subset_samplesheet": "-10011|-10012|-10042|-10043",
     "executables": {
         "workflow-GpYgvx840f99ZXpx05K0ZFbv": {
             "name": "eunomia_workflow_v1.0.0",

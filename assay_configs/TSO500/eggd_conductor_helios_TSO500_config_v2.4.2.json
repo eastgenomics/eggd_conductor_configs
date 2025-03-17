@@ -1,8 +1,8 @@
 {
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
-    "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041|-10042|-10043",
-    "version": "2.4.1",
+    "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041",
+    "version": "2.4.2",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -24,7 +24,9 @@
         "v2.2.6": "Update to latest TSO500 vep config file (v1.2.15).Removed PANCAN codes 10011 and 10012.",
         "v2.3.0": "Update to use app-eggd_ici_uploader/v1.0.0",
         "v2.4.0": "Update eggd_TSO500_reports_workflow to v2.1.0",
-        "v2.4.1": "Update to latest TSO500 vep config file (v1.2.16)"
+        "v2.4.1": "Update to latest TSO500 vep config file (v1.2.16)",
+        "v2.4.2": "Removed Epic test codes 10042 and 10043 for Haemonc from assay_code"
+
     },
     "demultiplex": true,    
     "demultiplex_config": {
