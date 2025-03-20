@@ -36,7 +36,6 @@
         "v2.3.0": "Updated VEP config to v1.1.0 for eggd_vep_cgppindel and eggd_vep_mutect2",
         "v2.3.1": "Updated VEP config to v1.1.1 for eggd_vep_cgppindel and eggd_vep_mutect2",
         "v2.4.0": "Updated VEP config to v1.2.1 for eggd_vep_cgppindel and eggd_vep_mutect2, includes new eg_annotations, updated columns for eggd_generate_variant_workbook"
-
     },
     "demultiplex": true,
     "users": {
