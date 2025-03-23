@@ -12,7 +12,7 @@
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "workflow-GzPyBz84kyZ30xG5JGkBp9f9": {
+        "workflow-GzPyJ684kyZ0fGbyzXZX45BQ": {
             "name": "uranus_main_workflow_GRCh38_v2.4.0",
             "details": "Main Uranus workflow for alignment (UMI) and variant calling",
             "url": "https://github.com/eastgenomics/eggd_uranus_main_workflow",
@@ -166,8 +166,8 @@
                 "stage-athena.thresholds": "100, 250, 500, 1000, 1500",
                 "stage-athena.exons_file": {
                     "$dnanexus_link": {
-                        "project": "project-GyJfk5846Pg9kfqyfY8Fxxz9",
-                        "id": "file-GzGkbb846Pg36b2P8BJkfKKX"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gyb29P84fJPqZJ37pfjz1vZB"
                     }
                 },
                 "stage-athena.summary": true,
