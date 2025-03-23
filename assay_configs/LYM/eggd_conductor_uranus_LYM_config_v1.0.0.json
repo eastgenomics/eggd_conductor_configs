@@ -39,18 +39,18 @@
                 }
             },
             "inputs": {
-                "stage-sentieon-umi.read_template": "5M2S+T,5M2S+T",
-                "stage-sentieon-umi.output_metrics": true,
-                "stage-sentieon-umi.duplex_umi": true,
-                "stage-sentieon-umi.reads_fastqgzs": "INPUT-R1",
-                "stage-sentieon-umi.reads2_fastqgzs": "INPUT-R2",
-                "stage-sentieon-umi.genome_fastagz": {
+                "stage-sentieon_umi.read_template": "5M2S+T,5M2S+T",
+                "stage-sentieon_umi.output_metrics": true,
+                "stage-sentieon_umi.duplex_umi": true,
+                "stage-sentieon_umi.reads_fastqgzs": "INPUT-R1",
+                "stage-sentieon_umi.reads2_fastqgzs": "INPUT-R2",
+                "stage-sentieon_umi.genome_fastagz": {
                     "$dnanexus_link": "file-Gb757784XGyY3FPvkPQ74K9z"
                 },
-                "stage-sentieon-umi.genomebwaindex_targz": {
+                "stage-sentieon_umi.genomebwaindex_targz": {
                     "$dnanexus_link": "file-Gb76f204XGybZ3J6F731xkBp"
                 },
-                "stage-sentieon-umi.sample": "INPUT-SAMPLE-NAME",
+                "stage-sentieon_umi.sample": "INPUT-SAMPLE-NAME",
                 "stage-sentieon_tnbam.genome_fastagz": {
                     "$dnanexus_link": "file-Gb757784XGyY3FPvkPQ74K9z"
                 },
@@ -118,7 +118,7 @@
                 "stage-cgppindel.tumour_index": {
                     "$dnanexus_link": {
                         "outputField": "mappings_bam_bai",
-                        "stage": "stage-sentieon-umi"
+                        "stage": "stage-sentieon_umi"
                     }
                 },
                 "stage-cgppindel.genes": {
@@ -241,7 +241,7 @@
                 "stage-sex_check.female_threshold": 6.00
             },
             "output_dirs": {
-                "stage-sentieon-umi": "/OUT-FOLDER/STAGE-NAME",
+                "stage-sentieon_umi": "/OUT-FOLDER/STAGE-NAME",
                 "stage-sentieon_tnbam": "/OUT-FOLDER/STAGE-NAME",
                 "stage-cgppindel": "/OUT-FOLDER/STAGE-NAME",
                 "stage-eggd_vep_cgppindel": "/OUT-FOLDER/STAGE-NAME",
