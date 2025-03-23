@@ -12,9 +12,9 @@
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "workflow-GxZg78j4kZj3QjzV6kj6GXZz": {
-            "name": "uranus_main_workflow_GRCh38_v2.3.0",
-            "details": "Main Uranus workflow for alignment and variant calling",
+        "workflow-GzPZ2gQ4kyZ9Q8JgGq566fzK": {
+            "name": "uranus_main_workflow_GRCh38_v2.4.0",
+            "details": "Main Uranus workflow for alignment (UMI) and variant calling",
             "url": "https://github.com/eastgenomics/eggd_uranus_main_workflow",
             "analysis": "analysis_1",
             "per_sample": true,
@@ -39,15 +39,18 @@
                 }
             },
             "inputs": {
-                "stage-sentieon_bwa.reads_fastqgzs": "INPUT-R1",
-                "stage-sentieon_bwa.reads2_fastqgzs": "INPUT-R2",
-                "stage-sentieon_bwa.genome_fastagz": {
+                "stage-sentieon-umi.read_template": "5M2S+T,5M2S+T",
+                "stage-sentieon-umi.output_metrics": true,
+                "stage-sentieon-umi.duplex_umi": true,
+                "stage-sentieon-umi.reads_fastqgzs": "INPUT-R1",
+                "stage-sentieon-umi.reads2_fastqgzs": "INPUT-R2",
+                "stage-sentieon-umi.genome_fastagz": {
                     "$dnanexus_link": "file-Gb757784XGyY3FPvkPQ74K9z"
                 },
-                "stage-sentieon_bwa.genomebwaindex_targz": {
+                "stage-sentieon-umi.genomebwaindex_targz": {
                     "$dnanexus_link": "file-Gb76f204XGybZ3J6F731xkBp"
                 },
-                "stage-sentieon_bwa.sample": "INPUT-SAMPLE-NAME",
+                "stage-sentieon-umi.sample": "INPUT-SAMPLE-NAME",
                 "stage-sentieon_tnbam.genome_fastagz": {
                     "$dnanexus_link": "file-Gb757784XGyY3FPvkPQ74K9z"
                 },
@@ -67,11 +70,11 @@
                 },
                 "stage-eggd_vep_cgppindel.normalise": false,
                 "stage-eggd_vep_mutect2.panel_bed": {
-                    "$dnanexus_link": "file-Gxy5Vf04kyZ7vFP4FJGGXZvb"
-                  },
+                    "$dnanexus_link": "file-GxyQz8Q4kyZ8XyVbfjYBg6Fb"
+                },
                 "stage-eggd_vep_mutect2.config_file": {
                     "$dnanexus_link": "file-GxXf9GQ44y215VkVYz48Xj1z"
-                  },
+                },
                 "stage-eggd_vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": "file-GjFv9X0421zQFGxXVFQ4j972"
                 },
@@ -115,11 +118,11 @@
                 "stage-cgppindel.tumour_index": {
                     "$dnanexus_link": {
                         "outputField": "mappings_bam_bai",
-                        "stage": "stage-sentieon_bwa"
+                        "stage": "stage-sentieon-umi"
                     }
                 },
                 "stage-cgppindel.genes": {
-                    "$dnanexus_link": "file-Gxy5Vf04kyZ7vFP4FJGGXZvb"
+                    "$dnanexus_link": "file-GxyQz8Q4kyZ8XyVbfjYBg6Fb"
                 },
                 "stage-cgppindel.normal_index": {
                     "$dnanexus_link": "file-GjQGjqj4qv8qyZ97xj57vjVq"
@@ -136,12 +139,13 @@
                 "stage-cgppindel.docker_image": {
                     "$dnanexus_link": "file-Fz0KxFj4KB7fxxZ06vy2B2P3"
                 },
+                "stage-verifybamid.vcf_file": {
                     "$dnanexus_link": "file-G7YKFZj4kj47GxgQ2bKGYV1g"
                 },
                 "stage-picard.bedfile": {
                     "$dnanexus_link": {
-                      "project": "project-Gxp04xQ4kyZPy82xVbZzqkY5",
-                      "id": "file-Gxp2vx84kyZB9Y5GQjbY1vby"
+                        "project": "project-Gxp04xQ4kyZPy82xVbZzqkY5",
+                        "id": "file-Gxp2vx84kyZB9Y5GQjbY1vby"
                     }
                 },
                 "stage-picard.fasta_index": {
@@ -150,28 +154,28 @@
                 "stage-mosdepth.qual_flags": true,
                 "stage-mosdepth.mosdepth_docker": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
                     }
                 },
                 "stage-athena.snps": [
                     {
-                      "$dnanexus_link": "file-FyZfyqQ41zg5FjK2GykYfKq8"
+                        "$dnanexus_link": "file-FyZfyqQ41zg5FjK2GykYfKq8"
                     }
-                  ],
+                ],
                 "stage-athena.thresholds": "100, 250, 500, 1000, 1500",
                 "stage-athena.exons_file": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-GZYqkkQ4fPQpKYz0BYPZk68j"
+                        "project": "project-GyJfk5846Pg9kfqyfY8Fxxz9",
+                        "id": "file-GzGkbb846Pg36b2P8BJkfKKX"
                     }
-                  },
+                },
                 "stage-athena.summary": true,
                 "stage-athena.cutoff_threshold": 250,
                 "stage-athena.panel_bed": {
                 "$dnanexus_link": {
                     "project": "project-Gxp04xQ4kyZPy82xVbZzqkY5",
-                    "id": "file-Gxy5Vf04kyZ7vFP4FJGGXZvb"
+                    "id": "file-GyGG5Qj4kyZ55PBkgkJjX5VY"
                     }
                 },
                 "stage-athena.per_chromosome_coverage": true,
@@ -183,10 +187,10 @@
                 },
                 "stage-somalier_extract.reference_genome": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-GjPxXq84qv8xz3ZV1jFq6z3g"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GjPxXq84qv8xz3ZV1jFq6z3g"
                     }
-                  },
+                },
                 "stage-somalier_extract.reference_genome_index": {
                     "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
                 },
@@ -198,14 +202,14 @@
                 },
                 "stage-sompy.truth_vcf": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-Gjk675j4qv8zvQ5Qxq31Vfpg"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gjk675j4qv8zvQ5Qxq31Vfpg"
                     }
-                  },
+                },
                 "stage-sompy.panel_bed": {
                     "$dnanexus_link": {
                         "project": "project-Gxp04xQ4kyZPy82xVbZzqkY5",
-                        "id": "file-Gxy5Vf04kyZ7vFP4FJGGXZvb"
+                        "id": "file-GxyQz8Q4kyZ8XyVbfjYBg6Fb"
                     }
                 },
                 "stage-sompy.truth_high_confidence_bed": {
@@ -232,10 +236,12 @@
                         "id": "file-GjPxp3Q4qv8Vk76xFVjfyPgJ"
                     }
                 },
-                "stage-sompy.query_vcf_string": "Oncospan|-[0-9]+Q[0-9]+-"
+                "stage-sompy.query_vcf_string": "Oncospan|-[0-9]+Q[0-9]+-",
+                "stage-sex_check.male_threshold": 5.00,
+                "stage-sex_check.female_threshold": 6.00
             },
             "output_dirs": {
-                "stage-sentieon_bwa": "/OUT-FOLDER/STAGE-NAME",
+                "stage-sentieon-umi": "/OUT-FOLDER/STAGE-NAME",
                 "stage-sentieon_tnbam": "/OUT-FOLDER/STAGE-NAME",
                 "stage-cgppindel": "/OUT-FOLDER/STAGE-NAME",
                 "stage-eggd_vep_cgppindel": "/OUT-FOLDER/STAGE-NAME",
@@ -294,7 +300,7 @@
                 "stage-somalier_relate2multiqc": "/OUT-FOLDER/STAGE-NAME"
             }
         },
-        "app-GF3K4Qj4bJyvpzx055V3G8q7": {
+        "app-Gjyybj844V5bbzXQVfk32Xby": {
             "name": "MultiQC",
             "details": "MultiQC app to generate aggregated run level QC report",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
