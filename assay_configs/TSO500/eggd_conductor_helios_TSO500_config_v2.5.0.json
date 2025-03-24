@@ -162,12 +162,6 @@
                 },
                 "stage-cnvkit.case_bams": "eggd_tso500.bam",
                 "stage-cnvkit.drop_low_coverage": true,
-                "stage-mosdepth.bed": {
-                    "$dnanexus_link": {
-                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-FkkZQ1Q433GYXZ892pzkgvbP"
-                    }
-                },
                 "stage-mosdepth.bam": "eggd_tso500.bam",
                 "stage-mosdepth.index": "eggd_tso500.idx",
                 "stage-mosdepth.bed": {
