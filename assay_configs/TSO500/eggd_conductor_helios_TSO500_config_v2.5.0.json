@@ -2,7 +2,7 @@
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
     "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041",
-    "version": "2.4.2",
+    "version": "2.5.0",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -25,10 +25,10 @@
         "v2.3.0": "Update to use app-eggd_ici_uploader/v1.0.0",
         "v2.4.0": "Update eggd_TSO500_reports_workflow to v2.1.0",
         "v2.4.1": "Update to latest TSO500 vep config file (v1.2.16)",
-        "v2.4.2": "Removed Epic test codes 10042 and 10043 for Haemonc from assay_code"
-
+        "v2.4.2": "Removed Epic test codes 10042 and 10043 for Haemonc from assay_code",
+        "v2.5.0": "Update to latest TSO500 vep config (v1.2.17), configure CNVkit v2.03"
     },
-    "demultiplex": true,    
+    "demultiplex": true,
     "demultiplex_config": {
         "app_id": "app-GJxgy7Q47yq62Q90GY2FX0fq",
         "additional_args": "--strict-mode true",
@@ -145,8 +145,8 @@
                 "app-Gpzb0Y04FXvff0vJPxj0p1x1": "/OUT-FOLDER/APP-NAME"
             }
         },
-        "workflow-GyfvJ5j4yfKJ54935785K9Kq": {
-            "name": "TSO500_reports_workflow_v2.1.0",
+        "workflow-GzV9pGj437z86V1QPfVzBgGK": {
+            "name": "TSO500_reports_workflow_v2.2.0",
             "details": "Reports workflow to run vep and generate_variant_workbook etc",
             "url": "https://github.com/eastgenomics/eggd_TSO500_reports_workflow",
             "analysis": "analysis_5",
@@ -154,6 +154,14 @@
             "process_fastqs": false,
             "depends_on": ["analysis_1"],
             "inputs": {
+                "stage-cnvkit.cn_reference": {
+                    "$dnanexus_link": {
+                    "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                    "id": "file-GzJyJx84vpyvj520v42G8jXF"
+                    }
+                },
+                "stage-cnvkit.case_bams": "eggd_tso500.bam",
+                "stage-cnvkit.drop_low_coverage": true,
                 "stage-mosdepth.bam": "eggd_tso500.bam",
                 "stage-mosdepth.index": "eggd_tso500.idx",
                 "stage-mosdepth.bed": {
@@ -204,7 +212,7 @@
                 "stage-vep.config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-Gyp9G8840P9B4ykYv12G2B7F"
+                        "id": "file-GzGYykQ40P90x5pGbp9yzkY0"
                     }
                 },
                 "stage-vep.transcript_list": {
@@ -239,8 +247,8 @@
                 "stage-generate_variant_workbook.additional_columns": "oncoKB PeCan cBioPortal",
                 "stage-generate_variant_workbook.summary": "helios",
                 "stage-generate_variant_workbook.colour_cells": "VF:>=0.9:#2ab600 VF:<0.9&>=0.8:#51bc00 VF:<0.8&>=0.7:#7bc100 VF:<0.7&>=0.6:#a7c700 VF:<0.6&>=0.5:#ccc300 VF:<0.5&>=0.4:#d29d00 VF:<0.4&>=0.3:#d77600 VF:<0.3&>=0.2:#dd4c00 VF:<0.2&>=0.1:#e22000 VF:<0.1:#e8000f",
-                "stage-generate_variant_workbook.image_sizes": "1500:500",
-                "stage-generate_variant_workbook.image_sheet_names": "BAF_Plot"
+                "stage-generate_variant_workbook.image_sizes": "1500:500 856:675",
+                "stage-generate_variant_workbook.image_sheet_names": "BAF_Plot CNVkit_Plot"
             },
             "output_dirs": {
                 "stage-mosdepth": "/OUT-FOLDER/STAGE-NAME",
