@@ -145,7 +145,7 @@
                 "app-Gpzb0Y04FXvff0vJPxj0p1x1": "/OUT-FOLDER/APP-NAME"
             }
         },
-        "workflow-GzQZqpj4zJ43QVgKPBBq7KZY": {
+        "workflow-GzV9pGj437z86V1QPfVzBgGK": {
             "name": "TSO500_reports_workflow_v2.2.0",
             "details": "Reports workflow to run vep and generate_variant_workbook etc",
             "url": "https://github.com/eastgenomics/eggd_TSO500_reports_workflow",
