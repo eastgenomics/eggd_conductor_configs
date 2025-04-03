@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-",
-    "version": "2.4.0",
+    "version": "2.5.0",
     "details": "Includes main Uranus workflow, multi_fastqc, somalier workflow and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -35,15 +35,16 @@
         "v2.2.1": "Updated VEP config to v1.0.3 for eggd_vep_cgppindel and eggd_vep_mutect2",
         "v2.3.0": "Updated VEP config to v1.1.0 for eggd_vep_cgppindel and eggd_vep_mutect2",
         "v2.3.1": "Updated VEP config to v1.1.1 for eggd_vep_cgppindel and eggd_vep_mutect2",
-        "v2.4.0": "Updated VEP config to v1.2.1 for eggd_vep_cgppindel and eggd_vep_mutect2, includes new eg_annotations, updated columns for eggd_generate_variant_workbook"
+        "v2.4.0": "Updated VEP config to v1.2.1 for eggd_vep_cgppindel and eggd_vep_mutect2, includes new eg_annotations, updated columns for eggd_generate_variant_workbook",
+        "v2.5.0": "Updated main workflow to v2.4.0 (update eggd_generate_variant_workbook to v2.10.1)"
     },
     "demultiplex": true,
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "workflow-GxZg78j4kZj3QjzV6kj6GXZz": {
-            "name": "uranus_main_workflow_GRCh38_v2.3.0",
+        "workflow-Gzfbq1j4fjXkg42B4JXFpZYY": {
+            "name": "uranus_main_workflow_GRCh38_v2.4.0",
             "details": "Main Uranus workflow for alignment and variant calling",
             "url": "https://github.com/eastgenomics/eggd_uranus_main_workflow",
             "analysis": "analysis_1",
