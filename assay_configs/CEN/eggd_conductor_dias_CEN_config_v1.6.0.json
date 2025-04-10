@@ -11,15 +11,16 @@
         "v1.2.0": "Updated instance type for MultiQC",
         "v1.3.0": "Updated input files for dias_multi and MultiQC",
         "v1.4.0": "Updated workflow ID and name for dias_single",
-        "v1.5.0": "Updated dias_single to v2.5.0 and multiqc config to v2.3.0"
+        "v1.5.0": "Updated dias_single to v2.5.0 and multiqc config to v2.3.0",
+        "v1.6.0": "Updated dias_single to v2.8.0"
     },
     "demultiplex": true,
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "workflow-Gkj2pgj4B1BxKfPZBfy85FjX": {
-            "name": "dias_single_v2.5.0",
+        "workflow-GzqvbPQ4pyGQ9gF5vJXj8Q8J": {
+            "name": "dias_single_v2.8.0",
             "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAM_ID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step",
             "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
             "analysis": "analysis_1",
@@ -223,7 +224,11 @@
                 "analysis_2"
             ],
             "extra_args": {
-                "systemRequirements": {"*": {"instanceType": "mem2_ssd1_v2_x8"}}
+                "systemRequirements": {
+                    "*": {
+                        "instanceType": "mem2_ssd1_v2_x8"
+                    }
+                }
             },
             "inputs": {
                 "project_for_multiqc": "INPUT-dx_project_name",
