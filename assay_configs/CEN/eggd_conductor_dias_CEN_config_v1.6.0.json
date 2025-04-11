@@ -2,7 +2,7 @@
     "name": "Config for CEN assay",
     "assay": "CEN",
     "assay_code": "-EGG5|-9527-|-9617-",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
         "v1.0.0": "Initial working version",
