@@ -157,7 +157,7 @@
                         "field": "fi_coding"
                     }
                 },
-                "fastqc_data": {
+                "multiqc_files": {
                     "$dnanexus_link": {
                         "job": "analysis_2",
                         "field": "multiqc_data_files"
@@ -169,11 +169,6 @@
                         "id": "file-GzGgXK048F3Vk1Xj7Zpk92Pq"
                     }
                 }
-            },
-            "inputs_filter": {
-                "fastqc_data": [
-                    "multiqc_fastqc.txt"
-                ]
             },
             "output_dirs": {
                 "app-GzJKf6Q45x4QfyYX1VP99Y34": "/OUT-FOLDER/APP-NAME"
