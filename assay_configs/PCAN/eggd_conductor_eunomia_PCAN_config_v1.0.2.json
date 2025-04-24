@@ -147,13 +147,15 @@
             "inputs": {
                 "starfusion_files": {
                     "$dnanexus_link": {
-                        "job": "analysis_1",
+                        "analysis": "analysis_1",
+                        "stage": "stage-starfusion",
                         "field": "starfusion_abridged"
                     }
                 },
                 "fusioninspector_files": {
                     "$dnanexus_link": {
-                        "job": "analysis_1",
+                        "analysis": "analysis_1",
+                        "stage": "stage-fusioninspector_scientist",
                         "field": "fi_coding"
                     }
                 },
