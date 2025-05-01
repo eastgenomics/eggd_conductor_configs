@@ -159,6 +159,20 @@
                         "field": "fi_coding"
                     }
                 },
+                "fi_testdir_cosmic_files": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-fusioninspector_testdir_cosmic",
+                        "field": "fi_coding"
+                    }
+                },
+                "fi_rna_opa_files": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-fusioninspector_rnaopa",
+                        "field": "fi_coding"
+                    }
+                },
                 "multiqc_files": {
                     "$dnanexus_link": {
                         "job": "analysis_2",
@@ -169,6 +183,18 @@
                     "$dnanexus_link": {
                         "project": "project-Gz4kFpQ48F3YXzV94xXQ220Q",
                         "id": "file-GzGgXK048F3Vk1Xj7Zpk92Pq"
+                    }
+                },
+                "reference_sources": {
+                    "$dnanexus_link": {
+                        "project": "project-Gz4kFpQ48F3YXzV94xXQ220Q",
+                        "id": "file-J08Jjyj48F3qQ7875J60XXKf"
+                    }
+                },
+                "previous_positives": {
+                    "$dnanexus_link": {
+                        "project": "project-Gz4kFpQ48F3YXzV94xXQ220Q",
+                        "id": "file-J08FKq848F3kj6XxPZ0f3jyZ"
                     }
                 }
             },
