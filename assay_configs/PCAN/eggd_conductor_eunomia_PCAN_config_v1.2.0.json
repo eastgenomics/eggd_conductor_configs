@@ -2,13 +2,14 @@
     "name": "Config for Eunomia pipeline with PANCAN assay",
     "assay": "PCAN",
     "assay_code": "-10011|-10012|-10042|-10043",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "details": "Initial release of assay config",
     "changelog": {
         "v1.0.0": "Initial release of assay config",
         "v1.0.1": "Changed assay field name to be more consistent with DNANexus project naming convention",
         "v1.0.2": "Added Epic test codes 10042 and 10043 for Haemonc to assay_code",
-        "v1.1.0": "Updated sentieon_tar to 202508.03"
+        "v1.1.0": "Updated sentieon_tar to 202508.03",
+        "v1.2.0": "Updated eunomia workflow to v1.1.0"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -21,8 +22,8 @@
     },
     "subset_samplesheet": "-10011|-10012|-10042|-10043",
     "executables": {
-        "workflow-GpYgvx840f99ZXpx05K0ZFbv": {
-            "name": "eunomia_workflow_v1.0.0",
+        "workflow-J0XpQ5Q4jJqv7K3xVBf9Fpp6": {
+            "name": "eunomia_workflow_v1.1.0",
             "details": "Eunomia workflow",
             "url": "https://github.com/eastgenomics/eggd_eunomia_workflow",
             "analysis": "analysis_1",
@@ -37,54 +38,37 @@
                 "stage-staraligner.sentieon_tar": {
                     "$dnanexus_link": "file-J0K7q784JpPxYJy7zJPQF7qG"
                 },
+                "stage-staraligner.ctat_genome_indices_read_length": 151,
+                "stage-staraligner.genome_lib":{
+                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
+                },
+                "stage-staraligner.opt_parameters": "--outBAMcompression 0 --outSAMstrandField intronMotif --outSAMunmapped Within --outReadsUnmapped None --chimSegmentMin 12 --chimJunctionOverhangMin 8 --chimOutJunctionFormat 1 --alignSJDBoverhangMin 10 --alignMatesGapMax 100000 --alignIntronMax 100000 --alignSJstitchMismatchNmax 5 -1 5 5 --alignInsertionFlush Right --alignSplicedMateMapLminOverLmate 0 --alignSplicedMateMapLmin 30 --chimMultimapScoreRange 3 --chimScoreJunctionNonGTAG -4 --chimMultimapNmax 20 --chimNonchimScoreDropMin 10 --peOverlapNbasesMin 12 --peOverlapMMp 0.1 --genomeLoad NoSharedMemory --twopassMode Basic --quantMode GeneCounts",
                 "stage-starfusion.sf_docker": {
                     "$dnanexus_link": "file-GGygFkQ4Y6Yjp0jpBjgV9VZx"
                 },
                 "stage-starfusion.genome_lib": {
                     "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
                 },
-                "stage-fusioninspector_scientist.fi_docker": {
+                "stage-fusioninspector.fi_docker": {
                     "$dnanexus_link": "file-GGzFp2Q43Gg5Y56p8yfGjPYb"
                 },
-                "stage-fusioninspector_scientist.known_fusions": [
+                "stage-fusioninspector.known_fusions": [
                     {
                         "$dnanexus_link": "file-GpQXz1j4JJKX9PPVpKpBzV7Q"
-                    }
-                ],
-                "stage-fusioninspector_scientist.genome_lib": {
-                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
-                },
-                "stage-fusioninspector_scientist.include_trinity": true,
-                "stage-fusioninspector_scientist.r1_fastqs": "INPUT-R1",
-                "stage-fusioninspector_scientist.r2_fastqs": "INPUT-R2",
-                "stage-fusioninspector_rnaopa.fi_docker": {
-                    "$dnanexus_link": "file-GGzFp2Q43Gg5Y56p8yfGjPYb"
-                },
-                "stage-fusioninspector_rnaopa.genome_lib": {
-                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
-                },
-                "stage-fusioninspector_rnaopa.known_fusions": [
+                    },
+                    {
+                        "$dnanexus_link": "file-GpGVQZj4JJKy6vGyZz2GQ2p2"
+                    },
                     {
                         "$dnanexus_link": "file-GpGQq8j4JJKgbjK5z5gGxx6K"
                     }
                 ],
-                "stage-fusioninspector_rnaopa.include_trinity": true,
-                "stage-fusioninspector_rnaopa.r1_fastqs": "INPUT-R1",
-                "stage-fusioninspector_rnaopa.r2_fastqs": "INPUT-R2",
-                "stage-fusioninspector_testdir_cosmic.fi_docker": {
-                    "$dnanexus_link": "file-GGzFp2Q43Gg5Y56p8yfGjPYb"
-                },
-                "stage-fusioninspector_testdir_cosmic.genome_lib": {
+                "stage-fusioninspector.genome_lib": {
                     "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
                 },
-                "stage-fusioninspector_testdir_cosmic.known_fusions": [
-                    {
-                        "$dnanexus_link": "file-GpGVQZj4JJKy6vGyZz2GQ2p2"
-                    }
-                ],
-                "stage-fusioninspector_testdir_cosmic.include_trinity": true,
-                "stage-fusioninspector_testdir_cosmic.r1_fastqs": "INPUT-R1",
-                "stage-fusioninspector_testdir_cosmic.r2_fastqs": "INPUT-R2",
+                "stage-fusioninspector.include_trinity": true,
+                "stage-fusioninspector.r1_fastqs": "INPUT-R1",
+                "stage-fusioninspector.r2_fastqs": "INPUT-R2",
                 "stage-rnaseqc.docker": {
                     "$dnanexus_link": "file-Gp2YvGj43p6bP660QjZ6zV60"
                 },
@@ -105,9 +89,7 @@
             "output_dirs": {
                 "stage-staraligner": "/OUT-FOLDER/STAGE-NAME",
                 "stage-starfusion": "/OUT-FOLDER/STAGE-NAME",
-                "stage-fusioninspector_scientist": "/OUT-FOLDER/STAGE-NAME",
-                "stage-fusioninspector_rnaopa": "/OUT-FOLDER/STAGE-NAME",
-                "stage-fusioninspector_testdir_cosmic": "/OUT-FOLDER/STAGE-NAME",
+                "stage-fusioninspector": "/OUT-FOLDER/STAGE-NAME",
                 "stage-rnaseqc": "/OUT-FOLDER/STAGE-NAME",
                 "stage-picard": "/OUT-FOLDER/STAGE-NAME",
                 "stage-fastqc": "/OUT-FOLDER/STAGE-NAME"
