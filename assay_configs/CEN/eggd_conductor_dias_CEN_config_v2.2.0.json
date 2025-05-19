@@ -141,7 +141,13 @@
                     }
                 },
                 "stage-sex_check.male_threshold": 4.30,
-                "stage-sex_check.female_threshold": 5.00
+                "stage-sex_check.female_threshold": 5.00,
+                "stage-additional_regions_calling.fasta_tar": {
+                    "$dnanexus_link": {
+                        "project": "project-F3zqGV04fXX5j7566869fjFq",
+                        "id": "file-F3zxG0Q4fXX9YFjP1v5jK9jf"
+                    }
+                }
             },
             "output_dirs": {
                 "stage-fastQC": "/OUT-FOLDER/STAGE-NAME",
