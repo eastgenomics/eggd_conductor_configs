@@ -3,7 +3,7 @@
     "assay": "38_CEN",
     "genome": "GRCh38",
     "assay_code": "-EGG5|-9527-|-9617-",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -14,15 +14,16 @@
         "v1.4.0": "Updated workflow ID and name for dias_single",
         "v2.0.0": "Updates to all reference genome related files to GRCh38",
         "v2.0.1": "Update vcf_QC bed file and instance types",
-        "v2.1.0": "Updates dias_single to v2.7.0, Sentieon instance type, sex check thresholds and adds mosdepth docker input. Updates dias_multi to v2.2.0 and removes references to update_run_folders. Updates egg_multiqc to v2.0.2, MultiQC docker input to v1.14 and MultiQC config for GRCh38"
+        "v2.1.0": "Updates dias_single to v2.7.0, Sentieon instance type, sex check thresholds and adds mosdepth docker input. Updates dias_multi to v2.2.0 and removes references to update_run_folders. Updates egg_multiqc to v2.0.2, MultiQC docker input to v1.14 and MultiQC config for GRCh38",
+        "v2.2.0": "Update dias_single to v2.9.0. Sentieon v5.1.0. + eggd_additional_region_calling v1.0.0"
     },
     "demultiplex": true,
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
     "executables": {
-        "workflow-Gx44P1j46vxPgz7BbQ81VXJ3": {
-            "name": "dias_single_v2.7.0",
+        "workflow-J0XqXfQ414Zg7v6BqJYV9BKF": {
+            "name": "dias_single_v2.9.0",
             "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAMID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step, and eggd_sex_check",
             "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
             "analysis": "analysis_1",
@@ -31,22 +32,34 @@
             "extra_args": {
                 "stageSystemRequirements": {
                     "stage-sentieon_dnaseq": {
-                        "*": {"instanceType": "mem1_ssd1_v2_x36"}
+                        "*": {
+                            "instanceType": "mem1_ssd1_v2_x36"
+                        }
                     },
                     "stage-verifybamid": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x2"
+                        }
                     },
                     "stage-picardQC": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x4"
+                        }
                     },
                     "stage-somalier_extract": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x2"
+                        }
                     },
                     "stage-samtools_flagstat": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x2"
+                        }
                     },
                     "stage-mosdepth": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x4"
+                        }
                     }
                 }
             },
@@ -128,7 +141,19 @@
                     }
                 },
                 "stage-sex_check.male_threshold": 4.30,
-                "stage-sex_check.female_threshold": 5.00
+                "stage-sex_check.female_threshold": 5.00,
+                "stage-additional_regions_calling.fasta_tar": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+                    }
+                },
+                "stage-additional_regions_calling.region_list": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J0bY10848g1k41qQ6jqk90Z4"
+                    }
+                }
             },
             "output_dirs": {
                 "stage-fastQC": "/OUT-FOLDER/STAGE-NAME",
@@ -242,7 +267,11 @@
                 "analysis_2"
             ],
             "extra_args": {
-                "systemRequirements": {"*": {"instanceType": "mem2_ssd1_v2_x8"}}
+                "systemRequirements": {
+                    "*": {
+                        "instanceType": "mem2_ssd1_v2_x8"
+                    }
+                }
             },
             "inputs": {
                 "project_for_multiqc": "INPUT-dx_project_name",
