@@ -16,7 +16,7 @@
         "v2.0.1": "Change vcf_qc input bed to capture bed,update instance types,add genome field",
         "v2.1.0": "Updates dias_single to v2.7.0, Sentieon instance type, sex check thresholds and adds mosdepth docker input. Updates dias_multi to v2.2.0 and removes references to update_run_folders. Updates egg_multiqc to v2.02, MultiQC docker input to v1.14 and MultiQC config for GRCh38",
         "v2.1.1": "Updates hap.py panel BED",
-        "v2.2.0": "Update dias_single to v2.9.0. Sentieon v5.1.0. + "
+        "v2.2.0": "Update dias_single to v2.9.0. Sentieon v5.1.0. + eggd_additional_region_calling v1.0.0"
     },
     "demultiplex": true,
     "demultiplex_config": {
