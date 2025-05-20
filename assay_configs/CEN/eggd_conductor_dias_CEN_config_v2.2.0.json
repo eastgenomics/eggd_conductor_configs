@@ -147,6 +147,12 @@
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
                     }
+                },
+                "stage-additional_regions_calling.region_list": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J0bY10848g1k41qQ6jqk90Z4"
+                    }
                 }
             },
             "output_dirs": {
