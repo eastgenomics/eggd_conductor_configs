@@ -168,7 +168,8 @@
                 "stage-picardQC": "/OUT-FOLDER/STAGE-NAME",
                 "stage-mosdepth": "/OUT-FOLDER/STAGE-NAME",
                 "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME",
-                "stage-sex_check": "/OUT-FOLDER/STAGE-NAME"
+                "stage-sex_check": "/OUT-FOLDER/STAGE-NAME",
+                "stage-additional_regions_calling": "/OUT-FOLDER/STAGE-NAME"
             }
         },
         "workflow-Gj2jP6j4PKbJpVgjK417J4X7": {
