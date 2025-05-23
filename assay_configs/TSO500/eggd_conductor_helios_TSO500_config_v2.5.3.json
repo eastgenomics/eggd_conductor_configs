@@ -2,7 +2,7 @@
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
     "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041",
-    "version": "2.5.2",
+    "version": "2.5.3",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -28,7 +28,8 @@
         "v2.4.2": "Removed Epic test codes 10042 and 10043 for Haemonc from assay_code",
         "v2.5.0": "Update to latest TSO500 vep config (v1.2.17), configure CNVkit v2.03",
         "v2.5.1": "Patch to specify output directory for CNVkit",
-        "v2.5.2": "Update to latest TSO500 vep config file (v1.2.18)"
+        "v2.5.2": "Update to latest TSO500 vep config file (v1.2.18)",
+        "v2.5.3": "Update to latest TSO500 vep config file (v1.2.19)"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -214,7 +215,7 @@
                 "stage-vep.config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-J0502G840P9BBpB3J3g9yb5b"
+                        "id": "file-J0gY7bQ40P92KF7XkGG4XGfZ"
                     }
                 },
                 "stage-vep.transcript_list": {
