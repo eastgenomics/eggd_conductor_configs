@@ -10,7 +10,7 @@
         "v1.0.2": "Added Epic test codes 10042 and 10043 for Haemonc to assay_code",
         "v1.1.0": "Updated sentieon_tar to 202508.03",
         "v1.2.0": "Updated eunomia workflow to v1.1.0",
-        "v1.3.0": "Updated eunomia workflow to v1.2.0"
+        "v1.3.0": "Updated eunomia workflow to v1.2.0, which contains arriba app v1.0.0"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -23,7 +23,7 @@
     },
     "subset_samplesheet": "-10011|-10012|-10042|-10043",
     "executables": {
-        "workflow-J0zP06j4y2zvFFqX8yqfpXg9": {
+        "workflow-J0zPQK84y2zYJPJ1Ffzx926y": {
             "name": "eunomia_workflow_v1.2.0",
             "details": "Eunomia workflow",
             "url": "https://github.com/eastgenomics/eggd_eunomia_workflow",
