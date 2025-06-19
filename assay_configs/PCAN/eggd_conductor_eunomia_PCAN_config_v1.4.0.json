@@ -2,7 +2,7 @@
     "name": "Config for Eunomia pipeline with PANCAN assay",
     "assay": "PCAN",
     "assay_code": "-10011|-10012|-10042|-10043",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "details": "Initial release of assay config",
     "changelog": {
         "v1.0.0": "Initial release of assay config",
@@ -10,7 +10,8 @@
         "v1.0.2": "Added Epic test codes 10042 and 10043 for Haemonc to assay_code",
         "v1.1.0": "Updated sentieon_tar to 202508.03",
         "v1.2.0": "Updated eunomia workflow to v1.1.0",
-        "v1.3.0": "Updated eunomia workflow to v1.2.0, which contains arriba app v1.0.0"
+        "v1.3.0": "Updated eunomia workflow to v1.2.0, which contains arriba app v1.0.0",
+        "v1.4.0": "Added eggd_generate_fusion_workbook to pipeline"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -127,6 +128,58 @@
             },
             "output_dirs": {
                 "app-Gjyybj844V5bbzXQVfk32Xby": "/OUT-FOLDER/APP-NAME"
+            }
+        }, 
+        "app-GzJKf6Q45x4QfyYX1VP99Y34": {
+            "name": "eggd_generate_fusion_workbook/1.0.0",
+            "details": "App to generate fusion workbook",
+            "url": "https://github.com/eastgenomics/eggd_generate_fusion_workbook",
+            "analysis": "analysis_3",
+            "depends_on": ["analysis_1", "analysis_2"],
+            "per_sample": false,
+            "process_fastqs": false,
+            "inputs": {
+                "starfusion_files": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-starfusion",
+                        "field": "starfusion_abridged"
+                    }
+                },
+                "fusioninspector_files": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-fusioninspector",
+                        "field": "fi_coding"
+                    }
+                },
+                "multiqc_files": {
+                    "$dnanexus_link": {
+                        "job": "analysis_2",
+                        "field": "multiqc_data_files"
+                    }
+                },
+                "SF_previous_runs_data": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J18X5qj48F3V951v176vBq90"
+                    }
+                },
+                "reference_sources": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J18490j48F3b2zB4Z27KJJk4"
+                    }
+                },
+                "previous_positives": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J0fy7Fj48F3fzq0G40GPZ138"
+                    }
+                }
+            },
+            "output_dirs": {
+                "app-GzJKf6Q45x4QfyYX1VP99Y34": "/OUT-FOLDER/APP-NAME"
             }
         }
     }
