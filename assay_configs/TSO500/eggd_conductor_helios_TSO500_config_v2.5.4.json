@@ -30,7 +30,7 @@
         "v2.5.1": "Patch to specify output directory for CNVkit",
         "v2.5.2": "Update to latest TSO500 vep config file (v1.2.18)",
         "v2.5.3": "Update to latest TSO500 vep config file (v1.2.19)",
-        "v2.5.4": "Update to latest TSO500 vep config file (v1.2.20)"
+        "v2.5.4": "Update to latest TSO500 vep config file (v1.2.20), Update eggd_TSO500 v2.0.1 -> v2.1.1"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -43,8 +43,8 @@
     },
     "subset_samplesheet": "-8471|-8472|-8475|-9689|-10040|-10041",
     "executables": {
-        "app-GgBKy7j4QjX77XK69fG7Pj0y": {
-            "name": "eggd_tso500/v2.0.1",
+        "app-J1B20pQ4VbqB3jv2q37VP26K": {
+            "name": "eggd_tso500/v2.1.1",
             "details": "TSO500 local app",
             "url": "https://github.com/eastgenomics/eggd_tso500",
             "analysis": "analysis_1",
@@ -67,7 +67,7 @@
                 "upload_demultiplex_output": false
             },
             "output_dirs": {
-                "app-GgBKy7j4QjX77XK69fG7Pj0y": "/OUT-FOLDER/APP-NAME"
+                "app-J1B20pQ4VbqB3jv2q37VP26K": "/OUT-FOLDER/APP-NAME"
             }
         },
         "app-Gvb47584ZGzp4pF9Gpk10P9Q": {
