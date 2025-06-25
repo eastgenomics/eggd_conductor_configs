@@ -47,4 +47,4 @@ No external inputs.
 | Input field | Input file | Version |
 | ---         | ---        | ---     |
 | `multiqc_docker` | [seglh_multiqc_v1.11.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.constraint=%24or&id.values=file-GF3PxgQ433Gqv1Q029Gjzjfv&scope=project)|v1.11.0|
-| `multiqc_config_file` | [MYE_multiqc_config_v4.0.0.yaml](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/dynamic_files/multiqc_config?id.constraint=%24or&id.values=file-J19xyp84vV6vGvyVxF5X4pqq)|v2.1.0|
+| `multiqc_config_file` | [MYE_multiqc_config_v4.0.0.yaml](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/dynamic_files/multiqc_config?id.constraint=%24or&id.values=file-J19xyp84vV6vGvyVxF5X4pqq)|v4.0.0|
