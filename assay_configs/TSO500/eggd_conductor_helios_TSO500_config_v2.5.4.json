@@ -2,7 +2,7 @@
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
     "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041",
-    "version": "2.5.4",
+    "version": "2.5.5",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -149,8 +149,8 @@
                 "app-Gpzb0Y04FXvff0vJPxj0p1x1": "/OUT-FOLDER/APP-NAME"
             }
         },
-        "workflow-GzV9pGj437z86V1QPfVzBgGK": {
-            "name": "TSO500_reports_workflow_v2.2.0",
+        "workflow-J1K1Z6Q4XbVpxQPvK56QY9pJ": {
+            "name": "TSO500_reports_workflow_v2.3.0",
             "details": "Reports workflow to run vep and generate_variant_workbook etc",
             "url": "https://github.com/eastgenomics/eggd_TSO500_reports_workflow",
             "analysis": "analysis_5",
@@ -231,11 +231,12 @@
                         "id": "file-Gg5p2J04qJpk3GyJXjFyby66"
                     }
                 },
-                "stage-plot_variant_baf.vcf": "eggd_tso500.vcf",
+                "stage-plot_variant_baf.vcf": "stage-vep.annotated_vcf",
+                "stage-plot_variant_baf.gvcf": "eggd_tso500.vcf",
                 "stage-plot_variant_baf.packages": {
                     "$dnanexus_link": {
-                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GyFgkY84Bkj379jK5039J51q"
+                        "project": "project-GzyK2qj4XbVqYVY24bVQqgX2",
+                        "id": "file-GzyV1004y5QX260z2yYyjzbK"
                     }
                 },
                 "stage-generate_variant_workbook.additional_files": "eggd_tso500.cvo",
