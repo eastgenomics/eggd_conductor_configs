@@ -231,7 +231,6 @@
                         "id": "file-Gg5p2J04qJpk3GyJXjFyby66"
                     }
                 },
-                "stage-plot_variant_baf.vcf": "stage-vep.annotated_vcf",
                 "stage-plot_variant_baf.gvcf": "eggd_tso500.vcf",
                 "stage-plot_variant_baf.packages": {
                     "$dnanexus_link": {
