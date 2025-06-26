@@ -42,7 +42,7 @@
         "v2.7.0": "Updated main workflow to v2.5.0 (update sentieon-bwa to v5.1.0 and sentieon-tnbam to v5.1.0)",
         "v2.7.1": "Updated VEP config to v1.3.2 for eggd_vep_cgppindel and eggd_vep_mutect2",
         "v2.7.2": "Updated VEP config to v1.3.3 for eggd_vep_cgppindel and eggd_vep_mutect2",
-        "v3.0.0": "Updated VEP config to v2.0.0 for for eggd_vep_cgppindel and eggd_vep_mutect2; Updated multiqc config file to v4.0.0, includsion of eggd_sex_check_app, removal of somalier_extract, updated bed files for new capture"
+        "v3.0.0": "Updated VEP config to v2.0.0 for for eggd_vep_cgppindel and eggd_vep_mutect2; Updated multiqc config file to v4.0.0, inclusion of eggd_sex_check_app, removal of somalier_extract, updated bed files for new capture"
     },
     "demultiplex": true,
     "users": {
