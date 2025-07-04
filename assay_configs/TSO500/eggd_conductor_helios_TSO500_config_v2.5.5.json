@@ -30,7 +30,8 @@
         "v2.5.1": "Patch to specify output directory for CNVkit",
         "v2.5.2": "Update to latest TSO500 vep config file (v1.2.18)",
         "v2.5.3": "Update to latest TSO500 vep config file (v1.2.19)",
-        "v2.5.4": "Update to latest TSO500 vep config file (v1.2.20), Update eggd_TSO500 v2.0.1 -> v2.1.1"
+        "v2.5.4": "Update to latest TSO500 vep config file (v1.2.20), Update eggd_TSO500 v2.0.1 -> v2.1.1",
+        "v2.5.5": "Update eggd_TSO500_reports_workflow -> v1.3.0 & add non-default params"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -149,7 +150,7 @@
                 "app-Gpzb0Y04FXvff0vJPxj0p1x1": "/OUT-FOLDER/APP-NAME"
             }
         },
-        "workflow-J1K4vVQ4XbVZp6fP6QGvgVvj": {
+        "workflow-J1Yx3B844B4bzPPvXFZ451bj": {
             "name": "TSO500_reports_workflow_v2.3.0",
             "details": "Reports workflow to run vep and generate_variant_workbook etc",
             "url": "https://github.com/eastgenomics/eggd_TSO500_reports_workflow",
@@ -232,6 +233,9 @@
                     }
                 },
                 "stage-plot_variant_baf.gvcf": "eggd_tso500.vcf",
+                "stage-plot_variant_baf.min_baf": 0,
+                "stage-plot_variant_baf.max_baf": 1,
+                "stage-plot_variant_baf.max_depth": 0.95,
                 "stage-plot_variant_baf.packages": {
                     "$dnanexus_link": {
                         "project": "project-GzyK2qj4XbVqYVY24bVQqgX2",
