@@ -235,6 +235,7 @@
                 "stage-plot_variant_baf.gvcf": "eggd_tso500.vcf",
                 "stage-plot_variant_baf.min_baf": 0,
                 "stage-plot_variant_baf.max_baf": 1,
+                "stage-plot_variant_baf.min_depth": 20,
                 "stage-plot_variant_baf.max_depth": 0.95,
                 "stage-plot_variant_baf.packages": {
                     "$dnanexus_link": {
