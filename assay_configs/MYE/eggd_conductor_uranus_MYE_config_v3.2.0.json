@@ -54,7 +54,7 @@
     },
     "subset_samplesheet": "EGG2|-8128-|-8476-|-5877-",
     "executables": {
-        "workflow-J0P0Kyj46JVYy1qp4FG4X0vz": {
+        "workflow-J25YB3041y6pvpj5Z7zKYjP1": {
             "name": "uranus_main_workflow_GRCh38_v3.0.0",
             "details": "Main Uranus workflow for alignment and variant calling",
             "url": "https://github.com/eastgenomics/eggd_uranus_main_workflow",
