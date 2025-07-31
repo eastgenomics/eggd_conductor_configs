@@ -34,6 +34,18 @@
             "process_fastqs": true,
             "hold": false,
             "extra_args": {
+                "stageSystemRequirements": {
+                    "stage-staraligner": {
+                        "*": {
+                            "instanceType": "mem1_ssd1_v2_x36"
+                        }
+                    },
+                    "stage-picard": {
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x4"
+                        }
+                    }
+                },
                 "priority": "high"
             },
             "inputs": {
