@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-|-2327-",
-    "version": "3.2.0",
+    "version": "3.3.0",
     "details": "Includes main Uranus workflow, multi_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -45,7 +45,8 @@
         "v3.0.0": "Updated VEP config to v2.0.0 for for eggd_vep_cgppindel and eggd_vep_mutect2; Updated multiqc config file to v4.0.0, inclusion of eggd_sex_check_app, removal of somalier_extract, updated bed files for new capture",
         "v3.1.0": "Updated VEP config to v2.1.0 for eggd_vep_cgppindel and eggd_vep_mutect2, include SpliceAI columns",
         "v3.1.1": "Updated VEP config to v2.1.1 for eggd_vep_cgppindel and eggd_vep_mutect2",
-        "v3.2.0": "Updated to include assay_code for top-up samples and subset_samplesheet codes for only clinical samples"
+        "v3.2.0": "Updated to include assay_code for top-up samples and subset_samplesheet codes for only clinical samples",
+        "v3.3.0": "Updated to main workflow v3.1.0 to include reference fastas for mosdepth and verifybamid for compatibility with using CRAM files"
     },
     "demultiplex": true,
     "users": {
@@ -85,6 +86,7 @@
                 "stage-sentieon_bwa.genomebwaindex_targz": {
                     "$dnanexus_link": "file-Gb76f204XGybZ3J6F731xkBp"
                 },
+                "stage-sentieon_bwa.output_format": "CRAM",
                 "stage-sentieon_bwa.sample": "INPUT-SAMPLE-NAME",
                 "stage-sentieon_bwa.output_metrics": true,
                 "stage-sentieon_tnbam.genome_fastagz": {
@@ -178,6 +180,12 @@
                 "stage-verifybamid.vcf_file": {
                     "$dnanexus_link": "file-G7YKFZj4kj47GxgQ2bKGYV1g"
                 },
+                "stage-verifybamid.reference_fasta": {
+                    "$dnanexus_link": "file-GjPxXq84qv8xz3ZV1jFq6z3g"
+                 },
+                "stage-verifybamid.reference_fasta_index": {
+                    "$dnanexus_link": "file-GjPxp3Q4qv8Vk76xFVjfyPgJ"
+                 },
                 "stage-picard.bedfile": {
                     "$dnanexus_link": {
                       "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
@@ -194,6 +202,12 @@
                       "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
                     }
                 },
+                "stage-mosdepth.reference_fasta": {
+                    "$dnanexus_link": "file-GjPxXq84qv8xz3ZV1jFq6z3g"
+                 },
+                "stage-mosdepth.reference_fasta_index": {
+                    "$dnanexus_link": "file-GjPxp3Q4qv8Vk76xFVjfyPgJ"
+                 },
                 "stage-athena.snps": [
                     {
                       "$dnanexus_link": "file-FyZfyqQ41zg5FjK2GykYfKq8"
