@@ -2,7 +2,7 @@
     "name": "Config for Eunomia pipeline with PANCAN assay",
     "assay": "PCAN",
     "assay_code": "-10011|-10012|-10042|-10043",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "details": "Initial release of assay config",
     "changelog": {
         "v1.0.0": "Initial release of assay config",
@@ -11,7 +11,8 @@
         "v1.1.0": "Updated sentieon_tar to 202508.03",
         "v1.2.0": "Updated eunomia workflow to v1.1.0",
         "v1.3.0": "Updated eunomia workflow to v1.2.0, which contains arriba app v1.0.0",
-        "v1.4.0": "Added eggd_generate_fusion_workbook to pipeline"
+        "v1.4.0": "Added eggd_generate_fusion_workbook to pipeline",
+        "v1.5.0": "Update Eunomia workflow to v1.3.0 and fusion workbook app to v1.1.0"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -24,8 +25,8 @@
     },
     "subset_samplesheet": "-10011|-10012|-10042|-10043",
     "executables": {
-        "workflow-J0zPQK84y2zYJPJ1Ffzx926y": {
-            "name": "eunomia_workflow_v1.2.0",
+        "workflow-J25XKFQ4vxJk8X0z4j1gyB9k": {
+            "name": "eunomia_workflow_v1.3.0",
             "details": "Eunomia workflow",
             "url": "https://github.com/eastgenomics/eggd_eunomia_workflow",
             "analysis": "analysis_1",
@@ -33,6 +34,18 @@
             "process_fastqs": true,
             "hold": false,
             "extra_args": {
+                "stageSystemRequirements": {
+                    "stage-staraligner": {
+                        "*": {
+                            "instanceType": "mem1_ssd1_v2_x36"
+                        }
+                    },
+                    "stage-picard": {
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x4"
+                        }
+                    }
+                },
                 "priority": "high"
             },
             "inputs": {
@@ -130,8 +143,8 @@
                 "app-Gjyybj844V5bbzXQVfk32Xby": "/OUT-FOLDER/APP-NAME"
             }
         }, 
-        "app-GzJKf6Q45x4QfyYX1VP99Y34": {
-            "name": "eggd_generate_fusion_workbook/1.0.0",
+        "app-J1vQGq04Z51fGgFQ924V7bYQ": {
+            "name": "eggd_generate_fusion_workbook/1.1.0",
             "details": "App to generate fusion workbook",
             "url": "https://github.com/eastgenomics/eggd_generate_fusion_workbook",
             "analysis": "analysis_3",
@@ -151,6 +164,13 @@
                         "analysis": "analysis_1",
                         "stage": "stage-fusioninspector",
                         "field": "fi_coding"
+                    }
+                },
+                "arriba_files": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-arriba",
+                        "field": "arriba_full"
                     }
                 },
                 "multiqc_files": {
