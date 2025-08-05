@@ -12,7 +12,8 @@
         "v1.2.0": "Updated eunomia workflow to v1.1.0",
         "v1.3.0": "Updated eunomia workflow to v1.2.0, which contains arriba app v1.0.0",
         "v1.4.0": "Added eggd_generate_fusion_workbook to pipeline",
-        "v1.5.0": "Update Eunomia workflow to v1.3.0 and fusion workbook app to v1.1.0"
+        "v1.5.0": "Update Eunomia workflow to v1.3.0 and fusion workbook app to v1.1.0",
+        "v1.5.1": "Update the app id in the output_dirs to use the same app id in the workbook"
     },
     "demultiplex": true,
     "demultiplex_config": {
