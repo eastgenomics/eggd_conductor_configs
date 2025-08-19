@@ -23,6 +23,7 @@
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
+    "subset_samplesheet": "-EGG5|-9527-|-9617-",
     "executables": {
         "workflow-J1V9g8j400YKZyVYZy2vZQ19": {
             "name": "dias_single_v2.10.0",
