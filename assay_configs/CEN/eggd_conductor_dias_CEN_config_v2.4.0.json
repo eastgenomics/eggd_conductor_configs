@@ -2,8 +2,8 @@
     "name": "Config for CEN assay",
     "assay": "38_CEN",
     "genome": "GRCh38",
-    "assay_code": "-EGG5|-9527-|-9617-",
-    "version": "2.3.0",
+    "assay_code": "-EGG5|-9527-|-9617-|-1256-",
+    "version": "2.4.0",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -16,7 +16,8 @@
         "v2.0.1": "Update vcf_QC bed file and instance types",
         "v2.1.0": "Updates dias_single to v2.7.0, Sentieon instance type, sex check thresholds and adds mosdepth docker input. Updates dias_multi to v2.2.0 and removes references to update_run_folders. Updates egg_multiqc to v2.0.2, MultiQC docker input to v1.14 and MultiQC config for GRCh38",
         "v2.2.0": "Update dias_single to v2.9.0. Sentieon v5.1.0. + eggd_additional_region_calling v1.0.0",
-        "v2.3.0": "Update dias_single to v2.10.0. Includes eggd_additional_region_calling v1.1.0"
+        "v2.3.0": "Update dias_single to v2.10.0. Includes eggd_additional_region_calling v1.1.0",
+        "v2.4.0": "Updated assay code to include top up codes.Add subset_samplesheet to inlcude non-top up codes"
     },
     "demultiplex": true,
     "users": {
