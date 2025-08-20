@@ -1,8 +1,8 @@
 {
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
-    "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041",
-    "version": "2.5.6",
+    "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041|-2122",
+    "version": "2.5.7",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -32,7 +32,8 @@
         "v2.5.3": "Update to latest TSO500 vep config file (v1.2.19)",
         "v2.5.4": "Update to latest TSO500 vep config file (v1.2.20), Update eggd_TSO500 v2.0.1 -> v2.1.1",
         "v2.5.5": "Update eggd_TSO500_reports_workflow -> v2.3.0 & add non-default params",
-        "v2.5.6": "Update to latest TSO500 vep config file (v1.2.21)"
+        "v2.5.6": "Update to latest TSO500 vep config file (v1.2.21)",
+        "v2.5.7": "Update to latest TSO500 vep config file (v1.2.22) and include TSO500 top up code"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -218,7 +219,7 @@
                 "stage-vep.config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-J1zq7j845ZYXPkJ4gyVxF8FB"
+                        "id": "file-J2Xkfvj40P996P9Q708x6368"
                     }
                 },
                 "stage-vep.transcript_list": {
