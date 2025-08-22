@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-|-2327-",
-    "version": "3.2.1",
+    "version": "3.3.0",
     "details": "Includes main Uranus workflow, multi_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -46,7 +46,8 @@
         "v3.1.0": "Updated VEP config to v2.1.0 for eggd_vep_cgppindel and eggd_vep_mutect2, include SpliceAI columns",
         "v3.1.1": "Updated VEP config to v2.1.1 for eggd_vep_cgppindel and eggd_vep_mutect2",
         "v3.2.0": "Updated to include assay_code for top-up samples and subset_samplesheet codes for only clinical samples",
-        "v3.2.1": "Updated main workflow to v3.0.1 (eggd_generate_variant_workbook v2.10.2 and new dx folder syntax)"
+        "v3.2.1": "Updated main workflow to v3.0.1 (eggd_generate_variant_workbook v2.10.2 and new dx folder syntax)",
+        "v3.3.0": "Update VEP config to v2.1.2 for eggd_vep_cgppindel and eggd_vep_mutect2, update panel_bed input file to v1.1.0 for eggd_sompy and eggd_vep_mutect2"
     },
     "demultiplex": true,
     "users": {
@@ -103,14 +104,14 @@
                     "$dnanexus_link": "file-Gqy4V1Q47xBXYzfKxb22fGXz"
                 },
                 "stage-eggd_vep_cgppindel.config_file": {
-                    "$dnanexus_link": "file-J1zjk2Q42ffYYy2fJ2XjFFbB"
+                    "$dnanexus_link": "file-J2XpjX842ffyPPpK0ZkB1xvP"
                 },
                 "stage-eggd_vep_cgppindel.normalise": false,
                 "stage-eggd_vep_mutect2.panel_bed": {
-                    "$dnanexus_link": "file-GzK2x284P4fk93qFVyJ7x1yx"
+                    "$dnanexus_link": "file-J2YKYVQ441GvBpGxJ4J2Jf3P"
                   },
                 "stage-eggd_vep_mutect2.config_file": {
-                    "$dnanexus_link": "file-J1zjk2Q42ffYYy2fJ2XjFFbB"
+                    "$dnanexus_link": "file-J2XpjX842ffyPPpK0ZkB1xvP"
                   },
                 "stage-eggd_vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": "file-GjFv9X0421zQFGxXVFQ4j972"
@@ -225,7 +226,7 @@
                 "stage-sompy.panel_bed": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GzK2x284P4fk93qFVyJ7x1yx"
+                        "id": "file-J2YKYVQ441GvBpGxJ4J2Jf3P"
                     }
                 },
                 "stage-sompy.truth_high_confidence_bed": {
