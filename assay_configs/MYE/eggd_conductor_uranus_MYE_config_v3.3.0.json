@@ -47,7 +47,7 @@
         "v3.1.1": "Updated VEP config to v2.1.1 for eggd_vep_cgppindel and eggd_vep_mutect2",
         "v3.2.0": "Updated to include assay_code for top-up samples and subset_samplesheet codes for only clinical samples",
         "v3.2.1": "Updated main workflow to v3.0.1 (eggd_generate_variant_workbook v2.10.2 and new dx folder syntax)",
-        "v3.3.0": "Update VEP config to v2.1.2 for eggd_vep_cgppindel and eggd_vep_mutect2, update panel_bed input file to v1.1.0 for eggd_sompy and eggd_vep_mutect2"
+        "v3.3.0": "Update VEP config to v2.1.2 for eggd_vep_cgppindel and eggd_vep_mutect2, update capture panel bed input file to v1.1.0 for eggd_sompy and eggd_vep_mutect2, update athena panel bed file to v1.1.0 and update main workflow for v3.1.0 (sompy v1.0.5)"
     },
     "demultiplex": true,
     "users": {
@@ -55,8 +55,8 @@
     },
     "subset_samplesheet": "EGG2|-8128-|-8476-|-5877-",
     "executables": {
-        "workflow-J2JKpJ840x858Fj21qy5FYgy": {
-            "name": "uranus_main_workflow_GRCh38_v3.0.1",
+        "workflow-J2K4vJ84pGKbY35zX03zpkBX": {
+            "name": "uranus_main_workflow_GRCh38_v3.1.0",
             "details": "Main Uranus workflow for alignment and variant calling",
             "url": "https://github.com/eastgenomics/eggd_uranus_main_workflow",
             "analysis": "analysis_1",
