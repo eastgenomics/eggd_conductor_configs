@@ -213,7 +213,7 @@
                 "stage-athena.panel_bed": {
                 "$dnanexus_link": {
                     "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                    "id": "file-GzGkpPQ46PgG27pqY9B16FvP"
+                    "id": "file-J2gFVf849v4GY3Fjk8qKZb40"
                     }
                 },
                 "stage-athena.per_chromosome_coverage": true,
