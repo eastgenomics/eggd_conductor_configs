@@ -2,7 +2,7 @@
     "name": "Config for Twist whole exome assay",
     "assay": "38_TWE",
     "genome": "GRCh38",
-    "assay_code": "-EGG4|-9526-|-9688-",
+    "assay_code": "-EGG4|-9526-|-9688-|-1288-",
     "version": "2.4.0",
     "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
@@ -27,6 +27,7 @@
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
+    "subset_samplesheet":"-EGG4|-9526-|-9688-",
     "executables": {
         "workflow-J1V9g8j400YKZyVYZy2vZQ19": {
             "name": "dias_single_v2.10.0",
