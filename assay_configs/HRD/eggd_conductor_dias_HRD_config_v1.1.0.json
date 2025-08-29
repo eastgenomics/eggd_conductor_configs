@@ -2,10 +2,11 @@
     "name": "Config for HRD assay",
     "assay": "HRD",
     "assay_code": "-9197|-10021",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "details": "Includes 'demultiplexing and multiQC'",
     "changelog": {
-        "v1.0.0": "Initial working version"
+        "v1.0.0": "Initial working version",
+        "v1.1.0": "Updated assay code to include top up codes.Add subset_samplesheet to include non-top up codes"
     },
     "demultiplex": true,
     "users": {
