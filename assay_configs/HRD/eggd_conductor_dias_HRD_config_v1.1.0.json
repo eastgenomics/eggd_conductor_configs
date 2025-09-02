@@ -19,7 +19,7 @@
             "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
             "url": "https://github.com/eastgenomics/eggd_fastqc",
             "analysis": "analysis_1",
-            "per_sample": false,
+            "per_sample": true,
             "process_fastqs": true,
             "inputs": {
                 "fastqs": "INPUT-R1-R2"
