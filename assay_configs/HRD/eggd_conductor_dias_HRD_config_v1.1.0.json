@@ -12,7 +12,7 @@
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
-    "subset_samplesheet":"-9197|-10021",
+    "subset_samplesheet": "-9197|-10021",
     "executables": {
         "applet-FvyXygj433GbKPPY0QY8ZKQG": {
             "name": "multi_fastqc",
