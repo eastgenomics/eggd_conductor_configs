@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-|-2327-",
-    "version": "TBD",
+    "version": "3.4.0",
     "details": "Includes main Uranus workflow, multi_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -48,7 +48,7 @@
         "v3.2.0": "Updated to include assay_code for top-up samples and subset_samplesheet codes for only clinical samples",
         "v3.2.1": "Updated main workflow to v3.0.1 (eggd_generate_variant_workbook v2.10.2 and new dx folder syntax)",
         "v3.3.0": "Update VEP config to v2.1.2 for eggd_vep_cgppindel and eggd_vep_mutect2, update capture panel bed input file to v1.1.0 for eggd_sompy and eggd_vep_mutect2, update athena panel bed file to v1.1.0 and update main workflow for v3.1.0 (sompy v1.0.5)",
-        "vTBD": "TBD"
+        "v3.4.0": "Update eggd_generate_variant_workbook to v2.11.1"
     },
     "demultiplex": true,
     "users": {
@@ -56,8 +56,8 @@
     },
     "subset_samplesheet": "EGG2|-8128-|-8476-|-5877-",
     "executables": {
-        "workflow-TBD": {
-            "name": "uranus_main_workflow_GRCh38_vTBD",
+        "workflow-J2v1788467yFGFygyx2zBf3F": {
+            "name": "uranus_main_workflow_GRCh38_v3.2.0",
             "details": "Main Uranus workflow for alignment and variant calling",
             "url": "https://github.com/eastgenomics/eggd_uranus_main_workflow",
             "analysis": "analysis_1",
@@ -66,16 +66,24 @@
             "extra_args": {
                 "stageSystemRequirements": {
                     "stage-verifybamid": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x2"
+                        }
                     },
                     "stage-picard": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x4"
+                        }
                     },
                     "stage-flagstat": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x2"
+                        }
                     },
                     "stage-mosdepth": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x4"
+                        }
                     }
                 }
             },
@@ -110,10 +118,10 @@
                 "stage-eggd_vep_cgppindel.normalise": false,
                 "stage-eggd_vep_mutect2.panel_bed": {
                     "$dnanexus_link": "file-J2YKYVQ441GvBpGxJ4J2Jf3P"
-                  },
+                },
                 "stage-eggd_vep_mutect2.config_file": {
                     "$dnanexus_link": "file-J2XpjX842ffyPPpK0ZkB1xvP"
-                  },
+                },
                 "stage-eggd_vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": "file-GjFv9X0421zQFGxXVFQ4j972"
                 },
@@ -197,8 +205,8 @@
                 },
                 "stage-picard.bedfile": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-Gyyjk4j4B3b7f3ypgx32fqjj"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gyyjk4j4B3b7f3ypgx32fqjj"
                     }
                 },
                 "stage-picard.fasta_index": {
@@ -207,37 +215,37 @@
                 "stage-mosdepth.qual_flags": true,
                 "stage-mosdepth.mosdepth_docker": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
                     }
                 },
                 "stage-athena.snps": [
                     {
-                      "$dnanexus_link": "file-FyZfyqQ41zg5FjK2GykYfKq8"
+                        "$dnanexus_link": "file-FyZfyqQ41zg5FjK2GykYfKq8"
                     }
-                  ],
+                ],
                 "stage-athena.thresholds": "100, 250, 500, 1000, 1500",
                 "stage-athena.exons_file": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-GzGkbb846Pg36b2P8BJkfKKX"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GzGkbb846Pg36b2P8BJkfKKX"
                     }
-                  },
+                },
                 "stage-athena.summary": true,
                 "stage-athena.cutoff_threshold": 250,
                 "stage-athena.panel_bed": {
-                "$dnanexus_link": {
-                    "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                    "id": "file-J2gFVf849v4GY3Fjk8qKZb40"
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J2gFVf849v4GY3Fjk8qKZb40"
                     }
                 },
                 "stage-athena.per_chromosome_coverage": true,
                 "stage-sompy.truth_vcf": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-Gjk675j4qv8zvQ5Qxq31Vfpg"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gjk675j4qv8zvQ5Qxq31Vfpg"
                     }
-                  },
+                },
                 "stage-sompy.panel_bed": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
