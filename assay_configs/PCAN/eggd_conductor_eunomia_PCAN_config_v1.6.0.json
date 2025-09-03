@@ -14,7 +14,7 @@
         "v1.4.0": "Added eggd_generate_fusion_workbook to pipeline",
         "v1.5.0": "Update Eunomia workflow to v1.3.0 and fusion workbook app to v1.1.0",
         "v1.5.1": "Update the app id in the output_dirs to use the same app id in the workbook",
-        "v1.6.0": "Updated assay code to include top up codes."
+        "v1.6.0": "Updated assay code to include a top up code."
     },
     "demultiplex": true,
     "demultiplex_config": {
