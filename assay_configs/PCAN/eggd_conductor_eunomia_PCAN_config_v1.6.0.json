@@ -1,8 +1,8 @@
 {
     "name": "Config for Eunomia pipeline with PANCAN assay",
     "assay": "PCAN",
-    "assay_code": "-10011|-10012|-10042|-10043",
-    "version": "1.5.1",
+    "assay_code": "-10011|-10012|-10042|-10043|-2222",
+    "version": "1.6.0",
     "details": "Initial release of assay config",
     "changelog": {
         "v1.0.0": "Initial release of assay config",
@@ -13,7 +13,8 @@
         "v1.3.0": "Updated eunomia workflow to v1.2.0, which contains arriba app v1.0.0",
         "v1.4.0": "Added eggd_generate_fusion_workbook to pipeline",
         "v1.5.0": "Update Eunomia workflow to v1.3.0 and fusion workbook app to v1.1.0",
-        "v1.5.1": "Update the app id in the output_dirs to use the same app id in the workbook"
+        "v1.5.1": "Update the app id in the output_dirs to use the same app id in the workbook",
+        "v1.6.0": "Updated assay code to include a top up code."
     },
     "demultiplex": true,
     "demultiplex_config": {
