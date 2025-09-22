@@ -48,7 +48,8 @@
         "v3.2.0": "Updated to include assay_code for top-up samples and subset_samplesheet codes for only clinical samples",
         "v3.2.1": "Updated main workflow to v3.0.1 (eggd_generate_variant_workbook v2.10.2 and new dx folder syntax)",
         "v3.3.0": "Update VEP config to v2.1.2 for eggd_vep_cgppindel and eggd_vep_mutect2, update capture panel bed input file to v1.1.0 for eggd_sompy and eggd_vep_mutect2, update athena panel bed file to v1.1.0 and update main workflow for v3.1.0 (sompy v1.0.5)",
-        "v3.4.0": "Update eggd_generate_variant_workbook to v2.11.1"
+        "v3.4.0": "Update eggd_generate_variant_workbook to v2.11.1",
+        "v3.4.1": "Updated VEP config to v2.1.3 for eggd_vep_cgppindel and eggd_vep_mutect2"
     },
     "demultiplex": true,
     "users": {
