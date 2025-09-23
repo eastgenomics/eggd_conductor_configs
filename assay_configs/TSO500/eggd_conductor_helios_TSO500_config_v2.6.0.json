@@ -2,7 +2,7 @@
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
     "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041|-2122",
-    "version": "2.5.8",
+    "version": "2.6.0",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -34,7 +34,8 @@
         "v2.5.5": "Update eggd_TSO500_reports_workflow -> v2.3.0 & add non-default params",
         "v2.5.6": "Update to latest TSO500 vep config file (v1.2.21)",
         "v2.5.7": "Update to latest TSO500 vep config file (v1.2.22) and include TSO500 top up code",
-        "v2.5.8": "Update to latest TSO500 vep config file (v1.2.23)"
+        "v2.5.8": "Update to latest TSO500 vep config file (v1.2.23)",
+        "v2.6.0": "Remove ICI uploader"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -72,31 +73,6 @@
             },
             "output_dirs": {
                 "app-J1B20pQ4VbqB3jv2q37VP26K": "/OUT-FOLDER/APP-NAME"
-            }
-        },
-        "app-Gvb47584ZGzp4pF9Gpk10P9Q": {
-            "name": "eggd-ici_uploader/v1.0.0",
-            "details": "ICI run uploader",
-            "url": "https://github.com/eastgenomics/eggd_ici_uploader",
-            "analysis": "ici_upload",
-            "per_sample": false,
-            "process_fastqs": false,
-            "depends_on": ["analysis_1"],
-            "extra_args": {
-                "systemRequirements": {"*": {"instanceType": "mem2_ssd1_v2_x16"}},
-                "priority": "high"
-            },
-            "inputs": {
-                "run_folder": "INPUT-analysis_1-out_dir",
-                "workflow_id": "c209834d-92d5-445f-b89b-c4d291c57613",
-                "api_key_file": {
-                    "$dnanexus_link": {
-                        "project": "project-Fv7VVv04FjKB44KJ3fp9554Q",
-                        "id": "file-Gy3q4Z049YxFq9p4q9788V5y"
-                    }
-                }
-            },
-            "output_dirs": {
             }
         },
         "applet-FvyXygj433GbKPPY0QY8ZKQG": {
