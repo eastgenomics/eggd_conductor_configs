@@ -15,11 +15,11 @@
         "v1.5.0": "Update Eunomia workflow to v1.3.0 and fusion workbook app to v1.1.0",
         "v1.5.1": "Update the app id in the output_dirs to use the same app id in the workbook",
         "v1.6.0": "Updated assay code to include a top up code.",
-        "v1.7.0": "Update Eunomia workflow to v1.4.0 which contains picardQC v1.2.0 and Ref flat file for RNAseq metrics,updated multiqc config file to v1.1.0 and multiQC docker"
+        "v1.7.0": "Update Eunomia workflow to v1.4.0 which contains picardQC v1.2.0 and Ref flat file for RNAseq metrics,updated multiqc config file to v1.1.0, multiQC docker and bclconvert to v1.1.0"
     },
     "demultiplex": true,
     "demultiplex_config": {
-        "app_id": "app-GJxgy7Q47yq62Q90GY2FX0fq",
+        "app_id": "app-J1VFP0Q4VpfGKKG1V7XgYXQ5",
         "additional_args": "--strict-mode true",
         "instance_type": "mem2_ssd1_v2_x48"
     },
