@@ -15,7 +15,7 @@
         "v1.5.0": "Update Eunomia workflow to v1.3.0 and fusion workbook app to v1.1.0",
         "v1.5.1": "Update the app id in the output_dirs to use the same app id in the workbook",
         "v1.6.0": "Updated assay code to include a top up code.",
-        "v1.7.0": "Update Eunomia workflow to v1.4.0 which contains picardQC v1.2.0 and update multiqc config file to v1.1.0"
+        "v1.7.0": "Update Eunomia workflow to v1.4.0 which contains picardQC v1.2.0 and Ref flat file for RNAseq metrics,updated multiqc config file to v1.1.0 and multiQC docker"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -106,6 +106,9 @@
                 "stage-picard.fasta_index": {
                     "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
                 },
+                "stage-picard.ref_annot_refflat": {
+                    "$dnanexus_link": "file-GxQ3f9j4vP4x9XYP7kz0ZvB0"
+                },
                 "stage-picard.run_CollectMultipleMetrics": false,
                 "stage-picard.run_CollectHsMetrics": false,
                 "stage-picard.run_CollectRnaSeqMetrics": true,
@@ -121,7 +124,7 @@
                 "stage-fastqc": "/OUT-FOLDER/STAGE-NAME"
             }
         },
-        "app-Gjyybj844V5bbzXQVfk32Xby": {
+        "app-J24Ffv8469JKgKQ88bX2kYF2": {
             "name": "MultiQC",
             "details": "MultiQC app to generate aggregated run level QC report",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
@@ -136,16 +139,15 @@
                     "$dnanexus_link": "file-J3403z84X3pXyK4Jx6Qgfzjf"
                 },
                 "multiqc_docker": {
-                    "$dnanexus_link": "file-G61JxF84g59YVK4G43FzGzGp"
+                    "$dnanexus_link": "file-J08KZb04bX05K677bv83GY2q"
                 },
-                "single_folder": false,
                 "calc_custom_coverage": false,
                 "depths": "250,500,1000"
             },
             "output_dirs": {
-                "app-Gjyybj844V5bbzXQVfk32Xby": "/OUT-FOLDER/APP-NAME"
+                "app-J24Ffv8469JKgKQ88bX2kYF2": "/OUT-FOLDER/APP-NAME"
             }
-        }, 
+        },
         "app-J1vQGq04Z51fGgFQ924V7bYQ": {
             "name": "eggd_generate_fusion_workbook/1.1.0",
             "details": "App to generate fusion workbook",
