@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-|-2327-",
-    "version": "3.3.0",
+    "version": "3.4.1",
     "details": "Includes main Uranus workflow, multi_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -47,7 +47,9 @@
         "v3.1.1": "Updated VEP config to v2.1.1 for eggd_vep_cgppindel and eggd_vep_mutect2",
         "v3.2.0": "Updated to include assay_code for top-up samples and subset_samplesheet codes for only clinical samples",
         "v3.2.1": "Updated main workflow to v3.0.1 (eggd_generate_variant_workbook v2.10.2 and new dx folder syntax)",
-        "v3.3.0": "Update VEP config to v2.1.2 for eggd_vep_cgppindel and eggd_vep_mutect2, update capture panel bed input file to v1.1.0 for eggd_sompy and eggd_vep_mutect2, update athena panel bed file to v1.1.0 and update main workflow for v3.1.0 (sompy v1.0.5)"
+        "v3.3.0": "Update VEP config to v2.1.2 for eggd_vep_cgppindel and eggd_vep_mutect2, update capture panel bed input file to v1.1.0 for eggd_sompy and eggd_vep_mutect2, update athena panel bed file to v1.1.0 and update main workflow for v3.1.0 (sompy v1.0.5)",
+        "v3.4.0": "Update eggd_generate_variant_workbook to v2.11.1",
+        "v3.4.1": "Updated VEP config to v2.1.3 for eggd_vep_cgppindel and eggd_vep_mutect2"
     },
     "demultiplex": true,
     "users": {
@@ -55,8 +57,8 @@
     },
     "subset_samplesheet": "EGG2|-8128-|-8476-|-5877-",
     "executables": {
-        "workflow-J2K4vJ84pGKbY35zX03zpkBX": {
-            "name": "uranus_main_workflow_GRCh38_v3.1.0",
+        "workflow-J2v1788467yFGFygyx2zBf3F": {
+            "name": "uranus_main_workflow_GRCh38_v3.2.0",
             "details": "Main Uranus workflow for alignment and variant calling",
             "url": "https://github.com/eastgenomics/eggd_uranus_main_workflow",
             "analysis": "analysis_1",
@@ -65,16 +67,24 @@
             "extra_args": {
                 "stageSystemRequirements": {
                     "stage-verifybamid": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x2"
+                        }
                     },
                     "stage-picard": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x4"
+                        }
                     },
                     "stage-flagstat": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x2"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x2"
+                        }
                     },
                     "stage-mosdepth": {
-                        "*": {"instanceType": "mem1_ssd2_v2_x4"}
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x4"
+                        }
                     }
                 }
             },
@@ -104,15 +114,15 @@
                     "$dnanexus_link": "file-Gqy4V1Q47xBXYzfKxb22fGXz"
                 },
                 "stage-eggd_vep_cgppindel.config_file": {
-                    "$dnanexus_link": "file-J2XpjX842ffyPPpK0ZkB1xvP"
+                    "$dnanexus_link": "file-J360jKQ42ffQ8vg5jYYj0VVY"
                 },
                 "stage-eggd_vep_cgppindel.normalise": false,
                 "stage-eggd_vep_mutect2.panel_bed": {
                     "$dnanexus_link": "file-J2YKYVQ441GvBpGxJ4J2Jf3P"
-                  },
+                },
                 "stage-eggd_vep_mutect2.config_file": {
-                    "$dnanexus_link": "file-J2XpjX842ffyPPpK0ZkB1xvP"
-                  },
+                    "$dnanexus_link": "file-J360jKQ42ffQ8vg5jYYj0VVY"
+                },
                 "stage-eggd_vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": "file-GjFv9X0421zQFGxXVFQ4j972"
                 },
@@ -121,23 +131,37 @@
                 },
                 "stage-eggd_vcf_rescue.rescue_filtered": true,
                 "stage-eggd_vcf_rescue.filter_string": "bcftools filter -e '(FORMAT/DP<99 || AF<0.03 || CSQ_gnomADe_AF>0.1) && (CSQ_RESCUE_LIST!=\"RESCUED\")'",
-                "stage-eggd_generate_variant_workbook.include_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_COSMICcMuts CSQ_COSMICncMuts CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC",
-                "stage-eggd_generate_variant_workbook.reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_COSMICcMuts CSQ_COSMICncMuts CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC",
-                "stage-eggd_generate_variant_workbook.rename_columns": "CSQ_Existing_variation=dbSNP DNA=HGVSc Protein=_HGVSp CSQ_HGVSp=Protein_ID CSQ_Feature=Transcript_ID DP=Read_Depth CSQ_gnomADg_AF=gnomADg_AF CSQ_gnomADe_AF=gnomADe_AF CSQ_SpliceAI_pred_DS_AG=SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL=SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG=SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL=SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG=SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL=SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG=SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL=SpliceAI_pred_DP_DL CSQ_EG_LC=Latest_Classification CSQ_EG_LCD=Latest_Classification_Date CSQ_EG_LCS=Latest_Specimen_ID CSQ_EG_TC=Total_Classifications ",
+                "stage-eggd_generate_variant_workbook.include_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC",
+                "stage-eggd_generate_variant_workbook.reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
+                "stage-eggd_generate_variant_workbook.rename_columns": "CSQ_Existing_variation=dbSNP CSQ_Feature=Transcript_ID DP=Read_Depth CSQ_EG_LC=Latest_Classification CSQ_EG_LCD=Latest_Classification_Date CSQ_EG_LCS=Latest_Specimen_ID CSQ_EG_TC=Total_Classifications",
                 "stage-eggd_generate_variant_workbook.types": "CSQ_Prev_Count_AC=Float",
                 "stage-eggd_generate_variant_workbook.filter": "bcftools filter -e '(CSQ_Prev_Count_AC>853) || (CSQ_SYMBOL!=\"GATA2\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_SYMBOL!=\"TP53\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_Consequence==\"synonymous_variant\")'",
                 "stage-eggd_generate_variant_workbook.add_samplename_column": true,
+                "stage-eggd_generate_variant_workbook.add_allele_origin_column": true,
+                "stage-eggd_generate_variant_workbook.add_interpreted_column": true,
+                "stage-eggd_generate_variant_workbook.add_mnv_column": true,
+                "stage-eggd_generate_variant_workbook.add_reported_column": true,
+                "stage-eggd_generate_variant_workbook.add_comment_column": true,
+                "stage-eggd_generate_variant_workbook.add_classification_column": true,
+                "stage-eggd_generate_variant_workbook.add_report_text_column": true,
                 "stage-eggd_generate_variant_workbook.additional_sheet_names": "pindel",
                 "stage-eggd_generate_variant_workbook.summary": "uranus",
                 "stage-eggd_generate_variant_workbook.split_hgvs": true,
                 "stage-eggd_generate_variant_workbook.af_format": "percent",
-                "stage-eggd_generate_variant_workbook.report_text": true,
                 "stage-eggd_generate_variant_workbook.join_columns": "Prev_Count=CSQ_Prev_Count_AC,/,CSQ_Prev_Count_NS",
                 "stage-eggd_generate_variant_workbook.keep_filtered": true,
                 "stage-eggd_generate_variant_workbook.keep_tmp": false,
-                "stage-eggd_generate_variant_workbook.add_comment_column": false,
-                "stage-eggd_generate_variant_workbook.add_classification_column": false,
                 "stage-eggd_generate_variant_workbook.merge_vcfs": false,
+                "stage-eggd_generate_variant_workbook.add_auto_filter": true,
+                "stage-eggd_generate_variant_workbook.freeze_column": "J2",
+                "stage-eggd_generate_variant_workbook.lock_sheet": true,
+                "stage-eggd_generate_variant_workbook.m_codes": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J2Gxb9j49q6yzjB933Xj36jB"
+                    }
+                },
+                "stage-eggd_generate_variant_workbook.sort_by": "CSQ_SYMBOL:True",
                 "stage-cgppindel.reference_index": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
@@ -182,8 +206,8 @@
                 },
                 "stage-picard.bedfile": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-Gyyjk4j4B3b7f3ypgx32fqjj"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gyyjk4j4B3b7f3ypgx32fqjj"
                     }
                 },
                 "stage-picard.fasta_index": {
@@ -192,37 +216,37 @@
                 "stage-mosdepth.qual_flags": true,
                 "stage-mosdepth.mosdepth_docker": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
                     }
                 },
                 "stage-athena.snps": [
                     {
-                      "$dnanexus_link": "file-FyZfyqQ41zg5FjK2GykYfKq8"
+                        "$dnanexus_link": "file-FyZfyqQ41zg5FjK2GykYfKq8"
                     }
-                  ],
+                ],
                 "stage-athena.thresholds": "100, 250, 500, 1000, 1500",
                 "stage-athena.exons_file": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-GzGkbb846Pg36b2P8BJkfKKX"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GzGkbb846Pg36b2P8BJkfKKX"
                     }
-                  },
+                },
                 "stage-athena.summary": true,
                 "stage-athena.cutoff_threshold": 250,
                 "stage-athena.panel_bed": {
-                "$dnanexus_link": {
-                    "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                    "id": "file-J2gFVf849v4GY3Fjk8qKZb40"
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J2gFVf849v4GY3Fjk8qKZb40"
                     }
                 },
                 "stage-athena.per_chromosome_coverage": true,
                 "stage-sompy.truth_vcf": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-Gjk675j4qv8zvQ5Qxq31Vfpg"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gjk675j4qv8zvQ5Qxq31Vfpg"
                     }
-                  },
+                },
                 "stage-sompy.panel_bed": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
