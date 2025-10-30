@@ -3,7 +3,7 @@
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-|-2327-",
     "version": "3.5.0",
-    "details": "Includes main Uranus workflow, multi_fastqc and multiQC",
+    "details": "Includes main Uranus workflow, eggd_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated main workflow to v1.11.0; updated multiQC app to v2.0.1 + config file and Docker image",
