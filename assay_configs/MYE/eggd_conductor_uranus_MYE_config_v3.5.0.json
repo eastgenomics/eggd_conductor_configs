@@ -115,14 +115,14 @@
                     "$dnanexus_link": "file-Gqy4V1Q47xBXYzfKxb22fGXz"
                 },
                 "stage-eggd_vep_cgppindel.config_file": {
-                    "$dnanexus_link": "file-J360jKQ42ffQ8vg5jYYj0VVY"
+                    "$dnanexus_link": "file-J40KzFj42ffbFvXFQg66FVkY"
                 },
                 "stage-eggd_vep_cgppindel.normalise": false,
                 "stage-eggd_vep_mutect2.panel_bed": {
                     "$dnanexus_link": "file-J2YKYVQ441GvBpGxJ4J2Jf3P"
                 },
                 "stage-eggd_vep_mutect2.config_file": {
-                    "$dnanexus_link": "file-J360jKQ42ffQ8vg5jYYj0VVY"
+                    "$dnanexus_link": "file-J40KzFj42ffbFvXFQg66FVkY"
                 },
                 "stage-eggd_vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": "file-GjFv9X0421zQFGxXVFQ4j972"
