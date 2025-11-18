@@ -38,7 +38,7 @@
         "v2.6.0": "Remove ICI uploader",
         "v2.7.0": "Update TSO500 reports workflow to v2.4.0, Picard CollectVariantCallingMetrics, MultiQC config (v2.2.0) and MultiQC docker (v1.28)",
         "v2.7.1": "Update to latest TSO500 vep config file (v1.2.24), Update multi_fastqc v1.1.0 -> eggd_fastqc v1.2.0",
-        "v2.7.2": "Update to include multiQC dependency on eggd_metricsoutput_editor (analysis_3) and TSO500_reports_workflow (analysis_5)"
+        "v2.7.2": "Update to include multiQC dependency on TSO500_reports_workflow (analysis_5)"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -281,7 +281,6 @@
             "depends_on": [
                 "analysis_1",
                 "analysis_2",
-                "analysis_3",
                 "analysis_4",
                 "analysis_5"
             ],
