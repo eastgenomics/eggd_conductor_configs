@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-|-2327-",
-    "version": "3.5.0",
+    "version": "3.6.0",
     "details": "Includes main Uranus workflow, eggd_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -50,7 +50,8 @@
         "v3.3.0": "Update VEP config to v2.1.2 for eggd_vep_cgppindel and eggd_vep_mutect2, update capture panel bed input file to v1.1.0 for eggd_sompy and eggd_vep_mutect2, update athena panel bed file to v1.1.0 and update main workflow for v3.1.0 (sompy v1.0.5)",
         "v3.4.0": "Update eggd_generate_variant_workbook to v2.11.1",
         "v3.4.1": "Updated VEP config to v2.1.3 for eggd_vep_cgppindel and eggd_vep_mutect2",
-        "v3.5.0": "Updated VEP config to v2.1.4 for eggd_vep_cgppindel and eggd_vep_mutect2. Update multi_fastqc to eggd_fastqc v1.2.0"
+        "v3.5.0": "Updated VEP config to v2.1.4 for eggd_vep_cgppindel and eggd_vep_mutect2. Update multi_fastqc to eggd_fastqc v1.2.0",
+        "v3.6.0": "Updated VEP config to v2.1.5 for eggd_vep_cgppindel and eggd_vep_mutect2. Update gnomad filtering and cgppindel timeout to 24h."
     },
     "demultiplex": true,
     "users": {
@@ -87,6 +88,13 @@
                             "instanceType": "mem1_ssd2_v2_x4"
                         }
                     }
+                },
+                "timeoutPolicyByExecutable": {
+                    "stage-cgppindel": {
+                        "*": {
+                            "hours": "24"
+                        }
+                    }
                 }
             },
             "inputs": {
@@ -115,14 +123,14 @@
                     "$dnanexus_link": "file-Gqy4V1Q47xBXYzfKxb22fGXz"
                 },
                 "stage-eggd_vep_cgppindel.config_file": {
-                    "$dnanexus_link": "file-J40KzFj42ffbFvXFQg66FVkY"
+                    "$dnanexus_link": "file-J4PKYX042ffQg1jJKJx3Fp01"
                 },
                 "stage-eggd_vep_cgppindel.normalise": false,
                 "stage-eggd_vep_mutect2.panel_bed": {
                     "$dnanexus_link": "file-J2YKYVQ441GvBpGxJ4J2Jf3P"
                 },
                 "stage-eggd_vep_mutect2.config_file": {
-                    "$dnanexus_link": "file-J40KzFj42ffbFvXFQg66FVkY"
+                    "$dnanexus_link": "file-J4PKYX042ffQg1jJKJx3Fp01"
                 },
                 "stage-eggd_vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": "file-GjFv9X0421zQFGxXVFQ4j972"
@@ -136,7 +144,7 @@
                 "stage-eggd_generate_variant_workbook.reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
                 "stage-eggd_generate_variant_workbook.rename_columns": "CSQ_Existing_variation=dbSNP CSQ_Feature=Transcript_ID DP=Read_Depth CSQ_EG_LC=Latest_Classification CSQ_EG_LCD=Latest_Classification_Date CSQ_EG_LCS=Latest_Specimen_ID CSQ_EG_TC=Total_Classifications",
                 "stage-eggd_generate_variant_workbook.types": "CSQ_Prev_Count_AC=Float",
-                "stage-eggd_generate_variant_workbook.filter": "bcftools filter -e '(CSQ_Prev_Count_AC>853) || (CSQ_SYMBOL!=\"GATA2\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_SYMBOL!=\"TP53\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_Consequence==\"synonymous_variant\")'",
+                "stage-eggd_generate_variant_workbook.filter": "bcftools filter -e '(CSQ_Prev_Count_AC>853 || gnomADg_AF >= 0.005 || gnomADe_AF >= 0.005 ) || (CSQ_SYMBOL!=\"GATA2\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_SYMBOL!=\"TP53\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_Consequence==\"synonymous_variant\")'",
                 "stage-eggd_generate_variant_workbook.add_samplename_column": true,
                 "stage-eggd_generate_variant_workbook.add_allele_origin_column": true,
                 "stage-eggd_generate_variant_workbook.add_interpreted_column": true,
