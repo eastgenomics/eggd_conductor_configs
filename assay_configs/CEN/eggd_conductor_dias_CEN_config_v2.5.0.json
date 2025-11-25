@@ -18,7 +18,7 @@
         "v2.2.0": "Update dias_single to v2.9.0. Sentieon v5.1.0. + eggd_additional_region_calling v1.0.0",
         "v2.3.0": "Update dias_single to v2.10.0. Includes eggd_additional_region_calling v1.1.0",
         "v2.4.0": "Updated assay code to include top up codes.Add subset_samplesheet to inlcude non-top up codes",
-        "v2.5.0": "Updated assay to include eggd_plot_variant_baf. Updated dias_single to v2.14.0,  CEN MultiQC yaml config to v1.2.0 and MultiQC docker to v1.28. Update eggd_MultiQC to v3.2.0 and to receive samplesheet as input."
+        "v2.5.0": "Updated dias_single to v2.14.0 and provided inputs to new app in workflow eggd_plot_variant_baf. Updated eggd_MultiQC to v3.2.0, multiqc_docker to v1.28, CEN MultiQC config v1.2.0 and provided samplesheet as MultiqQC input."
     },
     "demultiplex": true,
     "users": {
@@ -28,7 +28,7 @@
     "executables": {
         "workflow-J3k0PxQ40JxZqpz3XKVpz2qF": {
             "name": "dias_single_v2.14.0",
-            "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAMID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step, and eggd_sex_check",
+            "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAMID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step, eggd_sex_check, and eggd_plot_variant_baf",
             "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
             "analysis": "analysis_1",
             "per_sample": true,
