@@ -2,7 +2,7 @@
     "name": "Config for Eunomia pipeline with PANCAN assay",
     "assay": "PCAN",
     "assay_code": "-10011|-10012|-10042|-10043|-2222",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "details": "Initial release of assay config",
     "changelog": {
         "v1.0.0": "Initial release of assay config",
@@ -15,7 +15,8 @@
         "v1.5.0": "Update Eunomia workflow to v1.3.0 and fusion workbook app to v1.1.0",
         "v1.5.1": "Update the app id in the output_dirs to use the same app id in the workbook",
         "v1.6.0": "Updated assay code to include a top up code.",
-        "v1.7.0": "Update Eunomia workflow to v1.4.0 which contains picardQC v1.2.0 and Ref flat file for RNAseq metrics,updated multiqc config file to v1.1.0, multiQC docker and bclconvert to v1.1.0"
+        "v1.7.0": "Update Eunomia workflow to v1.4.0 which contains picardQC v1.2.0 and Ref flat file for RNAseq metrics,updated multiqc config file to v1.1.0, multiQC docker and bclconvert to v1.1.0",
+        "v1.7.1": "Update to eunomia_workflow_v1.4.1, which updates eggd_fusioninspector to v1.1.1."
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -28,8 +29,8 @@
     },
     "subset_samplesheet": "-10011|-10012|-10042|-10043",
     "executables": {
-        "workflow-J2fqJv04X3pz2zkbZBFKG1Xk": {
-            "name": "eunomia_workflow_v1.4.0",
+        "workflow-J4PVJY04jKby1J97Y55x5x7X": {
+            "name": "eunomia_workflow_v1.4.1",
             "details": "Eunomia workflow",
             "url": "https://github.com/eastgenomics/eggd_eunomia_workflow",
             "analysis": "analysis_1",
