@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-|-2327-",
-    "version": "3.6.0",
+    "version": "3.7.0",
     "details": "Includes main Uranus workflow, eggd_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -51,7 +51,8 @@
         "v3.4.0": "Update eggd_generate_variant_workbook to v2.11.1",
         "v3.4.1": "Updated VEP config to v2.1.3 for eggd_vep_cgppindel and eggd_vep_mutect2",
         "v3.5.0": "Updated VEP config to v2.1.4 for eggd_vep_cgppindel and eggd_vep_mutect2. Update multi_fastqc to eggd_fastqc v1.2.0",
-        "v3.6.0": "Updated VEP config to v2.1.5 for eggd_vep_cgppindel and eggd_vep_mutect2. Update gnomad filtering and cgppindel timeout to 24h."
+        "v3.6.0": "Updated VEP config to v2.1.5 for eggd_vep_cgppindel and eggd_vep_mutect2. Update gnomad filtering and cgppindel timeout to 24h.",
+        "v3.7.0": "Updated gnomad filtering threshold"
     },
     "demultiplex": true,
     "users": {
