@@ -17,7 +17,7 @@
         "v1.6.0": "Updated assay code to include a top up code.",
         "v1.7.0": "Update Eunomia workflow to v1.4.0 which contains picardQC v1.2.0 and Ref flat file for RNAseq metrics,updated multiqc config file to v1.1.0, multiQC docker and bclconvert to v1.1.0",
         "v1.7.1": "Update to eunomia_workflow_v1.4.1, which updates eggd_fusioninspector to v1.1.1",
-	"v1.7.2": "New assay codes added"
+        "v1.7.2": "New assay codes added"
     },
     "demultiplex": true,
     "demultiplex_config": {
