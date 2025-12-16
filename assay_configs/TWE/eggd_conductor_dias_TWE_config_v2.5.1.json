@@ -2,8 +2,8 @@
     "name": "Config for Twist whole exome assay",
     "assay": "38_TWE",
     "genome": "GRCh38",
-    "assay_code": "-EGG4|-9526-|-9688-|-1288-",
-    "version": "2.5.0",
+    "assay_code": "-EGG4|-9526-|-9688-|-1288-|-10028-",
+    "version": "2.5.1",
     "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -19,7 +19,8 @@
         "v2.2.0": "Update dias_single to v2.9.0. Sentieon v5.1.0. + eggd_additional_region_calling v1.0.0",
         "v2.3.0": "Update dias_single to v2.10.0. Includes eggd_additional_region_calling v1.1.0",
         "v2.4.0": "Updated assay code to include top up codes.Add subset_samplesheet to include non-top up codes",
-        "v2.5.0": "Updated dias_single to v2.14.0 and provided inputs to new app in workflow eggd_plot_variant_baf. Updated eggd_MultiQC to v3.2.0, multiqc_docker to v1.28, CEN MultiQC config v1.2.0 and provided samplesheet as MultiqQC input."
+        "v2.5.0": "Updated dias_single to v2.14.0 and provided inputs to new app in workflow eggd_plot_variant_baf. Updated eggd_MultiQC to v3.2.0, multiqc_docker to v1.28, CEN MultiQC config v1.2.0 and provided samplesheet as MultiqQC input.",
+	"v2.5.1": "Updated assay code"
     },
     "demultiplex": true,
     "demultiplex_config": {
