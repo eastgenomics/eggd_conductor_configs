@@ -1,7 +1,7 @@
 {
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
-    "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041|-2122",
+    "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041|-2122|-10026|-10054",
     "version": "2.8.1",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
