@@ -1,30 +1,35 @@
 {
-    "name": "Config for CEN assay",
-    "assay": "38_CEN",
+    "name": "Config for Twist whole exome assay",
+    "assay": "38_TWE",
     "genome": "GRCh38",
-    "assay_code": "-EGG5|-9527-|-9617-|-1256-",
-    "version": "2.5.0",
-    "details": "Includes main Dias workflow, single, multi, QC and reports",
+    "assay_code": "-EGG4|-9526-|-9688-|-1288-|-10028-",
+    "version": "2.5.1",
+    "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated dias_single and dias_multi workflows, specifying input files",
-        "v1.1.1": "Updated somalier reference genome projects",
-        "v1.2.0": "Updated instance type for MultiQC",
-        "v1.3.0": "Updated input files for dias_multi and MultiQC",
-        "v1.4.0": "Updated workflow ID and name for dias_single",
-        "v2.0.0": "Updates to all reference genome related files to GRCh38",
-        "v2.0.1": "Update vcf_QC bed file and instance types",
-        "v2.1.0": "Updates dias_single to v2.7.0, Sentieon instance type, sex check thresholds and adds mosdepth docker input. Updates dias_multi to v2.2.0 and removes references to update_run_folders. Updates egg_multiqc to v2.0.2, MultiQC docker input to v1.14 and MultiQC config for GRCh38",
+        "v1.1.1": "Updated somalier genome reference projects",
+        "v1.2.0": "Updated input files for dias_multi and MultiQC",
+        "v1.3.0": "Updated workflow ID and name for dias_single",
+        "v1.4.0": "Updated dias_single to 2.5.0 and multiqc config to v2.3.0",
+        "v2.0.0": "Updates to all reference related file to GRCh38",
+        "v2.0.1": "Change vcf_qc input bed to capture bed,update instance types,add genome field",
+        "v2.1.0": "Updates dias_single to v2.7.0, Sentieon instance type, sex check thresholds and adds mosdepth docker input. Updates dias_multi to v2.2.0 and removes references to update_run_folders. Updates egg_multiqc to v2.02, MultiQC docker input to v1.14 and MultiQC config for GRCh38",
+        "v2.1.1": "Updates hap.py panel BED",
         "v2.2.0": "Update dias_single to v2.9.0. Sentieon v5.1.0. + eggd_additional_region_calling v1.0.0",
         "v2.3.0": "Update dias_single to v2.10.0. Includes eggd_additional_region_calling v1.1.0",
-        "v2.4.0": "Updated assay code to include top up codes.Add subset_samplesheet to inlcude non-top up codes",
-        "v2.5.0": "Updated dias_single to v2.14.0 and provided inputs to new app in workflow eggd_plot_variant_baf. Updated eggd_MultiQC to v3.2.0, multiqc_docker to v1.28, CEN MultiQC config v1.2.0 and provided samplesheet as MultiqQC input."
+        "v2.4.0": "Updated assay code to include top up codes.Add subset_samplesheet to include non-top up codes",
+        "v2.5.0": "Updated dias_single to v2.14.0 and provided inputs to new app in workflow eggd_plot_variant_baf. Updated eggd_MultiQC to v3.2.0, multiqc_docker to v1.28, CEN MultiQC config v1.2.0 and provided samplesheet as MultiqQC input.",
+	"v2.5.1": "Updated assay code"
     },
     "demultiplex": true,
+    "demultiplex_config": {
+        "instance_type": "mem2_ssd1_v2_x48"
+    },
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
-    "subset_samplesheet": "-EGG5|-9527-|-9617-",
+    "subset_samplesheet":"-EGG4|-9526-|-9688-",
     "executables": {
         "workflow-J3k0PxQ40JxZqpz3XKVpz2qF": {
             "name": "dias_single_v2.14.0",
@@ -65,10 +70,10 @@
                             "instanceType": "mem1_ssd2_v2_x4"
                         }
                     },
-                "stage-eggd_plot_variant_baf": {
-                    "*": {
-                        "instanceType": "mem3_ssd1_v2_x8"
-                        }
+                    "stage-eggd_plot_variant_baf": {
+                        "*": {
+                            "instanceType": "mem3_ssd1_v2_x8"
+                            }
                     }
                 }
             },
@@ -106,7 +111,7 @@
                 "stage-vcfQC.bed_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GP2bGp848QggjG456FJ1vG95"
+                        "id": "file-G7FK1xQ4kj4317YGFpqYPb75"
                     }
                 },
                 "stage-picardQC.run_CollectMultipleMetrics": false,
@@ -123,7 +128,7 @@
                 "stage-picardQC.bedfile": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-GP2bGp848QggjG456FJ1vG95"
+                        "id": "file-G7FK1xQ4kj4317YGFpqYPb75"
                     }
                 },
                 "stage-picardQC.dbsnp_vcf": {
@@ -156,7 +161,7 @@
                         "id": "file-G7FJjz04kj424vq826gKbZx7"
                     }
                 },
-                "stage-sex_check.male_threshold": 4.30,
+                "stage-sex_check.male_threshold": 4.00,
                 "stage-sex_check.female_threshold": 5.00,
                 "stage-additional_regions_calling.fasta_tar": {
                     "$dnanexus_link": {
@@ -222,7 +227,7 @@
                 "stage-vcfeval_happy.panel_bed": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-Gf0265j4XGyVZgV9VkG615xf"
+                        "id": "file-Gz08bkj47Vx09JkYY14vk0gj"
                     }
                 },
                 "stage-vcfeval_happy.high_conf_bed": {
@@ -268,7 +273,7 @@
                         "field": "somalier_output"
                     }
                 },
-                "stage-somalier_relate2multiqc.female_threshold": 3,
+                "stage-somalier_relate2multiqc.female_threshold": 60,
                 "stage-somalier_relate2multiqc.male_threshold": 1
             },
             "inputs_filter": {
@@ -297,9 +302,9 @@
             "extra_args": {
                 "systemRequirements": {
                     "*": {
-                        "instanceType": "mem2_ssd1_v2_x8"
+                        "instanceType": "mem1_ssd1_v2_x8"
+                        }
                     }
-                }
             },
             "inputs": {
                 "project_for_multiqc": "INPUT-dx_project_name",
@@ -315,7 +320,7 @@
                 "multiqc_config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-J4XjZPQ40Fq2k5pZ9VqpG10J"
+                        "id": "file-J4ZvZk849Vpbz6G76kZ6z0Gf"
                     }
                 }
             },
