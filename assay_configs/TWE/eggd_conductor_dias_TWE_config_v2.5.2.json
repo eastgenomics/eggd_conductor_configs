@@ -3,7 +3,7 @@
     "assay": "38_TWE",
     "genome": "GRCh38",
     "assay_code": "-EGG4|-9526-|-9688-|-1288-|-10028-",
-    "version": "2.5.1",
+    "version": "2.5.2",
     "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
         "v1.0.0": "Initial working version",
