@@ -17,7 +17,7 @@ Below defines all external input files, their versions and file locations in DNA
 ||`docker_image`|[cgppindel_image.tar.gz](https://platform.dnanexus.com/panx/projects/G21BGP84q5JFYf168QjZ58Vz/data/?scope=project&id.values=file-Fz0KxFj4KB7fxxZ06vy2B2P3)|not versioned|
 |[verifybamid](https://github.com/eastgenomics/eggd_verifybamid)|`vcf_file`|[Omni25_genotypes_1525_samples_v2.b38.PASS.ALL.sites_no_chr.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-G7YKFZj4kj47GxgQ2bKGYV1g)|not versioned|
 |[picardqc](https://github.com/eastgenomics/eggd_picardqc)|`bedfile`|[Probes_GRCh38_HaemOnc_v3.0.bed](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/bed_files/b38/kits/myeloid?id.constraint=%24or&id.values=file-Gyyjk4j4B3b7f3ypgx32fqjj)|v3.0|
-|| `fasta_index` |[GRCh38_GIABv3_no_alt_analysis_set_maskedGRC_decoys_MAP2K3_KMT2C_KCNJ18_noChr.fasta-index.tar.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-Gb772VQ4XGyzQ0Zk615XbZ0X)|not versioned|
+|| `fasta_index` |[GRCh38_GIABv3_no_alt_analysis_set_maskedGRC_decoys_MAP2K3_KMT2C_KCNJ18_noChr.fasta-index.tar.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/genomes/b38?id.values=file-Gb772VQ4XGyzQ0Zk615XbZ0X)|not versioned|
 ||`dbsnp_vcf`|[dbSNP138.GRCh38.vcf.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.value=file-GyfBYg8433GkZg7X1B23qFfj)|v138.0|
 |[mosdepth](https://github.com/eastgenomics/eggd_mosdepth)|`mosdepth_docker`|[mosdepth_image_v0.3.5.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?scope=project&id.values=file-GbJXzq04pgpY6FX22Qvk9F9x)|v0.3.5||
 |[athena](https://github.com/eastgenomics/athena)|`snps`|[hgmd_pro_2020.1_hg38.vcf](https://platform.dnanexus.com/panx/projects/G21BGP84q5JFYf168QjZ58Vz/data/?scope=project&id.values=file-FyZfyqQ41zg5FjK2GykYfKq8)|v2020.1|
@@ -33,8 +33,8 @@ Below defines all external input files, their versions and file locations in DNA
 ||`panel_bed`|[GCF_000001405.39_GRCh38.p13_genomic_20200815.exons_20bp_5bp_uranus_panel_v1.1.0.bed](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/bed_files/b38/kits/myeloid?id.constraint=%24or&id.values=file-J2YKYVQ441GvBpGxJ4J2Jf3P)|v1.1.0|
 |[eggd_vep [cgppindel VCF]](https://github.com/eastgenomics/eggd_vep)|`config_file`|[uranus_vep_config_v2.1.6.json](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/dynamic_files/vep_configs?id.constraint=%24or&id.values=file-J50b5Y042ffV33PBvV571b53)|v2.1.6|
 ||`panel_bed`|[pindel_cgppindel_filtering_coordinates_v1.2.bed](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/bed_files/b38/kits/myeloid?id.values=file-Gqy4V1Q47xBXYzfKxb22fGXz)|v1.2|
-|[eggd_vcf_rescue](https://github.com/eastgenomics/eggd_vcf_rescue)|`rescue_vcf`|[CosmicCodingMuts_GRCh38_v99.normal.NoEntry.vcf.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-GjFv9X0421zQFGxXVFQ4j972)|v99|
-||`fasta_tar`|[GRCh38_GIABv3_no_alt_analysis_set_maskedGRC_decoys_MAP2K3_KMT2C_KCNJ18_noChr.fasta-index.tar.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-Gb772VQ4XGyzQ0Zk615XbZ0X)|not versioned|
+|[eggd_vcf_rescue](https://github.com/eastgenomics/eggd_vcf_rescue)|`rescue_vcf`|[CosmicCodingMuts_GRCh38_v99.normal.NoEntry.vcf.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-GjFv9X0421zQFGxXVFQ4j972&scope=project)|v99|
+||`fasta_tar`|[GRCh38_GIABv3_no_alt_analysis_set_maskedGRC_decoys_MAP2K3_KMT2C_KCNJ18_noChr.fasta-index.tar.gz](https://platform.dnanexus.com/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/genomes/b38?id.values=file-Gb772VQ4XGyzQ0Zk615XbZ0X&scope=project)|not versioned|
 
 ---
 
@@ -48,5 +48,5 @@ No external inputs.
 
 | Input field | Input file | Version |
 | ---         | ---        | ---     |
-| `multiqc_docker` | [multiqc_v1.32.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-J4v08vj4GPF4Fg2zjkpkKyY1)|v1.32.0|
-| `multiqc_config_file` | [MYE_multiqc_config_v4.1.0.yaml](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-J5QY4q04xvfvk5qBf7vF3y3Z)|v4.1.0|
+| `multiqc_docker` | [multiqc_v1.32.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-J4v08vj4GPF4Fg2zjkpkKyY1&scope=project)|v1.32.0|
+| `multiqc_config_file` | [MYE_multiqc_config_v4.1.0.yaml](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-J5QY4q04xvfvk5qBf7vF3y3Z&scope=project)|v4.1.0|
