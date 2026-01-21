@@ -3,7 +3,7 @@
     "assay": "38_CEN",
     "genome": "GRCh38",
     "assay_code": "-EGG5|-9527-|-9617-|-1256-|-10029-",
-    "version": "2.5.2",
+    "version": "3.0.0",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -20,9 +20,13 @@
         "v2.4.0": "Updated assay code to include top up codes.Add subset_samplesheet to inlcude non-top up codes",
         "v2.5.0": "Updated dias_single to v2.14.0 and provided inputs to new app in workflow eggd_plot_variant_baf. Updated eggd_MultiQC to v3.2.0, multiqc_docker to v1.28, CEN MultiQC config v1.2.0 and provided samplesheet as MultiqQC input.",
         "v2.5.1": "Updated assay code",
-        "v2.5.2": "Fix MultiQC folder destination"
+        "v2.5.2": "Fix MultiQC folder destination",
+        "v3.0.0": "Add demultiplex config for handling Harmonisation project UMIs"
     },
     "demultiplex": true,
+    "demultiplex_config": {
+        "additional_args": "-l INFO --use-bases-mask n7Y144,I10,I10,n7Y144"
+    },
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
@@ -67,9 +71,9 @@
                             "instanceType": "mem1_ssd2_v2_x4"
                         }
                     },
-                "stage-eggd_plot_variant_baf": {
-                    "*": {
-                        "instanceType": "mem3_ssd1_v2_x8"
+                    "stage-eggd_plot_variant_baf": {
+                        "*": {
+                            "instanceType": "mem3_ssd1_v2_x8"
                         }
                     }
                 }
@@ -306,7 +310,9 @@
             "inputs": {
                 "project_for_multiqc": "INPUT-dx_project_name",
                 "primary_workflow_output": "INPUT-parent_out_dir",
-                "samplesheet": {"$dnanexus_link": "INPUT-SAMPLESHEET"},
+                "samplesheet": {
+                    "$dnanexus_link": "INPUT-SAMPLESHEET"
+                },
                 "calc_custom_coverage": false,
                 "multiqc_docker": {
                     "$dnanexus_link": {
