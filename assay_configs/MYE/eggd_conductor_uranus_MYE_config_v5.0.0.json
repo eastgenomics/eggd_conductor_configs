@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-|-2327-|-10051-",
-    "version": "4.0.0",
+    "version": "5.0.0",
     "details": "Includes main Uranus workflow, eggd_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -54,9 +54,13 @@
         "v3.6.0": "Updated VEP config to v2.1.5 for eggd_vep_cgppindel and eggd_vep_mutect2. Update gnomad filtering and cgppindel timeout to 24h.",
         "v3.7.0": "Updated gnomad filtering threshold",
         "v3.7.1": "Updated VEP config to v2.1.6 for eggd_vep_cgppindel and eggd_vep_mutect2. Update assay_code to include top-up procedure code.",
-        "v4.0.0": "Updated to support uranus_main_workflow_GRCh38_v3.3.0, eggd_MultiQC v3.2.0, and associated MYE MultiQC config v4.1.0"
+        "v4.0.0": "Updated to support uranus_main_workflow_GRCh38_v3.3.0, eggd_MultiQC v3.2.0, and associated MYE MultiQC config v4.1.0",
+        "v5.0.0": "Add demultiplex config for handling Twist harmonisation project UMIs"
     },
     "demultiplex": true,
+    "demultiplex_config": {
+        "additional_args": "-l INFO --use-bases-mask n7Y144,I10,I10,n7Y144"
+    },
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
@@ -216,7 +220,7 @@
                 "stage-verifybamid.vcf_file": {
                     "$dnanexus_link": "file-G7YKFZj4kj47GxgQ2bKGYV1g"
                 },
-		"stage-picard.run_CollectVariantCallingMetrics": true,
+                "stage-picard.run_CollectVariantCallingMetrics": true,
                 "stage-picard.bedfile": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
@@ -226,9 +230,9 @@
                 "stage-picard.fasta_index": {
                     "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
                 },
-		"stage-picard.dbsnp_vcf": {
-		    "$dnanexus_link": "file-GyfBYg8433GkZg7X1B23qFfj"
-		},
+                "stage-picard.dbsnp_vcf": {
+                    "$dnanexus_link": "file-GyfBYg8433GkZg7X1B23qFfj"
+                },
                 "stage-mosdepth.qual_flags": true,
                 "stage-mosdepth.mosdepth_docker": {
                     "$dnanexus_link": {
@@ -350,9 +354,9 @@
                 "multiqc_config_file": {
                     "$dnanexus_link": "file-J5QY4q04xvfvk5qBf7vF3y3Z"
                 },
-		"samplesheet": {
-		    "$dnanexus_link": "INPUT-SAMPLESHEET"
-		}
+                "samplesheet": {
+                    "$dnanexus_link": "INPUT-SAMPLESHEET"
+                }
             },
             "output_dirs": {
                 "app-GF3K4Qj4bJyvpzx055V3G8q7": "/OUT-FOLDER/APP-NAME"
