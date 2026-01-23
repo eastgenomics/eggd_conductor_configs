@@ -22,7 +22,7 @@
         "v2.5.0": "Updated dias_single to v2.14.0 and provided inputs to new app in workflow eggd_plot_variant_baf. Updated eggd_MultiQC to v3.2.0, multiqc_docker to v1.28, CEN MultiQC config v1.2.0 and provided samplesheet as MultiqQC input.",
         "v2.5.1": "Updated assay code",
         "v2.5.2": "Update the MultiQC config file to fix threshold display issue with Fold80 + Fix MultiQC folder destination",
-        "v3.0.0": "Add demultiplex config for handling Harmonisation project UMIs"
+        "v3.0.0": "Add demultiplex config for handling Twist harmonisation project project UMIs"
     },
     "demultiplex": true,
     "demultiplex_config": {
