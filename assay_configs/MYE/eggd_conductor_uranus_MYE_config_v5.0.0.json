@@ -60,7 +60,7 @@
     "demultiplex": true,
     "demultiplex_config": {
         "additional_args": "-l INFO --use-bases-mask n7Y144,I10,I10,n7Y144",
-        "instance_type": "mem2_ssd1_v2_x48"
+        "instance_type": "mem2_ssd1_v2_x32"
     },
     "users": {
         "org-emee_1": "CONTRIBUTE"
