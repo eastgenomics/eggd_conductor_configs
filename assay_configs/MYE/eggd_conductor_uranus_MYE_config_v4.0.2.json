@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-|-2327-|-10051-",
-    "version": "4.0.1",
+    "version": "4.0.2",
     "details": "Includes main Uranus workflow, eggd_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
