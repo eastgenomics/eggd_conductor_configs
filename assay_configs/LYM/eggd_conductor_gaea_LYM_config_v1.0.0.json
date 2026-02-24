@@ -1,0 +1,269 @@
+{
+    "name": "Config for lymphoma assay",
+    "assay": "LYM",
+    "assay_code": "EGG2|-10056-|-10055-|-2327-",
+    "version": "1.0.0",
+    "details": "Includes main gaea workflow, eggd_fastqc and multiQC",
+    "changelog": {
+        "v1.0.0": "Initial working version"
+    },
+    "demultiplex": true,
+    "users": {
+        "org-emee_1": "CONTRIBUTE"
+    },
+    "subset_samplesheet": "EGG2|-10056-|-10055-",
+    "executables": {
+        "workflow-J5yJQp84zfVz4Gg4YF30yqjP": {
+            "name": "gaea_main_workflow_v1.0.0",
+            "details": "Main Gaea workflow for alignment and variant calling",
+            "url": "https://github.com/eastgenomics/eggd_gaea_main_workflow",
+            "analysis": "analysis_1",
+            "per_sample": true,
+            "process_fastqs": true,
+            "extra_args": {
+                "stageSystemRequirements": {
+                    "stage-verifybamid": {
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x2"
+                        }
+                    },
+                    "stage-picard": {
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x4"
+                        }
+                    },
+                    "stage-flagstat": {
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x2"
+                        }
+                    },
+                    "stage-mosdepth": {
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x4"
+                        }
+                    }
+                },
+                "timeoutPolicyByExecutable": {
+                    "app-GpFk2784Qyjzf9bzfxg73K8F": {
+                        "*": {
+                            "hours": 24
+                        }
+                    }
+                }
+            },
+            "inputs": {
+                "stage-sentieon_umi.reads_fastqgzs": "INPUT-R1",
+                "stage-sentieon_umi.reads2_fastqgzs": "INPUT-R2",
+                "stage-sentieon_umi.genome_fastagz": {
+                    "$dnanexus_link": "file-Gb757784XGyY3FPvkPQ74K9z"
+                },
+                "stage-sentieon_umi.genomebwaindex_targz": {
+                    "$dnanexus_link": "file-Gb76f204XGybZ3J6F731xkBp"
+                },
+                "stage-sentieon_umi.sample": "INPUT-SAMPLE-NAME",
+                "stage-sentieon_umi.read_template": "5M2S+T,5M2S+T",
+                "stage-sentieon_umi.duplex_umi": true,
+                "stage-sentieon_umi.output_metrics": true,
+                "stage-sentieon_tnbam.genome_fastagz": {
+                    "$dnanexus_link": "file-Gb757784XGyY3FPvkPQ74K9z"
+                },
+                "stage-sentieon_tnbam.gatk_resource_bundle": {
+                    "$dnanexus_link": {
+                        "project": "project-F3zqGV04fXX5j7566869fjFq",
+                        "id": "file-F3zvKp84fXX8qJx43zZXP395"
+                    }
+                },
+                "stage-sentieon_tnbam.run_bqsr": true,
+                "stage-sentieon_tnbam.somatic_algo": "TNhaplotyper2",
+                "stage-eggd_vep_mutect2.panel_bed": {
+                    "$dnanexus_link": "file-J5ZzxFj4kyZ353b3JJZb4J30"
+                },
+                "stage-eggd_vep_mutect2.config_file": {
+                    "$dnanexus_link": "file-J69Kv104kyZ2GFYJ552BZ2BF"
+                },
+                "stage-eggd_vcf_rescue.rescue_vcf": {
+                    "$dnanexus_link": "file-GjFv9X0421zQFGxXVFQ4j972"
+                },
+                "stage-eggd_vcf_rescue.fasta_tar": {
+                    "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+                },
+                "stage-eggd_vcf_rescue.rescue_filtered": true,
+                "stage-eggd_vcf_rescue.filter_string": "bcftools filter -e '(FORMAT/DP<99 || AF<0.01 || CSQ_gnomADe_AF>0.1 || CSQ_Feature==\"NM_058195.4\") && (CSQ_RESCUE_LIST!=\"RESCUED\")'",
+                "stage-eggd_generate_variant_workbook.include_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_aSHM CSQ_CHIP CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC",
+                "stage-eggd_generate_variant_workbook.reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_aSHM CSQ_CHIP CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
+                "stage-eggd_generate_variant_workbook.rename_columns": "CSQ_Existing_variation=dbSNP CSQ_Feature=Transcript_ID CSQ_aSHM=aSHM CSQ_CHIP=CHIP DP=Read_Depth CSQ_EG_LC=Latest_Classification CSQ_EG_LCD=Latest_Classification_Date CSQ_EG_LCS=Latest_Specimen_ID CSQ_EG_TC=Total_Classifications",
+                "stage-eggd_generate_variant_workbook.types": "CSQ_Prev_Count_AC=Float",
+                "stage-eggd_generate_variant_workbook.filter": "bcftools filter -e '(CSQ_Prev_Count_AC>853 || AF < 0.03 || CSQ_Consequence==\"intron_variant\" || CSQ_gnomADe_AF >= 0.002) || (CSQ_SYMBOL!=\"TP53\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_Consequence==\"synonymous_variant\")'",
+                "stage-eggd_generate_variant_workbook.add_samplename_column": true,
+                "stage-eggd_generate_variant_workbook.add_allele_origin_column": true,
+                "stage-eggd_generate_variant_workbook.add_interpreted_column": true,
+                "stage-eggd_generate_variant_workbook.add_mnv_column": true,
+                "stage-eggd_generate_variant_workbook.add_reported_column": true,
+                "stage-eggd_generate_variant_workbook.add_comment_column": true,
+                "stage-eggd_generate_variant_workbook.add_classification_column": true,
+                "stage-eggd_generate_variant_workbook.add_report_text_column": true,
+                "stage-eggd_generate_variant_workbook.summary": "gaea",
+                "stage-eggd_generate_variant_workbook.split_hgvs": true,
+                "stage-eggd_generate_variant_workbook.af_format": "percent",
+                "stage-eggd_generate_variant_workbook.join_columns": "Prev_Count=CSQ_Prev_Count_AC,/,CSQ_Prev_Count_NS",
+                "stage-eggd_generate_variant_workbook.keep_filtered": true,
+                "stage-eggd_generate_variant_workbook.keep_tmp": false,
+                "stage-eggd_generate_variant_workbook.merge_vcfs": false,
+                "stage-eggd_generate_variant_workbook.add_auto_filter": true,
+                "stage-eggd_generate_variant_workbook.freeze_column": "L2",
+                "stage-eggd_generate_variant_workbook.lock_sheet": false,
+                "stage-eggd_generate_variant_workbook.m_codes": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J2Gxb9j49q6yzjB933Xj36jB"
+                    }
+                },
+                "stage-eggd_generate_variant_workbook.sort_by": "CSQ_SYMBOL:True",
+                "stage-verifybamid.vcf_file": {
+                    "$dnanexus_link": "file-G7YKFZj4kj47GxgQ2bKGYV1g"
+                },
+		"stage-picard.run_CollectVariantCallingMetrics": false,
+                "stage-picard.bedfile": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J4vXpyj4kyZGpZFFx4XxzkBv"
+                    }
+                },
+                "stage-picard.fasta_index": {
+                    "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+                },
+                "stage-picard.run_CollectHsMetrics": true,
+                "stage-picard.run_CollectMultipleMetrics": true,
+                "stage-picard.stringency": "silent",
+		"stage-picard.dbsnp_vcf": {
+		    "$dnanexus_link": "file-GyfBYg8433GkZg7X1B23qFfj"
+		},
+                "stage-mosdepth.qual_flags": true,
+                "stage-mosdepth.mosdepth_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GbJXzq04pgpY6FX22Qvk9F9x"
+                    }
+                },
+                "stage-athena.snps": [
+                    {
+                        "$dnanexus_link": "file-FyZfyqQ41zg5FjK2GykYfKq8"
+                    }
+                ],
+                "stage-athena.thresholds": "100, 250, 500, 1000, 1500",
+                "stage-athena.exons_file": {
+                    "$dnanexus_link": {
+                        "project": "project-Gxp04xQ4kyZPy82xVbZzqkY5",
+                        "id": "file-J5QK2p04kyZ6Gzz6FJKZKqfJ"
+                    }
+                },
+                "stage-athena.summary": true,
+                "stage-athena.cutoff_threshold": 250,
+                "stage-athena.panel_bed": {
+                    "$dnanexus_link": {
+                        "project": "project-Gxp04xQ4kyZPy82xVbZzqkY5",
+                        "id": "file-J6ByGqj4kyZ4ZXGpjqZyxx88"
+                    }
+                },
+                "stage-athena.per_chromosome_coverage": true,
+                "stage-sompy.truth_vcf": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gjk675j4qv8zvQ5Qxq31Vfpg"
+                    }
+                },
+                "stage-sompy.panel_bed": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J5ZzxFj4kyZ353b3JJZb4J30"
+                    }
+                },
+                "stage-sompy.truth_high_confidence_bed": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gj7BZj04qv8gx99jFB5QqV2y"
+                    }
+                },
+                "stage-sompy.pkrusche_happy_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GFGbK48433GzV4y54b25p43Z"
+                    }
+                },
+                "stage-sompy.reference_file": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GjPxXq84qv8xz3ZV1jFq6z3g"
+                    }
+                },
+                "stage-sompy.reference_index_file": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GjPxp3Q4qv8Vk76xFVjfyPgJ"
+                    }
+                },
+                "stage-sompy.query_vcf_string": "Oncospan|-[0-9]+Q[0-9]+-",
+                "stage-sex_check.male_threshold": 5.16,
+                "stage-sex_check.female_threshold": 6.44
+            },
+            "output_dirs": {
+                "stage-sentieon_umi": "/OUT-FOLDER/STAGE-NAME",
+                "stage-sentieon_tnbam": "/OUT-FOLDER/STAGE-NAME",
+                "stage-eggd_vep_mutect2": "/OUT-FOLDER/STAGE-NAME",
+                "stage-eggd_vcf_rescue": "/OUT-FOLDER/STAGE-NAME",
+                "stage-eggd_generate_variant_workbook": "/OUT-FOLDER/STAGE-NAME",
+                "stage-verifybamid": "/OUT-FOLDER/STAGE-NAME",
+                "stage-picard": "/OUT-FOLDER/STAGE-NAME",
+                "stage-flagstat": "/OUT-FOLDER/STAGE-NAME",
+                "stage-mosdepth": "/OUT-FOLDER/STAGE-NAME",
+                "stage-athena": "/OUT-FOLDER/STAGE-NAME",
+                "stage-sompy": "/OUT-FOLDER/STAGE-NAME",
+                "stage-sex_check": "/OUT-FOLDER/STAGE-NAME",
+                "stage-apheleia": "OUT-FOLDER/STAGE-NAME"
+            }
+        },
+        "app-GZx3kyQ4vjBq4xBgykzk5J98": {
+            "name": "eggd_fastqc",
+            "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
+            "url": "https://github.com/eastgenomics/eggd_fastqc",
+            "analysis": "analysis_2",
+            "per_sample": false,
+            "process_fastqs": true,
+            "inputs": {
+                "fastqs": "INPUT-R1-R2"
+            },
+            "output_dirs": {
+                "app-GZx3kyQ4vjBq4xBgykzk5J98": "/OUT-FOLDER/APP-NAME"
+            }
+        },
+        "app-J24Ffv8469JKgKQ88bX2kYF2": {
+            "name": "MultiQC",
+            "details": "MultiQC app to generate aggregated run level QC report",
+            "url": "https://github.com/eastgenomics/eggd_multiqc",
+            "analysis": "analysis_3",
+            "per_sample": false,
+            "process_fastqs": false,
+            "depends_on": [
+                "analysis_1",
+                "analysis_2"
+            ],
+            "inputs": {
+                "project_for_multiqc": "INPUT-dx_project_name",
+                "primary_workflow_output": "INPUT-parent_out_dir",
+                "calc_custom_coverage": true,
+                "multiqc_docker": {
+                    "$dnanexus_link": "file-J4v08vj4GPF4Fg2zjkpkKyY1"
+                },
+                "multiqc_config_file": {
+                    "$dnanexus_link": "file-J6By33846895QV9bX7pXFXvJ"
+                },
+		"samplesheet": {
+		    "$dnanexus_link": "INPUT-SAMPLESHEET"
+		}
+            },
+            "output_dirs": {
+                "app-GF3K4Qj4bJyvpzx055V3G8q7": "/OUT-FOLDER/APP-NAME"
+            }
+        }
+    }
+}
