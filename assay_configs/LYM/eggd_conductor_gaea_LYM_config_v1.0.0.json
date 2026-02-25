@@ -42,13 +42,6 @@
                             "instanceType": "mem1_ssd2_v2_x4"
                         }
                     }
-                },
-                "timeoutPolicyByExecutable": {
-                    "app-GpFk2784Qyjzf9bzfxg73K8F": {
-                        "*": {
-                            "hours": 24
-                        }
-                    }
                 }
             },
             "inputs": {
@@ -93,7 +86,7 @@
                 "stage-eggd_generate_variant_workbook.reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_aSHM CSQ_CHIP CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
                 "stage-eggd_generate_variant_workbook.rename_columns": "CSQ_Existing_variation=dbSNP CSQ_Feature=Transcript_ID CSQ_aSHM=aSHM CSQ_CHIP=CHIP DP=Read_Depth CSQ_EG_LC=Latest_Classification CSQ_EG_LCD=Latest_Classification_Date CSQ_EG_LCS=Latest_Specimen_ID CSQ_EG_TC=Total_Classifications",
                 "stage-eggd_generate_variant_workbook.types": "CSQ_Prev_Count_AC=Float",
-                "stage-eggd_generate_variant_workbook.filter": "bcftools filter -e '(CSQ_Prev_Count_AC>853 || AF < 0.03 || CSQ_Consequence==\"intron_variant\" || CSQ_gnomADe_AF >= 0.002) || (CSQ_SYMBOL!=\"TP53\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_Consequence==\"synonymous_variant\")'",
+                "stage-eggd_generate_variant_workbook.filter": "bcftools filter -e '(CSQ_Prev_Count_AC>853 || AF<0.03 || CSQ_Consequence==\"intron_variant\" || CSQ_gnomADe_AF >= 0.002) || (CSQ_SYMBOL!=\"TP53\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_Consequence==\"synonymous_variant\")'",
                 "stage-eggd_generate_variant_workbook.add_samplename_column": true,
                 "stage-eggd_generate_variant_workbook.add_allele_origin_column": true,
                 "stage-eggd_generate_variant_workbook.add_interpreted_column": true,
@@ -153,7 +146,7 @@
                 "stage-athena.thresholds": "100, 250, 500, 1000, 1500",
                 "stage-athena.exons_file": {
                     "$dnanexus_link": {
-                        "project": "project-Gxp04xQ4kyZPy82xVbZzqkY5",
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-J5QK2p04kyZ6Gzz6FJKZKqfJ"
                     }
                 },
@@ -161,7 +154,7 @@
                 "stage-athena.cutoff_threshold": 250,
                 "stage-athena.panel_bed": {
                     "$dnanexus_link": {
-                        "project": "project-Gxp04xQ4kyZPy82xVbZzqkY5",
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
                         "id": "file-J6ByGqj4kyZ4ZXGpjqZyxx88"
                     }
                 },
@@ -237,7 +230,7 @@
             }
         },
         "app-J24Ffv8469JKgKQ88bX2kYF2": {
-            "name": "MultiQC",
+            "name": "eggd_MultiQC/3.2.0",
             "details": "MultiQC app to generate aggregated run level QC report",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
             "analysis": "analysis_3",
@@ -255,14 +248,14 @@
                     "$dnanexus_link": "file-J4v08vj4GPF4Fg2zjkpkKyY1"
                 },
                 "multiqc_config_file": {
-                    "$dnanexus_link": "file-J6By33846895QV9bX7pXFXvJ"
+                    "$dnanexus_link": "file-J6G584Q46896gz0BXY2g0xv2"
                 },
 		"samplesheet": {
 		    "$dnanexus_link": "INPUT-SAMPLESHEET"
 		}
             },
             "output_dirs": {
-                "app-GF3K4Qj4bJyvpzx055V3G8q7": "/OUT-FOLDER/APP-NAME"
+                "app-J24Ffv8469JKgKQ88bX2kYF2": "/OUT-FOLDER/APP-NAME"
             }
         }
     }
