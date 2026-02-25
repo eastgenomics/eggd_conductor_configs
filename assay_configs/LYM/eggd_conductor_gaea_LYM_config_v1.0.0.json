@@ -8,6 +8,11 @@
         "v1.0.0": "Initial working version"
     },
     "demultiplex": true,
+        "demultiplex_config": {
+        "app_id": "app-J1VFP0Q4VpfGKKG1V7XgYXQ5",
+        "additional_args": "--strict-mode true",
+        "instance_type": "mem2_ssd1_v2_x32"
+    },
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
