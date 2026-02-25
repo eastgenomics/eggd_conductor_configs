@@ -1,7 +1,7 @@
 {
     "name": "Config for lymphoma assay",
     "assay": "LYM",
-    "assay_code": "EGG2|-10056-|-10055-",
+    "assay_code": "-10056-|-10055-",
     "version": "1.0.0",
     "details": "Includes main gaea workflow, eggd_fastqc and multiQC",
     "changelog": {
@@ -16,7 +16,7 @@
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
-    "subset_samplesheet": "EGG2|-10056-|-10055-",
+    "subset_samplesheet": "-10056-|-10055-",
     "executables": {
         "workflow-J5yJQp84zfVz4Gg4YF30yqjP": {
             "name": "gaea_main_workflow_v1.0.0",
