@@ -55,7 +55,8 @@
         "v3.7.0": "Updated gnomad filtering threshold",
         "v3.7.1": "Updated VEP config to v2.1.6 for eggd_vep_cgppindel and eggd_vep_mutect2. Update assay_code to include top-up procedure code.",
         "v4.0.0": "Updated to support uranus_main_workflow_GRCh38_v3.3.0, eggd_MultiQC v3.2.0, and associated MYE MultiQC config v4.1.0",
-        "v5.0.0": "Add demultiplex config for handling Twist harmonisation project UMIs"
+        "v5.0.0": "Add demultiplex config for handling Twist harmonisation project UMIs",
+        "v5.0.1": "Updated VEP config to v2.1.8 for eggd_vep_cgppindel and eggd_vep_mutect2. Update app-id in output_dirs for eggd_multiqc to v3.2.0."
     },
     "demultiplex": true,
     "demultiplex_config": {
