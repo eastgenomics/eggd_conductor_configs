@@ -325,7 +325,7 @@
                 "multiqc_config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-J4XjZPQ40Fq2k5pZ9VqpG10J"
+                        "id": "file-J6ZpGYj4QXVq3Gz2vFJk76YB"
                     }
                 }
             },
