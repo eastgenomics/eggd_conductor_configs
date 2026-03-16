@@ -292,8 +292,8 @@
                 "stage-somalier_relate2multiqc": "/OUT-FOLDER/STAGE-NAME"
             }
         },
-        "app-J24Ffv8469JKgKQ88bX2kYF2": {
-            "name": "eggd_MultiQC/3.2.0",
+        "app-J6Q1VVQ4Pf3XgF2j1jz53qv9": {
+            "name": "eggd_MultiQC/3.3.0",
             "details": "",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
             "analysis": "analysis_3",
