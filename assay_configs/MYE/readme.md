@@ -49,4 +49,4 @@ No external inputs.
 | Input field | Input file | Version |
 | ---         | ---        | ---     |
 | `multiqc_docker` | [multiqc_v1.32.tar.gz](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-J4v08vj4GPF4Fg2zjkpkKyY1&scope=project)|v1.32.0|
-| `multiqc_config_file` | [MYE_multiqc_config_v4.1.0.yaml](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-J5QY4q04xvfvk5qBf7vF3y3Z&scope=project)|v4.1.0|
+| `multiqc_config_file` | [MYE_multiqc_config_v4.2.0.yaml](https://platform.dnanexus.com/panx/projects/Fkb6Gkj433GVVvj73J7x8KbV/data/?id.values=file-J6YPg384F54PjqqqXybyF86b&scope=project)|v4.2.0|
