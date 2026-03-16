@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-|-2327-|-10051-",
-    "version": "5.0.1",
+    "version": "5.2.0",
     "details": "Includes main Uranus workflow, eggd_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -56,7 +56,8 @@
         "v3.7.1": "Updated VEP config to v2.1.6 for eggd_vep_cgppindel and eggd_vep_mutect2. Update assay_code to include top-up procedure code.",
         "v4.0.0": "Updated to support uranus_main_workflow_GRCh38_v3.3.0, eggd_MultiQC v3.2.0, and associated MYE MultiQC config v4.1.0",
         "v5.0.0": "Add demultiplex config for handling Twist harmonisation project UMIs",
-        "v5.0.1": "Updated VEP config to v2.1.8 for eggd_vep_cgppindel and eggd_vep_mutect2. Update app-id in output_dirs for eggd_multiqc to v3.2.0."
+        "v5.0.1": "Updated VEP config to v2.1.8 for eggd_vep_cgppindel and eggd_vep_mutect2. Update app-id in output_dirs for eggd_multiqc to v3.2.0.",
+        "v5.2.0": "Updated to support eggd_MultiQC v3.3.0 and associated MYE MultiQC config v4.2.0"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -335,7 +336,7 @@
                 "app-GZx3kyQ4vjBq4xBgykzk5J98": "/OUT-FOLDER/APP-NAME"
             }
         },
-        "app-J24Ffv8469JKgKQ88bX2kYF2": {
+        "app-J6Q1VVQ4Pf3XgF2j1jz53qv9": {
             "name": "MultiQC",
             "details": "MultiQC app to generate aggregated run level QC report",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
@@ -354,14 +355,14 @@
                     "$dnanexus_link": "file-J4v08vj4GPF4Fg2zjkpkKyY1"
                 },
                 "multiqc_config_file": {
-                    "$dnanexus_link": "file-J5QY4q04xvfvk5qBf7vF3y3Z"
+                    "$dnanexus_link": "file-J6YPg384F54PjqqqXybyF86b"
                 },
                 "samplesheet": {
                     "$dnanexus_link": "INPUT-SAMPLESHEET"
                 }
             },
             "output_dirs": {
-                "app-J24Ffv8469JKgKQ88bX2kYF2": "/OUT-FOLDER/APP-NAME"
+                "app-J6Q1VVQ4Pf3XgF2j1jz53qv9": "/OUT-FOLDER/APP-NAME"
             }
         }
     }
