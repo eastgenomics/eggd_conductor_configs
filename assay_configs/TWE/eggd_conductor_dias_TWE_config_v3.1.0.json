@@ -3,7 +3,7 @@
     "assay": "38_TWE",
     "genome": "GRCh38",
     "assay_code": "-EGG4|-9526-|-9688-|-1288-|-10028-",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -22,7 +22,8 @@
         "v2.5.0": "Updated dias_single to v2.14.0 and provided inputs to new app in workflow eggd_plot_variant_baf. Updated eggd_MultiQC to v3.2.0, multiqc_docker to v1.28, CEN MultiQC config v1.2.0 and provided samplesheet as MultiqQC input.",
         "v2.5.1": "Updated assay code",
         "v2.5.2": "Update the MultiQC config file to fix threshold display issue with Fold80 + Fix MultiQC folder destination",
-        "v3.0.0": "Add demultiplex config for handling Twist harmonisation project UMIs"
+        "v3.0.0": "Add demultiplex config for handling Twist harmonisation project UMIs",
+        "v3.1.0": "Update eggd_MultiQC to v3.3.0 and TWE MultiQC config file to v1.3.0"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -291,8 +292,8 @@
                 "stage-somalier_relate2multiqc": "/OUT-FOLDER/STAGE-NAME"
             }
         },
-        "app-J24Ffv8469JKgKQ88bX2kYF2": {
-            "name": "eggd_MultiQC/3.2.0",
+        "app-J6Q1VVQ4Pf3XgF2j1jz53qv9": {
+            "name": "eggd_MultiQC/3.3.0",
             "details": "",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
             "analysis": "analysis_3",
@@ -325,12 +326,12 @@
                 "multiqc_config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-J51xZGj47ZxZ1yq77b8v8GKF"
+                        "id": "file-J6jgb4Q4yPXYkBX2KP9FqVf8"
                     }
                 }
             },
             "output_dirs": {
-                "app-J24Ffv8469JKgKQ88bX2kYF2": "/OUT-FOLDER/APP-NAME"
+                "app-J6Q1VVQ4Pf3XgF2j1jz53qv9": "/OUT-FOLDER/APP-NAME"
             }
         }
     }
