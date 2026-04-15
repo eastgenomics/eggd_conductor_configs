@@ -2,10 +2,11 @@
     "name": "Config for lymphoma assay",
     "assay": "LYM",
     "assay_code": "-10056-|-10055-",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "details": "Includes main gaea workflow, eggd_fastqc and multiQC",
     "changelog": {
-        "v1.0.0": "Initial working version"
+        "v1.0.0": "Initial working version",
+        "v1.1.0": "Updated filtering criteria to exclude non-coding regions from 11 genes. Rescued variants do not go to excluded tab."
     },
     "demultiplex": true,
         "demultiplex_config": {
@@ -77,7 +78,7 @@
                     "$dnanexus_link": "file-J5ZzxFj4kyZ353b3JJZb4J30"
                 },
                 "stage-eggd_vep_mutect2.config_file": {
-                    "$dnanexus_link": "file-J69Kv104kyZ2GFYJ552BZ2BF"
+                    "$dnanexus_link": "file-J7FqKP840BGkyKX7KKYFyF8F"
                 },
                 "stage-eggd_vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": "file-GjFv9X0421zQFGxXVFQ4j972"
@@ -87,11 +88,11 @@
                 },
                 "stage-eggd_vcf_rescue.rescue_filtered": true,
                 "stage-eggd_vcf_rescue.filter_string": "bcftools filter -e '(FORMAT/DP<99 || AF<0.01 || CSQ_gnomADe_AF>0.1 || CSQ_Feature==\"NM_058195.4\") && (CSQ_RESCUE_LIST!=\"RESCUED\")'",
-                "stage-eggd_generate_variant_workbook.include_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_aSHM CSQ_CHIP CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC",
-                "stage-eggd_generate_variant_workbook.reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_aSHM CSQ_CHIP CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
-                "stage-eggd_generate_variant_workbook.rename_columns": "CSQ_Existing_variation=dbSNP CSQ_Feature=Transcript_ID CSQ_aSHM=aSHM CSQ_CHIP=CHIP DP=Read_Depth CSQ_EG_LC=Latest_Classification CSQ_EG_LCD=Latest_Classification_Date CSQ_EG_LCS=Latest_Specimen_ID CSQ_EG_TC=Total_Classifications",
+                "stage-eggd_generate_variant_workbook.include_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_aSHM CSQ_CHIP CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC CSQ_RESCUE_LIST",
+                "stage-eggd_generate_variant_workbook.reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_aSHM CSQ_CHIP CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC CSQ_RESCUE_LIST Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
+                "stage-eggd_generate_variant_workbook.rename_columns": "CSQ_Existing_variation=dbSNP CSQ_Feature=Transcript_ID CSQ_aSHM=aSHM CSQ_CHIP=CHIP DP=Read_Depth CSQ_EG_LC=Latest_Classification CSQ_EG_LCD=Latest_Classification_Date CSQ_EG_LCS=Latest_Specimen_ID CSQ_EG_TC=Total_Classifications CSQ_RESCUE_LIST=Rescue_Status",
                 "stage-eggd_generate_variant_workbook.types": "CSQ_Prev_Count_AC=Float",
-                "stage-eggd_generate_variant_workbook.filter": "bcftools filter -e '(AF<0.03 || CSQ_Consequence==\"intron_variant\" || CSQ_gnomADe_AF >= 0.002) || (CSQ_SYMBOL!=\"TP53\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_Consequence==\"synonymous_variant\")'",
+                "stage-eggd_generate_variant_workbook.filter": "bcftools filter -e '((AF<0.03 && CSQ_RESCUE_LIST!=\"RESCUED\") || CSQ_EXCLUDED_REGIONS==\"EXCLUDE\" || CSQ_gnomADe_AF >= 0.002) || (CSQ_SYMBOL!=\"TP53\" && CSQ_Consequence==\"synonymous_variant\")'",
                 "stage-eggd_generate_variant_workbook.add_samplename_column": true,
                 "stage-eggd_generate_variant_workbook.add_allele_origin_column": true,
                 "stage-eggd_generate_variant_workbook.add_interpreted_column": true,
@@ -109,7 +110,7 @@
                 "stage-eggd_generate_variant_workbook.merge_vcfs": false,
                 "stage-eggd_generate_variant_workbook.add_auto_filter": true,
                 "stage-eggd_generate_variant_workbook.freeze_column": "L2",
-                "stage-eggd_generate_variant_workbook.lock_sheet": false,
+                "stage-eggd_generate_variant_workbook.lock_sheet": true,
                 "stage-eggd_generate_variant_workbook.m_codes": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
