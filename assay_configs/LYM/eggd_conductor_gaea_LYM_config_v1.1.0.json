@@ -110,7 +110,7 @@
                 "stage-eggd_generate_variant_workbook.merge_vcfs": false,
                 "stage-eggd_generate_variant_workbook.add_auto_filter": true,
                 "stage-eggd_generate_variant_workbook.freeze_column": "L2",
-                "stage-eggd_generate_variant_workbook.lock_sheet": false,
+                "stage-eggd_generate_variant_workbook.lock_sheet": true,
                 "stage-eggd_generate_variant_workbook.m_codes": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
