@@ -304,7 +304,7 @@
                 },
                 "stage-sompy.query_vcf_string": "Oncospan|-[0-9]+Q[0-9]+-",
                 "stage-sex_check.male_threshold": 5.26,
-                "stage-sex_check.female_threshold": 6.26
+                "stage-sex_check.female_threshold": 5.70
             },
             "output_dirs": {
                 "stage-sentieon_bwa": "/OUT-FOLDER/STAGE-NAME",
