@@ -2,7 +2,7 @@
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
     "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041|-2122|-10026|-10054",
-    "version": "2.9.1",
+    "version": "2.10.0",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -44,7 +44,8 @@
         "v2.8.3": "Update to latest TSO500 vep config file (v1.2.28)",
         "v2.8.4": "Update to latest TSO500 vep config file (v1.2.29)",
         "v2.9.0": "Add eggd_sex_check v1.2.1, update MultiQC config v2.3.0, and update TSO500 reports workflow to v2.5.1",
-        "v2.9.1": "Update to latest TSO500 vep config file (v1.2.30)"
+        "v2.9.1": "Update to latest TSO500 vep config file (v1.2.30)",
+        "v2.10.0": "Update TSO500 reports workflow to v2.6.0 and incorporate eggd_vcf_normaliser"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -138,8 +139,8 @@
                 "app-Gpzb0Y04FXvff0vJPxj0p1x1": "/OUT-FOLDER/APP-NAME"
             }
         },
-        "workflow-J6xyPQQ4pqk4Q29z2kZ5jqx5": {
-            "name": "TSO500_reports_workflow_v2.5.1",
+        "workflow-J72f9vQ4Y4632F64YVx6G4YZ": {
+            "name": "TSO500_reports_workflow_v2.6.0",
             "details": "Reports workflow to run vep and generate_variant_workbook etc",
             "url": "https://github.com/eastgenomics/eggd_TSO500_reports_workflow",
             "analysis": "analysis_5",
@@ -209,7 +210,14 @@
                 "stage-athena.thresholds": "50,100,150,250",
                 "stage-athena.cutoff_threshold": 100,
                 "stage-athena.summary": true,
-                "stage-vcf_rescue.gvcf": "eggd_tso500.vcf",
+                "stage-vcf_normaliser.input_vcf": "eggd_tso500.vcf",
+                "stage-vcf_normaliser.bcftools_options": "-m -any --keep-sum AD",
+                "stage-vcf_normaliser.fasta_tar": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Fp4BVFj4KXyyPkP90x21z29X"
+                    }
+                },
                 "stage-vcf_rescue.fasta_tar": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
@@ -279,7 +287,8 @@
                 "stage-generate_variant_workbook": "/OUT-FOLDER/STAGE-NAME",
                 "stage-cnvkit": "/OUT-FOLDER/STAGE-NAME",
                 "stage-picardQC": "/OUT-FOLDER/STAGE-NAME",
-                "stage-sex_check": "/OUT-FOLDER/STAGE-NAME"
+                "stage-sex_check": "/OUT-FOLDER/STAGE-NAME",
+                "stage-vcf_normaliser": "/OUT-FOLDER/STAGE-NAME"
             }
         },
         "app-J24Ffv8469JKgKQ88bX2kYF2": {
