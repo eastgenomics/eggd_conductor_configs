@@ -3,7 +3,7 @@
     "assay": "38_CEN",
     "genome": "GRCh38",
     "assay_code": "-EGG5|-9527-|-9617-|-1256-|-10029-",
-    "version": "3.1.0",
+    "version": "3.1.1",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -22,7 +22,8 @@
         "v2.5.1": "Updated assay code",
         "v2.5.2": "Fix MultiQC folder destination",
         "v3.0.0": "Add demultiplex config for handling Twist harmonisation project UMIs",
-        "v3.1.0": "Update eggd_MultiQC to v3.3.0 and CEN MultiQC config to v1.3.1"
+        "v3.1.0": "Update eggd_MultiQC to v3.3.0 and CEN MultiQC config to v1.3.1",
+        "v3.1.1": "Update eggd_MultiQC config to v1.3.2"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -325,7 +326,7 @@
                 "multiqc_config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-J6ZpGYj4QXVq3Gz2vFJk76YB"
+                        "id": "file-J80xZp04zq218yg2Pk5V5kQB"
                     }
                 }
             },
