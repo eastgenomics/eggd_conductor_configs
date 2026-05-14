@@ -45,7 +45,7 @@
         "v2.8.4": "Update to latest TSO500 vep config file (v1.2.29)",
         "v2.9.0": "Add eggd_sex_check v1.2.1, update MultiQC config v2.3.0, and update TSO500 reports workflow to v2.5.1",
         "v2.9.1": "Update to latest TSO500 vep config file (v1.2.30)",
-        "v2.10.0": "Update TSO500 reports workflow to v2.6.0 and incorporate eggd_vcf_normaliser"
+        "v2.10.0": "Update TSO500 reports workflow to v2.6.0, incorporating eggd_vcf_normaliser; update MultiQC TSO500 config to v2.3.1"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -323,7 +323,7 @@
                 "multiqc_config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-J6v1yjj4pXZv0YK26JgP1Pyb"
+                        "id": "file-J81X4584j9YXggvVPxQq2fvB"
                     }
                 }
             },
