@@ -209,7 +209,8 @@
                 "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME",
                 "stage-sex_check": "/OUT-FOLDER/STAGE-NAME",
                 "stage-additional_regions_calling": "/OUT-FOLDER/STAGE-NAME",
-                "stage-eggd_plot_variant_baf": "/OUT-FOLDER/STAGE-NAME"
+                "stage-eggd_plot_variant_baf": "/OUT-FOLDER/STAGE-NAME",
+                "stage-vcf_normaliser": "/OUT-FOLDER/STAGE-NAME"
             }
         },
         "workflow-Gj2jP6j4PKbJpVgjK417J4X7": {
