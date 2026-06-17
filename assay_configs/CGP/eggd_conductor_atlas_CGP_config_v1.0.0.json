@@ -74,7 +74,7 @@
         "stage-sentieon_tnbam.run_bqsr": true,
         "stage-sentieon_tnbam.somatic_algo": "TNhaplotyper2",
         "stage-eggd_vep.panel_bed": {
-          "$dnanexus_link": "" // "file-J2YKYVQ441GvBpGxJ4J2Jf3P"
+          "$dnanexus_link": "file-J8VKVz847y60Bvz96qp0ypbg"
         },
         "stage-eggd_vep.config_file": {
           "$dnanexus_link": "file-J7YjZQ842ffX0qyf7Qgz9qJb"
@@ -124,8 +124,8 @@
         "stage-picard.run_CollectVariantCallingMetrics": true,
         "stage-picard.bedfile": {
           "$dnanexus_link": {
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "" // "file-Gyyjk4j4B3b7f3ypgx32fqjj"
+            "project": "project-J0j7Vq846fyBfxXy8FX5Vx47",
+            "id": "file-J8PxpPj46fy37KV1JyKYVYbX"
           }
         },
         "stage-picard.fasta_index": {
@@ -149,35 +149,35 @@
         "stage-athena.thresholds": "100, 250, 500, 1000, 1500",
         "stage-athena.exons_file": {
           "$dnanexus_link": {
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "" // "file-GzGkbb846Pg36b2P8BJkfKKX"
+            "project": "project-J8Gk0p047y68ggF1gQXkPG87",
+            "id": "file-J8VK41j47y686XjQx9VFzj24"
           }
         },
         "stage-athena.summary": true,
         "stage-athena.cutoff_threshold": 250,
         "stage-athena.panel_bed": {
           "$dnanexus_link": {
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "" // "file-J2gFVf849v4GY3Fjk8qKZb40"
+            "project": "project-J8Gk0p047y68ggF1gQXkPG87",
+            "id": "file-J8VKVz847y60Bvz96qp0ypbg"
           }
         },
         "stage-athena.per_chromosome_coverage": true,
         "stage-sompy.truth_vcf": {
           "$dnanexus_link": {
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "" // "file-Gjk675j4qv8zvQ5Qxq31Vfpg"
+            "project": "project-J8Gk0p047y68ggF1gQXkPG87",
+            "id": "file-J8ZggQ847y65179f13yjXGg9"
           }
         },
         "stage-sompy.panel_bed": {
           "$dnanexus_link": {
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "" // "file-J2YKYVQ441GvBpGxJ4J2Jf3P"
+            "project": "project-J8Gk0p047y68ggF1gQXkPG87",
+            "id": "file-J8VKVz847y60Bvz96qp0ypbg"
           }
         },
         "stage-sompy.truth_high_confidence_bed": {
           "$dnanexus_link": {
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "" // "file-Gj7BZj04qv8gx99jFB5QqV2y"
+            "project": "project-J8Gk0p047y68ggF1gQXkPG87",
+            "id": "file-J8ZfgQj47y67QXpyKK1F2gKb"
           }
         },
         "stage-sompy.pkrusche_happy_docker": {
