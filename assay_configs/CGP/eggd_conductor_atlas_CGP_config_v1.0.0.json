@@ -1,6 +1,6 @@
 {
   "name": "Config for myeloid assay",
-  "assay": "TSC",
+  "assay": "CGP",
   "assay_code": "-9999-",
   "version": "1.0.0",
   "details": "Includes main Atlas workflow, eggd_fastqc and multiQC",
@@ -73,10 +73,10 @@
         },
         "stage-sentieon_tnbam.run_bqsr": true,
         "stage-sentieon_tnbam.somatic_algo": "TNhaplotyper2",
-        "stage-eggd_vep_mutect2.panel_bed": {
+        "stage-eggd_vep.panel_bed": {
           "$dnanexus_link": "" // "file-J2YKYVQ441GvBpGxJ4J2Jf3P"
         },
-        "stage-eggd_vep_mutect2.config_file": {
+        "stage-eggd_vep.config_file": {
           "$dnanexus_link": "file-J7YjZQ842ffX0qyf7Qgz9qJb"
         },
         "stage-eggd_vcf_rescue.rescue_vcf": {
@@ -205,7 +205,7 @@
       "output_dirs": {
         "stage-sentieon_umi": "/OUT-FOLDER/STAGE-NAME",
         "stage-sentieon_tnbam": "/OUT-FOLDER/STAGE-NAME",
-        "stage-eggd_vep_mutect2": "/OUT-FOLDER/STAGE-NAME",
+        "stage-eggd_vep": "/OUT-FOLDER/STAGE-NAME",
         "stage-eggd_vcf_rescue": "/OUT-FOLDER/STAGE-NAME",
         "stage-eggd_generate_variant_workbook": "/OUT-FOLDER/STAGE-NAME",
         "stage-verifybamid": "/OUT-FOLDER/STAGE-NAME",
