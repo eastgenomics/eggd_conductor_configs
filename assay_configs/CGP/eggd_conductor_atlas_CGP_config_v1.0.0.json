@@ -43,7 +43,7 @@
         "app-J5YgzxQ41xZ8pkgbgzQgvjyV": "/OUT-FOLDER/APP-NAME"
       }
       },
-      "workflow-J8pX0p8431PFkV5bF4b3Jqk0": {
+      "workflow-J8pX6bQ431PG7yFx14v2x1z3": {
         "name": "atlas_main_workflow_GRCh38_v1.0.0",
         "details": "Main atlas workflow for alignment and variant calling",
         "url": "https://github.com/eastgenomics/eggd_atlas_main_workflow",
