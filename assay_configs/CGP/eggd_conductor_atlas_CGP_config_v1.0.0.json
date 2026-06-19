@@ -147,6 +147,7 @@
           "stage-picard.dbsnp_vcf": {
             "$dnanexus_link": "file-GyfBYg8433GkZg7X1B23qFfj"
           },
+          "stage-picard.stringency": "silent",
           "stage-mosdepth.qual_flags": true,
           "stage-mosdepth.mosdepth_docker": {
             "$dnanexus_link": {
@@ -294,7 +295,6 @@
           "add_comment_column": true,
           "add_classification_column": true,
           "add_report_text_column": true,
-          "additional_sheet_names": "TMB MSI CNV",
           "summary": "atlas",
           "split_hgvs": true,
           "af_format": "percent",
