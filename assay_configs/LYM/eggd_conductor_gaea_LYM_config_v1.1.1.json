@@ -6,7 +6,8 @@
     "details": "Includes main gaea workflow, eggd_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
-        "v1.1.0": "Updated filtering criteria to exclude non-coding regions from 11 genes. Rescued variants do not go to excluded tab."
+        "v1.1.0": "Updated filtering criteria to exclude non-coding regions from 11 genes. Rescued variants do not go to excluded tab.",
+        "v1.1.1": "Updated VEP config to v1.1.1 for ClinVar version 20260606 (hg38) and CADD v1.7"
     },
     "demultiplex": true,
         "demultiplex_config": {
