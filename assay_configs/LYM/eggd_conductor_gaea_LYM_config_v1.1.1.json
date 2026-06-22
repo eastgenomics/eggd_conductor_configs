@@ -79,7 +79,7 @@
                     "$dnanexus_link": "file-J5ZzxFj4kyZ353b3JJZb4J30"
                 },
                 "stage-eggd_vep_mutect2.config_file": {
-                    "$dnanexus_link": "file-J7FqKP840BGkyKX7KKYFyF8F"
+                    "$dnanexus_link": "file-J8pb4X84jQkPV8bG1qxvkY1f"
                 },
                 "stage-eggd_vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": "file-GjFv9X0421zQFGxXVFQ4j972"
