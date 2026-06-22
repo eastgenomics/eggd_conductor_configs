@@ -2,7 +2,7 @@
     "name": "Config for lymphoma assay",
     "assay": "LYM",
     "assay_code": "-10056-|-10055-",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "details": "Includes main gaea workflow, eggd_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
