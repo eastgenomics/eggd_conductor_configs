@@ -265,11 +265,97 @@
           "stage-sex_check": "/OUT-FOLDER/STAGE-NAME"
         }
       },
+      "workflow-J8yY1G0431PPx29yfb5bvqz6": {
+        "name": "eggd_msi_tmb_workflow_v1.0.0",
+        "details": "MSI + TMB atlas workflow",
+        "url": "https://github.com/eastgenomics/eggd_msi_tmb_workflow",
+        "analysis": "analysis_3",
+        "per_sample": true,
+        "process_fastqs": false,
+        "inputs": {
+          "stage-eggd_pyTMB.bam": {
+            "$dnanexus_link": {
+              "job": "analysis_1",
+              "field": "mappings_bam"
+            }
+          },
+          "stage-eggd_pyTMB.bam_bai": {
+            "$dnanexus_link": {
+              "job": "analysis_1",
+              "field": "mappings_bam_bai"
+            }
+          },
+          "stage-eggd_pyTMB.vcf": {
+            "$dnanexus_link": {
+              "job": "analysis_2",
+              "field": "annotated_vcf"
+            }
+          },
+          "stage-eggd_pyTMB.gtf": {
+            "$dnanexus_link": {
+              "project": "project-J87JkQQ46QQ71Pg858qKKJxY",
+              "id": "file-J8kGFb846QQGxq933Q2VP41f"
+            }
+          },
+          "stage-eggd_pyTMB.bed": {
+            "$dnanexus_link": {
+              "project": "project-J8Gk0p047y68ggF1gQXkPG87",
+              "id": "file-J8VKVz847y60Bvz96qp0ypbg"
+            }
+          },
+          "stage-eggd_msisensor_pro.msites_file": {
+            "$dnanexus_link": {
+              "project": "project-J75xJY843ZZ0ZGPV0J1Yz8p7",
+              "id": "file-J777KYj43ZZBgj1p3Y7zkYJq"
+            }
+          },
+          "stage-eggd_msisensor_pro.tumor_bam": {
+            "$dnanexus_link": {
+              "job": "analysis_1",
+              "field": "mappings_bam"
+            }
+          },
+          "stage-eggd_msisensor_pro.tumor_bam_bai": {
+            "$dnanexus_link": {
+              "job": "analysis_1",
+              "field": "mappings_bam_bai"
+            }
+          },
+          "stage-eggd_msisensor2.models_dir": "/usr/share/msisensor2/models_hg38",
+          "stage-eggd_msisensor2.msi_scan": {
+            "$dnanexus_link": {
+              "project": "project-J75xJY843ZZ0ZGPV0J1Yz8p7",
+              "id": "file-J8FGyK843ZZ47JzxGfYQ2Xg1"
+        
+            }
+          },
+          "stage-eggd_msisensor2.tumor_bam": {
+            "$dnanexus_link": {
+              "job": "analysis_1",
+              "field": "mappings_bam"
+        
+            }
+          },
+          "stage-eggd_msisensor2.tumor_bam_bai": {
+            "$dnanexus_link": {
+              "job": "analysis_1",
+              "field": "mappings_bam_bai"
+        
+            }
+          }
+      },
+      "output_dirs": {
+          "stage-eggd_pyTMB": "/OUT-FOLDER/STAGE-NAME",
+          "stage-eggd_msisensor_pro": "/OUT-FOLDER/STAGE-NAME",
+          "stage-eggd_msisensor2": "/OUT-FOLDER/STAGE-NAME",
+          "stage-eggd_msi_tmb_combiner": "/OUT-FOLDER/STAGE-NAME"
+        }
+      },
       "app-GZx3kyQ4vjBq4xBgykzk5J98": {
         "name": "eggd_fastqc",
         "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
         "url": "https://github.com/eastgenomics/eggd_fastqc",
-        "analysis": "analysis_3",
+        "analysis": "analysis_4",
         "per_sample": false,
         "process_fastqs": true,
         "inputs": {
@@ -283,10 +369,10 @@
         "name": "MultiQC",
         "details": "MultiQC app to generate aggregated run level QC report",
         "url": "https://github.com/eastgenomics/eggd_multiqc",
-        "analysis": "analysis_4",
+        "analysis": "analysis_5",
         "per_sample": false,
         "process_fastqs": false,
-        "depends_on": ["analysis_1", "analysis_2", "analysis_3"],
+        "depends_on": ["analysis_1", "analysis_2", "analysis_3", "analysis_5"],
         "inputs": {
           "project_for_multiqc": "INPUT-dx_project_name",
           "primary_workflow_output": "INPUT-parent_out_dir",
@@ -309,10 +395,10 @@
         "name": "eggd_generate_variant_workbook",
         "details": "Generates a variant workbook from the VCF output of the atlas workflows",
         "url": "https://github.com/eastgenomics/eggd_generate_variant_workbook",
-        "analysis": "analysis_5",
+        "analysis": "analysis_6",
         "per_sample": true,
         "process_fastqs": false,
-        "depends_on": ["analysis_1", "analysis_2", "analysis_4"],
+        "depends_on": ["analysis_1", "analysis_2", "analysis_3", "analysis_4", "analysis_5"],
         "inputs": {
           "vcfs": {
             "$dnanexus_link": {
