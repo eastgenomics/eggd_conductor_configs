@@ -287,8 +287,9 @@
           },
           "stage-eggd_pyTMB.vcf": {
             "$dnanexus_link": {
-              "job": "analysis_2",
-              "field": "annotated_vcf"
+              "analysis": "analysis_2",
+              "stage": "stage-eggd_vcf_rescue",
+              "field": "output_vcf"
             }
           },
           "stage-eggd_pyTMB.gtf": {
