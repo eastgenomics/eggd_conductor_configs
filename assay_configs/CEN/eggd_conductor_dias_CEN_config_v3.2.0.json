@@ -3,7 +3,7 @@
     "assay": "38_CEN",
     "genome": "GRCh38",
     "assay_code": "-EGG5|-9527-|-9617-|-1256-|-10029-",
-    "version": "3.1.1",
+    "version": "3.2.0",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -23,7 +23,8 @@
         "v2.5.2": "Fix MultiQC folder destination",
         "v3.0.0": "Add demultiplex config for handling Twist harmonisation project UMIs",
         "v3.1.0": "Update eggd_MultiQC to v3.3.0 and CEN MultiQC config to v1.3.1",
-        "v3.1.1": "Update eggd_MultiQC config to v1.3.2"
+        "v3.1.1": "Update eggd_MultiQC config to v1.3.2",
+        "v3.2.0": "Updated dias_single to v2.15.0. Includes eggd_vcf_normaliser."
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -35,9 +36,9 @@
     },
     "subset_samplesheet": "-EGG5|-9527-|-9617-",
     "executables": {
-        "workflow-J3k0PxQ40JxZqpz3XKVpz2qF": {
-            "name": "dias_single_v2.14.0",
-            "details": "Dias single workflow - Runs Sentieon, multi_fastqc, verifyBAMID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step, eggd_sex_check, and eggd_plot_variant_baf",
+        "workflow-J70bzZj4F33fBzxY8q694105": {
+            "name": "dias_single_v2.15.0",
+            "details": "Dias single workflow - Runs Sentieon, vcf_normaliser, multi_fastqc, verifyBAMID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step, eggd_sex_check, and eggd_plot_variant_baf",
             "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
             "analysis": "analysis_1",
             "per_sample": true,
@@ -104,6 +105,13 @@
                     "$dnanexus_link": {
                         "project": "project-F3zqGV04fXX5j7566869fjFq",
                         "id": "file-F3zvKp84fXX8qJx43zZXP395"
+                    }
+                },
+                "stage-vcf_normaliser.bcftools_options": "-m -any --keep-sum AD",
+                "stage-vcf_normaliser.fasta_tar": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
                     }
                 },
                 "stage-verifybamid.vcf_file": {
@@ -201,7 +209,8 @@
                 "stage-somalier_extract": "/OUT-FOLDER/STAGE-NAME",
                 "stage-sex_check": "/OUT-FOLDER/STAGE-NAME",
                 "stage-additional_regions_calling": "/OUT-FOLDER/STAGE-NAME",
-                "stage-eggd_plot_variant_baf": "/OUT-FOLDER/STAGE-NAME"
+                "stage-eggd_plot_variant_baf": "/OUT-FOLDER/STAGE-NAME",
+                "stage-vcf_normaliser": "/OUT-FOLDER/STAGE-NAME"
             }
         },
         "workflow-Gj2jP6j4PKbJpVgjK417J4X7": {
