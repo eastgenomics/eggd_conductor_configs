@@ -2,7 +2,7 @@
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
     "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041|-2122|-10026|-10054",
-    "version": "2.10.1",
+    "version": "2.12.0",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -46,7 +46,8 @@
         "v2.9.0": "Add eggd_sex_check v1.2.1, update MultiQC config v2.3.0, and update TSO500 reports workflow to v2.5.1",
         "v2.9.1": "Update to latest TSO500 vep config file (v1.2.30)",
         "v2.10.0": "Update TSO500 reports workflow to v2.6.0, incorporating eggd_vcf_normaliser; update MultiQC TSO500 config to v2.3.1",
-        "v2.10.1": "Update to latest TSO500 vep config file (v1.2.31)"
+        "v2.10.1": "Update to latest TSO500 vep config file (v1.2.31)",
+        "v2.11.0": "Add Som.py to the Helios pipeline"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -107,7 +108,9 @@
             "analysis": "analysis_3",
             "per_sample": false,
             "process_fastqs": false,
-            "depends_on": ["analysis_1"],
+            "depends_on": [
+                "analysis_1"
+            ],
             "inputs": {
                 "tsv_input": {
                     "$dnanexus_link": {
@@ -127,7 +130,9 @@
             "analysis": "analysis_4",
             "per_sample": false,
             "process_fastqs": false,
-            "depends_on": ["analysis_1"],
+            "depends_on": [
+                "analysis_1"
+            ],
             "inputs": {
                 "tsv_input": {
                     "$dnanexus_link": {
@@ -140,19 +145,82 @@
                 "app-Gpzb0Y04FXvff0vJPxj0p1x1": "/OUT-FOLDER/APP-NAME"
             }
         },
+        "app-J734vj84QkbZ3bk05y6VG2kf": {
+            "name": "eggd_sompy",
+            "details": "Sompy app to add QC for the control sample",
+            "url": "https://github.com/eastgenomics/eggd_sompy",
+            "analysis": "analysis_5",
+            "per_sample": false,
+            "process_fastqs": false,
+            "depends_on": [
+                "analysis_1"
+            ],
+            "inputs": {
+                "query_vcf": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "job": "eggd_tso500",
+                        "field": "gvcfs"
+                    }
+                },
+                "truth_vcf": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J71Ff7j4yY5qxkYvB471653f"
+                    }
+                },
+                "truth_high_confidence_bed": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J6yYgkj4yY5yFK8jy3y9gZv8"
+                    }
+                },
+                "panel_bed": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-FkkZQ1Q433GYXZ892pzkgvbP"
+                    }
+                },
+                "pkrusche_happy_docker": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J71FPJ84yY5Yj4198Kyx6Q85"
+                    }
+                },
+                "reference_file": {
+                    "$dnanexus_link": {
+                        "project": "project-J6yQVF04yY5j7p5JgY3FGggY",
+                        "id": "file-J6yV8G84yY5X0P1Yp07zG5Gf"
+                    }
+                },
+                "reference_index_file": {
+                    "$dnanexus_link": {
+                        "project": "project-J6yQVF04yY5j7p5JgY3FGggY",
+                        "id": "file-J6yV8G84yY5X0P1Yp07zG5Gf"
+                    }
+                },
+                "query_vcf_string": "[0-9]+Q[0-9]+"
+            },
+            "inputs_filter": {
+                "query_vcf": [
+                    "NA12878.*",
+                    "-[0-9]+Q[0-9]+-"
+                ]
+            }
+        },
         "workflow-J72f9vQ4Y4632F64YVx6G4YZ": {
             "name": "TSO500_reports_workflow_v2.6.0",
             "details": "Reports workflow to run vep and generate_variant_workbook etc",
             "url": "https://github.com/eastgenomics/eggd_TSO500_reports_workflow",
-            "analysis": "analysis_5",
+            "analysis": "analysis_6",
             "per_sample": true,
             "process_fastqs": false,
             "depends_on": ["analysis_1"],
             "inputs": {
                 "stage-cnvkit.cn_reference": {
                     "$dnanexus_link": {
-                    "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                    "id": "file-GzJyJx84vpyvj520v42G8jXF"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GzJyJx84vpyvj520v42G8jXF"
                     }
                 },
                 "stage-cnvkit.case_bams": "eggd_tso500.bam",
@@ -196,10 +264,10 @@
                 "stage-athena.name": "INPUT-SAMPLE-NAME",
                 "stage-athena.panel_bed": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-J3x0vqj49jj2fpGgg5z2ZgJ6"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J3x0vqj49jj2fpGgg5z2ZgJ6"
                     }
-                  },
+                },
                 "stage-athena.exons_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
@@ -227,10 +295,10 @@
                 },
                 "stage-vcf_rescue.rescue_vcf": {
                     "$dnanexus_link": {
-                      "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                      "id": "file-GpVgQk04949qzzZk4FJ0ZQp7"
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GpVgQk04949qzzZk4FJ0ZQp7"
                     }
-                  },
+                },
                 "stage-vcf_rescue.rescue_non_pass": true,
                 "stage-vcf_rescue.strip_chr": true,
                 "stage-vep.config_file": {
@@ -296,14 +364,14 @@
             "name": "eggd_MultiQC/v3.2.0",
             "details": "MultiQC app to generate aggregated run level QC report",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
-            "analysis": "analysis_6",
+            "analysis": "analysis_7",
             "per_sample": false,
             "process_fastqs": false,
             "depends_on": [
                 "analysis_1",
                 "analysis_2",
                 "analysis_4",
-                "analysis_5"
+                "analysis_6"
             ],
             "extra_args": {
                 "systemRequirements": {
