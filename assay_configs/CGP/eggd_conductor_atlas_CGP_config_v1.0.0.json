@@ -103,7 +103,7 @@
               }
           },
           "stage-eggd_vep.config_file": {
-            "$dnanexus_link": "file-J7YjZQ842ffX0qyf7Qgz9qJb"
+            "$dnanexus_link": "file-J93vJK8431P7Kj4fzQXG54P2"
           },
           "stage-eggd_vcf_rescue.rescue_vcf": {
             "$dnanexus_link": "file-J8kvg4j431P1ybFZ8bG83y1q"
@@ -187,7 +187,7 @@
           "stage-athena.thresholds": "100, 250, 500, 1000, 1500",
           "stage-athena.exons_file": {
             "$dnanexus_link": {
-              "project": "project-J8Gk0p047y68ggF1gQXkPG87",
+              "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
               "id": "file-J8VK41j47y686XjQx9VFzj24"
             }
           },
@@ -195,7 +195,7 @@
           "stage-athena.cutoff_threshold": 250,
           "stage-athena.panel_bed": {
             "$dnanexus_link": {
-              "project": "project-J8Gk0p047y68ggF1gQXkPG87",
+              "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
               "id": "file-J8VKVz847y60Bvz96qp0ypbg"
             }
           },
@@ -208,7 +208,7 @@
           },
           "stage-sompy.panel_bed": {
             "$dnanexus_link": {
-              "project": "project-J8Gk0p047y68ggF1gQXkPG87",
+              "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
               "id": "file-J8VKVz847y60Bvz96qp0ypbg"
             }
           },
