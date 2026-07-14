@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-|-2327-|-10051-",
-    "version": "5.2.4",
+    "version": "5.2.5",
     "details": "Includes main Uranus workflow, eggd_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -61,11 +61,11 @@
         "v5.2.1": "Updated to use ClinVar version 260309 (hg38)",
         "v5.2.2": "Updated VEP config to v2.1.10 for eggd_vep_cgppindel and eggd_vep_mutect2",
         "v5.2.3": "Updated VEP config to v2.1.11 for ClinVar version 20260510 (hg38)",
-        "v5.2.4": "Updated VEP config to v2.1.12 for ClinVar version 20260606 (hg38) and CADD v1.7"
+        "v5.2.4": "Updated VEP config to v2.1.12 for ClinVar version 20260606 (hg38) and CADD v1.7",
+        "v5.2.5": "Updated to remove UMI masking for demultiplexing temporarily."
     },
     "demultiplex": true,
     "demultiplex_config": {
-        "additional_args": "-l INFO --use-bases-mask n7Y144,I10,I10,n7Y144",
         "instance_type": "mem2_ssd1_v2_x32"
     },
     "users": {
