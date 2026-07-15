@@ -24,7 +24,8 @@
         "v2.5.2": "Update the MultiQC config file to fix threshold display issue with Fold80 + Fix MultiQC folder destination",
         "v3.0.0": "Add demultiplex config for handling Twist harmonisation project UMIs",
         "v3.1.0": "Update eggd_MultiQC to v3.3.0 and TWE MultiQC config file to v1.3.0",
-        "v3.2.0": "Updated dias_single to v2.15.0. Includes eggd_vcf_normaliser."
+        "v3.2.0": "Updated dias_single to v2.15.0. Includes eggd_vcf_normaliser.",
+        "v3.2.1": "Updated to remove UMI masking for demultiplexing temporarily."
     },
     "demultiplex": true,
     "demultiplex_config": {
