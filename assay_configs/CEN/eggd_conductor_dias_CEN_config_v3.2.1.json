@@ -3,7 +3,7 @@
     "assay": "38_CEN",
     "genome": "GRCh38",
     "assay_code": "-EGG5|-9527-|-9617-|-1256-|-10029-",
-    "version": "3.2.0",
+    "version": "3.2.1",
     "details": "Includes main Dias workflow, single, multi, QC and reports",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -24,11 +24,11 @@
         "v3.0.0": "Add demultiplex config for handling Twist harmonisation project UMIs",
         "v3.1.0": "Update eggd_MultiQC to v3.3.0 and CEN MultiQC config to v1.3.1",
         "v3.1.1": "Update eggd_MultiQC config to v1.3.2",
-        "v3.2.0": "Updated dias_single to v2.15.0. Includes eggd_vcf_normaliser."
+        "v3.2.0": "Updated dias_single to v2.15.0. Includes eggd_vcf_normaliser.",
+        "v3.2.1": "Temporary version removing UMI masking as the lab have run out of UMIs!"
     },
     "demultiplex": true,
     "demultiplex_config": {
-        "additional_args": "-l INFO --use-bases-mask n7Y144,I10,I10,n7Y144",
         "instance_type": "mem2_ssd1_v2_x32"
     },
     "users": {
