@@ -390,8 +390,9 @@
           "$dnanexus_link": "file-J4v08vj4GPF4Fg2zjkpkKyY1"
         },
         "multiqc_config_file": {
-          "$dnanexus_link": "file-J6YPg384F54PjqqqXybyF86b"
-        },
+            "project": "project-J98FGv04XJP03gYz506Z27X9",
+            "id": "file-J9PjK4j4XJP0P6vzQGqGY249"
+          },
         "samplesheet": {
           "$dnanexus_link": "INPUT-SAMPLESHEET"
         }
