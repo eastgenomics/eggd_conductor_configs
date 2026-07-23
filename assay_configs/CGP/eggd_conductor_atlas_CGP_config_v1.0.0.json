@@ -374,11 +374,101 @@
         "app-GZx3kyQ4vjBq4xBgykzk5J98": "/OUT-FOLDER/APP-NAME"
       }
     },
+    "app-xxxx": {
+      "name": "eggd_cnvkit_PON",
+      "details": "Generates a CNVkit Panel of Normals (PON) from a set of normal samples",
+      "url": "https://github.com/eastgenomics/eggd_cnvkit_PON",
+      "analysis": "analysis_6",
+      "per_sample": false,
+      "process_fastqs": false
+    },
+    "workflow-J9PfYbQ4p12yf9y9pP66y5Vq": {
+      "name": "eggd_atlas_cnv",
+      "details": "CNV workflow for atlas including CNVkit, Purple and AMBER",
+      "url": "https://github.com/eastgenomics/eggd_atlas_cnv",
+      "analysis": "analysis_7",
+      "per_sample": true,
+      "process_fastqs": false,
+      "depends_on": ["analysis_1", "analysis_2", "analysis_6"],
+      "inputs": {
+        "stage-amber.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-amber.tumour_bam": {
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "TODO:_confirm_chr_prefix_bam_field"
+          }
+        },
+        "stage-amber.tumour_bai": {
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "TODO:_confirm_chr_prefix_bai_field"
+          }
+        },
+        "stage-cobalt.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-cobalt.tumour_bam": {
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "TODO:_confirm_chr_prefix_bam_field"
+          }
+        },
+        "stage-cobalt.tumour_bai": {
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "TODO:_confirm_chr_prefix_bai_field"
+          }
+        },
+        "stage-sage.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-sage.tumour_bam": {
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "TODO:_confirm_chr_prefix_bam_field"
+          }
+        },
+        "stage-sage.tumour_bai": {
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "TODO:_confirm_chr_prefix_bai_field"
+          }
+        },
+        "stage-purple.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-purple.ploidy_cap_purity_threshold": 0.35,
+        "stage-cnvkit_batch.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-cnvkit_batch.tumour_bam": {
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "TODO:_confirm_chr_prefix_bam_field"
+          }
+        },
+        "stage-cnvkit_batch.tumour_bai": {
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "TODO:_confirm_chr_prefix_bai_field"
+          }
+        },
+        "stage-cnvkit_batch.cn_reference": {
+          "$dnanexus_link": {
+            "project": "project-J8F1vK845FGG0pVG2vfQ4J34",
+            "id": "file-J8G49YQ4ZP680j2bpv0F3kFX"
+          }
+        },
+        "stage-cnv_chr_strip.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-purple_plotter.sample_id": "INPUT-SAMPLE-NAME"
+      },
+      "output_dirs": {
+        "stage-amber": "/OUT-FOLDER/STAGE-NAME",
+        "stage-cobalt": "/OUT-FOLDER/STAGE-NAME",
+        "stage-sage": "/OUT-FOLDER/STAGE-NAME",
+        "stage-purple": "/OUT-FOLDER/STAGE-NAME",
+        "stage-cnvkit_batch": "/OUT-FOLDER/STAGE-NAME",
+        "stage-cnv_chr_strip": "/OUT-FOLDER/STAGE-NAME",
+        "stage-purple_plotter": "/OUT-FOLDER/STAGE-NAME"
+      }
+    },
     "app-J6Q1VVQ4Pf3XgF2j1jz53qv9": {
       "name": "MultiQC",
       "details": "MultiQC app to generate aggregated run level QC report",
       "url": "https://github.com/eastgenomics/eggd_multiqc",
-      "analysis": "analysis_6",
+      "analysis": "analysis_8",
       "per_sample": false,
       "process_fastqs": false,
       "depends_on": ["analysis_1", "analysis_2", "analysis_3", "analysis_5"],
@@ -390,9 +480,9 @@
           "$dnanexus_link": "file-J4v08vj4GPF4Fg2zjkpkKyY1"
         },
         "multiqc_config_file": {
-            "project": "project-J98FGv04XJP03gYz506Z27X9",
-            "id": "file-J9PjK4j4XJP0P6vzQGqGY249"
-          },
+          "project": "project-J98FGv04XJP03gYz506Z27X9",
+          "id": "file-J9PjK4j4XJP0P6vzQGqGY249"
+        },
         "samplesheet": {
           "$dnanexus_link": "INPUT-SAMPLESHEET"
         }
@@ -405,7 +495,7 @@
       "name": "eggd_generate_variant_workbook",
       "details": "Generates a variant workbook from the VCF output of the atlas workflows",
       "url": "https://github.com/eastgenomics/eggd_generate_variant_workbook",
-      "analysis": "analysis_7",
+      "analysis": "analysis_9",
       "per_sample": true,
       "process_fastqs": false,
       "depends_on": [
@@ -414,7 +504,7 @@
         "analysis_3",
         "analysis_4",
         "analysis_5",
-        "analysis_6"
+        "analysis_8"
       ],
       "inputs": {
         "vcfs": {
