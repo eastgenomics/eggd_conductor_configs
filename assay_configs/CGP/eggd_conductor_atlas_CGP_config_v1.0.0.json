@@ -11,7 +11,7 @@
   "demultiplex_config": {
     "app_id": "app-J1VFP0Q4VpfGKKG1V7XgYXQ5",
     "additional_args": "--strict-mode true",
-    "instance_type": "mem2_ssd1_v2_x32"
+    "instance_type": "mem2_ssd1_v2_x48"
   },
   "users": {
     "org-emee_1": "CONTRIBUTE"
@@ -273,10 +273,11 @@
         "stage-mosdepth": "/OUT-FOLDER/STAGE-NAME",
         "stage-athena": "/OUT-FOLDER/STAGE-NAME",
         "stage-sompy": "/OUT-FOLDER/STAGE-NAME",
-        "stage-sex_check": "/OUT-FOLDER/STAGE-NAME"
+        "stage-sex_check": "/OUT-FOLDER/STAGE-NAME",
+        "stage-vcf_normaliser": "/OUT-FOLDER/STAGE-NAME"
       }
     },
-    "workflow-J8z9j8Q431P5YKgfqBf4K8Vj": {
+    "workflow-J9ZQ94Q42Q98v6QjXxP0g21Z": {
       "name": "eggd_msi_tmb_workflow_v1.0.0",
       "details": "MSI + TMB atlas workflow",
       "url": "https://github.com/eastgenomics/eggd_msi_tmb_workflow",
@@ -315,24 +316,38 @@
             "id": "file-J8VKVz847y60Bvz96qp0ypbg"
           }
         },
-        "stage-eggd_msisensor_pro.msites_file": {
+        "stage-eggd_msipro_score.msi_sites": {
           "$dnanexus_link": {
-            "project": "project-J75xJY843ZZ0ZGPV0J1Yz8p7",
-            "id": "file-J777KYj43ZZBgj1p3Y7zkYJq"
+            "project": "project-J0j7Vq846fyBfxXy8FX5Vx47",
+            "id": "file-J9ZVqJ846fyP41p4FxJqg6v4"
           }
         },
-        "stage-eggd_msisensor_pro.tumor_bam": {
+        "stage-eggd_msipro_score.tumour_bam": {
           "$dnanexus_link": {
             "job": "analysis_1",
             "field": "mappings_bam"
           }
         },
-        "stage-eggd_msisensor_pro.tumor_bam_bai": {
+        "stage-eggd_msipro_score.tumour_bai": {
           "$dnanexus_link": {
             "job": "analysis_1",
             "field": "mappings_bam_bai"
           }
         },
+        "stage-eggd_msipro_score.baseline_tar": {
+          "$dnanexus_link": {
+            "project": "project-J0j7Vq846fyBfxXy8FX5Vx47",
+            "id": "file-J9ZX09846fy8YGqvkFQfXbyg"
+          }
+        },
+        "stage-eggd_msipro_score.msisensor_pro": {
+          "$dnanexus_link": {
+            "project": "project-J8F1Yq84gPFqgBp4XZ395fB3",
+            "id": "file-J8J0xg04gPFjVPXJGJ9GB7GQ"
+          }
+        },
+        "stage-eggd_msipro_score.msi_threshold": 8,
+        "stage-eggd_msipro_score.sample_id": "INPUT-SAMPLE-NAME",
         "stage-eggd_msisensor2.models_dir": "/usr/share/msisensor2/models_hg38",
         "stage-eggd_msisensor2.msi_scan": {
           "$dnanexus_link": {
@@ -355,7 +370,7 @@
       },
       "output_dirs": {
         "stage-eggd_pyTMB": "/OUT-FOLDER/STAGE-NAME",
-        "stage-eggd_msisensor_pro": "/OUT-FOLDER/STAGE-NAME",
+        "stage-eggd_msipro_score": "/OUT-FOLDER/STAGE-NAME",
         "stage-eggd_msisensor2": "/OUT-FOLDER/STAGE-NAME",
         "stage-eggd_msi_tmb_combiner": "/OUT-FOLDER/STAGE-NAME"
       }
@@ -390,9 +405,11 @@
           "$dnanexus_link": "file-J4v08vj4GPF4Fg2zjkpkKyY1"
         },
         "multiqc_config_file": {
+          "$dnanexus_link": {
             "project": "project-J98FGv04XJP03gYz506Z27X9",
-            "id": "file-J9PjK4j4XJP0P6vzQGqGY249"
-          },
+            "id": "file-J9VfF784XJP9fJ9fXyK9P2gP"
+          }
+        },
         "samplesheet": {
           "$dnanexus_link": "INPUT-SAMPLESHEET"
         }
@@ -431,11 +448,10 @@
             "field": "msi_tmb_combined_file"
           }
         },
-        "include_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC",
-        "reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
+        "include_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC",
+        "reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
         "rename_columns": "CSQ_Existing_variation=dbSNP CSQ_Feature=Transcript_ID DP=Read_Depth CSQ_EG_LC=Latest_Classification CSQ_EG_LCD=Latest_Classification_Date CSQ_EG_LCS=Latest_Specimen_ID CSQ_EG_TC=Total_Classifications",
-        "types": "CSQ_Prev_Count_AC=Float",
-        "filter": "bcftools filter -e '(CSQ_Prev_Count_AC>853 || CSQ_gnomADg_AF >= 0.002 || CSQ_gnomADe_AF >= 0.002) || (CSQ_SYMBOL!=\"GATA2\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_SYMBOL!=\"TP53\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_Consequence==\"synonymous_variant\")'",
+        "filter": "bcftools filter -e '(CSQ_gnomADg_AF >= 0.002 || CSQ_gnomADe_AF >= 0.002) || (CSQ_SYMBOL!=\"GATA2\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_SYMBOL!=\"TP53\" || CSQ_Consequence!=\"synonymous_variant\") && (CSQ_Consequence==\"synonymous_variant\")'",
         "keep_filtered": true,
         "keep_tmp": false,
         "add_samplename_column": true,
@@ -448,8 +464,6 @@
         "add_report_text_column": true,
         "summary": "atlas",
         "split_hgvs": true,
-        "af_format": "percent",
-        "join_columns": "Prev_Count=CSQ_Prev_Count_AC,/,CSQ_Prev_Count_NS",
         "merge_vcfs": false,
         "add_auto_filter": true,
         "freeze_column": "J2",
