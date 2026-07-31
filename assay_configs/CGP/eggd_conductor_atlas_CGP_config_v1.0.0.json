@@ -51,7 +51,7 @@
       "per_sample": true,
       "process_fastqs": false,
       "inputs": {
-        "input_file": {
+        "input_bam": {
           "$dnanexus_link": {
             "job": "analysis_1",
             "field": "mappings_bam"
