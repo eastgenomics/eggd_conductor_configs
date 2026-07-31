@@ -725,7 +725,7 @@
       "name": "eggd_generate_variant_workbook",
       "details": "Generates a variant workbook from the VCF output of the atlas workflows",
       "url": "https://github.com/eastgenomics/eggd_generate_variant_workbook",
-      "analysis": "analysis_9",
+      "analysis": "analysis_10",
       "per_sample": true,
       "process_fastqs": false,
       "depends_on": [
