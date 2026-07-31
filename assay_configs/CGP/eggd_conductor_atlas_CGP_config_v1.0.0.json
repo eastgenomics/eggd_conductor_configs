@@ -430,7 +430,7 @@
     "workflow-J9bb6P84KvFypv45KzBVzQyZ": {
       "name": "eggd_atlas_cnv_workflow_v1.0.0",
       "details": "Somatic CNV workflow for Atlas",
-      "url": "https://https://github.com/eastgenomics/eggd_atlas_cnv_workflow",
+      "url": "https://github.com/eastgenomics/eggd_atlas_cnv_workflow",
       "analysis": "analysis_7",
       "depends_on": [
         "analysis_2", "analysis_5", "analysis_6"
