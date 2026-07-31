@@ -375,11 +375,314 @@
         "stage-eggd_msi_tmb_combiner": "/OUT-FOLDER/STAGE-NAME"
       }
     },
+    "app-J9J2yQj441QYqP572g95kFF1": {
+      "name": "eggd_cgp-cnvkit-coverage",
+      "details": "Creates coverage .cnn file for use in creation of CNV PON",
+      "url": "https://github.com/eastgenomics/eggd_cgp-cnvkit-coverage",
+      "analysis": "analysis_5",
+      "depends_on": ["analysis_2"],
+      "per_sample": true,
+      "inputs": {
+        "tumour_bam": {
+            "$dnanexus_link": {
+                "job": "analysis_2",
+                "field": "output_bam"
+            }
+        },
+        "tumour_bai": {
+          "$dnanexus_link": {
+              "job": "analysis_2",
+              "field": "output_bai"
+            }
+        },
+        "sample_id": "INPUT-SAMPLE-NAME",
+        "baits": {
+          "$dnanexus_link": "file-J8F1zf045FG6xJVp5X6b0Pkp"
+        }
+
+      },
+      "output_dirs": {
+        "app-J9J2yQj441QYqP572g95kFF1": "/OUT-FOLDER/APP-NAME"
+      }
+    },
+    "app-J9P1j884Q0v0zfbV4VjzXkBk": {
+      "name": "eggd_cgp-cnvkit-pon",
+      "details": "Creates panel of normals for use in CNVkit somatic CNV calling",
+      "url": "https://github.com/eastgenomics/eggd_cgp-cnvkit-pon",
+      "analysis": "analysis_6",
+      "depends_on": ["analysis_5"],
+      "per_sample": false,
+      "inputs": {
+        "pon_name": "INPUT-dx_project_name",
+        "coverage_files": {
+          "$dnanexus_link": {
+              "job": "analysis_5",
+              "field": "coverage_cnn"
+            }
+        }
+      },
+      "output_dirs": {
+        "app-J9P1j884Q0v0zfbV4VjzXkBk": "/OUT-FOLDER/APP-NAME"
+      }
+    },
+    "workflow-J9bb6P84KvFypv45KzBVzQyZ": {
+      "name": "eggd_atlas_cnv_workflow_v1.0.0",
+      "details": "Somatic CNV workflow for Atlas",
+      "url": "https://https://github.com/eastgenomics/eggd_atlas_cnv_workflow",
+      "analysis": "analysis_7",
+      "depends_on": [
+        "analysis_2", "analysis_5", "analysis_6"
+      ],
+      "per_sample": true,
+      "inputs": {
+        "stage-amber.tumour_bam": {
+            "$dnanexus_link": {
+                "job": "analysis_2",
+                "field": "output_bam"
+            }
+        },
+        "stage-amber.tumour_bai": {
+          "$dnanexus_link": {
+              "job": "analysis_2",
+              "field": "output_bai"
+            }
+        },
+        "stage-amber.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-amber.amber_jar": {
+          "$dnanexus_link": "file-J9936z04p12z3FYjFYb448pP"
+        },
+        "stage-amber.germline_sites": {
+          "$dnanexus_link": "file-J88xxvQ4QyV82JKY5PkqXGbv"
+        },
+        "stage-cobalt.tumour_bam": {
+            "$dnanexus_link": {
+                "job": "analysis_2",
+                "field": "output_bam"
+            }
+        },
+        "stage-cobalt.tumour_bai": {
+          "$dnanexus_link": {
+              "job": "analysis_2",
+              "field": "output_bai"
+            }
+        },
+        "stage-cobalt.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-cobalt.cobalt_jar": {
+          "$dnanexus_link": "file-J893p9Q470j4zY3zzpVBjP11"
+        },
+        "stage-cobalt.norm_file": {
+          "$dnanexus_link": "file-J89183j4zxxZ5v7Gv5F9BK06"
+        },
+        "stage-cobalt.diploid_regions": {
+          "$dnanexus_link": "file-J88xxvQ4QyV7vyPx294b4Z23"
+        },
+        "stage-cobalt.gc_profile": {
+          "$dnanexus_link": "file-J88xxvQ4QyVPb8K6VFqX1FKB"
+        },
+        "stage-cobalt.ref_fasta": {
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-GjPxXq84qv8xz3ZV1jFq6z3g"
+          }
+        },
+        "stage-cobalt.ref_fai": {
+          "$dnanexus_link": "file-GjPxp3Q4qv8Vk76xFVjfyPgJ"
+        },
+        "stage-sage.tumour_bam": {
+            "$dnanexus_link": {
+                "job": "analysis_2",
+                "field": "output_bam"
+            }
+        },
+        "stage-sage.tumour_bai": {
+          "$dnanexus_link": {
+              "job": "analysis_2",
+              "field": "output_bai"
+            }
+        },
+        "stage-sage.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-sage.sage_jar": {
+          "$dnanexus_link": "file-J8F1bFj4gPFvK81Z330Yfk3j"
+        },
+        "stage-sage.ref_fasta": {
+          "$dnanexus_link": "file-G5xBZvj4yPz1xZfqKKjkG8xQ"
+        },
+        "stage-sage.hotspots_vcf": {
+          "$dnanexus_link": "file-J8F1kQQ4gPFbZQZ1BG7KY62z"
+        },
+        "stage-sage.hotspots_tbi": {
+          "$dnanexus_link": "file-J8F1kV04gPFz7kZ45XfQPp4K"
+        },
+        "stage-sage.panel_bed": {
+          "$dnanexus_link": "file-J8F1kv84gPFfQKqYbZVYQqv8"
+        },
+        "stage-sage.hc_bed": {
+          "$dnanexus_link": "file-J8F1kVj4gPFkBK29yj6P4BgQ"
+        },
+        "stage-sage.pon_file": {
+          "$dnanexus_link": "file-J8F1kX84gPFpJ2kvz13KJ5kP"
+        },
+        "stage-sage.ensembl_data": {
+          "$dnanexus_link": "file-J892FbQ493ZPf7pZzpjX05P6"
+        },
+        "stage-purple.amber_tar": {
+          "$dnanexus_link": {
+            "stage": "stage-amber",
+            "outputField": "amber_tar"
+          }
+        },
+        "stage-purple.cobalt_tar": {
+          "$dnanexus_link": {
+            "stage": "stage-cobalt",
+            "outputField": "cobalt_tar"
+          }
+        },
+        "stage-purple.somatic_vcf": {
+          "$dnanexus_link": {
+            "stage": "stage-sage",
+            "outputField": "somatic_vcf"
+          }
+        },
+        "stage-purple.somatic_vcf_tbi": {
+          "$dnanexus_link": {
+            "stage": "stage-sage",
+            "outputField": "somatic_vcf_tbi"
+          }
+        },
+        "stage-purple.gc_profile": {
+          "$dnanexus_link": "file-J88xxvQ4QyVPb8K6VFqX1FKB"
+        },
+        "stage-purple.target_regions_bed": {
+          "$dnanexus_link": "file-J88gVF84Y8X123K6JX8jB8Z5"
+        },
+        "stage-purple.ref_fasta": {
+          "$dnanexus_link": "file-Gb757784XGyY3FPvkPQ74K9z"
+        },
+        "stage-purple.ref_fai": {
+          "$dnanexus_link": "file-Gb7578Q4XGyQ8xfvyxJkBgx7"
+        },
+        "stage-purple.ensembl_data": {
+          "$dnanexus_link": "file-J892FbQ493ZPf7pZzpjX05P6"
+        },
+        "stage-purple.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-cnvkit_batch.tumour_bam": {
+            "$dnanexus_link": {
+                "job": "analysis_2",
+                "field": "output_bam"
+            }
+        },
+        "stage-cnvkit_batch.tumour_bai": {
+          "$dnanexus_link": {
+              "job": "analysis_2",
+              "field": "output_bai"
+            }
+        },
+        "stage-cnvkit_batch.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-cnvkit_batch.cnvkit_cn_reference": {
+          "$dnanexus_link": {
+            "job": "analysis_6",
+            "field": "cn_reference"
+          }
+        },
+        "stage-cnvkit_batch.baits": {
+          "$dnanexus_link": "file-J8F94G845FG5ZG55xFzF1fP6"
+        },
+        "stage-cnvkit_batch.purity": {
+          "$dnanexus_link": {
+            "stage": "stage-purple",
+            "outputField": "purity"
+          }
+        },
+        "stage-cnvkit_batch.ploidy": {
+          "$dnanexus_link": {
+            "stage": "stage-purple",
+            "outputField": "ploidy"
+          }
+        },
+        "stage-cnvkit_batch.sample_sex": {
+          "$dnanexus_link": {
+            "stage": "stage-purple",
+            "outputField": "sample_sex"
+          }
+        },
+        "stage-cnv_chr_strip.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-cnv_chr_strip.cnvkit_cnr": {
+          "$dnanexus_link": {
+            "stage": "stage-cnvkit_batch",
+            "outputField": "copy_ratios"
+          }
+        },
+        "stage-cnv_chr_strip.cnvkit_cns": {
+          "$dnanexus_link": {
+            "stage": "stage-cnvkit_batch",
+            "outputField": "segments"
+          }
+        },
+        "stage-cnv_chr_strip.cnvkit_call_cns": {
+          "$dnanexus_link": {
+            "stage": "stage-cnvkit_batch",
+            "outputField": "call_segments"
+          }
+        },
+        "stage-cnv_chr_strip.cnvkit_genemetrics": {
+          "$dnanexus_link": {
+            "stage": "stage-cnvkit_batch",
+            "outputField": "genemetrics"
+          }
+        },
+        "stage-cnv_chr_strip.purple_cnv_somatic": {
+          "$dnanexus_link": {
+            "stage": "stage-purple",
+            "outputField": "cnv_somatic_tsv"
+          }
+        },
+        "stage-cnv_chr_strip.purple_cnv_gene": {
+          "$dnanexus_link": {
+            "stage": "stage-purple",
+            "outputField": "cnv_gene_tsv"
+          }
+        },
+        "stage-purple_plotter.sample_id": "INPUT-SAMPLE-NAME",
+        "stage-purple_plotter.purple_tar": {
+          "$dnanexus_link": {
+            "stage": "stage-purple",
+            "outputField": "purple_tar"
+          }
+        },
+        "stage-purple_plotter.cnvkit_cnr": {
+          "$dnanexus_link": {
+            "stage": "stage-cnvkit_batch",
+            "outputField": "copy_ratios"
+          }
+        },
+        "stage-purple_plotter.cnvkit_call_cns": {
+          "$dnanexus_link": {
+            "stage": "stage-cnvkit_batch",
+            "outputField": "call_segments"
+          }
+        },
+        "stage-purple_plotter.cnvkit_genemetrics": {
+          "$dnanexus_link": {
+            "stage": "stage-cnvkit_batch",
+            "outputField": "genemetrics"
+          }
+        }
+      },
+      "output_dirs": {
+        "stage-amber": "/OUT-FOLDER/STAGE-NAME",
+        "stage-cobalt": "/OUT-FOLDER/STAGE-NAME",
+        "stage-sage": "/OUT-FOLDER/STAGE-NAME",
+        "stage-purple": "/OUT-FOLDER/STAGE-NAME",
+        "stage-cnvkit_batch": "/OUT-FOLDER/STAGE-NAME",
+        "stage-cnv_chr_strip": "/OUT-FOLDER/STAGE-NAME",
+        "stage-purple_plotter": "/OUT-FOLDER/STAGE-NAME"
+      }
+    },
     "app-GZx3kyQ4vjBq4xBgykzk5J98": {
       "name": "eggd_fastqc",
       "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
       "url": "https://github.com/eastgenomics/eggd_fastqc",
-      "analysis": "analysis_5",
+      "analysis": "analysis_8",
       "per_sample": false,
       "process_fastqs": true,
       "inputs": {
@@ -393,10 +696,10 @@
       "name": "MultiQC",
       "details": "MultiQC app to generate aggregated run level QC report",
       "url": "https://github.com/eastgenomics/eggd_multiqc",
-      "analysis": "analysis_6",
+      "analysis": "analysis_9",
       "per_sample": false,
       "process_fastqs": false,
-      "depends_on": ["analysis_1", "analysis_2", "analysis_3", "analysis_5"],
+      "depends_on": ["analysis_1", "analysis_2", "analysis_3", "analysis_8"],
       "inputs": {
         "project_for_multiqc": "INPUT-dx_project_name",
         "primary_workflow_output": "INPUT-parent_out_dir",
@@ -422,16 +725,14 @@
       "name": "eggd_generate_variant_workbook",
       "details": "Generates a variant workbook from the VCF output of the atlas workflows",
       "url": "https://github.com/eastgenomics/eggd_generate_variant_workbook",
-      "analysis": "analysis_7",
+      "analysis": "analysis_9",
       "per_sample": true,
       "process_fastqs": false,
       "depends_on": [
         "analysis_1",
         "analysis_2",
         "analysis_3",
-        "analysis_4",
-        "analysis_5",
-        "analysis_6"
+        "analysis_4"
       ],
       "inputs": {
         "vcfs": {
