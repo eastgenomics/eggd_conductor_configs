@@ -552,6 +552,9 @@
             "outputField": "somatic_vcf_tbi"
           }
         },
+        "stage-purple.purple_jar": {
+          "$dnanexus_link": "file-J893gpQ470jJPF18gjJ1zg7Y"
+        },
         "stage-purple.gc_profile": {
           "$dnanexus_link": "file-J88xxvQ4QyVPb8K6VFqX1FKB"
         },
