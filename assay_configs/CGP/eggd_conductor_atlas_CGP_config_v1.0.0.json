@@ -382,6 +382,7 @@
       "analysis": "analysis_5",
       "depends_on": ["analysis_2"],
       "per_sample": true,
+      "process_fastqs": false,
       "inputs": {
         "tumour_bam": {
             "$dnanexus_link": {
@@ -412,6 +413,7 @@
       "analysis": "analysis_6",
       "depends_on": ["analysis_5"],
       "per_sample": false,
+      "process_fastqs": false,
       "inputs": {
         "pon_name": "INPUT-dx_project_name",
         "coverage_files": {
@@ -434,6 +436,7 @@
         "analysis_2", "analysis_5", "analysis_6"
       ],
       "per_sample": true,
+      "process_fastqs": false,
       "inputs": {
         "stage-amber.tumour_bam": {
             "$dnanexus_link": {
