@@ -581,7 +581,7 @@
             }
         },
         "stage-cnvkit_batch.sample_id": "INPUT-SAMPLE-NAME",
-        "stage-cnvkit_batch.cnvkit_cn_reference": {
+        "stage-cnvkit_batch.cn_reference": {
           "$dnanexus_link": {
             "job": "analysis_6",
             "field": "cn_reference"
