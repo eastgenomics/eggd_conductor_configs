@@ -43,7 +43,7 @@
         "app-J5YgzxQ41xZ8pkgbgzQgvjyV": "/OUT-FOLDER/APP-NAME"
       }
     },
-    "app-J8gyqk04Kpp7pYbZbKXqzzpJ": {
+    "app-J96Bgk84y9xJJ5k2YFbgfbf0": {
       "name": "eggd_chr_prefix",
       "details": "Adds chr prefix to BAM files",
       "url": "https://github.com/eastgenomics/eggd_chr_prefix",
@@ -59,7 +59,7 @@
         }
       },
       "output_dirs": {
-        "app-J8gyqk04Kpp7pYbZbKXqzzpJ": "/OUT-FOLDER/APP-NAME"
+        "app-J96Bgk84y9xJJ5k2YFbgfbf0": "/OUT-FOLDER/APP-NAME"
       },
       "depends_on": ["analysis_1"]
     },
