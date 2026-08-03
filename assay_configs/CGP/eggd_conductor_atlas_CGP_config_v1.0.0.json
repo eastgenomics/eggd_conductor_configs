@@ -278,7 +278,7 @@
       }
     },
     "workflow-J9ZQ94Q42Q98v6QjXxP0g21Z": {
-      "name": "eggd_msi_tmb_workflow_v1.0.0",
+      "name": "msi_tmb_workflow_v1.0.0",
       "details": "MSI + TMB atlas workflow",
       "url": "https://github.com/eastgenomics/eggd_msi_tmb_workflow",
       "analysis": "analysis_4",
@@ -428,7 +428,7 @@
       }
     },
     "workflow-J9bb6P84KvFypv45KzBVzQyZ": {
-      "name": "eggd_atlas_cnv_workflow_v1.0.0",
+      "name": "atlas_cnv_workflow_v1.0.0",
       "details": "Somatic CNV workflow for Atlas",
       "url": "https://github.com/eastgenomics/eggd_atlas_cnv_workflow",
       "analysis": "analysis_7",
