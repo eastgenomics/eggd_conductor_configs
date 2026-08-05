@@ -427,7 +427,7 @@
         "app-J9P1j884Q0v0zfbV4VjzXkBk": "/OUT-FOLDER/APP-NAME"
       }
     },
-    "workflow-J9bb6P84KvFypv45KzBVzQyZ": {
+    "workflow-J9kYV3Q4KvFp83JZQyp89VKF": {
       "name": "atlas_cnv_workflow_v1.0.0",
       "details": "Somatic CNV workflow for Atlas",
       "url": "https://github.com/eastgenomics/eggd_atlas_cnv_workflow",
