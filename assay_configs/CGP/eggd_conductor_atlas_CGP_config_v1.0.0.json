@@ -571,7 +571,7 @@
           "$dnanexus_link": "file-J892FbQ493ZPf7pZzpjX05P6"
         },
         "stage-purple.sample_id": "INPUT-SAMPLE-NAME",
-        "stage-purple.ploidy_cap_purity_threshold": "0.35",
+        "stage-purple.ploidy_cap_purity_threshold": 0.35,
         "stage-cnvkit_batch.tumour_bam": {
             "$dnanexus_link": {
                 "job": "analysis_2",
