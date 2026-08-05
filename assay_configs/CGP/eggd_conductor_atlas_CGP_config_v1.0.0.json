@@ -149,7 +149,7 @@
         "stage-picard.run_CollectVariantCallingMetrics": true,
         "stage-picard.bedfile": {
           "$dnanexus_link": {
-            "project": "project-J0j7Vq846fyBfxXy8FX5Vx47",
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
             "id": "file-J8kGqP846fy4KPPx9Zfb4VgK"
           }
         },
