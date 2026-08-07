@@ -18,7 +18,7 @@
   },
   "subset_samplesheet": "-8471|-8475|-9999|-9197|-8473",
   "executables": {
-    "app-J5YgzxQ41xZ8pkgbgzQgvjyV": {
+    "app-J9ZGBy0437b6ZQ79x2P82YgZ": {
       "name": "eggd_sentieon_umi",
       "details": "Sentieon UMI workflow for alignment and variant calling",
       "url": "https://github.com/eastgenomics/eggd_sentieon_umi",
@@ -40,7 +40,7 @@
         "output_metrics": true
       },
       "output_dirs": {
-        "app-J5YgzxQ41xZ8pkgbgzQgvjyV": "/OUT-FOLDER/APP-NAME"
+        "app-J9ZGBy0437b6ZQ79x2P82YgZ": "/OUT-FOLDER/APP-NAME"
       }
     },
     "app-J96Bgk84y9xJJ5k2YFbgfbf0": {
@@ -149,7 +149,7 @@
         "stage-picard.run_CollectVariantCallingMetrics": true,
         "stage-picard.bedfile": {
           "$dnanexus_link": {
-            "project": "project-J0j7Vq846fyBfxXy8FX5Vx47",
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
             "id": "file-J8kGqP846fy4KPPx9Zfb4VgK"
           }
         },
@@ -427,7 +427,7 @@
         "app-J9P1j884Q0v0zfbV4VjzXkBk": "/OUT-FOLDER/APP-NAME"
       }
     },
-    "workflow-J9bb6P84KvFypv45KzBVzQyZ": {
+    "workflow-J9kYV3Q4KvFp83JZQyp89VKF": {
       "name": "atlas_cnv_workflow_v1.0.0",
       "details": "Somatic CNV workflow for Atlas",
       "url": "https://github.com/eastgenomics/eggd_atlas_cnv_workflow",
@@ -571,7 +571,7 @@
           "$dnanexus_link": "file-J892FbQ493ZPf7pZzpjX05P6"
         },
         "stage-purple.sample_id": "INPUT-SAMPLE-NAME",
-        "stage-purple.ploidy_cap_purity_threshold": "0.35",
+        "stage-purple.ploidy_cap_purity_threshold": 0.35,
         "stage-cnvkit_batch.tumour_bam": {
             "$dnanexus_link": {
                 "job": "analysis_2",
