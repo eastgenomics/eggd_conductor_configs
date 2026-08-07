@@ -347,31 +347,11 @@
           }
         },
         "stage-eggd_msipro_score.msi_threshold": 8,
-        "stage-eggd_msipro_score.sample_id": "INPUT-SAMPLE-NAME",
-        "stage-eggd_msisensor2.models_dir": "/usr/share/msisensor2/models_hg38",
-        "stage-eggd_msisensor2.msi_scan": {
-          "$dnanexus_link": {
-            "project": "project-J75xJY843ZZ0ZGPV0J1Yz8p7",
-            "id": "file-J8FGyK843ZZ47JzxGfYQ2Xg1"
-          }
-        },
-        "stage-eggd_msisensor2.tumor_bam": {
-          "$dnanexus_link": {
-            "job": "analysis_1",
-            "field": "mappings_bam"
-          }
-        },
-        "stage-eggd_msisensor2.tumor_bam_bai": {
-          "$dnanexus_link": {
-            "job": "analysis_1",
-            "field": "mappings_bam_bai"
-          }
-        }
+        "stage-eggd_msipro_score.sample_id": "INPUT-SAMPLE-NAME"
       },
       "output_dirs": {
         "stage-eggd_pyTMB": "/OUT-FOLDER/STAGE-NAME",
         "stage-eggd_msipro_score": "/OUT-FOLDER/STAGE-NAME",
-        "stage-eggd_msisensor2": "/OUT-FOLDER/STAGE-NAME",
         "stage-eggd_msi_tmb_combiner": "/OUT-FOLDER/STAGE-NAME"
       }
     },
