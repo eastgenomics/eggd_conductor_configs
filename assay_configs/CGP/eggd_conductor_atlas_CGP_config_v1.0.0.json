@@ -18,7 +18,7 @@
   },
   "subset_samplesheet": "-8471|-8475|-9999|-9197|-8473",
   "executables": {
-    "app-J5YgzxQ41xZ8pkgbgzQgvjyV": {
+    "app-J9ZGBy0437b6ZQ79x2P82YgZ": {
       "name": "eggd_sentieon_umi",
       "details": "Sentieon UMI workflow for alignment and variant calling",
       "url": "https://github.com/eastgenomics/eggd_sentieon_umi",
