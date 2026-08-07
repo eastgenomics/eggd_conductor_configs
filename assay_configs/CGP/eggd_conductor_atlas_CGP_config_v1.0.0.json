@@ -324,14 +324,14 @@
         },
         "stage-eggd_msipro_score.tumour_bam": {
           "$dnanexus_link": {
-            "job": "analysis_1",
-            "field": "mappings_bam"
+              "job": "analysis_2",
+              "field": "output_bam"
           }
         },
         "stage-eggd_msipro_score.tumour_bai": {
           "$dnanexus_link": {
-            "job": "analysis_1",
-            "field": "mappings_bam_bai"
+            "job": "analysis_2",
+            "field": "output_bai"
           }
         },
         "stage-eggd_msipro_score.baseline_tar": {
