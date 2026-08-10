@@ -717,9 +717,9 @@
       "per_sample": true,
       "process_fastqs": false,
       "depends_on": [
-        "analysis_1",
-        "analysis_2",
-        "analysis_3"
+        "analysis_3",
+        "analysis_4",
+        "analysis_7"
       ],
       "inputs": {
         "vcfs": {
