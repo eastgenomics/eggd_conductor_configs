@@ -729,14 +729,30 @@
             "field": "annotated_vcf"
           }
         },
-        "additional_files": {
+        "additional_files": [
+          {
           "$dnanexus_link": {
             "analysis": "analysis_4",
             "stage": "stage-eggd_msi_tmb_combiner",
             "field": "msi_tmb_combined_file"
+          }},
+          {
+          "$dnanexus_link": {
+            "analysis": "analysis_7",
+            "stage": "stage-cnvkit_batch",
+            "field": "genemetrics"
+          }}
+        ],
+        "image_file": {
+          "$dnanexus_link": {
+            "analysis": "analysis_7",
+            "stage": "stage-cnvkit_batch",
+            "field": "scatter_png"
           }
         },
-        "additional_sheet_names":"MSI_TMB",
+        "image_sizes": "856:675",
+        "image_sheet_names": "plot_cnv_targeted",
+        "additional_sheet_names":"msi_tmb cnv_global cnv_targeted",
         "include_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC",
         "reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
         "rename_columns": "CSQ_Existing_variation=dbSNP CSQ_Feature=Transcript_ID DP=Read_Depth CSQ_EG_LC=Latest_Classification CSQ_EG_LCD=Latest_Classification_Date CSQ_EG_LCS=Latest_Specimen_ID CSQ_EG_TC=Total_Classifications",
