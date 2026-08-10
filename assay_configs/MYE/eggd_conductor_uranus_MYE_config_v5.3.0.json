@@ -75,8 +75,8 @@
     },
     "subset_samplesheet": "EGG2|-8128-|-8476-|-5877-",
     "executables": {
-        "workflow-J51FpkQ43X145gPZxkKv50x2": {
-            "name": "uranus_main_workflow_GRCh38_v3.3.0",
+        "workflow-J6yf15j43JZvJV9K7Jq8QXQ9": {
+            "name": "uranus_main_workflow_GRCh38_v3.4.0",
             "details": "Main Uranus workflow for alignment and variant calling",
             "url": "https://github.com/eastgenomics/eggd_uranus_main_workflow",
             "analysis": "analysis_1",
@@ -135,6 +135,14 @@
                 },
                 "stage-sentieon_tnbam.run_bqsr": true,
                 "stage-sentieon_tnbam.somatic_algo": "TNhaplotyper2",
+                "stage-vcf_normaliser_cgppindel.bcftools_options": "-m -any",
+                "stage-vcf_normaliser_cgppindel.fasta_tar": {
+                    "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+                },
+                "stage-vcf_normaliser_mutect2.bcftools_options": "-m -any --keep-sum AD",
+                "stage-vcf_normaliser_mutect2.fasta_tar": {
+                    "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+                },
                 "stage-eggd_vep_cgppindel.panel_bed": {
                     "$dnanexus_link": "file-Gqy4V1Q47xBXYzfKxb22fGXz"
                 },
@@ -314,6 +322,8 @@
                 "stage-sentieon_bwa": "/OUT-FOLDER/STAGE-NAME",
                 "stage-sentieon_tnbam": "/OUT-FOLDER/STAGE-NAME",
                 "stage-cgppindel": "/OUT-FOLDER/STAGE-NAME",
+                "stage-vcf_normaliser_cgppindel": "/OUT-FOLDER/STAGE-NAME",
+                "stage-vcf_normaliser_mutect2": "/OUT-FOLDER/STAGE-NAME",
                 "stage-eggd_vep_cgppindel": "/OUT-FOLDER/STAGE-NAME",
                 "stage-eggd_vep_mutect2": "/OUT-FOLDER/STAGE-NAME",
                 "stage-eggd_vcf_rescue": "/OUT-FOLDER/STAGE-NAME",
