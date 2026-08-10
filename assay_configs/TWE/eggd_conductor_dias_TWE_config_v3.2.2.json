@@ -25,8 +25,8 @@
         "v3.0.0": "Add demultiplex config for handling Twist harmonisation project UMIs",
         "v3.1.0": "Update eggd_MultiQC to v3.3.0 and TWE MultiQC config file to v1.3.0",
         "v3.2.0": "Updated dias_single to v2.15.0. Includes eggd_vcf_normaliser.",
-	"v3.2.1": "Temporary non-UMI config - see commit c6bb1c93 (release v3.2.1)",
-	"v3.2.2": "Updated dias_single workflow to v2.16.0"
+        "v3.2.1": "Temporary non-UMI config - see commit c6bb1c93 (release v3.2.1)",
+        "v3.2.2": "Updated dias_single workflow to v2.16.0"
     },
     "demultiplex": true,
     "demultiplex_config": {
