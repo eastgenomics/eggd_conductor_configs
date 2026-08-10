@@ -282,6 +282,7 @@
       "details": "MSI + TMB atlas workflow",
       "url": "https://github.com/eastgenomics/eggd_msi_tmb_workflow",
       "analysis": "analysis_4",
+      "depends_on": ["analysis_2", "analysis_3"],
       "per_sample": true,
       "process_fastqs": false,
       "inputs": {
@@ -665,7 +666,7 @@
         "stage-purple_plotter": "/OUT-FOLDER/STAGE-NAME"
       }
     },
-    "app-GZx3kyQ4vjBq4xBgykzk5J98": {
+    "app-J9kf6084BYg7QVKfKX262x7f": {
       "name": "eggd_fastqc",
       "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
       "url": "https://github.com/eastgenomics/eggd_fastqc",
@@ -676,7 +677,7 @@
         "fastqs": "INPUT-R1-R2"
       },
       "output_dirs": {
-        "app-GZx3kyQ4vjBq4xBgykzk5J98": "/OUT-FOLDER/APP-NAME"
+        "app-J9kf6084BYg7QVKfKX262x7f": "/OUT-FOLDER/APP-NAME"
       }
     },
     "app-J6Q1VVQ4Pf3XgF2j1jz53qv9": {
@@ -718,8 +719,7 @@
       "depends_on": [
         "analysis_1",
         "analysis_2",
-        "analysis_3",
-        "analysis_4"
+        "analysis_3"
       ],
       "inputs": {
         "vcfs": {
