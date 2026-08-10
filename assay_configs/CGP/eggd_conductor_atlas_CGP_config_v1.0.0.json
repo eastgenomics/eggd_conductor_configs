@@ -277,7 +277,7 @@
         "stage-vcf_normaliser": "/OUT-FOLDER/STAGE-NAME"
       }
     },
-    "workflow-J9ZQ94Q42Q98v6QjXxP0g21Z": {
+    "workflow-J9q04qQ431P1g8Q4qg0KXy86": {
       "name": "msi_tmb_workflow_v1.0.0",
       "details": "MSI + TMB atlas workflow",
       "url": "https://github.com/eastgenomics/eggd_msi_tmb_workflow",
@@ -318,26 +318,26 @@
         },
         "stage-eggd_msipro_score.msi_sites": {
           "$dnanexus_link": {
-            "project": "project-J0j7Vq846fyBfxXy8FX5Vx47",
-            "id": "file-J9ZVqJ846fyP41p4FxJqg6v4"
+            "project": "project-J8F1Yq84gPFqgBp4XZ395fB3",
+            "id": "file-J8J1KZ84YQBy6PK9GKXZpK4g"
           }
         },
         "stage-eggd_msipro_score.tumour_bam": {
           "$dnanexus_link": {
-            "job": "analysis_1",
-            "field": "mappings_bam"
+              "job": "analysis_2",
+              "field": "output_bam"
           }
         },
         "stage-eggd_msipro_score.tumour_bai": {
           "$dnanexus_link": {
-            "job": "analysis_1",
-            "field": "mappings_bam_bai"
+            "job": "analysis_2",
+            "field": "output_bai"
           }
         },
         "stage-eggd_msipro_score.baseline_tar": {
           "$dnanexus_link": {
-            "project": "project-J0j7Vq846fyBfxXy8FX5Vx47",
-            "id": "file-J9ZX09846fy8YGqvkFQfXbyg"
+            "project": "project-J8F1Yq84gPFqgBp4XZ395fB3",
+            "id": "file-J8J1p304y058QKQ70xqGj1yF"
           }
         },
         "stage-eggd_msipro_score.msisensor_pro": {
@@ -347,31 +347,11 @@
           }
         },
         "stage-eggd_msipro_score.msi_threshold": 8,
-        "stage-eggd_msipro_score.sample_id": "INPUT-SAMPLE-NAME",
-        "stage-eggd_msisensor2.models_dir": "/usr/share/msisensor2/models_hg38",
-        "stage-eggd_msisensor2.msi_scan": {
-          "$dnanexus_link": {
-            "project": "project-J75xJY843ZZ0ZGPV0J1Yz8p7",
-            "id": "file-J8FGyK843ZZ47JzxGfYQ2Xg1"
-          }
-        },
-        "stage-eggd_msisensor2.tumor_bam": {
-          "$dnanexus_link": {
-            "job": "analysis_1",
-            "field": "mappings_bam"
-          }
-        },
-        "stage-eggd_msisensor2.tumor_bam_bai": {
-          "$dnanexus_link": {
-            "job": "analysis_1",
-            "field": "mappings_bam_bai"
-          }
-        }
+        "stage-eggd_msipro_score.sample_id": "INPUT-SAMPLE-NAME"
       },
       "output_dirs": {
         "stage-eggd_pyTMB": "/OUT-FOLDER/STAGE-NAME",
         "stage-eggd_msipro_score": "/OUT-FOLDER/STAGE-NAME",
-        "stage-eggd_msisensor2": "/OUT-FOLDER/STAGE-NAME",
         "stage-eggd_msi_tmb_combiner": "/OUT-FOLDER/STAGE-NAME"
       }
     },
