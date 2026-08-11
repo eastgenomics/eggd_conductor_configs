@@ -38,8 +38,8 @@
     },
     "subset_samplesheet": "-EGG5|-9527-|-9617-",
     "executables": {
-        "workflow-J70bzZj4F33fBzxY8q694105": {
-            "name": "dias_single_v2.15.0",
+        "workflow-J9pzKv84jBJzBZfz33GzFV7q": {
+            "name": "dias_single_v2.16.0",
             "details": "Dias single workflow - Runs Sentieon, vcf_normaliser, multi_fastqc, verifyBAMID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step, eggd_sex_check, and eggd_plot_variant_baf",
             "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
             "analysis": "analysis_1",
