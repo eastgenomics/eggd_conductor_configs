@@ -2,7 +2,7 @@
     "name": "Config for myeloid assay",
     "assay": "MYE",
     "assay_code": "EGG2|-8128-|-8476-|-5877-|-2327-|-10051-",
-    "version": "5.2.6",
+    "version": "5.3.0",
     "details": "Includes main Uranus workflow, eggd_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -62,7 +62,8 @@
         "v5.2.2": "Updated VEP config to v2.1.10 for eggd_vep_cgppindel and eggd_vep_mutect2",
         "v5.2.3": "Updated VEP config to v2.1.11 for ClinVar version 20260510 (hg38)",
         "v5.2.4": "Updated VEP config to v2.1.12 for ClinVar version 20260606 (hg38) and CADD v1.7",
-        "v5.2.6": "Updated VEP config to v2.1.13 for ClinVar version 20260706 (hg38)"
+        "v5.2.6": "Updated VEP config to v2.1.13 for ClinVar version 20260706 (hg38)",
+        "v5.3.0": "Updated main workflow to v3.4.0 and eggd_fastqc to v1.2.1"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -74,8 +75,8 @@
     },
     "subset_samplesheet": "EGG2|-8128-|-8476-|-5877-",
     "executables": {
-        "workflow-J51FpkQ43X145gPZxkKv50x2": {
-            "name": "uranus_main_workflow_GRCh38_v3.3.0",
+        "workflow-J6yf15j43JZvJV9K7Jq8QXQ9": {
+            "name": "uranus_main_workflow_GRCh38_v3.4.0",
             "details": "Main Uranus workflow for alignment and variant calling",
             "url": "https://github.com/eastgenomics/eggd_uranus_main_workflow",
             "analysis": "analysis_1",
@@ -134,6 +135,14 @@
                 },
                 "stage-sentieon_tnbam.run_bqsr": true,
                 "stage-sentieon_tnbam.somatic_algo": "TNhaplotyper2",
+                "stage-vcf_normaliser_cgppindel.bcftools_options": "-m -any",
+                "stage-vcf_normaliser_cgppindel.fasta_tar": {
+                    "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+                },
+                "stage-vcf_normaliser_mutect2.bcftools_options": "-m -any --keep-sum AD",
+                "stage-vcf_normaliser_mutect2.fasta_tar": {
+                    "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+                },
                 "stage-eggd_vep_cgppindel.panel_bed": {
                     "$dnanexus_link": "file-Gqy4V1Q47xBXYzfKxb22fGXz"
                 },
@@ -313,6 +322,8 @@
                 "stage-sentieon_bwa": "/OUT-FOLDER/STAGE-NAME",
                 "stage-sentieon_tnbam": "/OUT-FOLDER/STAGE-NAME",
                 "stage-cgppindel": "/OUT-FOLDER/STAGE-NAME",
+                "stage-vcf_normaliser_cgppindel": "/OUT-FOLDER/STAGE-NAME",
+                "stage-vcf_normaliser_mutect2": "/OUT-FOLDER/STAGE-NAME",
                 "stage-eggd_vep_cgppindel": "/OUT-FOLDER/STAGE-NAME",
                 "stage-eggd_vep_mutect2": "/OUT-FOLDER/STAGE-NAME",
                 "stage-eggd_vcf_rescue": "/OUT-FOLDER/STAGE-NAME",
@@ -327,7 +338,7 @@
                 "stage-apheleia": "OUT-FOLDER/STAGE-NAME"
             }
         },
-        "app-GZx3kyQ4vjBq4xBgykzk5J98": {
+        "app-J9kf6084BYg7QVKfKX262x7f": {
             "name": "eggd_fastqc",
             "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
             "url": "https://github.com/eastgenomics/eggd_fastqc",
@@ -338,7 +349,7 @@
                 "fastqs": "INPUT-R1-R2"
             },
             "output_dirs": {
-                "app-GZx3kyQ4vjBq4xBgykzk5J98": "/OUT-FOLDER/APP-NAME"
+                "app-J9kf6084BYg7QVKfKX262x7f": "/OUT-FOLDER/APP-NAME"
             }
         },
         "app-J6Q1VVQ4Pf3XgF2j1jz53qv9": {
