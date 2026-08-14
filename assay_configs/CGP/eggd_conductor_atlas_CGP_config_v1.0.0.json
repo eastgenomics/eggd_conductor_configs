@@ -386,7 +386,7 @@
         "app-J9J2yQj441QYqP572g95kFF1": "/OUT-FOLDER/APP-NAME"
       }
     },
-    "app-J9P1j884Q0v0zfbV4VjzXkBk": {
+    "app-J9zQG1044bP7FqfFYGQ8J0zP": {
       "name": "eggd_cgp-cnvkit-pon",
       "details": "Creates panel of normals for use in CNVkit somatic CNV calling",
       "url": "https://github.com/eastgenomics/eggd_cgp-cnvkit-pon",
@@ -404,7 +404,7 @@
         }
       },
       "output_dirs": {
-        "app-J9P1j884Q0v0zfbV4VjzXkBk": "/OUT-FOLDER/APP-NAME"
+        "app-J9zQG1044bP7FqfFYGQ8J0zP": "/OUT-FOLDER/APP-NAME"
       }
     },
     "workflow-J9kYV3Q4KvFp83JZQyp89VKF": {
