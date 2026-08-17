@@ -1,0 +1,174 @@
+{
+    "name": "Config for Eunomia pipeline with RES assay",
+    "assay": "RES",
+    "assay_code": "-10011|-10012|-10042|-10043|-2222|-10027|-10053",
+    "version": "1.0.0",
+    "details": "Initial release of assay config",
+    "changelog": {
+        "v1.0.0": "Initial release of assay config"
+    },
+    "demultiplex": true,
+    "demultiplex_config": {
+        "app_id": "app-J1VFP0Q4VpfGKKG1V7XgYXQ5",
+        "additional_args": "--strict-mode true",
+        "instance_type": "mem2_ssd1_v2_x48"
+    },
+    "users": {
+        "org-emee_1": "CONTRIBUTE"
+    },
+    "subset_samplesheet": "-10011|-10012|-10042|-10043",
+    "executables": {
+        "workflow-J75xqgj4jX1KzqP5xJQkKVVY": {
+            "name": "eunomia_workflow_v2.0.0",
+            "details": "Eunomia workflow",
+            "url": "https://github.com/eastgenomics/eggd_eunomia_workflow",
+            "analysis": "analysis_1",
+            "per_sample": true,
+            "process_fastqs": true,
+            "hold": false,
+            "extra_args": {
+                "stageSystemRequirements": {
+                    "stage-staraligner": {
+                        "*": {
+                            "instanceType": "mem1_ssd1_v2_x36"
+                        }
+                    },
+                    "stage-picard": {
+                        "*": {
+                            "instanceType": "mem1_ssd2_v2_x4"
+                        }
+                    }
+                },
+                "priority": "high"
+            },
+            "inputs": {
+                "stage-staraligner.fastqs": "INPUT-R1-R2",
+                "stage-staraligner.sentieon_tar": {
+                    "$dnanexus_link": "file-J0K7q784JpPxYJy7zJPQF7qG"
+                },
+                "stage-staraligner.ctat_genome_indices_read_length": 151,
+                "stage-staraligner.genome_lib":{
+                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
+                },
+                "stage-staraligner.opt_parameters": "--outBAMcompression 0 --outSAMstrandField intronMotif --outSAMunmapped Within --outReadsUnmapped None --chimSegmentMin 12 --chimJunctionOverhangMin 8 --chimOutJunctionFormat 1 --alignSJDBoverhangMin 10 --alignMatesGapMax 100000 --alignIntronMax 100000 --alignSJstitchMismatchNmax 5 -1 5 5 --alignInsertionFlush Right --alignSplicedMateMapLminOverLmate 0 --alignSplicedMateMapLmin 30 --chimMultimapScoreRange 3 --chimScoreJunctionNonGTAG -4 --chimMultimapNmax 20 --chimNonchimScoreDropMin 10 --peOverlapNbasesMin 12 --peOverlapMMp 0.1 --genomeLoad NoSharedMemory --twopassMode Basic --quantMode GeneCounts --chimOutType WithinBAM Junctions",
+                "stage-starfusion.sf_docker": {
+                    "$dnanexus_link": "file-GGygFkQ4Y6Yjp0jpBjgV9VZx"
+                },
+                "stage-arriba.arriba_tar": {
+                    "$dnanexus_link": "file-Gyfv7X044JZyyp4Q6XPXVj5b"
+                },
+                "stage-arriba.genome_lib": {
+                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
+                },
+                "stage-arriba.arriba_visual_script": true,
+                "stage-starfusion.genome_lib": {
+                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
+                },
+                "stage-rnaseqc.docker": {
+                    "$dnanexus_link": "file-Gp2YvGj43p6bP660QjZ6zV60"
+                },
+                "stage-rnaseqc.CTAT_bundle": {
+                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
+                },
+                "stage-rnaseqc.bed": {
+                    "$dnanexus_link": "file-Gp8Xxv842QQqKY9Z5938xQP0"
+                },
+                "stage-picard.fasta_index": {
+                    "$dnanexus_link": "file-GJfX12j41p4GY5K3PY65VFjj"
+                },
+                "stage-picard.ref_annot_refflat": {
+                    "$dnanexus_link": "file-GxQ3f9j4vP4x9XYP7kz0ZvB0"
+                },
+                "stage-picard.run_CollectMultipleMetrics": false,
+                "stage-picard.run_CollectHsMetrics": false,
+                "stage-picard.run_CollectRnaSeqMetrics": true,
+                "stage-fastqc.fastqs": "INPUT-R1-R2"
+            },
+            "output_dirs": {
+                "stage-staraligner": "/OUT-FOLDER/STAGE-NAME",
+                "stage-starfusion": "/OUT-FOLDER/STAGE-NAME",
+                "stage-arriba": "/OUT-FOLDER/STAGE-NAME",
+                "stage-rnaseqc": "/OUT-FOLDER/STAGE-NAME",
+                "stage-picard": "/OUT-FOLDER/STAGE-NAME",
+                "stage-fastqc": "/OUT-FOLDER/STAGE-NAME"
+            }
+        },
+        "app-J24Ffv8469JKgKQ88bX2kYF2": {
+            "name": "MultiQC",
+            "details": "MultiQC app to generate aggregated run level QC report",
+            "url": "https://github.com/eastgenomics/eggd_multiqc",
+            "analysis": "analysis_2",
+            "depends_on": ["analysis_1"],
+            "per_sample": false,
+            "process_fastqs": false,
+            "inputs": {
+                "project_for_multiqc": "INPUT-dx_project_name",
+                "primary_workflow_output": "INPUT-parent_out_dir",
+                "multiqc_config_file": {
+                    "$dnanexus_link": "file-J3403z84X3pXyK4Jx6Qgfzjf"
+                },
+                "multiqc_docker": {
+                    "$dnanexus_link": "file-J08KZb04bX05K677bv83GY2q"
+                },
+                "calc_custom_coverage": false,
+                "depths": "250,500,1000"
+            },
+            "output_dirs": {
+                "app-J24Ffv8469JKgKQ88bX2kYF2": "/OUT-FOLDER/APP-NAME"
+            }
+        },
+        "app-J7Yb11j4YXXxj81jpY5B86z7": {
+             "name": "eggd_generate_fusion_workbook/1.2.0",
+            "details": "App to generate fusion workbook",
+            "url": "https://github.com/eastgenomics/eggd_generate_fusion_workbook",
+            "analysis": "analysis_3",
+            "depends_on": ["analysis_1", "analysis_2"],
+            "per_sample": false,
+            "process_fastqs": false,
+            "inputs": {
+                "starfusion_files": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-starfusion",
+                        "field": "starfusion_abridged"
+                    }
+                },
+                "arriba_files": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-arriba",
+                        "field": "arriba_full"
+                    }
+                },
+                "multiqc_files": {
+                    "$dnanexus_link": {
+                        "job": "analysis_2",
+                        "field": "multiqc_data_files"
+                    }
+                },
+                "SF_previous_runs_data": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J6j4Fqj44Kkg9vYKYp2ZJZ3G"
+                    }
+                },
+                "reference_sources": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J18490j48F3b2zB4Z27KJJk4"
+                    }
+                },
+                "previous_positives": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-J753pPQ44KkgG0B26fxGyXg3"
+                    }
+                }
+            },
+            "output_dirs": {
+                "app-J1vQGq04Z51fGgFQ924V7bYQ": "/OUT-FOLDER/APP-NAME"
+            }
+        }
+    }
+}
+ 
