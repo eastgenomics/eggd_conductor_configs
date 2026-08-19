@@ -249,8 +249,8 @@
           }
         },
         "stage-sompy.query_vcf_string": "-[0-9]+Q[0-9]+-",
-        "stage-sex_check.male_threshold": 5.26,
-        "stage-sex_check.female_threshold": 5.7,
+        "stage-sex_check.male_threshold": 3.8,
+        "stage-sex_check.female_threshold": 4.5,
         "stage-sex_check.input_bam": {
           "$dnanexus_link": {
             "job": "analysis_1",
