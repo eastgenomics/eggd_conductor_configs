@@ -148,7 +148,7 @@
                     "$dnanexus_link": "file-Gqy4V1Q47xBXYzfKxb22fGXz"
                 },
                 "stage-eggd_vep_cgppindel.config_file": {
-                    "$dnanexus_link": "file-J9Qy1k842ffZgQg7382F2V0V"
+                    "$dnanexus_link": "file-JB2kVY042ffxgv31Bq890Qvp"
                 },
                 "stage-eggd_vep_cgppindel.normalise": false,
                 "stage-eggd_vep_mutect2.panel_bed": {
