@@ -138,7 +138,10 @@
           }
         },
         "stage-verifybamid.vcf_file": {
-          "$dnanexus_link": "file-G7YKFZj4kj47GxgQ2bKGYV1g"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-G7YKFZj4kj47GxgQ2bKGYV1g"
+          }
         },
         "stage-picard.sorted_bam": {
           "$dnanexus_link": {
@@ -154,10 +157,16 @@
           }
         },
         "stage-picard.fasta_index": {
-          "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
+          }
         },
         "stage-picard.dbsnp_vcf": {
-          "$dnanexus_link": "file-GyfBYg8433GkZg7X1B23qFfj"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-GyfBYg8433GkZg7X1B23qFfj"
+          }
         },
         "stage-picard.stringency": "silent",
         "stage-mosdepth.qual_flags": true,
