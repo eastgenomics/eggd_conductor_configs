@@ -325,8 +325,8 @@
         },
         "stage-eggd_msipro_score.tumour_bam": {
           "$dnanexus_link": {
-              "job": "analysis_2",
-              "field": "output_bam"
+            "job": "analysis_2",
+            "field": "output_bam"
           }
         },
         "stage-eggd_msipro_score.tumour_bai": {
@@ -366,22 +366,21 @@
       "process_fastqs": false,
       "inputs": {
         "tumour_bam": {
-            "$dnanexus_link": {
-                "job": "analysis_2",
-                "field": "output_bam"
-            }
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "output_bam"
+          }
         },
         "tumour_bai": {
           "$dnanexus_link": {
-              "job": "analysis_2",
-              "field": "output_bai"
-            }
+            "job": "analysis_2",
+            "field": "output_bai"
+          }
         },
         "sample_id": "INPUT-SAMPLE-NAME",
         "baits": {
           "$dnanexus_link": "file-J8F94G845FG5ZG55xFzF1fP6"
         }
-
       },
       "output_dirs": {
         "app-J9J2yQj441QYqP572g95kFF1": "/OUT-FOLDER/APP-NAME"
@@ -399,9 +398,9 @@
         "pon_name": "INPUT-dx_project_name",
         "coverage_files": {
           "$dnanexus_link": {
-              "job": "analysis_5",
-              "field": "coverage_cnn"
-            }
+            "job": "analysis_5",
+            "field": "coverage_cnn"
+          }
         }
       },
       "output_dirs": {
@@ -413,23 +412,21 @@
       "details": "Somatic CNV workflow for Atlas",
       "url": "https://github.com/eastgenomics/eggd_atlas_cnv_workflow",
       "analysis": "analysis_7",
-      "depends_on": [
-        "analysis_2", "analysis_5", "analysis_6"
-      ],
+      "depends_on": ["analysis_2", "analysis_5", "analysis_6"],
       "per_sample": true,
       "process_fastqs": false,
       "inputs": {
         "stage-amber.tumour_bam": {
-            "$dnanexus_link": {
-                "job": "analysis_2",
-                "field": "output_bam"
-            }
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "output_bam"
+          }
         },
         "stage-amber.tumour_bai": {
           "$dnanexus_link": {
-              "job": "analysis_2",
-              "field": "output_bai"
-            }
+            "job": "analysis_2",
+            "field": "output_bai"
+          }
         },
         "stage-amber.sample_id": "INPUT-SAMPLE-NAME",
         "stage-amber.amber_jar": {
@@ -439,16 +436,16 @@
           "$dnanexus_link": "file-J88xxvQ4QyV82JKY5PkqXGbv"
         },
         "stage-cobalt.tumour_bam": {
-            "$dnanexus_link": {
-                "job": "analysis_2",
-                "field": "output_bam"
-            }
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "output_bam"
+          }
         },
         "stage-cobalt.tumour_bai": {
           "$dnanexus_link": {
-              "job": "analysis_2",
-              "field": "output_bai"
-            }
+            "job": "analysis_2",
+            "field": "output_bai"
+          }
         },
         "stage-cobalt.sample_id": "INPUT-SAMPLE-NAME",
         "stage-cobalt.cobalt_jar": {
@@ -473,16 +470,16 @@
           "$dnanexus_link": "file-GjPxp3Q4qv8Vk76xFVjfyPgJ"
         },
         "stage-sage.tumour_bam": {
-            "$dnanexus_link": {
-                "job": "analysis_2",
-                "field": "output_bam"
-            }
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "output_bam"
+          }
         },
         "stage-sage.tumour_bai": {
           "$dnanexus_link": {
-              "job": "analysis_2",
-              "field": "output_bai"
-            }
+            "job": "analysis_2",
+            "field": "output_bai"
+          }
         },
         "stage-sage.sample_id": "INPUT-SAMPLE-NAME",
         "stage-sage.sage_jar": {
@@ -554,16 +551,16 @@
         "stage-purple.sample_id": "INPUT-SAMPLE-NAME",
         "stage-purple.ploidy_cap_purity_threshold": 0.35,
         "stage-cnvkit_batch.tumour_bam": {
-            "$dnanexus_link": {
-                "job": "analysis_2",
-                "field": "output_bam"
-            }
+          "$dnanexus_link": {
+            "job": "analysis_2",
+            "field": "output_bam"
+          }
         },
         "stage-cnvkit_batch.tumour_bai": {
           "$dnanexus_link": {
-              "job": "analysis_2",
-              "field": "output_bai"
-            }
+            "job": "analysis_2",
+            "field": "output_bai"
+          }
         },
         "stage-cnvkit_batch.sample_id": "INPUT-SAMPLE-NAME",
         "stage-cnvkit_batch.cn_reference": {
@@ -716,11 +713,7 @@
       "analysis": "analysis_10",
       "per_sample": true,
       "process_fastqs": false,
-      "depends_on": [
-        "analysis_3",
-        "analysis_4",
-        "analysis_7"
-      ],
+      "depends_on": ["analysis_3", "analysis_4", "analysis_7"],
       "inputs": {
         "vcfs": {
           "$dnanexus_link": {
@@ -731,11 +724,12 @@
         },
         "additional_files": [
           {
-          "$dnanexus_link": {
-            "analysis": "analysis_4",
-            "stage": "stage-eggd_msi_tmb_combiner",
-            "field": "msi_tmb_combined_file"
-          }},
+            "$dnanexus_link": {
+              "analysis": "analysis_4",
+              "stage": "stage-eggd_msi_tmb_combiner",
+              "field": "msi_tmb_combined_file"
+            }
+          },
           {
             "$dnanexus_link": {
               "analysis": "analysis_7",
@@ -744,11 +738,12 @@
             }
           },
           {
-          "$dnanexus_link": {
-            "analysis": "analysis_7",
-            "stage": "stage-cnv_chr_strip",
-            "field": "cnvkit_genemetrics_nochr"
-          }}
+            "$dnanexus_link": {
+              "analysis": "analysis_7",
+              "stage": "stage-cnv_chr_strip",
+              "field": "cnvkit_genemetrics_nochr"
+            }
+          }
         ],
         "image_file": {
           "$dnanexus_link": {
@@ -759,7 +754,7 @@
         },
         "image_sizes": "856:675",
         "image_sheet_names": "plot_cnv_targeted",
-        "additional_sheet_names":"msi_tmb cnv_global cnv_targeted",
+        "additional_sheet_names": "msi_tmb cnv_global cnv_targeted",
         "include_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC",
         "reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
         "rename_columns": "CSQ_Existing_variation=dbSNP CSQ_Feature=Transcript_ID DP=Read_Depth CSQ_EG_LC=Latest_Classification CSQ_EG_LCD=Latest_Classification_Date CSQ_EG_LCS=Latest_Specimen_ID CSQ_EG_TC=Total_Classifications",
