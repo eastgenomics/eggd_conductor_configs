@@ -320,7 +320,7 @@
         "stage-eggd_msipro_score.msi_sites": {
           "$dnanexus_link": {
             "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "file-J8J1KZ84YQBy6PK9GKXZpK4g"
+            "id": "file-J9y5g0j4jB0kxbb5Y1vkQ27p"
           }
         },
         "stage-eggd_msipro_score.tumour_bam": {
@@ -338,7 +338,7 @@
         "stage-eggd_msipro_score.baseline_tar": {
           "$dnanexus_link": {
             "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "file-J8J1p304y058QKQ70xqGj1yF"
+            "id": "file-J9y5g204jB0fP0GY035Xx4FY"
           }
         },
         "stage-eggd_msipro_score.msisensor_pro": {
@@ -736,6 +736,13 @@
             "stage": "stage-eggd_msi_tmb_combiner",
             "field": "msi_tmb_combined_file"
           }},
+          {
+            "$dnanexus_link": {
+              "analysis": "analysis_7",
+              "stage": "stage-cnv_chr_strip",
+              "field": "cnvkit_call_cns_nochr"
+            }
+          },
           {
           "$dnanexus_link": {
             "analysis": "analysis_7",
