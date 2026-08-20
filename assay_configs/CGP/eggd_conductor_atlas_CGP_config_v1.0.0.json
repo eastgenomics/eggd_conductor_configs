@@ -754,7 +754,7 @@
             }
           }
         ],
-        "image_file": {
+        "images": {
           "$dnanexus_link": {
             "analysis": "analysis_7",
             "stage": "stage-cnvkit_batch",
