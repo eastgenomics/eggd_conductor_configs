@@ -2,7 +2,7 @@
     "name": "Config for HRD assay",
     "assay": "HRD",
     "assay_code": "-9197|-10021|-2435|-10050",
-    "version": "1.2.0",
+    "version": "v1.2.0",
     "details": "Includes 'demultiplexing and multiQC'",
     "changelog": {
         "v1.0.0": "Initial working version",
