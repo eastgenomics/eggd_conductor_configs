@@ -18,7 +18,7 @@
     "executables": {
         "app-J9kf6084BYg7QVKfKX262x7f": {
             "name": "eggd_fastqc",
-            "details": "Runs fastqc once for each input fastq",
+            "details": "Runs fastqc once for each input fastq at per sample level.",
             "url": "https://github.com/eastgenomics/eggd_fastqc",
             "analysis": "analysis_1",
             "per_sample": true,
