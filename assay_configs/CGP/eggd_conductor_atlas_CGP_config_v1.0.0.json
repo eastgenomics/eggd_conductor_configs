@@ -286,11 +286,32 @@
         "stage-vcf_normaliser": "/OUT-FOLDER/STAGE-NAME"
       }
     },
+    "app-J2fv5P89f2ZFbj52533QZKPG": {
+      "name": "Swiss Army Knife",
+      "details": "Swiss Army Knife app to retain only FILTER=PASS variants",
+      "analysis": "analysis_4",
+      "per_sample": true,
+      "process_fastqs": false,
+      "depends_on": ["analysis_1", "analysis_2", "analysis_3"],
+      "inputs": {
+        "in": {
+          "$dnanexus_link": {
+            "analysis": "analysis_3",
+            "stage": "stage-eggd_vep",
+            "field": "annotated_vcf"
+          }
+        },
+        "cmd": "(set -eo pipefail; vcf=$(ls *_annotated.vcf.gz); bcftools view -f PASS \"$vcf\" -Oz -o \"${vcf%.vcf.gz}_PASS.vcf.gz\")"
+      },
+      "output_dirs": {
+        "app-J2fv5P89f2ZFbj52533QZKPG": "/OUT-FOLDER/APP-NAME"
+      }
+    },
     "workflow-J9q04qQ431P1g8Q4qg0KXy86": {
       "name": "msi_tmb_workflow_v1.0.0",
       "details": "MSI + TMB atlas workflow",
       "url": "https://github.com/eastgenomics/eggd_msi_tmb_workflow",
-      "analysis": "analysis_4",
+      "analysis": "analysis_5",
       "depends_on": ["analysis_2", "analysis_3"],
       "per_sample": true,
       "process_fastqs": false,
@@ -369,7 +390,7 @@
       "name": "eggd_cgp-cnvkit-coverage",
       "details": "Creates coverage .cnn file for use in creation of CNV PON",
       "url": "https://github.com/eastgenomics/eggd_cgp-cnvkit-coverage",
-      "analysis": "analysis_5",
+      "analysis": "analysis_6",
       "depends_on": ["analysis_2"],
       "per_sample": true,
       "process_fastqs": false,
@@ -399,17 +420,17 @@
       "name": "eggd_cgp-cnvkit-pon",
       "details": "Creates panel of normals for use in CNVkit somatic CNV calling",
       "url": "https://github.com/eastgenomics/eggd_cgp-cnvkit-pon",
-      "analysis": "analysis_6",
-      "depends_on": ["analysis_5"],
+      "analysis": "analysis_7",
+      "depends_on": ["analysis_6"],
       "per_sample": false,
       "process_fastqs": false,
       "inputs": {
         "pon_name": "INPUT-dx_project_name",
         "coverage_files": {
           "$dnanexus_link": {
-            "job": "analysis_5",
-            "field": "coverage_cnn"
-          }
+              "job": "analysis_6",
+              "field": "coverage_cnn"
+            }
         }
       },
       "output_dirs": {
@@ -420,8 +441,10 @@
       "name": "atlas_cnv_workflow_v1.0.0",
       "details": "Somatic CNV workflow for Atlas",
       "url": "https://github.com/eastgenomics/eggd_atlas_cnv_workflow",
-      "analysis": "analysis_7",
-      "depends_on": ["analysis_2", "analysis_5", "analysis_6"],
+      "analysis": "analysis_8",
+      "depends_on": [
+        "analysis_2", "analysis_6", "analysis_7"
+      ],
       "per_sample": true,
       "process_fastqs": false,
       "inputs": {
@@ -574,7 +597,7 @@
         "stage-cnvkit_batch.sample_id": "INPUT-SAMPLE-NAME",
         "stage-cnvkit_batch.cn_reference": {
           "$dnanexus_link": {
-            "job": "analysis_6",
+            "job": "analysis_7",
             "field": "cn_reference"
           }
         },
@@ -676,7 +699,7 @@
       "name": "eggd_fastqc",
       "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
       "url": "https://github.com/eastgenomics/eggd_fastqc",
-      "analysis": "analysis_8",
+      "analysis": "analysis_9",
       "per_sample": false,
       "process_fastqs": true,
       "inputs": {
@@ -690,10 +713,10 @@
       "name": "MultiQC",
       "details": "MultiQC app to generate aggregated run level QC report",
       "url": "https://github.com/eastgenomics/eggd_multiqc",
-      "analysis": "analysis_9",
+      "analysis": "analysis_10",
       "per_sample": false,
       "process_fastqs": false,
-      "depends_on": ["analysis_1", "analysis_2", "analysis_3", "analysis_8"],
+      "depends_on": ["analysis_1", "analysis_2", "analysis_3", "analysis_9"],
       "inputs": {
         "project_for_multiqc": "INPUT-dx_project_name",
         "primary_workflow_output": "INPUT-parent_out_dir",
@@ -719,26 +742,29 @@
       "name": "eggd_generate_variant_workbook",
       "details": "Generates a variant workbook from the VCF output of the atlas workflows",
       "url": "https://github.com/eastgenomics/eggd_generate_variant_workbook",
-      "analysis": "analysis_10",
+      "analysis": "analysis_11",
       "per_sample": true,
       "process_fastqs": false,
-      "depends_on": ["analysis_3", "analysis_4", "analysis_7"],
+      "depends_on": [
+        "analysis_3",
+        "analysis_4",
+        "analysis_5",
+        "analysis_8"
+      ],
       "inputs": {
         "vcfs": {
           "$dnanexus_link": {
-            "analysis": "analysis_3",
-            "stage": "stage-eggd_vep",
-            "field": "annotated_vcf"
+            "job": "analysis_4",
+            "field": "out"
           }
         },
         "additional_files": [
           {
-            "$dnanexus_link": {
-              "analysis": "analysis_4",
-              "stage": "stage-eggd_msi_tmb_combiner",
-              "field": "msi_tmb_combined_file"
-            }
-          },
+          "$dnanexus_link": {
+            "analysis": "analysis_5",
+            "stage": "stage-eggd_msi_tmb_combiner",
+            "field": "msi_tmb_combined_file"
+          }},
           {
             "$dnanexus_link": {
               "analysis": "analysis_7",
@@ -747,25 +773,24 @@
             }
           },
           {
-            "$dnanexus_link": {
-              "analysis": "analysis_7",
-              "stage": "stage-cnv_chr_strip",
-              "field": "cnvkit_genemetrics_nochr"
-            }
-          }
+          "$dnanexus_link": {
+            "analysis": "analysis_8",
+            "stage": "stage-cnv_chr_strip",
+            "field": "cnvkit_genemetrics_nochr"
+          }}
         ],
         "images": {
           "$dnanexus_link": {
-            "analysis": "analysis_7",
+            "analysis": "analysis_8",
             "stage": "stage-cnvkit_batch",
             "field": "scatter_png"
           }
         },
         "image_sizes": "856:675",
         "image_sheet_names": "plot_cnv_targeted",
-        "additional_sheet_names": "msi_tmb cnv_global cnv_targeted",
-        "include_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED ",
-        "reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
+        "additional_sheet_names":"msi_tmb cnv_global cnv_targeted",
+        "include_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED CSQ_REVEL",
+        "reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED CSQ_REVEL Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
         "rename_columns": "CSQ_Existing_variation=dbSNP CSQ_Feature=Transcript_ID DP=Read_Depth CSQ_EG_LC=Latest_Classification CSQ_EG_LCD=Latest_Classification_Date CSQ_EG_LCS=Latest_Specimen_ID CSQ_EG_TC=Total_Classifications",
         "filter": "bcftools filter -e 'FORMAT/DP < 99 | CSQ_gnomADe_AF > 0.01 | CSQ_gnomADg_AF > 0.01 | AF < 0.05 | CSQ_Consequence==\"intron_variant&non_coding_transcript_variant\" | CSQ_Consequence==\"non_coding_transcript_exon_variant\" | CSQ_Consequence==\"3_prime_UTR_variant\" | CSQ_Consequence==\"5_prime_UTR_variant\" | CSQ_Consequence==\"downstream_gene_variant\" | CSQ_Consequence==\"intron_variant\" | CSQ_Consequence==\"splice_region_variant&intron_variant\" | CSQ_Consequence==\"splice_region_variant&synonymous_variant\" | CSQ_Consequence==\"synonymous_variant\" | (CSQ_SYMBOL != \"TERT\" & CSQ_Consequence==\"upstream_gene_variant\")'",
         "keep_filtered": true,
