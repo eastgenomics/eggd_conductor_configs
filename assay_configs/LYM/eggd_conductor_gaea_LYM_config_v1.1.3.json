@@ -224,7 +224,7 @@
                 "stage-apheleia": "OUT-FOLDER/STAGE-NAME"
             }
         },
-        "app-GZx3kyQ4vjBq4xBgykzk5J98": {
+        "app-J9kf6084BYg7QVKfKX262x7f": {
             "name": "eggd_fastqc",
             "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
             "url": "https://github.com/eastgenomics/eggd_fastqc",
@@ -235,7 +235,7 @@
                 "fastqs": "INPUT-R1-R2"
             },
             "output_dirs": {
-                "app-GZx3kyQ4vjBq4xBgykzk5J98": "/OUT-FOLDER/APP-NAME"
+                "app-J9kf6084BYg7QVKfKX262x7f": "/OUT-FOLDER/APP-NAME"
             }
         },
         "app-J24Ffv8469JKgKQ88bX2kYF2": {
