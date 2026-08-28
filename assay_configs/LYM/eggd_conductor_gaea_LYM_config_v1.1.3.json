@@ -22,8 +22,8 @@
     },
     "subset_samplesheet": "-10056-|-10055-",
     "executables": {
-        "workflow-J5yJQp84zfVz4Gg4YF30yqjP": {
-            "name": "gaea_main_workflow_v1.0.0",
+        "workflow-JB3XZ9047fbXGVJq9xyYv8xg": {
+            "name": "gaea_main_workflow_v1.1.0",
             "details": "Main Gaea workflow for alignment and variant calling",
             "url": "https://github.com/eastgenomics/eggd_gaea_main_workflow",
             "analysis": "analysis_1",
