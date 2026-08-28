@@ -31,8 +31,8 @@
     },
     "subset_samplesheet": "-10011|-10012|-10042|-10043",
     "executables": {
-        "workflow-J4PVJY04jKby1J97Y55x5x7X": {
-            "name": "eunomia_workflow_v1.4.1",
+        "workflow-JB7Fxk84Y8QyQZJ9b8Q4G18B": {
+            "name": "eunomia_workflow_v1.5.0",
             "details": "Eunomia workflow",
             "url": "https://github.com/eastgenomics/eggd_eunomia_workflow",
             "analysis": "analysis_1",
