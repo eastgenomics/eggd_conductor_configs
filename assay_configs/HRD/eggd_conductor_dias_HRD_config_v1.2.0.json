@@ -2,12 +2,13 @@
     "name": "Config for HRD assay",
     "assay": "HRD",
     "assay_code": "-9197|-10021|-2435|-10050",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "details": "Includes 'demultiplexing and multiQC'",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated assay code to include top up codes.Add subset_samplesheet to include non-top up codes",
-        "v1.1.1": "Updated assay code"
+        "v1.1.1": "Updated assay code",
+        "v1.2.0": "Updated version and replaced multi_fastqc applet with eggd_fastqc app v1.2.1"
     },
     "demultiplex": true,
     "users": {
@@ -15,9 +16,9 @@
     },
     "subset_samplesheet": "-9197|-10021",
     "executables": {
-        "applet-FvyXygj433GbKPPY0QY8ZKQG": {
-            "name": "multi_fastqc",
-            "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
+        "app-J9kf6084BYg7QVKfKX262x7f": {
+            "name": "eggd_fastqc",
+            "details": "Runs fastqc once for each input fastq at per sample level.",
             "url": "https://github.com/eastgenomics/eggd_fastqc",
             "analysis": "analysis_1",
             "per_sample": true,
@@ -26,7 +27,7 @@
                 "fastqs": "INPUT-R1-R2"
             },
             "output_dirs": {
-                "applet-FvyXygj433GbKPPY0QY8ZKQG": "/OUT-FOLDER/APP-NAME"
+                "app-J9kf6084BYg7QVKfKX262x7f": "/OUT-FOLDER/APP-NAME"
             }
         },
      "app-GF3K4Qj4bJyvpzx055V3G8q7": {
