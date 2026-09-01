@@ -287,7 +287,7 @@
       }
     },
     "workflow-J9q04qQ431P1g8Q4qg0KXy86": {
-      "name": "msi_tmb_workflow_v1.0.0",
+      "name": "msi_tmb_workflow_v1.1.0",
       "details": "MSI + TMB atlas workflow",
       "url": "https://github.com/eastgenomics/eggd_msi_tmb_workflow",
       "analysis": "analysis_4",
