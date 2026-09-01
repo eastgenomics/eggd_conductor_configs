@@ -64,7 +64,7 @@
         "v5.2.4": "Updated VEP config to v2.1.12 for ClinVar version 20260606 (hg38) and CADD v1.7",
         "v5.2.6": "Updated VEP config to v2.1.13 for ClinVar version 20260706 (hg38)",
         "v5.3.0": "Updated main workflow to v3.4.0 and eggd_fastqc to v1.2.1",
-        "v5.3.1": "Updated VEP config to v2.1.14 for ClinVar version 20260804 (hg38)"
+        "v5.3.1": "Updated VEP config to v2.1.14 for ClinVar version 20260804 (hg38), update demultiplex config instance to mem2_ssd1_v2_x48"
     },
     "demultiplex": true,
     "demultiplex_config": {
