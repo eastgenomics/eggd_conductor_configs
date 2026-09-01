@@ -220,7 +220,8 @@
                 "stage-mosdepth": "/OUT-FOLDER/STAGE-NAME",
                 "stage-athena": "/OUT-FOLDER/STAGE-NAME",
                 "stage-sompy": "/OUT-FOLDER/STAGE-NAME",
-                "stage-sex_check": "/OUT-FOLDER/STAGE-NAME"
+                "stage-sex_check": "/OUT-FOLDER/STAGE-NAME",
+                "stage-apheleia": "OUT-FOLDER/STAGE-NAME"
             }
         },
         "app-J9kf6084BYg7QVKfKX262x7f": {
