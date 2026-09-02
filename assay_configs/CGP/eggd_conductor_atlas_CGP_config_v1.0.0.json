@@ -767,7 +767,7 @@
           }},
           {
             "$dnanexus_link": {
-              "analysis": "analysis_7",
+              "analysis": "analysis_8",
               "stage": "stage-cnv_chr_strip",
               "field": "cnvkit_call_cns_nochr"
             }
