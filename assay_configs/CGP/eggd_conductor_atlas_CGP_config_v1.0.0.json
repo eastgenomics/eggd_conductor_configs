@@ -25,6 +25,9 @@
       "analysis": "analysis_1",
       "per_sample": true,
       "process_fastqs": true,
+      "extra_args": {
+        "priority": "high"
+      },
       "inputs": {
         "reads_fastqgzs": "INPUT-R1",
         "reads2_fastqgzs": "INPUT-R2",
@@ -50,6 +53,9 @@
       "analysis": "analysis_2",
       "per_sample": true,
       "process_fastqs": false,
+      "extra_args": {
+        "priority": "high"
+      },
       "inputs": {
         "input_bam": {
           "$dnanexus_link": {
@@ -92,7 +98,8 @@
               "instanceType": "mem1_ssd2_v2_x4"
             }
           }
-        }
+        },
+        "priority": "high"
       },
       "inputs": {
         "stage-sentieon_tnbam.mappings_bam": {
@@ -293,6 +300,9 @@
       "per_sample": true,
       "process_fastqs": false,
       "depends_on": ["analysis_1", "analysis_2", "analysis_3"],
+      "extra_args": {
+        "priority": "high"
+      },
       "inputs": {
         "in": {
           "$dnanexus_link": {
@@ -315,6 +325,9 @@
       "depends_on": ["analysis_2", "analysis_3"],
       "per_sample": true,
       "process_fastqs": false,
+      "extra_args": {
+        "priority": "high"
+      },
       "inputs": {
         "stage-eggd_pyTMB.bam": {
           "$dnanexus_link": {
@@ -394,6 +407,9 @@
       "depends_on": ["analysis_2"],
       "per_sample": true,
       "process_fastqs": false,
+      "extra_args": {
+        "priority": "high"
+      },
       "inputs": {
         "tumour_bam": {
           "$dnanexus_link": {
@@ -424,6 +440,9 @@
       "depends_on": ["analysis_6"],
       "per_sample": false,
       "process_fastqs": false,
+      "extra_args": {
+        "priority": "high"
+      },
       "inputs": {
         "pon_name": "INPUT-dx_project_name",
         "coverage_files": {
@@ -447,6 +466,9 @@
       ],
       "per_sample": true,
       "process_fastqs": false,
+      "extra_args": {
+        "priority": "high"
+      },
       "inputs": {
         "stage-amber.tumour_bam": {
           "$dnanexus_link": {
@@ -711,6 +733,9 @@
       "analysis": "analysis_9",
       "per_sample": false,
       "process_fastqs": true,
+      "extra_args": {
+        "priority": "high"
+      },
       "inputs": {
         "fastqs": "INPUT-R1-R2"
       },
@@ -726,6 +751,9 @@
       "per_sample": false,
       "process_fastqs": false,
       "depends_on": ["analysis_1", "analysis_2", "analysis_3", "analysis_9"],
+      "extra_args": {
+        "priority": "high"
+      },
       "inputs": {
         "project_for_multiqc": "INPUT-dx_project_name",
         "primary_workflow_output": "INPUT-parent_out_dir",
@@ -760,6 +788,9 @@
         "analysis_5",
         "analysis_8"
       ],
+      "extra_args": {
+        "priority": "high"
+      },
       "inputs": {
         "vcfs": {
           "$dnanexus_link": {
