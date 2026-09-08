@@ -518,7 +518,10 @@
           "$dnanexus_link": "file-J8F1bFj4gPFvK81Z330Yfk3j"
         },
         "stage-sage.ref_fasta": {
-          "$dnanexus_link": "file-G5xBZvj4yPz1xZfqKKjkG8xQ"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-Gb73P8Q4XGyX9QZ0g9qp61xV"
+          }
         },
         "stage-sage.hotspots_vcf": {
           "$dnanexus_link": "file-J8F1kQQ4gPFbZQZ1BG7KY62z"
@@ -572,10 +575,16 @@
           "$dnanexus_link": "file-J88gVF84Y8X123K6JX8jB8Z5"
         },
         "stage-purple.ref_fasta": {
-          "$dnanexus_link": "file-Gb757784XGyY3FPvkPQ74K9z"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-Gb73P8Q4XGyX9QZ0g9qp61xV"
+          }
         },
         "stage-purple.ref_fai": {
-          "$dnanexus_link": "file-Gb7578Q4XGyQ8xfvyxJkBgx7"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-Gb735V84XGyYkXYPqGqgz14j"
+          }
         },
         "stage-purple.ensembl_data": {
           "$dnanexus_link": "file-J892FbQ493ZPf7pZzpjX05P6"
