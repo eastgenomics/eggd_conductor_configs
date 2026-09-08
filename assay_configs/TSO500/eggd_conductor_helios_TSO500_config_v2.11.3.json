@@ -48,7 +48,8 @@
         "v2.10.0": "Update TSO500 reports workflow to v2.6.0, incorporating eggd_vcf_normaliser; update MultiQC TSO500 config to v2.3.1",
         "v2.10.1": "Update to latest TSO500 vep config file (v1.2.31)",
         "v2.11.1": "Update to latest TSO500 vep config file (v1.2.32)",
-        "v2.11.2": "Update to latest TSO500 vep config file (v1.2.33)"
+        "v2.11.2": "Update to latest TSO500 vep config file (v1.2.33)",
+        "v2.11.3": "Update to latest TSO500 vep config file (v1.2.34), and update eggd_fastqc to v1.2.1"
     },
     "demultiplex": true,
     "demultiplex_config": {
