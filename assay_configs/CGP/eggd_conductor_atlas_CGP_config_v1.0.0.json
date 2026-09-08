@@ -3,7 +3,7 @@
   "assay": "CGP",
   "assay_code": "-8471|-8475|-9999|-9197|-8473|-10083|-10084",
   "version": "1.0.0",
-  "details": "Includes Sentieon_UMI, main Atlas workflow (small_variants), eggd_generate_variant_workbook, eggd_fastqc and multiQC",
+  "details": "Includes Sentieon_UMI, main Atlas workflow (small_variants), MSI + TMB workflow, eggd_generate_variant_workbook, eggd_fastqc and multiQC",
   "changelog": {
     "v1.0.0": "Initial working version"
   },
@@ -317,8 +317,8 @@
         "app-J2fv5P89f2ZFbj52533QZKPG": "/OUT-FOLDER/APP-NAME"
       }
     },
-    "workflow-J9q04qQ431P1g8Q4qg0KXy86": {
-      "name": "msi_tmb_workflow_v1.0.0",
+    "workflow-JBF96bj46QQ2x5fB2B9xx6jV": {
+      "name": "msi_tmb_workflow_v1.1.0",
       "details": "MSI + TMB atlas workflow",
       "url": "https://github.com/eastgenomics/eggd_msi_tmb_workflow",
       "analysis": "analysis_5",
