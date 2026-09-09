@@ -2,7 +2,7 @@
     "name": "Config for Helios pipeline with TSO500 assay",
     "assay": "TSO500",
     "assay_code": "-8471|-8472|-8475|-9689|-10040|-10041|-2122|-10026|-10054",
-    "version": "2.11.2",
+    "version": "2.11.3",
     "details": "Allocates more storage for the eggd_tso500 app output",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -48,7 +48,8 @@
         "v2.10.0": "Update TSO500 reports workflow to v2.6.0, incorporating eggd_vcf_normaliser; update MultiQC TSO500 config to v2.3.1",
         "v2.10.1": "Update to latest TSO500 vep config file (v1.2.31)",
         "v2.11.1": "Update to latest TSO500 vep config file (v1.2.32)",
-        "v2.11.2": "Update to latest TSO500 vep config file (v1.2.33)"
+        "v2.11.2": "Update to latest TSO500 vep config file (v1.2.33)",
+        "v2.11.3": "Update to latest TSO500 vep config file (v1.2.34), and update eggd_fastqc to v1.2.1"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -88,8 +89,8 @@
                 "app-J1B20pQ4VbqB3jv2q37VP26K": "/OUT-FOLDER/APP-NAME"
             }
         },
-        "app-GZx3kyQ4vjBq4xBgykzk5J98": {
-            "name": "eggd_fastqc/v1.2.0",
+        "app-J9kf6084BYg7QVKfKX262x7f": {
+            "name": "eggd_fastqc/v1.2.1",
             "details": "Takes all fastqs of all samples, starts one job which runs fastqc in sub jobs for each fastq",
             "url": "https://github.com/eastgenomics/eggd_fastqc",
             "analysis": "analysis_2",
@@ -99,7 +100,7 @@
                 "fastqs": "INPUT-R1-R2"
             },
             "output_dirs": {
-                "app-GZx3kyQ4vjBq4xBgykzk5J98": "/OUT-FOLDER/APP-NAME"
+                "app-J9kf6084BYg7QVKfKX262x7f": "/OUT-FOLDER/APP-NAME"
             }
         },
         "app-GjF8gFQ4yyVBg4Y62BV10Vp2": {
@@ -238,7 +239,7 @@
                 "stage-vep.config_file": {
                     "$dnanexus_link": {
                         "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-                        "id": "file-J9VZqgQ40P92bV1Q2fq7Zk17"
+                        "id": "file-JB28PJ840P95b7JQQykjzXX4"
                     }
                 },
                 "stage-vep.transcript_list": {
