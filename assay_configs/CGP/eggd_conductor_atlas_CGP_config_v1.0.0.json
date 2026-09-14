@@ -360,6 +360,8 @@
             "id": "file-J8VKVz847y60Bvz96qp0ypbg"
           }
         },
+        "stage-eggd_pyTMB.min_coverage": 250,
+        "stage-eggd_pyTMB.vaf": 0.1,
         "stage-eggd_msipro_score.msi_sites": {
           "$dnanexus_link": {
             "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
