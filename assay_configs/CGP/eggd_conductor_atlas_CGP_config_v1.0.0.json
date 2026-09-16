@@ -458,8 +458,8 @@
         "app-J9zQG1044bP7FqfFYGQ8J0zP": "/OUT-FOLDER/APP-NAME"
       }
     },
-    "workflow-J9kYV3Q4KvFp83JZQyp89VKF": {
-      "name": "atlas_cnv_workflow_v1.0.0",
+    "workflow-JBZ0BJ842xg2YfjXjKPzQ4F5": {
+      "name": "atlas_cnv_workflow_v1.1.0",
       "details": "Somatic CNV workflow for Atlas",
       "url": "https://github.com/eastgenomics/eggd_atlas_cnv_workflow",
       "analysis": "analysis_8",
@@ -515,15 +515,6 @@
         },
         "stage-cobalt.gc_profile": {
           "$dnanexus_link": "file-J88xxvQ4QyVPb8K6VFqX1FKB"
-        },
-        "stage-cobalt.ref_fasta": {
-          "$dnanexus_link": {
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "file-GjPxXq84qv8xz3ZV1jFq6z3g"
-          }
-        },
-        "stage-cobalt.ref_fai": {
-          "$dnanexus_link": "file-GjPxp3Q4qv8Vk76xFVjfyPgJ"
         },
         "stage-sage.tumour_bam": {
           "$dnanexus_link": {
