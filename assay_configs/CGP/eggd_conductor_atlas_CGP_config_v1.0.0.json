@@ -486,9 +486,11 @@
         },
         "stage-amber.sample_id": "INPUT-SAMPLE-NAME",
         "stage-amber.amber_jar": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J9936z04p12z3FYjFYb448pP"
         },
         "stage-amber.germline_sites": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J88xxvQ4QyV82JKY5PkqXGbv"
         },
         "stage-cobalt.tumour_bam": {
@@ -505,15 +507,19 @@
         },
         "stage-cobalt.sample_id": "INPUT-SAMPLE-NAME",
         "stage-cobalt.cobalt_jar": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J893p9Q470j4zY3zzpVBjP11"
         },
         "stage-cobalt.norm_file": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J89183j4zxxZ5v7Gv5F9BK06"
         },
         "stage-cobalt.diploid_regions": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J88xxvQ4QyV7vyPx294b4Z23"
         },
         "stage-cobalt.gc_profile": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J88xxvQ4QyVPb8K6VFqX1FKB"
         },
         "stage-sage.tumour_bam": {
@@ -530,6 +536,7 @@
         },
         "stage-sage.sample_id": "INPUT-SAMPLE-NAME",
         "stage-sage.sage_jar": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J8F1bFj4gPFvK81Z330Yfk3j"
         },
         "stage-sage.ref_fasta": {
@@ -539,21 +546,27 @@
           }
         },
         "stage-sage.hotspots_vcf": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J8F1kQQ4gPFbZQZ1BG7KY62z"
         },
         "stage-sage.hotspots_tbi": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J8F1kV04gPFz7kZ45XfQPp4K"
         },
         "stage-sage.panel_bed": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J8F1kv84gPFfQKqYbZVYQqv8"
         },
         "stage-sage.hc_bed": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J8F1kVj4gPFkBK29yj6P4BgQ"
         },
         "stage-sage.pon_file": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J8F1kX84gPFpJ2kvz13KJ5kP"
         },
         "stage-sage.ensembl_data": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J892FbQ493ZPf7pZzpjX05P6"
         },
         "stage-purple.amber_tar": {
@@ -581,12 +594,15 @@
           }
         },
         "stage-purple.purple_jar": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J893gpQ470jJPF18gjJ1zg7Y"
         },
         "stage-purple.gc_profile": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J88xxvQ4QyVPb8K6VFqX1FKB"
         },
         "stage-purple.target_regions_bed": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J88gVF84Y8X123K6JX8jB8Z5"
         },
         "stage-purple.ref_fasta": {
@@ -602,6 +618,7 @@
           }
         },
         "stage-purple.ensembl_data": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-J892FbQ493ZPf7pZzpjX05P6"
         },
         "stage-purple.sample_id": "INPUT-SAMPLE-NAME",
@@ -626,6 +643,7 @@
           }
         },
         "stage-cnvkit_batch.baits": {
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
           "$dnanexus_link": "file-JBX3Fbj433GV2K4Y6625Pf3y"
         },
         "stage-cnvkit_batch.purity": {
