@@ -512,7 +512,7 @@
         },
         "stage-cobalt.norm_file": {
           "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J89183j4zxxZ5v7Gv5F9BK06"
+          "$dnanexus_link": "file-JBkKq08433GXB243V86VqGzF"
         },
         "stage-cobalt.diploid_regions": {
           "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
@@ -603,7 +603,7 @@
         },
         "stage-purple.target_regions_bed": {
           "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J88gVF84Y8X123K6JX8jB8Z5"
+          "$dnanexus_link": "file-JBp3vx8433GQbP2bJY9J9X7V"
         },
         "stage-purple.ref_fasta": {
           "$dnanexus_link": {
