@@ -427,7 +427,8 @@
         },
         "sample_id": "INPUT-SAMPLE-NAME",
         "baits": {
-          "$dnanexus_link": "file-JBX3Fbj433GV2K4Y6625Pf3y"
+          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+          "$dnanexus_link": "file-JBxvjg8433GxJf9Xypj5qyXf"
         }
       },
       "output_dirs": {
@@ -644,7 +645,7 @@
         },
         "stage-cnvkit_batch.baits": {
           "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-JBX3Fbj433GV2K4Y6625Pf3y"
+          "$dnanexus_link": "file-JBxvjg8433GxJf9Xypj5qyXf"
         },
         "stage-cnvkit_batch.purity": {
           "$dnanexus_link": {
