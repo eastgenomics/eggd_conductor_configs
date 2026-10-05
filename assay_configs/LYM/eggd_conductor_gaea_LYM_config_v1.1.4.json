@@ -2,7 +2,7 @@
     "name": "Config for lymphoma assay",
     "assay": "LYM",
     "assay_code": "-10056-|-10055-",
-    "version": "1.1.4",
+    "version": "1.2.0",
     "details": "Includes main gaea workflow, eggd_fastqc and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -10,7 +10,8 @@
         "v1.1.1": "Updated VEP config to v1.1.1 for ClinVar version 20260606 (hg38) and CADD v1.7",
 	    "v1.1.2": "Updated VEP config to v1.1.2 for ClinVar version 20260706 (hg38)",
         "v1.1.3": "Updated VEP config to v1.1.3 for ClinVar version 20260804 (hg38); Updated gaea workflow to v1.1.0; Updated fastqc app to v1.2.1; Updated male and female sex check thresholds. Removed apheleia stage which has been removed from the workflow.",
-        "v1.1.4": "Updated VEP config to v1.1.4 for ClinVar version 20260905 (hg38). Note: VEP v1.1.4 had COSMIC annotation removed."
+        "v1.1.4": "Updated VEP config to v1.1.4 for ClinVar version 20260905 (hg38). Note: VEP v1.1.4 had COSMIC annotation removed.",
+        "v1.2.0": "Updated gaea main workflow to v1.2.0 which includes eggd_vcf_rescue v1.2.1; Removed NM_058195.4 from filter string"
 
     },
     "demultiplex": true,
@@ -24,8 +25,8 @@
     },
     "subset_samplesheet": "-10056-|-10055-",
     "executables": {
-        "workflow-JB3XZ9047fbXGVJq9xyYv8xg": {
-            "name": "gaea_main_workflow_v1.1.0",
+        "workflow-JF1qqK04J1fG2f8Zzbq97j94": {
+            "name": "gaea_main_workflow_v1.2.0",
             "details": "Main Gaea workflow for alignment and variant calling",
             "url": "https://github.com/eastgenomics/eggd_gaea_main_workflow",
             "analysis": "analysis_1",
@@ -92,7 +93,7 @@
                     "$dnanexus_link": "file-Gb772VQ4XGyzQ0Zk615XbZ0X"
                 },
                 "stage-eggd_vcf_rescue.rescue_filtered": true,
-                "stage-eggd_vcf_rescue.filter_string": "bcftools filter -e '(FORMAT/DP<99 || AF<0.01 || CSQ_gnomADe_AF>0.1 || CSQ_Feature==\"NM_058195.4\") && (CSQ_RESCUE_LIST!=\"RESCUED\")'",
+                "stage-eggd_vcf_rescue.filter_string": "bcftools filter -e '(FORMAT/DP<99 || AF<0.01 || CSQ_gnomADe_AF>0.1) && (CSQ_RESCUE_LIST!=\"RESCUED\")'",
                 "stage-eggd_generate_variant_workbook.include_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_aSHM CSQ_CHIP CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC CSQ_RESCUE_LIST",
                 "stage-eggd_generate_variant_workbook.reorder_columns": "sampleName CHROM POS CSQ_SYMBOL CSQ_PANEL CSQ_Feature CSQ_EXON DNA Protein CSQ_aSHM CSQ_CHIP CSQ_HGVSp CSQ_Consequence CSQ_HGVSc DP AF FILTER CSQ_ClinVar CSQ_ClinVar_CLNSIG CSQ_ClinVar_CLNDN CSQ_Existing_variation CSQ_gnomADg_AF CSQ_gnomADe_AF CSQ_SpliceAI_pred_DS_AG CSQ_SpliceAI_pred_DS_AL CSQ_SpliceAI_pred_DS_DG CSQ_SpliceAI_pred_DS_DL CSQ_SpliceAI_pred_DP_AG CSQ_SpliceAI_pred_DP_AL CSQ_SpliceAI_pred_DP_DG CSQ_SpliceAI_pred_DP_DL CSQ_CADD_PHRED Prev_Count CSQ_EG_LC CSQ_EG_LCD CSQ_EG_LCS CSQ_EG_TC CSQ_RESCUE_LIST Allele_Origin Interpreted Reported Comment Classification MNV Report_text",
                 "stage-eggd_generate_variant_workbook.rename_columns": "CSQ_Existing_variation=dbSNP CSQ_Feature=Transcript_ID CSQ_aSHM=aSHM CSQ_CHIP=CHIP DP=Read_Depth CSQ_EG_LC=Latest_Classification CSQ_EG_LCD=Latest_Classification_Date CSQ_EG_LCS=Latest_Specimen_ID CSQ_EG_TC=Total_Classifications CSQ_RESCUE_LIST=Rescue_Status",
