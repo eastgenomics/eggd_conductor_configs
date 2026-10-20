@@ -122,7 +122,7 @@
         "stage-sentieon_tnbam.run_bqsr": true,
         "stage-sentieon_tnbam.somatic_algo": "TNhaplotyper2",
         "stage-eggd_vep.panel_bed": {
-          "$dnanexus_link": "file-J8VKVz847y60Bvz96qp0ypbg"
+          "$dnanexus_link": "file-JFF0FB0431P3z0x5Y129vYk0"
         },
         "stage-vcf_normaliser.bcftools_options": "-m -any --keep-sum AD",
         "stage-vcf_normaliser.fasta_tar": {
@@ -221,10 +221,7 @@
         "stage-athena.summary": true,
         "stage-athena.cutoff_threshold": 250,
         "stage-athena.panel_bed": {
-          "$dnanexus_link": {
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "file-J8VKVz847y60Bvz96qp0ypbg"
-          }
+          "$dnanexus_link": "file-JFF0FB0431P3z0x5Y129vYk0"
         },
         "stage-athena.per_chromosome_coverage": true,
         "stage-sompy.truth_vcf": {
@@ -234,10 +231,7 @@
           }
         },
         "stage-sompy.panel_bed": {
-          "$dnanexus_link": {
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "file-J8VKVz847y60Bvz96qp0ypbg"
-          }
+          "$dnanexus_link": "file-JFF0FB0431P3z0x5Y129vYk0"
         },
         "stage-sompy.truth_high_confidence_bed": {
           "$dnanexus_link": {
@@ -354,10 +348,7 @@
           }
         },
         "stage-eggd_pyTMB.bed": {
-          "$dnanexus_link": {
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "file-J8VKVz847y60Bvz96qp0ypbg"
-          }
+          "$dnanexus_link": "file-JFF0FB0431P3z0x5Y129vYk0"
         },
         "stage-eggd_pyTMB.min_coverage": 250,
         "stage-eggd_pyTMB.vaf": 0.1,
