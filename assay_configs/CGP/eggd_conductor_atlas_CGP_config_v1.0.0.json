@@ -216,10 +216,7 @@
         ],
         "stage-athena.thresholds": "100, 250, 500, 1000, 1500",
         "stage-athena.exons_file": {
-          "$dnanexus_link": {
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "file-J8VK41j47y686XjQx9VFzj24"
-          }
+          "$dnanexus_link": "file-JFF0VV0431PJBqf1VF7z5287"
         },
         "stage-athena.summary": true,
         "stage-athena.cutoff_threshold": 250,
