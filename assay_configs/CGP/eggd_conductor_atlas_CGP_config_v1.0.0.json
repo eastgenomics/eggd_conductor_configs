@@ -3,7 +3,7 @@
   "assay": "CGP",
   "assay_code": "-8471|-8475|-9999|-9197|-8473|-10083|-10084",
   "version": "1.0.0",
-  "details": "Includes Sentieon_UMI, main Atlas workflow (small_variants), MSI + TMB workflow, eggd_generate_variant_workbook, eggd_fastqc and multiQC",
+  "details": "Includes sentieon-bwa, main Atlas workflow (small_variants), MSI + TMB workflow, eggd_generate_variant_workbook, eggd_fastqc and multiQC",
   "changelog": {
     "v1.0.0": "Initial working version"
   },
@@ -18,10 +18,10 @@
   },
   "subset_samplesheet": "-8471|-8475|-9999|-9197|-8473|-10083|-10084",
   "executables": {
-    "app-J9ZGBy0437b6ZQ79x2P82YgZ": {
-      "name": "eggd_sentieon_umi",
-      "details": "Sentieon UMI workflow for alignment and variant calling",
-      "url": "https://github.com/eastgenomics/eggd_sentieon_umi",
+    "app-GkKxy5j0qjZ42zxJ7Y07Y246": {
+      "name": "Sentieon BWA-MEM and Sentieon De-duplication",
+      "details": "Performs alignment and deduplication using Sentieon to create a sorted and deduplicated BAM file from FASTQ file(s)",
+      "url": "https://platform.dnanexus.com/panx/tool/app/sentieon-bwa",
       "analysis": "analysis_1",
       "per_sample": true,
       "process_fastqs": true,
@@ -38,12 +38,10 @@
           "$dnanexus_link": "file-Gb76f204XGybZ3J6F731xkBp"
         },
         "sample": "INPUT-SAMPLE-NAME",
-        "read_template": "5M2S+T,5M2S+T",
-        "duplex_umi": true,
         "output_metrics": true
       },
       "output_dirs": {
-        "app-J9ZGBy0437b6ZQ79x2P82YgZ": "/OUT-FOLDER/APP-NAME"
+        "app-GkKxy5j0qjZ42zxJ7Y07Y246": "/OUT-FOLDER/APP-NAME"
       }
     },
     "app-J96Bgk84y9xJJ5k2YFbgfbf0": {
