@@ -115,6 +115,10 @@
             "id": "file-F3zvKp84fXX8qJx43zZXP395"
           }
         },
+        "stage-sentieon_tnbam.panel_of_normal_vcfgz": {
+          "$dnanexus_link": "file-JF8PPJ04kB7B3y422qkjZKjP"
+        },
+        "stage-sentieon_tnbam.tnscope_algo_options": "--call_pon_sites",
         "stage-sentieon_tnbam.run_bqsr": true,
         "stage-sentieon_tnbam.somatic_algo": "TNhaplotyper2",
         "stage-eggd_vep.panel_bed": {
