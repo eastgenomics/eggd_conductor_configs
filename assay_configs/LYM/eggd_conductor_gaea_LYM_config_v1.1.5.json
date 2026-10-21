@@ -10,7 +10,8 @@
         "v1.1.1": "Updated VEP config to v1.1.1 for ClinVar version 20260606 (hg38) and CADD v1.7",
 	    "v1.1.2": "Updated VEP config to v1.1.2 for ClinVar version 20260706 (hg38)",
         "v1.1.3": "Updated VEP config to v1.1.3 for ClinVar version 20260804 (hg38); Updated gaea workflow to v1.1.0; Updated fastqc app to v1.2.1; Updated male and female sex check thresholds. Removed apheleia stage which has been removed from the workflow.",
-        "v1.1.4": "Updated VEP config to v1.1.4 for ClinVar version 20260905 (hg38). Note: VEP v1.1.4 had COSMIC annotation removed."
+        "v1.1.4": "Updated VEP config to v1.1.4 for ClinVar version 20260905 (hg38). Note: VEP v1.1.4 had COSMIC annotation removed.",
+        "v1.1.5": "Updated VEP config to v1.1.5 for ClinVar version 20261011 (hg38); Updated Athena exons and panel BED to v2.0.0"
 
     },
     "demultiplex": true,
