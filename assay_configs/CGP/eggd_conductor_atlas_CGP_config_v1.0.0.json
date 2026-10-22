@@ -110,16 +110,25 @@
           "$dnanexus_link": "file-Gb757784XGyY3FPvkPQ74K9z"
         },
         "stage-sentieon_tnbam.gatk_resource_bundle": {
-          "$dnanexus_link": "file-JFG8y40432pF8X6zx9z10zV1"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JFG8y40432pF8X6zx9z10zV1"
+          }
         },
         "stage-sentieon_tnbam.panel_of_normal_vcfgz": {
-          "$dnanexus_link": "file-JF8PPJ04kB7B3y422qkjZKjP"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JF8PPJ04kB7B3y422qkjZKjP"
+          }
         },
         "stage-sentieon_tnbam.tnscope_algo_options": "--call_pon_sites",
         "stage-sentieon_tnbam.run_bqsr": true,
         "stage-sentieon_tnbam.somatic_algo": "TNhaplotyper2",
         "stage-eggd_vep.panel_bed": {
-          "$dnanexus_link": "file-JFF0FB0431P3z0x5Y129vYk0"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JFF0FB0431P3z0x5Y129vYk0"
+          }
         },
         "stage-vcf_normaliser.bcftools_options": "-m -any --keep-sum AD",
         "stage-vcf_normaliser.fasta_tar": {
@@ -213,12 +222,18 @@
         ],
         "stage-athena.thresholds": "100, 250, 500, 1000, 1500",
         "stage-athena.exons_file": {
-          "$dnanexus_link": "file-JFF0VV0431PJBqf1VF7z5287"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JFF0VV0431PJBqf1VF7z5287"
+          }
         },
         "stage-athena.summary": true,
         "stage-athena.cutoff_threshold": 250,
         "stage-athena.panel_bed": {
-          "$dnanexus_link": "file-JFF0FB0431P3z0x5Y129vYk0"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JFF0FB0431P3z0x5Y129vYk0"
+          }
         },
         "stage-athena.per_chromosome_coverage": true,
         "stage-sompy.truth_vcf": {
@@ -228,7 +243,10 @@
           }
         },
         "stage-sompy.panel_bed": {
-          "$dnanexus_link": "file-JFF0FB0431P3z0x5Y129vYk0"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JFF0FB0431P3z0x5Y129vYk0"
+          }
         },
         "stage-sompy.truth_high_confidence_bed": {
           "$dnanexus_link": {
@@ -345,7 +363,10 @@
           }
         },
         "stage-eggd_pyTMB.bed": {
-          "$dnanexus_link": "file-JFF0FB0431P3z0x5Y129vYk0"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JFF0FB0431P3z0x5Y129vYk0"
+          }
         },
         "stage-eggd_pyTMB.min_coverage": 250,
         "stage-eggd_pyTMB.vaf": 0.1,
