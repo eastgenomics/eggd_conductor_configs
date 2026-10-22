@@ -110,10 +110,7 @@
           "$dnanexus_link": "file-Gb757784XGyY3FPvkPQ74K9z"
         },
         "stage-sentieon_tnbam.gatk_resource_bundle": {
-          "$dnanexus_link": {
-            "project": "project-F3zqGV04fXX5j7566869fjFq",
-            "id": "file-F3zvKp84fXX8qJx43zZXP395"
-          }
+          "$dnanexus_link": "file-JFG8y40432pF8X6zx9z10zV1"
         },
         "stage-sentieon_tnbam.panel_of_normal_vcfgz": {
           "$dnanexus_link": "file-JF8PPJ04kB7B3y422qkjZKjP"
