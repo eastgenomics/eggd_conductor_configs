@@ -138,7 +138,7 @@
           }
         },
         "stage-eggd_vep.config_file": {
-          "$dnanexus_link": "file-JB6bxq04kjB5jq3Qk0P5q3PZ"
+          "$dnanexus_link": "file-JF8Jkb04kjB49j5BvKKB93vj"
         },
         "stage-verifybamid.input_file": {
           "$dnanexus_link": {
