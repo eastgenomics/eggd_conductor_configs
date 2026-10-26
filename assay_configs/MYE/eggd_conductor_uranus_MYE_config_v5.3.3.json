@@ -65,7 +65,8 @@
         "v5.2.6": "Updated VEP config to v2.1.13 for ClinVar version 20260706 (hg38)",
         "v5.3.0": "Updated main workflow to v3.4.0 and eggd_fastqc to v1.2.1",
         "v5.3.1": "Updated VEP config to v2.1.14 for ClinVar version 20260804 (hg38), update demultiplex config instance to mem2_ssd1_v2_x48",
-        "v5.3.2": "Updated VEP config to v2.1.15 for ClinVar version 20260905 (hg38)"
+        "v5.3.2": "Updated VEP config to v2.1.15 for ClinVar version 20260905 (hg38)",
+        "v5.3.3": "Updated VEP config to v2.1.16 for ClinVar version 20261011 (hg38) and update MYE multiqc config to v4.2.1"
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -373,7 +374,7 @@
                     "$dnanexus_link": "file-J4v08vj4GPF4Fg2zjkpkKyY1"
                 },
                 "multiqc_config_file": {
-                    "$dnanexus_link": "file-J6YPg384F54PjqqqXybyF86b"
+                    "$dnanexus_link": "file-JF8yGZ84B2qXzpPGYXKyF60Y"
                 },
                 "samplesheet": {
                     "$dnanexus_link": "INPUT-SAMPLESHEET"
