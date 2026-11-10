@@ -356,11 +356,49 @@
                 "app-J9kf6084BYg7QVKfKX262x7f": "/OUT-FOLDER/APP-NAME"
             }
         },
+        "app-JFGGG484JPVZ8vv19pKfBqKK": {
+            "name": "eggd_contamination-screen",
+            "details": "eggd_contamination-screen",
+            "url": "https://github.com/eastgenomics/eggd_contamination-screen",
+            "analysis": "analysis_3",
+            "per_sample": false,
+            "process_fastqs": false,
+            "depends_on": [
+                "analysis_1"
+            ],
+            "inputs_filter": {
+                "vcfs": ["^(?!.*-[0-9]+Q[0-9]+-)"],
+                "verifybamid": ["^(?!.*-[0-9]+Q[0-9]+-)"]
+            },
+            "inputs": {
+                "vcfs": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-eggd_vep_mutect2",
+                        "field": "annotated_vcf"
+                    }
+                },
+                "verifybamid": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-verifybamid",
+                        "field": "verifybamid_out"
+                    }
+                },
+                "samplesheet": {
+                    "$dnanexus_link": "INPUT-SAMPLESHEET"
+                },
+                "plots": true
+            },
+            "output_dirs": {
+                "app-JFGGG484JPVZ8vv19pKfBqKK": "/OUT-FOLDER/APP-NAME"
+            }
+        },
         "app-J6Q1VVQ4Pf3XgF2j1jz53qv9": {
             "name": "MultiQC",
             "details": "MultiQC app to generate aggregated run level QC report",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
-            "analysis": "analysis_3",
+            "analysis": "analysis_4",
             "per_sample": false,
             "process_fastqs": false,
             "depends_on": [
