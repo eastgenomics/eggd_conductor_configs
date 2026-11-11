@@ -106,7 +106,7 @@
                 "project_for_multiqc": "INPUT-dx_project_name",
                 "primary_workflow_output": "INPUT-parent_out_dir",
                 "multiqc_config_file": {
-                    "$dnanexus_link": "file-JFjq2704YKqzvxy50GQv0PP5"
+                    "$dnanexus_link": "file-JFp34Z84YKqgBFVZyp19QGVK"
                 },
                 "multiqc_docker": {
                     "$dnanexus_link": "file-J08KZb04bX05K677bv83GY2q"
