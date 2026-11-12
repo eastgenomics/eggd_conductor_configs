@@ -1,11 +1,12 @@
 {
     "name": "Config for Eunomia pipeline with RES assay",
     "assay": "RES",
-    "assay_code": "-10011|-10012|-10042|-10043|-2222|-10027|-10053",
-    "version": "1.0.0",
-    "details": "Initial release of assay config",
+    "assay_code": "-10087|-10088|-10089|-10090",
+    "version": "1.0.1",
+    "details": "Includes main Eunomia workflow, eggd_fastqc and multiQC",
     "changelog": {
-        "v1.0.0": "Initial release of assay config"
+        "v1.0.0": "Initial release of assay config",
+        "v1.0.1": "Replaced PCAN assay codes with RES test codes. Updated eunomia_workflow to v2.1.0, RES MultiQC config to v1.0.0 and eggd_fusion_workbook to v1.2.1."
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -16,10 +17,10 @@
     "users": {
         "org-emee_1": "CONTRIBUTE"
     },
-    "subset_samplesheet": "-10011|-10012|-10042|-10043",
+    "subset_samplesheet": "-10087|-10088|-10089|-10090",
     "executables": {
-        "workflow-J75xqgj4jX1KzqP5xJQkKVVY": {
-            "name": "eunomia_workflow_v2.0.0",
+        "workflow-JBG0KfQ45qYFyBgBVpx74K73": {
+            "name": "eunomia_workflow_v2.1.0",
             "details": "Eunomia workflow",
             "url": "https://github.com/eastgenomics/eggd_eunomia_workflow",
             "analysis": "analysis_1",
@@ -105,7 +106,7 @@
                 "project_for_multiqc": "INPUT-dx_project_name",
                 "primary_workflow_output": "INPUT-parent_out_dir",
                 "multiqc_config_file": {
-                    "$dnanexus_link": "file-J3403z84X3pXyK4Jx6Qgfzjf"
+                    "$dnanexus_link": "file-JFp34Z84YKqgBFVZyp19QGVK"
                 },
                 "multiqc_docker": {
                     "$dnanexus_link": "file-J08KZb04bX05K677bv83GY2q"
@@ -117,8 +118,8 @@
                 "app-J24Ffv8469JKgKQ88bX2kYF2": "/OUT-FOLDER/APP-NAME"
             }
         },
-        "app-J7Yb11j4YXXxj81jpY5B86z7": {
-             "name": "eggd_generate_fusion_workbook/1.2.0",
+        "app-JBP834Q4Yzp2kF3g4JgB3f3F": {
+             "name": "eggd_generate_fusion_workbook/1.2.1",
             "details": "App to generate fusion workbook",
             "url": "https://github.com/eastgenomics/eggd_generate_fusion_workbook",
             "analysis": "analysis_3",
