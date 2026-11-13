@@ -44,6 +44,12 @@ No external inputs.
 
 ---
 
+### [eggd_contamination-screen](https://github.com/eastgenomics/eggd_contamination-screen)
+
+No external inputs.
+
+---
+
 ### [MultiQC](https://github.com/eastgenomics/eggd_multiqc)
 
 | Input field | Input file | Version |
