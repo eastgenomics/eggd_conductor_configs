@@ -2,8 +2,8 @@
     "name": "Config for lymphoma assay",
     "assay": "LYM",
     "assay_code": "-10056-|-10055-",
-    "version": "1.1.5",
-    "details": "Includes main gaea workflow, eggd_fastqc and multiQC",
+    "version": "1.2.0",
+    "details": "Includes main gaea workflow, eggd_fastqc, eggd_contamination-screen, and multiQC",
     "changelog": {
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated filtering criteria to exclude non-coding regions from 11 genes. Rescued variants do not go to excluded tab.",
@@ -11,7 +11,8 @@
 	    "v1.1.2": "Updated VEP config to v1.1.2 for ClinVar version 20260706 (hg38)",
         "v1.1.3": "Updated VEP config to v1.1.3 for ClinVar version 20260804 (hg38); Updated gaea workflow to v1.1.0; Updated fastqc app to v1.2.1; Updated male and female sex check thresholds. Removed apheleia stage which has been removed from the workflow.",
         "v1.1.4": "Updated VEP config to v1.1.4 for ClinVar version 20260905 (hg38). Note: VEP v1.1.4 had COSMIC annotation removed.",
-        "v1.1.5": "Updated VEP config to v1.1.5 for ClinVar version 20261011 (hg38); Updated Athena exons and panel BED to v2.0.0"
+        "v1.1.5": "Updated VEP config to v1.1.5 for ClinVar version 20261011 (hg38); Updated Athena exons and panel BED to v2.0.0",
+        "v1.2.0": "Added eggd_contamination-screen/1.0.0"
 
     },
     "demultiplex": true,
@@ -240,11 +241,49 @@
                 "app-J9kf6084BYg7QVKfKX262x7f": "/OUT-FOLDER/APP-NAME"
             }
         },
+        "app-JFGGG484JPVZ8vv19pKfBqKK": {
+            "name": "eggd_contamination-screen",
+            "details": "eggd_contamination-screen",
+            "url": "https://github.com/eastgenomics/eggd_contamination-screen",
+            "analysis": "analysis_3",
+            "per_sample": false,
+            "process_fastqs": false,
+            "depends_on": [
+                "analysis_1"
+            ],
+            "inputs_filter": {
+                "vcfs": ["^(?!.*-[0-9]+Q[0-9]+-)"],
+                "verifybamid": ["^(?!.*-[0-9]+Q[0-9]+-)"]
+            },
+            "inputs": {
+                "vcfs": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-eggd_vep_mutect2",
+                        "field": "annotated_vcf"
+                    }
+                },
+                "verifybamid": {
+                    "$dnanexus_link": {
+                        "analysis": "analysis_1",
+                        "stage": "stage-verifybamid",
+                        "field": "verifybamid_out"
+                    }
+                },
+                "samplesheet": {
+                    "$dnanexus_link": "INPUT-SAMPLESHEET"
+                },
+                "plots": true
+            },
+            "output_dirs": {
+                "app-JFGGG484JPVZ8vv19pKfBqKK": "/OUT-FOLDER/APP-NAME"
+            }
+        },
         "app-J24Ffv8469JKgKQ88bX2kYF2": {
             "name": "eggd_MultiQC/3.2.0",
             "details": "MultiQC app to generate aggregated run level QC report",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
-            "analysis": "analysis_3",
+            "analysis": "analysis_4",
             "per_sample": false,
             "process_fastqs": false,
             "depends_on": [
