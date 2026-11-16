@@ -2,7 +2,7 @@
     "name": "Config for HRD assay",
     "assay": "HRD",
     "assay_code": "-9197|-10021|-2435|-10050",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "details": "Includes 'demultiplexing and multiQC'",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -30,7 +30,7 @@
                 "app-J9kf6084BYg7QVKfKX262x7f": "/OUT-FOLDER/APP-NAME"
             }
         },
-     "app-GF3K4Qj4bJyvpzx055V3G8q7": {
+     "app-J6Q1VVQ4Pf3XgF2j1jz53qv9": {
             "name": "MultiQC",
             "details": "MultiQC app to generate aggregated run level QC report",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
