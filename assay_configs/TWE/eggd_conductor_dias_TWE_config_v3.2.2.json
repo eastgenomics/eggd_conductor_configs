@@ -3,7 +3,7 @@
     "assay": "38_TWE",
     "genome": "GRCh38",
     "assay_code": "-EGG4|-9526-|-9688-|-1288-|-10028-",
-    "version": "3.2.2",
+    "version": "3.2.3",
     "details": "Includes main Dias workflows: single, multi and QC reports",
     "changelog": {
         "v1.0.0": "Initial working version",
@@ -26,7 +26,8 @@
         "v3.1.0": "Update eggd_MultiQC to v3.3.0 and TWE MultiQC config file to v1.3.0",
         "v3.2.0": "Updated dias_single to v2.15.0. Includes eggd_vcf_normaliser.",
         "v3.2.1": "Temporary non-UMI config - see commit c6bb1c93 (release v3.2.1)",
-        "v3.2.2": "Updated dias_single workflow to v2.16.0"
+        "v3.2.2": "Updated dias_single workflow to v2.16.0",
+        "v3.2.3": "Updated dias_single workflow to v2.17.0 and provided inputs and new configs to existing app eggd_plot_variant_baf."
     },
     "demultiplex": true,
     "demultiplex_config": {
@@ -38,8 +39,8 @@
     },
     "subset_samplesheet": "-EGG4|-9526-|-9688-",
     "executables": {
-        "workflow-J9pzKv84jBJzBZfz33GzFV7q": {
-            "name": "dias_single_v2.16.0",
+        "workflow-JFxP9304Y538g7X4kq8v8xpp": {
+            "name": "dias_single_v2.17.0",
             "details": "Dias single workflow - Runs Sentieon, VCF normaliser, multi_fastqc, verifyBAMID, vcf_QC, flagstat, Picard, mosdepth, somalier extract using the fastqs out of demultiplexing step, eggd_sex_check, and eggd_plot_variant_baf",
             "url": "https://github.com/eastgenomics/eggd_dias_single_workflow",
             "analysis": "analysis_1",
@@ -192,6 +193,9 @@
                 "stage-eggd_plot_variant_baf.min_baf": 0,
                 "stage-eggd_plot_variant_baf.max_baf": 1,
                 "stage-eggd_plot_variant_baf.max_depth": 0.95,
+                "stage-eggd_plot_variant_baf.min_depth": 200,
+                "stage-eggd_plot_variant_baf.min_qual": 30,
+                "stage-eggd_plot_variant_baf.bed_filter": "project-Fkb6Gkj433GVVvj73J7x8KbV:file-G7FK1xQ4kj4317YGFpqYPb75",
                 "stage-eggd_plot_variant_baf.genome": "hg38",
                 "stage-eggd_plot_variant_baf.packages": {
                     "$dnanexus_link": {
