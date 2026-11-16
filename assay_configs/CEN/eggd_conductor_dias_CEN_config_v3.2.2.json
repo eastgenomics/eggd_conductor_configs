@@ -195,7 +195,12 @@
                 "stage-eggd_plot_variant_baf.max_depth": 0.95,
                 "stage-eggd_plot_variant_baf.min_depth": 5,
                 "stage-eggd_plot_variant_baf.min_qual": 30,
-                "stage-eggd_plot_variant_baf.bed_filter": "project-Fkb6Gkj433GVVvj73J7x8KbV:file-GP2bGp848QggjG456FJ1vG95",
+                "stage-eggd_plot_variant_baf.bed_filter": {
+                    "$dnanexus_link": {
+                        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+                        "id": "file-GP2bGp848QggjG456FJ1vG95"
+                    }
+                },
                 "stage-eggd_plot_variant_baf.genome": "hg38",
                 "stage-eggd_plot_variant_baf.packages": {
                     "$dnanexus_link": {
