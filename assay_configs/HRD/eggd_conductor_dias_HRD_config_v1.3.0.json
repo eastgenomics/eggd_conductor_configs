@@ -31,8 +31,8 @@
                 "app-J9kf6084BYg7QVKfKX262x7f": "/OUT-FOLDER/APP-NAME"
             }
         },
-     "app-GF3K4Qj4bJyvpzx055V3G8q7": {
-            "name": "MultiQC",
+     "app-J6Q1VVQ4Pf3XgF2j1jz53qv9": {
+            "name": "eggd_MultiQC/3.3.0",
             "details": "MultiQC app to generate aggregated run level QC report",
             "url": "https://github.com/eastgenomics/eggd_multiqc",
             "analysis": "analysis_2",
