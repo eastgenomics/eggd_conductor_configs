@@ -8,7 +8,8 @@
         "v1.0.0": "Initial working version",
         "v1.1.0": "Updated assay code to include top up codes.Add subset_samplesheet to include non-top up codes",
         "v1.1.1": "Updated assay code",
-        "v1.2.0": "Updated version and replaced multi_fastqc applet with eggd_fastqc app v1.2.1"
+        "v1.2.0": "Updated version and replaced multi_fastqc applet with eggd_fastqc app v1.2.1",
+        "v1.3.0": "Updated version, eggd_MultiQC app, docker image, and multiqc config"
     },
     "demultiplex": true,
     "users": {
