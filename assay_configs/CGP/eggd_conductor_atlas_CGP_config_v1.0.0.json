@@ -325,8 +325,8 @@
         "app-J2fv5P89f2ZFbj52533QZKPG": "/OUT-FOLDER/APP-NAME"
       }
     },
-    "workflow-JBF96bj46QQ2x5fB2B9xx6jV": {
-      "name": "msi_tmb_workflow_v1.1.0",
+    "workflow-JFyj2F04G48qKF1YFZ2VXy2f": {
+      "name": "msi_tmb_workflow_v1.2.0",
       "details": "MSI + TMB atlas workflow",
       "url": "https://github.com/eastgenomics/eggd_msi_tmb_workflow",
       "analysis": "analysis_5",
@@ -370,12 +370,6 @@
         },
         "stage-eggd_pyTMB.min_coverage": 250,
         "stage-eggd_pyTMB.vaf": 0.1,
-        "stage-eggd_msipro_score.msi_sites": {
-          "$dnanexus_link": {
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-            "id": "file-J9y5g0j4jB0kxbb5Y1vkQ27p"
-          }
-        },
         "stage-eggd_msipro_score.tumour_bam": {
           "$dnanexus_link": {
             "job": "analysis_2",
@@ -469,8 +463,8 @@
         "app-J9zQG1044bP7FqfFYGQ8J0zP": "/OUT-FOLDER/APP-NAME"
       }
     },
-    "workflow-JBZ0BJ842xg2YfjXjKPzQ4F5": {
-      "name": "atlas_cnv_workflow_v1.1.0",
+    "workflow-JG05KX04G48vQ2jyqGVygfX1": {
+      "name": "atlas_cnv_workflow_v1.2.0",
       "details": "Somatic CNV workflow for Atlas",
       "url": "https://github.com/eastgenomics/eggd_atlas_cnv_workflow",
       "analysis": "analysis_8",
@@ -483,26 +477,62 @@
         "priority": "high"
       },
       "inputs": {
-        "stage-amber.tumour_bam": {
+        "stage-fgbio.bam": {
           "$dnanexus_link": {
             "job": "analysis_2",
             "field": "output_bam"
           }
         },
+        "stage-fgbio.output_prefix": "INPUT-SAMPLE-NAME",
+        "stage-fgbio.fgbio_version": "4.1.1",
+        "stage-fgbio.fgbio_docker": {
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JFp7fG0453KjK25zPx1bYF8J"
+          }
+          },
+        "stage-fgbio.reference_fasta": {
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-Gb73P8Q4XGyX9QZ0g9qp61xV"
+          }
+        },
+        "stage-fgbio.reference_fai": {
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-Gb735V84XGyYkXYPqGqgz14j"
+          }
+        },
+        "stage-fgbio.reference_gzi": {
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-Gb735Vj4XGyj2ZPbzjfYxZxX"
+          }
+        },
+        "stage-amber.tumour_bam": {
+          "$dnanexus_link": {
+            "stage": "stage-fgbio",
+            "outputField": "clipped_bam"
+          }
+        },
         "stage-amber.tumour_bai": {
           "$dnanexus_link": {
-            "job": "analysis_2",
-            "field": "output_bai"
+            "stage": "stage-fgbio",
+            "outputField": "clipped_bai"
           }
         },
         "stage-amber.sample_id": "INPUT-SAMPLE-NAME",
         "stage-amber.amber_jar": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J9936z04p12z3FYjFYb448pP"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J9936z04p12z3FYjFYb448pP"
+          }
         },
         "stage-amber.germline_sites": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J88xxvQ4QyV82JKY5PkqXGbv"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J88xxvQ4QyV82JKY5PkqXGbv"
+          }
         },
         "stage-cobalt.tumour_bam": {
           "$dnanexus_link": {
@@ -518,20 +548,28 @@
         },
         "stage-cobalt.sample_id": "INPUT-SAMPLE-NAME",
         "stage-cobalt.cobalt_jar": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J893p9Q470j4zY3zzpVBjP11"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J893p9Q470j4zY3zzpVBjP11"
+          }
         },
         "stage-cobalt.norm_file": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-JBkKq08433GXB243V86VqGzF"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JFv3QYj433GkYzp9zfGKkGpY"
+          }
         },
         "stage-cobalt.diploid_regions": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J88xxvQ4QyV7vyPx294b4Z23"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J88xxvQ4QyV7vyPx294b4Z23"
+          }
         },
         "stage-cobalt.gc_profile": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J88xxvQ4QyVPb8K6VFqX1FKB"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J88xxvQ4QyVPb8K6VFqX1FKB"
+          }
         },
         "stage-sage.tumour_bam": {
           "$dnanexus_link": {
@@ -547,8 +585,10 @@
         },
         "stage-sage.sample_id": "INPUT-SAMPLE-NAME",
         "stage-sage.sage_jar": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J8F1bFj4gPFvK81Z330Yfk3j"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J8F1bFj4gPFvK81Z330Yfk3j"
+          }
         },
         "stage-sage.ref_fasta": {
           "$dnanexus_link": {
@@ -557,28 +597,40 @@
           }
         },
         "stage-sage.hotspots_vcf": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J8F1kQQ4gPFbZQZ1BG7KY62z"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J8F1kQQ4gPFbZQZ1BG7KY62z"
+          }
         },
         "stage-sage.hotspots_tbi": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J8F1kV04gPFz7kZ45XfQPp4K"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J8F1kV04gPFz7kZ45XfQPp4K"
+          }
         },
         "stage-sage.panel_bed": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J8F1kv84gPFfQKqYbZVYQqv8"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J8F1kv84gPFfQKqYbZVYQqv8"
+          }
         },
         "stage-sage.hc_bed": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J8F1kVj4gPFkBK29yj6P4BgQ"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J8F1kVj4gPFkBK29yj6P4BgQ"
+          }
         },
         "stage-sage.pon_file": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J8F1kX84gPFpJ2kvz13KJ5kP"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J8F1kX84gPFpJ2kvz13KJ5kP"
+          }
         },
         "stage-sage.ensembl_data": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J892FbQ493ZPf7pZzpjX05P6"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J892FbQ493ZPf7pZzpjX05P6"
+          }
         },
         "stage-purple.amber_tar": {
           "$dnanexus_link": {
@@ -605,16 +657,22 @@
           }
         },
         "stage-purple.purple_jar": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J893gpQ470jJPF18gjJ1zg7Y"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J893gpQ470jJPF18gjJ1zg7Y"
+          }
         },
         "stage-purple.gc_profile": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J88xxvQ4QyVPb8K6VFqX1FKB"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J88xxvQ4QyVPb8K6VFqX1FKB"
+          }
         },
         "stage-purple.target_regions_bed": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-JBp3vx8433GQbP2bJY9J9X7V"
+          "$dnanexus_link": {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JBp3vx8433GQbP2bJY9J9X7V"
+          }
         },
         "stage-purple.ref_fasta": {
           "$dnanexus_link": {
@@ -629,8 +687,10 @@
           }
         },
         "stage-purple.ensembl_data": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-J892FbQ493ZPf7pZzpjX05P6"
+          "$dnanexus_link": {  
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-J892FbQ493ZPf7pZzpjX05P6"
+          }
         },
         "stage-purple.sample_id": "INPUT-SAMPLE-NAME",
         "stage-purple.ploidy_cap_purity_threshold": 0.35,
@@ -654,25 +714,9 @@
           }
         },
         "stage-cnvkit_batch.baits": {
-          "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
-          "$dnanexus_link": "file-JBxvjg8433GxJf9Xypj5qyXf"
-        },
-        "stage-cnvkit_batch.purity": {
-          "$dnanexus_link": {
-            "stage": "stage-purple",
-            "outputField": "purity"
-          }
-        },
-        "stage-cnvkit_batch.ploidy": {
-          "$dnanexus_link": {
-            "stage": "stage-purple",
-            "outputField": "ploidy"
-          }
-        },
-        "stage-cnvkit_batch.sample_sex": {
-          "$dnanexus_link": {
-            "stage": "stage-purple",
-            "outputField": "sample_sex"
+          "$dnanexus_link": {  
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JBxvjg8433GxJf9Xypj5qyXf"
           }
         },
         "stage-cnv_chr_strip.sample_id": "INPUT-SAMPLE-NAME",
@@ -739,6 +783,7 @@
         }
       },
       "output_dirs": {
+        "stage-fgbio": "/OUT-FOLDER/STAGE-NAME",
         "stage-amber": "/OUT-FOLDER/STAGE-NAME",
         "stage-cobalt": "/OUT-FOLDER/STAGE-NAME",
         "stage-sage": "/OUT-FOLDER/STAGE-NAME",
