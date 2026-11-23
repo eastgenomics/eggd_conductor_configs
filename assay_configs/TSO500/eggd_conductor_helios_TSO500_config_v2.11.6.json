@@ -51,7 +51,8 @@
         "v2.11.2": "Update to latest TSO500 vep config file (v1.2.33)",
         "v2.11.3": "Update to latest TSO500 vep config file (v1.2.34), and update eggd_fastqc to v1.2.1",
         "v2.11.4": "Update to latest TSO500 vep config file (v1.2.35)",
-        "v2.11.5": "Update to latest TSO500 vep config file (v1.2.36)"
+        "v2.11.5": "Update to latest TSO500 vep config file (v1.2.36)",
+        "v2.11.6": "Update to latest TSO500 vep config file (v1.2.37)"
     },
     "demultiplex": true,
     "demultiplex_config": {
