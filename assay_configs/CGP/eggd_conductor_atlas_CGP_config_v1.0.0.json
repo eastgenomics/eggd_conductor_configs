@@ -635,6 +635,7 @@
             "id": "file-JBxvjg8433GxJf9Xypj5qyXf"
           }
         },
+        "stage-cnvkit_batch.diploid_parx_genome": "grch38",
         "stage-cnv_chr_strip.sample_id": "INPUT-SAMPLE-NAME",
         "stage-cnv_chr_strip.cnvkit_cnr": {
           "$dnanexus_link": {
