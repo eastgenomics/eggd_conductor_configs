@@ -709,8 +709,8 @@
         "stage-cnvkit_batch.sample_id": "INPUT-SAMPLE-NAME",
         "stage-cnvkit_batch.cn_reference": {
           "$dnanexus_link": {
-            "job": "analysis_7",
-            "field": "cn_reference"
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JFP3fzQ455KjXVZ23JgX1gF2"
           }
         },
         "stage-cnvkit_batch.baits": {
