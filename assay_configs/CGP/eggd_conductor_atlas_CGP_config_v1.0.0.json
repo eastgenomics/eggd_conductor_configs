@@ -680,6 +680,12 @@
             "outputField": "purple_tar"
           }
         },
+        "stage-purple_plotter.qc_report": {
+          "$dnanexus_link": {
+            "stage": "stage-purple",
+            "outputField": "purity_tsv"
+          }
+        },
         "stage-purple_plotter.cnvkit_cnr": {
           "$dnanexus_link": {
             "stage": "stage-cnvkit_batch",
@@ -696,6 +702,13 @@
           "$dnanexus_link": {
             "stage": "stage-cnvkit_batch",
             "outputField": "genemetrics"
+          }
+        },
+        "stage-purple_plotter.msi_report": {
+          "$dnanexus_link": {
+            "analysis": "analysis_5",
+            "stage": "stage-eggd_msipro_score",
+            "field": "msi_tsv"
           }
         },
         "stage-purple_plotter.genome_image": true
