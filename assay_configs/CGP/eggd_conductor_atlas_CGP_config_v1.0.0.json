@@ -301,30 +301,6 @@
         "stage-vcf_normaliser": "/OUT-FOLDER/STAGE-NAME"
       }
     },
-    "app-J2fv5P89f2ZFbj52533QZKPG": {
-      "name": "Swiss Army Knife",
-      "details": "Swiss Army Knife app to retain only FILTER=PASS variants",
-      "analysis": "analysis_4",
-      "per_sample": true,
-      "process_fastqs": false,
-      "depends_on": ["analysis_1", "analysis_2", "analysis_3"],
-      "extra_args": {
-        "priority": "high"
-      },
-      "inputs": {
-        "in": {
-          "$dnanexus_link": {
-            "analysis": "analysis_3",
-            "stage": "stage-eggd_vep",
-            "field": "annotated_vcf"
-          }
-        },
-        "cmd": "(set -eo pipefail; vcf=$(ls *_annotated.vcf.gz); bcftools view -f PASS \"$vcf\" -Oz -o \"${vcf%.vcf.gz}_PASS.vcf.gz\")"
-      },
-      "output_dirs": {
-        "app-J2fv5P89f2ZFbj52533QZKPG": "/OUT-FOLDER/APP-NAME"
-      }
-    },
     "workflow-JFyj2F04G48qKF1YFZ2VXy2f": {
       "name": "msi_tmb_workflow_v1.2.0",
       "details": "MSI + TMB atlas workflow",
