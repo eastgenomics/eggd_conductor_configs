@@ -379,73 +379,13 @@
         "stage-eggd_msi_tmb_combiner": "/OUT-FOLDER/STAGE-NAME"
       }
     },
-    "app-J9J2yQj441QYqP572g95kFF1": {
-      "name": "eggd_cgp-cnvkit-coverage",
-      "details": "Creates coverage .cnn file for use in creation of CNV PON",
-      "url": "https://github.com/eastgenomics/eggd_cgp-cnvkit-coverage",
-      "analysis": "analysis_6",
-      "depends_on": ["analysis_2"],
-      "per_sample": true,
-      "process_fastqs": false,
-      "extra_args": {
-        "priority": "high"
-      },
-      "inputs": {
-        "tumour_bam": {
-          "$dnanexus_link": {
-            "job": "analysis_2",
-            "field": "output_bam"
-          }
-        },
-        "tumour_bai": {
-          "$dnanexus_link": {
-            "job": "analysis_2",
-            "field": "output_bai"
-          }
-        },
-        "sample_id": "INPUT-SAMPLE-NAME",
-        "baits": {
-          "$dnanexus_link": {
-            "id": "file-JBxvjg8433GxJf9Xypj5qyXf",
-            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV"
-          }
-        }
-      },
-      "output_dirs": {
-        "app-J9J2yQj441QYqP572g95kFF1": "/OUT-FOLDER/APP-NAME"
-      }
-    },
-    "app-J9zQG1044bP7FqfFYGQ8J0zP": {
-      "name": "eggd_cgp-cnvkit-pon",
-      "details": "Creates panel of normals for use in CNVkit somatic CNV calling",
-      "url": "https://github.com/eastgenomics/eggd_cgp-cnvkit-pon",
-      "analysis": "analysis_7",
-      "depends_on": ["analysis_6"],
-      "per_sample": false,
-      "process_fastqs": false,
-      "extra_args": {
-        "priority": "high"
-      },
-      "inputs": {
-        "pon_name": "INPUT-dx_project_name",
-        "coverage_files": {
-          "$dnanexus_link": {
-              "job": "analysis_6",
-              "field": "coverage_cnn"
-            }
-        }
-      },
-      "output_dirs": {
-        "app-J9zQG1044bP7FqfFYGQ8J0zP": "/OUT-FOLDER/APP-NAME"
-      }
-    },
     "workflow-JG05KX04G48vQ2jyqGVygfX1": {
       "name": "atlas_cnv_workflow_v1.2.0",
       "details": "Somatic CNV workflow for Atlas",
       "url": "https://github.com/eastgenomics/eggd_atlas_cnv_workflow",
       "analysis": "analysis_8",
       "depends_on": [
-        "analysis_2", "analysis_6", "analysis_7"
+        "analysis_2", "analysis_5"
       ],
       "per_sample": true,
       "process_fastqs": false,
