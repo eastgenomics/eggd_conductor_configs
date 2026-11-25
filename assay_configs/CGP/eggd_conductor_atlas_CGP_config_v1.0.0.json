@@ -866,7 +866,6 @@
       "process_fastqs": false,
       "depends_on": [
         "analysis_3",
-        "analysis_4",
         "analysis_5",
         "analysis_8"
       ],
@@ -876,8 +875,9 @@
       "inputs": {
         "vcfs": {
           "$dnanexus_link": {
-            "job": "analysis_4",
-            "field": "out"
+            "analysis": "analysis_3",
+            "stage": "stage-eggd_vep",
+            "field": "annotated_vcf"
           }
         },
         "additional_files": [
