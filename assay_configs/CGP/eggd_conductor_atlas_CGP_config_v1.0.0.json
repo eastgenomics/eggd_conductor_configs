@@ -786,7 +786,7 @@
       "analysis": "analysis_11",
       "per_sample": false,
       "process_fastqs": false,
-      "depends_on": ["analysis_1", "analysis_2", "analysis_3", "analysis_9"],
+      "depends_on": ["analysis_1", "analysis_2", "analysis_3", "analysis_8", "analysis_9"],
       "extra_args": {
         "priority": "high"
       },
@@ -799,8 +799,8 @@
         },
         "multiqc_config_file": {
           "$dnanexus_link": {
-            "project": "project-J98FGv04XJP03gYz506Z27X9",
-            "id": "file-J9VfF784XJP9fJ9fXyK9P2gP"
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-JG2ZbB8431P1X0xfP2fG9kG4"
           }
         },
         "samplesheet": {
